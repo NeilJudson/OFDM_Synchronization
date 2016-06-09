@@ -22,9 +22,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 250.898 ; gain = 77.617
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 250.605 ; gain = 76.723
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'dpram_1024_ip' [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/synth/dpram_1024_ip.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'dpram_1024_ip' [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/synth/dpram_1024_ip.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -36,7 +36,7 @@ INFO: [Synth 8-638] synthesizing module 'dpram_1024_ip' [g:/jiaweiwei/FPGA works
 	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
 	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
-	Parameter C_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
 	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
 	Parameter C_ALGORITHM bound to: 1 - type: integer 
 	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
@@ -67,13 +67,13 @@ INFO: [Synth 8-638] synthesizing module 'dpram_1024_ip' [g:/jiaweiwei/FPGA works
 	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
 	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
 	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
-	Parameter C_WRITE_MODE_B bound to: READ_FIRST - type: string 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
 	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
 	Parameter C_WRITE_DEPTH_B bound to: 1024 - type: integer 
 	Parameter C_READ_DEPTH_B bound to: 1024 - type: integer 
 	Parameter C_ADDRB_WIDTH bound to: 10 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
 	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 1 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
@@ -96,8 +96,8 @@ INFO: [Synth 8-638] synthesizing module 'dpram_1024_ip' [g:/jiaweiwei/FPGA works
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
 	Parameter C_COUNT_36K_BRAM bound to: 1 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
-	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     5.7608 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_2' declared at 'g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:123' bound to instance 'U0' of component 'blk_mem_gen_v8_2' [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/synth/dpram_1024_ip.vhd:229]
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     5.9043 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_2' declared at 'g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:123' bound to instance 'U0' of component 'blk_mem_gen_v8_2' [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/synth/dpram_1024_ip.vhd:235]
 INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2' [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:264]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
@@ -110,7 +110,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2' [g:/jiaweiwei/FPGA wo
 	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
 	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
-	Parameter C_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
 	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
 	Parameter C_ALGORITHM bound to: 1 - type: integer 
 	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
@@ -141,13 +141,13 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2' [g:/jiaweiwei/FPGA wo
 	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
 	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
 	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
-	Parameter C_WRITE_MODE_B bound to: READ_FIRST - type: string 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
 	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
 	Parameter C_WRITE_DEPTH_B bound to: 1024 - type: integer 
 	Parameter C_READ_DEPTH_B bound to: 1024 - type: integer 
 	Parameter C_ADDRB_WIDTH bound to: 10 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
 	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 1 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
@@ -170,7 +170,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2' [g:/jiaweiwei/FPGA wo
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
 	Parameter C_COUNT_36K_BRAM bound to: 1 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
-	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     5.7608 mW - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     5.9043 mW - type: string 
 INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2_synth' [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
@@ -182,7 +182,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2_synth' [g:/jiaweiwei/F
 	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
 	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
-	Parameter C_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
 	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
 	Parameter C_ALGORITHM bound to: 1 - type: integer 
 	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
@@ -215,13 +215,13 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2_synth' [g:/jiaweiwei/F
 	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
 	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
 	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
-	Parameter C_WRITE_MODE_B bound to: READ_FIRST - type: string 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
 	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
 	Parameter C_WRITE_DEPTH_B bound to: 1024 - type: integer 
 	Parameter C_READ_DEPTH_B bound to: 1024 - type: integer 
 	Parameter C_ADDRB_WIDTH bound to: 10 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
 	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 1 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
@@ -246,7 +246,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [g:/jiaweiwei/FPGA wor
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
 	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
-	Parameter C_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
 	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
 	Parameter C_ALGORITHM bound to: 1 - type: integer 
 	Parameter C_ALGORITHM_i bound to: 1 - type: integer 
@@ -284,13 +284,13 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [g:/jiaweiwei/FPGA wor
 	Parameter C_USE_BYTE_WEB_ALGO bound to: 0 - type: integer 
 	Parameter C_USE_BYTE_WEB_i bound to: 0 - type: integer 
 	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
-	Parameter C_WRITE_MODE_B bound to: READ_FIRST - type: string 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
 	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
 	Parameter C_WRITE_DEPTH_B bound to: 1024 - type: integer 
 	Parameter C_READ_DEPTH_B bound to: 1024 - type: integer 
 	Parameter C_ADDRB_WIDTH bound to: 10 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
 	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 1 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
@@ -326,9 +326,9 @@ WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [
 WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
 INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:186860]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
-	Parameter C_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
 	Parameter C_HAS_RSTA bound to: 0 - type: integer 
-	Parameter C_RSTA_WIDTH bound to: 1 - type: integer 
+	Parameter C_RSTA_WIDTH bound to: 2 - type: integer 
 	Parameter C_HAS_ENA bound to: 0 - type: integer 
 	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
 	Parameter C_REGCEA_WIDTH bound to: 1 - type: integer 
@@ -351,7 +351,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [g:/jiaweiwei/FPGA
 	Parameter C_WRITE_WIDTH_B_CORE bound to: 32 - type: integer 
 	Parameter C_ADDRB_WIDTH bound to: 10 - type: integer 
 	Parameter C_ADDRB_WIDTH_CORE bound to: 10 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
 	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 1 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
@@ -375,7 +375,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [g:/jiaweiwei
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
 	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
 	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
-	Parameter C_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
 	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
 	Parameter C_PRIM_TYPE_i bound to: 1 - type: integer 
 	Parameter C_USER_WIDTH bound to: 32 - type: integer 
@@ -393,7 +393,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [g:/jiaweiwei
 	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
 	Parameter C_RST_TYPE bound to: sync - type: string 
 	Parameter C_HAS_RSTA bound to: 0 - type: integer 
-	Parameter C_RSTA_WIDTH bound to: 1 - type: integer 
+	Parameter C_RSTA_WIDTH bound to: 2 - type: integer 
 	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
 	Parameter C_RSTRAM_A bound to: 0 - type: integer 
 	Parameter C_INITA_VAL bound to: 0 - type: string 
@@ -418,13 +418,13 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [g:/jiaweiwei
 	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
 	Parameter C_USE_BYTE_WEB_i bound to: 0 - type: integer 
 	Parameter C_WE_WIDTH_B bound to: 4 - type: integer 
-	Parameter C_WRITE_MODE_B bound to: READ_FIRST - type: string 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
 	Parameter C_RATIO_WB bound to: 1 - type: integer 
 	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
 	Parameter C_RATIO_RB bound to: 1 - type: integer 
 	Parameter C_ADDR_WIDTH_B bound to: 10 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
 	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 1 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
@@ -448,7 +448,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [g:/jiaweiwei/F
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
 	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
 	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
-	Parameter C_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
 	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
 	Parameter C_USER_WIDTH bound to: 32 - type: integer 
 	Parameter C_USER_DEPTH bound to: 1024 - type: integer 
@@ -478,11 +478,11 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [g:/jiaweiwei/F
 	Parameter C_INITB_VAL bound to: 0 - type: integer 
 	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
 	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
-	Parameter C_WRITE_MODE_B bound to: READ_FIRST - type: string 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter C_RATIO_WB bound to: 1 - type: integer 
 	Parameter C_RATIO_RB bound to: 1 - type: integer 
 	Parameter C_ADDR_WIDTH_B bound to: 10 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
 	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 1 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
@@ -505,7 +505,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper' [g:/jiaweiwei
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
 	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
 	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
-	Parameter C_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
 	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
 	Parameter C_USER_WIDTH bound to: 32 - type: integer 
 	Parameter C_USER_DEPTH bound to: 1024 - type: integer 
@@ -535,13 +535,13 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper' [g:/jiaweiwei
 	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
 	Parameter C_RSTRAM_B bound to: 0 - type: integer 
 	Parameter C_SINITB_VAL bound to: 36'b000000000000000000000000000000000000 
-	Parameter C_WRITE_MODE_B bound to: READ_FIRST - type: string 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter C_WRITE_WIDTH_B bound to: 36 - type: integer 
 	Parameter C_RATIO_WB bound to: 1 - type: integer 
 	Parameter C_READ_WIDTH_B bound to: 36 - type: integer 
 	Parameter C_RATIO_RB bound to: 1 - type: integer 
 	Parameter C_ADDR_WIDTH_B bound to: 10 - type: integer 
-	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
 	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 1 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
 	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
@@ -556,7 +556,9 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper' [g:/jiaweiwei
 	Parameter C_MEM_ADDR_WIDTH_A bound to: 10 - type: integer 
 	Parameter C_MEM_ADDR_WIDTH_B bound to: 10 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-3919] null assignment ignored [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:16271]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:18106]
+INFO: [Synth 8-3919] null assignment ignored [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:18387]
+INFO: [Synth 8-3919] null assignment ignored [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:18388]
 	Parameter DOA_REG bound to: 1 - type: integer 
 	Parameter DOB_REG bound to: 1 - type: integer 
 	Parameter EN_ECC_READ bound to: 0 - type: bool 
@@ -732,14 +734,14 @@ INFO: [Synth 8-3919] null assignment ignored [g:/jiaweiwei/FPGA workspace/OFDM_S
 	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter WRITE_WIDTH_A bound to: 36 - type: integer 
 	Parameter WRITE_WIDTH_B bound to: 36 - type: integer 
-INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:16352]
+INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB36E1' [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:18433]
 INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper' (2#1) [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:6972]
 INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width' (3#1) [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
 WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:185631]
 WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:185784]
 INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_generic_cstr' (4#1) [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:184145]
 INFO: [Synth 8-638] synthesizing module 'blk_mem_output_block' [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:187465]
-	Parameter C_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
 	Parameter C_WRITE_WIDTH_A bound to: 32 - type: integer 
 	Parameter C_READ_WIDTH_A bound to: 32 - type: integer 
 	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
@@ -753,9 +755,9 @@ INFO: [Synth 8-256] done synthesizing module 'blk_mem_output_block' (5#1) [g:/ji
 INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_top' (6#1) [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
 INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2_synth' (7#1) [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
 INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2' (8#1) [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:264]
-INFO: [Synth 8-256] done synthesizing module 'dpram_1024_ip' (9#1) [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/synth/dpram_1024_ip.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'dpram_1024_ip' (9#1) [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/synth/dpram_1024_ip.vhd:74]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 447.348 ; gain = 274.066
+Finished RTL Elaboration : Time (s): cpu = 00:01:29 ; elapsed = 00:01:41 . Memory (MB): peak = 447.625 ; gain = 273.742
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -773,7 +775,7 @@ INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[26] to constant 0
 INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[17] to constant 0 [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183501]
 INFO: [Synth 8-3295] tying undriven pin \prim_noinit.ram :DINB[8] to constant 0 [g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:183501]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 447.348 ; gain = 274.066
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:29 ; elapsed = 00:01:41 . Memory (MB): peak = 447.625 ; gain = 273.742
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -791,26 +793,26 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 586.469 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 587.910 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:39 ; elapsed = 00:01:47 . Memory (MB): peak = 586.469 ; gain = 413.188
+Finished Constraint Validation : Time (s): cpu = 00:01:42 ; elapsed = 00:02:01 . Memory (MB): peak = 587.910 ; gain = 414.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z045fbg676-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:39 ; elapsed = 00:01:47 . Memory (MB): peak = 586.469 ; gain = 413.188
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:42 ; elapsed = 00:02:01 . Memory (MB): peak = 587.910 ; gain = 414.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for U0. (constraint file  {G:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/dpram_1024_ip_synth_1/dont_touch.xdc}, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:39 ; elapsed = 00:01:47 . Memory (MB): peak = 586.469 ; gain = 413.188
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:42 ; elapsed = 00:02:01 . Memory (MB): peak = 587.910 ; gain = 414.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:39 ; elapsed = 00:01:48 . Memory (MB): peak = 586.469 ; gain = 413.188
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:43 ; elapsed = 00:02:01 . Memory (MB): peak = 587.910 ; gain = 414.027
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -841,14 +843,14 @@ BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:39 ; elapsed = 00:01:48 . Memory (MB): peak = 586.469 ; gain = 413.188
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:43 ; elapsed = 00:02:02 . Memory (MB): peak = 587.910 ; gain = 414.027
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:39 ; elapsed = 00:01:48 . Memory (MB): peak = 586.469 ; gain = 413.188
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:43 ; elapsed = 00:02:02 . Memory (MB): peak = 587.910 ; gain = 414.027
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:01:39 ; elapsed = 00:01:48 . Memory (MB): peak = 586.469 ; gain = 413.188
+Finished Parallel Reinference  : Time (s): cpu = 00:01:43 ; elapsed = 00:02:02 . Memory (MB): peak = 587.910 ; gain = 414.027
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -859,16 +861,16 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:39 ; elapsed = 00:01:48 . Memory (MB): peak = 586.469 ; gain = 413.188
+Finished Area Optimization : Time (s): cpu = 00:01:43 ; elapsed = 00:02:02 . Memory (MB): peak = 587.910 ; gain = 414.027
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:39 ; elapsed = 00:01:48 . Memory (MB): peak = 586.469 ; gain = 413.188
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:43 ; elapsed = 00:02:02 . Memory (MB): peak = 587.910 ; gain = 414.027
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:39 ; elapsed = 00:01:48 . Memory (MB): peak = 586.469 ; gain = 413.188
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:43 ; elapsed = 00:02:02 . Memory (MB): peak = 587.910 ; gain = 414.027
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -876,10 +878,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:56 ; elapsed = 00:02:05 . Memory (MB): peak = 614.758 ; gain = 441.477
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:59 ; elapsed = 00:02:19 . Memory (MB): peak = 615.273 ; gain = 441.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:56 ; elapsed = 00:02:05 . Memory (MB): peak = 614.758 ; gain = 441.477
+Finished Timing Optimization : Time (s): cpu = 00:01:59 ; elapsed = 00:02:19 . Memory (MB): peak = 616.195 ; gain = 442.313
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -891,7 +893,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:56 ; elapsed = 00:02:05 . Memory (MB): peak = 625.383 ; gain = 452.102
+Finished Technology Mapping : Time (s): cpu = 00:01:59 ; elapsed = 00:02:20 . Memory (MB): peak = 625.910 ; gain = 452.027
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -909,7 +911,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:57 ; elapsed = 00:02:06 . Memory (MB): peak = 625.383 ; gain = 452.102
+Finished IO Insertion : Time (s): cpu = 00:02:00 ; elapsed = 00:02:20 . Memory (MB): peak = 625.910 ; gain = 452.027
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -922,7 +924,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:57 ; elapsed = 00:02:06 . Memory (MB): peak = 625.383 ; gain = 452.102
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:00 ; elapsed = 00:02:20 . Memory (MB): peak = 625.910 ; gain = 452.027
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -934,13 +936,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:57 ; elapsed = 00:02:06 . Memory (MB): peak = 625.383 ; gain = 452.102
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:00 ; elapsed = 00:02:20 . Memory (MB): peak = 625.910 ; gain = 452.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:57 ; elapsed = 00:02:06 . Memory (MB): peak = 625.383 ; gain = 452.102
+Start Renaming Generated Ports : Time (s): cpu = 00:02:00 ; elapsed = 00:02:20 . Memory (MB): peak = 625.910 ; gain = 452.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:57 ; elapsed = 00:02:06 . Memory (MB): peak = 625.383 ; gain = 452.102
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:00 ; elapsed = 00:02:20 . Memory (MB): peak = 625.910 ; gain = 452.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -972,11 +974,11 @@ Report Instance Areas:
 |7     |            \prim_noinit.ram          |blk_mem_gen_prim_wrapper |     1|
 +------+--------------------------------------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:57 ; elapsed = 00:02:06 . Memory (MB): peak = 625.383 ; gain = 452.102
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:00 ; elapsed = 00:02:20 . Memory (MB): peak = 625.910 ; gain = 452.027
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:01:48 . Memory (MB): peak = 625.383 ; gain = 284.637
-Synthesis Optimization Complete : Time (s): cpu = 00:01:57 ; elapsed = 00:02:06 . Memory (MB): peak = 625.383 ; gain = 452.102
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:01:57 . Memory (MB): peak = 625.910 ; gain = 282.895
+Synthesis Optimization Complete : Time (s): cpu = 00:02:00 ; elapsed = 00:02:21 . Memory (MB): peak = 625.910 ; gain = 452.027
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -988,9 +990,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-47 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+48 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:57 ; elapsed = 00:02:06 . Memory (MB): peak = 625.383 ; gain = 423.758
+synth_design: Time (s): cpu = 00:02:00 ; elapsed = 00:02:17 . Memory (MB): peak = 625.910 ; gain = 423.180
 INFO: [Coretcl 2-1174] Renamed 6 cell refs.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.140 . Memory (MB): peak = 625.383 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Jun 06 23:18:05 2016...
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.215 . Memory (MB): peak = 625.910 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 10 00:07:20 2016...

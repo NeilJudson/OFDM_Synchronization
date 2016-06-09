@@ -14,8 +14,9 @@ set_property webtalk.parent_dir {G:/jiaweiwei/FPGA workspace/OFDM_Synchronizatio
 set_property parent.project_path {G:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-read_ip {{g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip.xci}}
-set_property is_locked true [get_files {{g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip.xci}}]
+read_ip {{G:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip.xci}}
+set_property used_in_implementation false [get_files -all {{g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip.dcp}}]
+set_property is_locked true [get_files {{G:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip.xci}}]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
@@ -24,27 +25,27 @@ rename_ref -prefix_all dpram_1024_ip_
 write_checkpoint -noxdef dpram_1024_ip.dcp
 catch { report_utilization -file dpram_1024_ip_utilization_synth.rpt -pb dpram_1024_ip_utilization_synth.pb }
 if { [catch {
-  file copy -force {G:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/dpram_1024_ip_synth_1/dpram_1024_ip.dcp} {g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip.dcp}
+  file copy -force {G:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/dpram_1024_ip_synth_1/dpram_1024_ip.dcp} {G:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip.dcp}
 } _RESULT ] } { 
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 if { [catch {
-  write_verilog -force -mode synth_stub {g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip_stub.v}
+  write_verilog -force -mode synth_stub {G:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip_stub.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 if { [catch {
-  write_vhdl -force -mode synth_stub {g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip_stub.vhdl}
+  write_vhdl -force -mode synth_stub {G:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip_stub.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 if { [catch {
-  write_verilog -force -mode funcsim {g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip_funcsim.v}
+  write_verilog -force -mode funcsim {G:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip_funcsim.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 if { [catch {
-  write_vhdl -force -mode funcsim {g:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip_funcsim.vhdl}
+  write_vhdl -force -mode funcsim {G:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip_funcsim.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }

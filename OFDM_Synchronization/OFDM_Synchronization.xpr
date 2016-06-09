@@ -101,9 +101,7 @@
     </Run>
     <Run Id="dpram_1024_ip_synth_1" Type="Ft3:Synth" SrcSet="dpram_1024_ip" Part="xc7z045fbg676-3" ConstrsSet="dpram_1024_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/dpram_1024_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -124,9 +122,7 @@
     </Run>
     <Run Id="dpram_1024_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="dpram_1024_ip" Description="Vivado Implementation Defaults" SynthRun="dpram_1024_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

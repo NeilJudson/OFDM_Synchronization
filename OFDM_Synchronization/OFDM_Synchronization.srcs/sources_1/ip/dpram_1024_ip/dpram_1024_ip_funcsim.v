@@ -1,9 +1,9 @@
 // Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-// Date        : Mon Jun 06 23:18:05 2016
+// Date        : Fri Jun 10 00:07:20 2016
 // Host        : FUTURE2 running 64-bit Service Pack 1  (build 7601)
-// Command     : write_verilog -force -mode funcsim {g:/jiaweiwei/FPGA
+// Command     : write_verilog -force -mode funcsim {G:/jiaweiwei/FPGA
 //               workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/dpram_1024_ip_funcsim.v}
 // Design      : dpram_1024_ip
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "dpram_1024_ip,blk_mem_gen_v8_2,{}" *) (* core_generation_info = "dpram_1024_ip,blk_mem_gen_v8_2,{x_ipProduct=Vivado 2015.2.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=blk_mem_gen,x_ipVersion=8.2,x_ipCoreRevision=6,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_XDEVICEFAMILY=zynq,C_ELABORATION_DIR=./,C_INTERFACE_TYPE=0,C_AXI_TYPE=1,C_AXI_SLAVE_TYPE=0,C_USE_BRAM_BLOCK=0,C_ENABLE_32BIT_ADDRESS=0,C_CTRL_ECC_ALGO=NONE,C_HAS_AXI_ID=0,C_AXI_ID_WIDTH=4,C_MEM_TYPE=1,C_BYTE_SIZE=9,C_ALGORITHM=1,C_PRIM_TYPE=1,C_LOAD_INIT_FILE=0,C_INIT_FILE_NAME=no_coe_file_loaded,C_INIT_FILE=dpram_1024_ip.mem,C_USE_DEFAULT_DATA=0,C_DEFAULT_DATA=0,C_HAS_RSTA=0,C_RST_PRIORITY_A=CE,C_RSTRAM_A=0,C_INITA_VAL=0,C_HAS_ENA=0,C_HAS_REGCEA=0,C_USE_BYTE_WEA=0,C_WEA_WIDTH=1,C_WRITE_MODE_A=WRITE_FIRST,C_WRITE_WIDTH_A=32,C_READ_WIDTH_A=32,C_WRITE_DEPTH_A=1024,C_READ_DEPTH_A=1024,C_ADDRA_WIDTH=10,C_HAS_RSTB=0,C_RST_PRIORITY_B=CE,C_RSTRAM_B=0,C_INITB_VAL=0,C_HAS_ENB=0,C_HAS_REGCEB=0,C_USE_BYTE_WEB=0,C_WEB_WIDTH=1,C_WRITE_MODE_B=READ_FIRST,C_WRITE_WIDTH_B=32,C_READ_WIDTH_B=32,C_WRITE_DEPTH_B=1024,C_READ_DEPTH_B=1024,C_ADDRB_WIDTH=10,C_HAS_MEM_OUTPUT_REGS_A=0,C_HAS_MEM_OUTPUT_REGS_B=1,C_HAS_MUX_OUTPUT_REGS_A=0,C_HAS_MUX_OUTPUT_REGS_B=0,C_MUX_PIPELINE_STAGES=0,C_HAS_SOFTECC_INPUT_REGS_A=0,C_HAS_SOFTECC_OUTPUT_REGS_B=0,C_USE_SOFTECC=0,C_USE_ECC=0,C_EN_ECC_PIPE=0,C_HAS_INJECTERR=0,C_SIM_COLLISION_CHECK=ALL,C_COMMON_CLK=1,C_DISABLE_WARN_BHV_COLL=0,C_EN_SLEEP_PIN=0,C_USE_URAM=0,C_EN_RDADDRA_CHG=0,C_EN_RDADDRB_CHG=0,C_EN_DEEPSLEEP_PIN=0,C_EN_SHUTDOWN_PIN=0,C_DISABLE_WARN_BHV_RANGE=0,C_COUNT_36K_BRAM=1,C_COUNT_18K_BRAM=0,C_EST_POWER_SUMMARY=Estimated Power for IP     _     5.7608 mW}" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* CHECK_LICENSE_TYPE = "dpram_1024_ip,blk_mem_gen_v8_2,{}" *) (* core_generation_info = "dpram_1024_ip,blk_mem_gen_v8_2,{x_ipProduct=Vivado 2015.2.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=blk_mem_gen,x_ipVersion=8.2,x_ipCoreRevision=6,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_XDEVICEFAMILY=zynq,C_ELABORATION_DIR=./,C_INTERFACE_TYPE=0,C_AXI_TYPE=1,C_AXI_SLAVE_TYPE=0,C_USE_BRAM_BLOCK=0,C_ENABLE_32BIT_ADDRESS=0,C_CTRL_ECC_ALGO=NONE,C_HAS_AXI_ID=0,C_AXI_ID_WIDTH=4,C_MEM_TYPE=2,C_BYTE_SIZE=9,C_ALGORITHM=1,C_PRIM_TYPE=1,C_LOAD_INIT_FILE=0,C_INIT_FILE_NAME=no_coe_file_loaded,C_INIT_FILE=dpram_1024_ip.mem,C_USE_DEFAULT_DATA=0,C_DEFAULT_DATA=0,C_HAS_RSTA=0,C_RST_PRIORITY_A=CE,C_RSTRAM_A=0,C_INITA_VAL=0,C_HAS_ENA=0,C_HAS_REGCEA=0,C_USE_BYTE_WEA=0,C_WEA_WIDTH=1,C_WRITE_MODE_A=WRITE_FIRST,C_WRITE_WIDTH_A=32,C_READ_WIDTH_A=32,C_WRITE_DEPTH_A=1024,C_READ_DEPTH_A=1024,C_ADDRA_WIDTH=10,C_HAS_RSTB=0,C_RST_PRIORITY_B=CE,C_RSTRAM_B=0,C_INITB_VAL=0,C_HAS_ENB=0,C_HAS_REGCEB=0,C_USE_BYTE_WEB=0,C_WEB_WIDTH=1,C_WRITE_MODE_B=WRITE_FIRST,C_WRITE_WIDTH_B=32,C_READ_WIDTH_B=32,C_WRITE_DEPTH_B=1024,C_READ_DEPTH_B=1024,C_ADDRB_WIDTH=10,C_HAS_MEM_OUTPUT_REGS_A=1,C_HAS_MEM_OUTPUT_REGS_B=1,C_HAS_MUX_OUTPUT_REGS_A=0,C_HAS_MUX_OUTPUT_REGS_B=0,C_MUX_PIPELINE_STAGES=0,C_HAS_SOFTECC_INPUT_REGS_A=0,C_HAS_SOFTECC_OUTPUT_REGS_B=0,C_USE_SOFTECC=0,C_USE_ECC=0,C_EN_ECC_PIPE=0,C_HAS_INJECTERR=0,C_SIM_COLLISION_CHECK=ALL,C_COMMON_CLK=1,C_DISABLE_WARN_BHV_COLL=0,C_EN_SLEEP_PIN=0,C_USE_URAM=0,C_EN_RDADDRA_CHG=0,C_EN_RDADDRB_CHG=0,C_EN_DEEPSLEEP_PIN=0,C_EN_SHUTDOWN_PIN=0,C_DISABLE_WARN_BHV_RANGE=0,C_COUNT_36K_BRAM=1,C_COUNT_18K_BRAM=0,C_EST_POWER_SUMMARY=Estimated Power for IP     _     5.9043 mW}" *) (* downgradeipidentifiedwarnings = "yes" *) 
 (* x_core_info = "blk_mem_gen_v8_2,Vivado 2015.2.1" *) 
 (* NotValidForBitStream *)
 module dpram_1024_ip
@@ -20,15 +20,21 @@ module dpram_1024_ip
     wea,
     addra,
     dina,
+    douta,
     clkb,
+    web,
     addrb,
+    dinb,
     doutb);
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK" *) input clka;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA WE" *) input [0:0]wea;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *) input [9:0]addra;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA DIN" *) input [31:0]dina;
+  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT" *) output [31:0]douta;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB CLK" *) input clkb;
+  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB WE" *) input [0:0]web;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR" *) input [9:0]addrb;
+  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB DIN" *) input [31:0]dinb;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTB DOUT" *) output [31:0]doutb;
 
   wire [9:0]addra;
@@ -36,8 +42,11 @@ module dpram_1024_ip
   wire clka;
   wire clkb;
   wire [31:0]dina;
+  wire [31:0]dinb;
+  wire [31:0]douta;
   wire [31:0]doutb;
   wire [0:0]wea;
+  wire [0:0]web;
   wire NLW_U0_dbiterr_UNCONNECTED;
   wire NLW_U0_s_axi_arready_UNCONNECTED;
   wire NLW_U0_s_axi_awready_UNCONNECTED;
@@ -48,7 +57,6 @@ module dpram_1024_ip
   wire NLW_U0_s_axi_sbiterr_UNCONNECTED;
   wire NLW_U0_s_axi_wready_UNCONNECTED;
   wire NLW_U0_sbiterr_UNCONNECTED;
-  wire [31:0]NLW_U0_douta_UNCONNECTED;
   wire [9:0]NLW_U0_rdaddrecc_UNCONNECTED;
   wire [3:0]NLW_U0_s_axi_bid_UNCONNECTED;
   wire [1:0]NLW_U0_s_axi_bresp_UNCONNECTED;
@@ -79,13 +87,13 @@ module dpram_1024_ip
   (* C_EN_RDADDRB_CHG = "0" *) 
   (* C_EN_SHUTDOWN_PIN = "0" *) 
   (* C_EN_SLEEP_PIN = "0" *) 
-  (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     5.7608 mW" *) 
+  (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     5.9043 mW" *) 
   (* C_FAMILY = "zynq" *) 
   (* C_HAS_AXI_ID = "0" *) 
   (* C_HAS_ENA = "0" *) 
   (* C_HAS_ENB = "0" *) 
   (* C_HAS_INJECTERR = "0" *) 
-  (* C_HAS_MEM_OUTPUT_REGS_A = "0" *) 
+  (* C_HAS_MEM_OUTPUT_REGS_A = "1" *) 
   (* C_HAS_MEM_OUTPUT_REGS_B = "1" *) 
   (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) 
   (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
@@ -101,7 +109,7 @@ module dpram_1024_ip
   (* C_INIT_FILE_NAME = "no_coe_file_loaded" *) 
   (* C_INTERFACE_TYPE = "0" *) 
   (* C_LOAD_INIT_FILE = "0" *) 
-  (* C_MEM_TYPE = "1" *) 
+  (* C_MEM_TYPE = "2" *) 
   (* C_MUX_PIPELINE_STAGES = "0" *) 
   (* C_PRIM_TYPE = "1" *) 
   (* C_READ_DEPTH_A = "1024" *) 
@@ -125,7 +133,7 @@ module dpram_1024_ip
   (* C_WRITE_DEPTH_A = "1024" *) 
   (* C_WRITE_DEPTH_B = "1024" *) 
   (* C_WRITE_MODE_A = "WRITE_FIRST" *) 
-  (* C_WRITE_MODE_B = "READ_FIRST" *) 
+  (* C_WRITE_MODE_B = "WRITE_FIRST" *) 
   (* C_WRITE_WIDTH_A = "32" *) 
   (* C_WRITE_WIDTH_B = "32" *) 
   (* C_XDEVICEFAMILY = "zynq" *) 
@@ -139,8 +147,8 @@ module dpram_1024_ip
         .dbiterr(NLW_U0_dbiterr_UNCONNECTED),
         .deepsleep(1'b0),
         .dina(dina),
-        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .douta(NLW_U0_douta_UNCONNECTED[31:0]),
+        .dinb(dinb),
+        .douta(douta),
         .doutb(doutb),
         .eccpipece(1'b0),
         .ena(1'b0),
@@ -192,33 +200,42 @@ module dpram_1024_ip
         .shutdown(1'b0),
         .sleep(1'b0),
         .wea(wea),
-        .web(1'b0));
+        .web(web));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module dpram_1024_ip_blk_mem_gen_generic_cstr
-   (doutb,
-    wea,
+   (douta,
+    doutb,
     clka,
     clkb,
     addra,
     addrb,
-    dina);
+    dina,
+    dinb,
+    wea,
+    web);
+  output [31:0]douta;
   output [31:0]doutb;
-  input [0:0]wea;
   input clka;
   input clkb;
   input [9:0]addra;
   input [9:0]addrb;
   input [31:0]dina;
+  input [31:0]dinb;
+  input [0:0]wea;
+  input [0:0]web;
 
   wire [9:0]addra;
   wire [9:0]addrb;
   wire clka;
   wire clkb;
   wire [31:0]dina;
+  wire [31:0]dinb;
+  wire [31:0]douta;
   wire [31:0]doutb;
   wire [0:0]wea;
+  wire [0:0]web;
 
   dpram_1024_ip_blk_mem_gen_prim_width \ramloop[0].ram.r 
        (.addra(addra),
@@ -226,34 +243,46 @@ module dpram_1024_ip_blk_mem_gen_generic_cstr
         .clka(clka),
         .clkb(clkb),
         .dina(dina),
+        .dinb(dinb),
+        .douta(douta),
         .doutb(doutb),
-        .wea(wea));
+        .wea(wea),
+        .web(web));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module dpram_1024_ip_blk_mem_gen_prim_width
-   (doutb,
-    wea,
+   (douta,
+    doutb,
     clka,
     clkb,
     addra,
     addrb,
-    dina);
+    dina,
+    dinb,
+    wea,
+    web);
+  output [31:0]douta;
   output [31:0]doutb;
-  input [0:0]wea;
   input clka;
   input clkb;
   input [9:0]addra;
   input [9:0]addrb;
   input [31:0]dina;
+  input [31:0]dinb;
+  input [0:0]wea;
+  input [0:0]web;
 
   wire [9:0]addra;
   wire [9:0]addrb;
   wire clka;
   wire clkb;
   wire [31:0]dina;
+  wire [31:0]dinb;
+  wire [31:0]douta;
   wire [31:0]doutb;
   wire [0:0]wea;
+  wire [0:0]web;
 
   dpram_1024_ip_blk_mem_gen_prim_wrapper \prim_noinit.ram 
        (.addra(addra),
@@ -261,46 +290,60 @@ module dpram_1024_ip_blk_mem_gen_prim_width
         .clka(clka),
         .clkb(clkb),
         .dina(dina),
+        .dinb(dinb),
+        .douta(douta),
         .doutb(doutb),
-        .wea(wea));
+        .wea(wea),
+        .web(web));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module dpram_1024_ip_blk_mem_gen_prim_wrapper
-   (doutb,
-    wea,
+   (douta,
+    doutb,
     clka,
     clkb,
     addra,
     addrb,
-    dina);
+    dina,
+    dinb,
+    wea,
+    web);
+  output [31:0]douta;
   output [31:0]doutb;
-  input [0:0]wea;
   input clka;
   input clkb;
   input [9:0]addra;
   input [9:0]addrb;
   input [31:0]dina;
+  input [31:0]dinb;
+  input [0:0]wea;
+  input [0:0]web;
 
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_72 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_73 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_74 ;
-  wire \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_75 ;
+  wire \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_68 ;
+  wire \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_69 ;
+  wire \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_70 ;
+  wire \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_71 ;
+  wire \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_72 ;
+  wire \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_73 ;
+  wire \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_74 ;
+  wire \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_75 ;
   wire [9:0]addra;
   wire [9:0]addrb;
   wire clka;
   wire clkb;
   wire [31:0]dina;
+  wire [31:0]dinb;
+  wire [31:0]douta;
   wire [31:0]doutb;
   wire [0:0]wea;
-  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
-  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
-  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED ;
-  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED ;
-  wire [31:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED ;
-  wire [3:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED ;
-  wire [7:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED ;
-  wire [8:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED ;
+  wire [0:0]web;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED ;
+  wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED ;
+  wire [7:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED ;
+  wire [8:0]\NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED ;
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
@@ -479,65 +522,74 @@ module dpram_1024_ip_blk_mem_gen_prim_wrapper
     .WRITE_MODE_B("WRITE_FIRST"),
     .WRITE_WIDTH_A(36),
     .WRITE_WIDTH_B(36)) 
-    \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram 
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram 
        (.ADDRARDADDR({1'b1,addra,1'b1,1'b1,1'b1,1'b1,1'b1}),
         .ADDRBWRADDR({1'b1,addrb,1'b1,1'b1,1'b1,1'b1,1'b1}),
         .CASCADEINA(1'b0),
         .CASCADEINB(1'b0),
-        .CASCADEOUTA(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ),
-        .CASCADEOUTB(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ),
+        .CASCADEOUTA(\NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ),
+        .CASCADEOUTB(\NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ),
         .CLKARDCLK(clka),
         .CLKBWRCLK(clkb),
-        .DBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED ),
+        .DBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED ),
         .DIADI(dina),
-        .DIBDI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .DIBDI(dinb),
         .DIPADIP({1'b0,1'b0,1'b0,1'b0}),
         .DIPBDIP({1'b0,1'b0,1'b0,1'b0}),
-        .DOADO(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED [31:0]),
+        .DOADO(douta),
         .DOBDO(doutb),
-        .DOPADOP(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED [3:0]),
-        .DOPBDOP({\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_72 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_73 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_74 ,\DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_n_75 }),
-        .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(wea),
+        .DOPADOP({\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_68 ,\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_69 ,\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_70 ,\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_71 }),
+        .DOPBDOP({\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_72 ,\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_73 ,\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_74 ,\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_75 }),
+        .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
+        .ENARDEN(1'b1),
         .ENBWREN(1'b1),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
-        .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b0),
+        .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
+        .REGCEAREGCE(1'b1),
         .REGCEB(1'b1),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
         .RSTREGB(1'b0),
-        .SBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED ),
-        .WEA({1'b1,1'b1,1'b1,1'b1}),
-        .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
+        .SBITERR(\NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED ),
+        .WEA({wea,wea,wea,wea}),
+        .WEBWE({1'b0,1'b0,1'b0,1'b0,web,web,web,web}));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module dpram_1024_ip_blk_mem_gen_top
-   (doutb,
-    wea,
+   (douta,
+    doutb,
     clka,
     clkb,
     addra,
     addrb,
-    dina);
+    dina,
+    dinb,
+    wea,
+    web);
+  output [31:0]douta;
   output [31:0]doutb;
-  input [0:0]wea;
   input clka;
   input clkb;
   input [9:0]addra;
   input [9:0]addrb;
   input [31:0]dina;
+  input [31:0]dinb;
+  input [0:0]wea;
+  input [0:0]web;
 
   wire [9:0]addra;
   wire [9:0]addrb;
   wire clka;
   wire clkb;
   wire [31:0]dina;
+  wire [31:0]dinb;
+  wire [31:0]douta;
   wire [31:0]doutb;
   wire [0:0]wea;
+  wire [0:0]web;
 
   dpram_1024_ip_blk_mem_gen_generic_cstr \valid.cstr 
        (.addra(addra),
@@ -545,8 +597,11 @@ module dpram_1024_ip_blk_mem_gen_top
         .clka(clka),
         .clkb(clkb),
         .dina(dina),
+        .dinb(dinb),
+        .douta(douta),
         .doutb(doutb),
-        .wea(wea));
+        .wea(wea),
+        .web(web));
 endmodule
 
 (* C_ADDRA_WIDTH = "10" *) (* C_ADDRB_WIDTH = "10" *) (* C_ALGORITHM = "1" *) 
@@ -556,14 +611,14 @@ endmodule
 (* C_DISABLE_WARN_BHV_COLL = "0" *) (* C_DISABLE_WARN_BHV_RANGE = "0" *) (* C_ELABORATION_DIR = "./" *) 
 (* C_ENABLE_32BIT_ADDRESS = "0" *) (* C_EN_DEEPSLEEP_PIN = "0" *) (* C_EN_ECC_PIPE = "0" *) 
 (* C_EN_RDADDRA_CHG = "0" *) (* C_EN_RDADDRB_CHG = "0" *) (* C_EN_SHUTDOWN_PIN = "0" *) 
-(* C_EN_SLEEP_PIN = "0" *) (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     5.7608 mW" *) (* C_FAMILY = "zynq" *) 
+(* C_EN_SLEEP_PIN = "0" *) (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     5.9043 mW" *) (* C_FAMILY = "zynq" *) 
 (* C_HAS_AXI_ID = "0" *) (* C_HAS_ENA = "0" *) (* C_HAS_ENB = "0" *) 
-(* C_HAS_INJECTERR = "0" *) (* C_HAS_MEM_OUTPUT_REGS_A = "0" *) (* C_HAS_MEM_OUTPUT_REGS_B = "1" *) 
+(* C_HAS_INJECTERR = "0" *) (* C_HAS_MEM_OUTPUT_REGS_A = "1" *) (* C_HAS_MEM_OUTPUT_REGS_B = "1" *) 
 (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) (* C_HAS_REGCEA = "0" *) 
 (* C_HAS_REGCEB = "0" *) (* C_HAS_RSTA = "0" *) (* C_HAS_RSTB = "0" *) 
 (* C_HAS_SOFTECC_INPUT_REGS_A = "0" *) (* C_HAS_SOFTECC_OUTPUT_REGS_B = "0" *) (* C_INITA_VAL = "0" *) 
 (* C_INITB_VAL = "0" *) (* C_INIT_FILE = "dpram_1024_ip.mem" *) (* C_INIT_FILE_NAME = "no_coe_file_loaded" *) 
-(* C_INTERFACE_TYPE = "0" *) (* C_LOAD_INIT_FILE = "0" *) (* C_MEM_TYPE = "1" *) 
+(* C_INTERFACE_TYPE = "0" *) (* C_LOAD_INIT_FILE = "0" *) (* C_MEM_TYPE = "2" *) 
 (* C_MUX_PIPELINE_STAGES = "0" *) (* C_PRIM_TYPE = "1" *) (* C_READ_DEPTH_A = "1024" *) 
 (* C_READ_DEPTH_B = "1024" *) (* C_READ_WIDTH_A = "32" *) (* C_READ_WIDTH_B = "32" *) 
 (* C_RSTRAM_A = "0" *) (* C_RSTRAM_B = "0" *) (* C_RST_PRIORITY_A = "CE" *) 
@@ -571,7 +626,7 @@ endmodule
 (* C_USE_BYTE_WEA = "0" *) (* C_USE_BYTE_WEB = "0" *) (* C_USE_DEFAULT_DATA = "0" *) 
 (* C_USE_ECC = "0" *) (* C_USE_SOFTECC = "0" *) (* C_USE_URAM = "0" *) 
 (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) (* C_WRITE_DEPTH_A = "1024" *) 
-(* C_WRITE_DEPTH_B = "1024" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) (* C_WRITE_MODE_B = "READ_FIRST" *) 
+(* C_WRITE_DEPTH_B = "1024" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) (* C_WRITE_MODE_B = "WRITE_FIRST" *) 
 (* C_WRITE_WIDTH_A = "32" *) (* C_WRITE_WIDTH_B = "32" *) (* C_XDEVICEFAMILY = "zynq" *) 
 (* ORIG_REF_NAME = "blk_mem_gen_v8_2" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module dpram_1024_ip_blk_mem_gen_v8_2
@@ -705,6 +760,7 @@ module dpram_1024_ip_blk_mem_gen_v8_2
   wire clkb;
   wire [31:0]dina;
   wire [31:0]dinb;
+  wire [31:0]douta;
   wire [31:0]doutb;
   wire eccpipece;
   wire ena;
@@ -742,38 +798,6 @@ module dpram_1024_ip_blk_mem_gen_v8_2
   wire [0:0]web;
 
   assign dbiterr = \<const0> ;
-  assign douta[31] = \<const0> ;
-  assign douta[30] = \<const0> ;
-  assign douta[29] = \<const0> ;
-  assign douta[28] = \<const0> ;
-  assign douta[27] = \<const0> ;
-  assign douta[26] = \<const0> ;
-  assign douta[25] = \<const0> ;
-  assign douta[24] = \<const0> ;
-  assign douta[23] = \<const0> ;
-  assign douta[22] = \<const0> ;
-  assign douta[21] = \<const0> ;
-  assign douta[20] = \<const0> ;
-  assign douta[19] = \<const0> ;
-  assign douta[18] = \<const0> ;
-  assign douta[17] = \<const0> ;
-  assign douta[16] = \<const0> ;
-  assign douta[15] = \<const0> ;
-  assign douta[14] = \<const0> ;
-  assign douta[13] = \<const0> ;
-  assign douta[12] = \<const0> ;
-  assign douta[11] = \<const0> ;
-  assign douta[10] = \<const0> ;
-  assign douta[9] = \<const0> ;
-  assign douta[8] = \<const0> ;
-  assign douta[7] = \<const0> ;
-  assign douta[6] = \<const0> ;
-  assign douta[5] = \<const0> ;
-  assign douta[4] = \<const0> ;
-  assign douta[3] = \<const0> ;
-  assign douta[2] = \<const0> ;
-  assign douta[1] = \<const0> ;
-  assign douta[0] = \<const0> ;
   assign rdaddrecc[9] = \<const0> ;
   assign rdaddrecc[8] = \<const0> ;
   assign rdaddrecc[7] = \<const0> ;
@@ -855,34 +879,46 @@ module dpram_1024_ip_blk_mem_gen_v8_2
         .clka(clka),
         .clkb(clkb),
         .dina(dina),
+        .dinb(dinb),
+        .douta(douta),
         .doutb(doutb),
-        .wea(wea));
+        .wea(wea),
+        .web(web));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_v8_2_synth" *) 
 module dpram_1024_ip_blk_mem_gen_v8_2_synth
-   (doutb,
-    wea,
+   (douta,
+    doutb,
     clka,
     clkb,
     addra,
     addrb,
-    dina);
+    dina,
+    dinb,
+    wea,
+    web);
+  output [31:0]douta;
   output [31:0]doutb;
-  input [0:0]wea;
   input clka;
   input clkb;
   input [9:0]addra;
   input [9:0]addrb;
   input [31:0]dina;
+  input [31:0]dinb;
+  input [0:0]wea;
+  input [0:0]web;
 
   wire [9:0]addra;
   wire [9:0]addrb;
   wire clka;
   wire clkb;
   wire [31:0]dina;
+  wire [31:0]dinb;
+  wire [31:0]douta;
   wire [31:0]doutb;
   wire [0:0]wea;
+  wire [0:0]web;
 
   dpram_1024_ip_blk_mem_gen_top \gnativebmg.native_blk_mem_gen 
        (.addra(addra),
@@ -890,8 +926,11 @@ module dpram_1024_ip_blk_mem_gen_v8_2_synth
         .clka(clka),
         .clkb(clkb),
         .dina(dina),
+        .dinb(dinb),
+        .douta(douta),
         .doutb(doutb),
-        .wea(wea));
+        .wea(wea),
+        .web(web));
 endmodule
 `ifndef GLBL
 `define GLBL
