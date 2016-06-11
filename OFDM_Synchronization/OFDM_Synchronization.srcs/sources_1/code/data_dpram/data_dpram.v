@@ -71,10 +71,17 @@ module data_dpram #(
 	output				[31:0]	m_axis_data_tdata	;
 	input						m_axis_data_trdy	;
 	
-//==============================================================================
-//0.Variable define
-//==============================================================================
 	localparam RAM_ADDR_WIDTH = 10;
+	
+	// sync_state
+	localparam	SYNC_IDLE			= 3'd0,
+				SYNC_COARSE_SEARCH	= 3'd1,
+				SYNC_COARSE_DONE	= 3'd2,
+				SYNC_FINE_SEARCH	= 3'd3,
+				SYNC_FINE_DONE		= 3'd4,
+				SYNC_DATA_OUTPUT	= 3'd5;
+	
+	wire				[2:0]	sync_state			;
 	
 	reg							u1_dpram_wea		;
 	reg					[9:0]	u1_dpram_addra_wr	;
@@ -93,7 +100,12 @@ module data_dpram #(
 	wire				[31:0]	u2_dpram_doutb		;
 	
 //==============================================================================
-//1.coarse syn
+// s_axis_ctrl_tdata
+//==============================================================================
+	assign sync_state = s_axis_ctrl_tdata[2:0];
+	
+//==============================================================================
+// coarse syn
 //==============================================================================
 	always @(posedge axis_aclk or posedge axis_areset)
 		begin
@@ -156,11 +168,37 @@ module data_dpram #(
 	);
 	
 //==============================================================================
-//3.fine syn & syn data output
+// fine syn & syn data output
 //==============================================================================
-	assign dpram_u2_wea = u1_dpram_wea;
-	assign dpram_u2_addra = u1_dpram_addra_wr;
-	assign dpram_u2_dina = u1_dpram_dina;
+	assign u2_dpram_wea = u1_dpram_wea;
+	assign u2_dpram_addra = u1_dpram_addra_wr;
+	assign u2_dpram_dina = u1_dpram_dina;
+	
+	always @(posedge axis_aclk or posedge axis_areset)
+		begin
+			if(axis_areset == 1'b1) begin
+				u2_dpram_addrb <= 10'd0;
+			end
+			else begin
+				case(sync_state)
+					SYNC_COARSE_DONE: begin
+						u2_dpram_addrb <= coarse_sync_addr;
+					end
+					SYNC_FINE_SEARCH: begin
+						u2_dpram_addrb <= u2_dpram_addrb + 10'd1;
+					end
+					SYNC_FINE_DONE: begin
+						u2_dpram_addrb <= fine_sync_addr;
+					end
+					SYNC_DATA_OUTPUT: begin
+						u2_dpram_addrb <= u2_dpram_addrb + 10'd1;
+					end
+					default: begin
+						u2_dpram_addrb <= 10'd0;
+					end
+				endcase
+			end
+		end
 	
 	dpram_1024_ip u2_dpram_1024_ip (
 		.clka	(axis_aclk		),	// input wire clka
