@@ -1,4 +1,4 @@
-function zc = ZC(N, M)
+function zc = ZC(N, M, shift)
 %ZC Zadoff Chu sequence.
 %   ZC(N, M) returns a ZC sequence.
 %   N: Length of ZC sequence.
@@ -6,7 +6,7 @@ function zc = ZC(N, M)
 
 %   Authors: Neil Judson
 %   Copyright 2016 Neil Judson
-%   $Revision: 1 $  $Date: 2016/06/29 18:40:00 $
+%   $Revision: 1.1 $  $Date: 2016/07/8 16:00:00 $
 
 %% check input
 errMsg = '';
@@ -18,10 +18,11 @@ if ~isempty(errMsg), error('JiaWeiwei:InputCheck',errMsg); end
 %%
 k = 1:1:N;
 if(mod(N,2) == 0)
-    zc = exp(1i*pi*M*k.*k/N);
+    zc = exp(1i * pi * M * k .* k / N);
 else
-    zc = exp(1i*pi*M*(k-1).*k/N);
+    zc = exp(1i * pi * M * (k-1) .* k / N);
 end
+zc = [zc(shift+1:end) zc(1:shift)];
 
 end
     
