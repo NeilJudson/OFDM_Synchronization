@@ -16,10 +16,8 @@ if ~isempty(errMsg), error('JiaWeiwei:InputCheck',errMsg); end
 %%
 crossCorrLength = longSeqLength - shortSeqLength + 1;
 crossCorr = zeros(1,crossCorrLength);
-% shortSeqLengthMinusOne = shortSeqLength - 1;
 for n = 1:1:crossCorrLength
     crossCorr(n) = sum(shortSeq .* conj(longSeq(n:n+shortSeqLength-1)));
-%     crossCorr(n) = sum(shortSeq .* conj(longSeq(n:n+shortSeqLengthMinusOne)));
 end
 % figure('name','互相关绝对值'); plot(abs(crossCorr));
 

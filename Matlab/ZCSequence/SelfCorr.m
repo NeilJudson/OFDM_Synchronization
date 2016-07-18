@@ -23,7 +23,6 @@ seq = [seqDelay(delay+1:end) zeros(1,delay)];
 seqMult = seq .* conj(seqDelay);
 selfCorrLength = seqLengMinusDelay - winWidth + 1;
 selfCorr = zeros(1,selfCorrLength);
-% winWidthMinusOne = winWidth-1;
 for k = 1:1:selfCorrLength
     selfCorr(k) = sum(seqMult(k:k+winWidth-1));
 end
