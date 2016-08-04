@@ -2,8 +2,8 @@ function [CPStartPoint,FCO] = MCOFDMSyn(data, NFFT, SNRdB)
 %MLOFDMSYN MC estimation of time and frequency offset in OFDM systems
 %   Detailed explanation goes here
 
-%   Authors: Jia Weiwei
-%   Copyright 2016 Jia Weiwei
+%   Authors: Neil Judson
+%   Copyright 2016 Neil Judson
 %   $Revision: 1.1 $  $Date: 2016/07/29 13:40:00 $
 
 %% 时延

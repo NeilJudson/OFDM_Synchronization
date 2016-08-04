@@ -5,8 +5,8 @@ function [CPStartPoint FCO] = MLOFDMSyn(data, NFFT, SNRdB)
 %   ML estimation of time and frequency offset in OFDM systems[J].
 %   IEEE Transactions on Signal Processing, 1997, 45(7): 1800-1805
 
-%   Authors: Jia Weiwei
-%   Copyright 2016 Jia Weiwei
+%   Authors: Neil Judson
+%   Copyright 2016 Neil Judson
 %   $Revision: 1.2 $  $Date: 2016/07/27 10:30:00 $
 
 %% й╠яс
