@@ -1,5 +1,5 @@
-function [CPStartPoint chanLength FCO] = NTFOFDMSyn(data, NFFT, SNRdB)
-%NTFOFDMSYN NTF estimation of time and frequency offset in OFDM systems
+function [CPStartPoint FCO] = Wang4OFDMSyn(data, NFFT, SNRdB)
+%WangOFDMSYN
 %   Detailed explanation goes here
 
 %   Authors: Neil Judson
@@ -31,25 +31,42 @@ dataPwrAverageExep = sum(dataPwrAverageTemp,1)/M;
 
 % gammaLength = selfMultTempLength - 32;
 gammaLength = 400;
-L = 15;
+L = 0;
 gamma = zeros(L+1,gammaLength);
 phi = zeros(L+1,gammaLength);
 for m = 0:1:L
     for n = 1:1:gammaLength
-        gamma(m+1,n) = sum(selfMultExep(n:n+31-m));
-        phi(m+1,n) = sum(dataPwrAverageExep(n:n+31-m));
+        gamma(m+1,n) = sum(selfMultExep(n:n+7-m));
+        phi(m+1,n) = sum(dataPwrAverageExep(n:n+7-m));
+    end
+end
+L2 = 31;
+gamma2 = zeros(L2+1,gammaLength);
+phi2 = zeros(L2+1,gammaLength);
+for m = 0:1:L2
+    for n = 1:1:gammaLength
+        gamma2(m+1,n) = sum(selfMultExep(n:n+m));
+        phi2(m+1,n) = sum(dataPwrAverageExep(n:n+m));
     end
 end
 
 %% 时间同步
 SNR = 10^(SNRdB/10);
-rou = (SNR/(SNR+1))^2;
+rou = (SNR/(SNR+1));
 gammaAbs = abs(gamma);
 target = gammaAbs - rou*phi;
-index = find(target(:,1:400)==max(max(target(:,1:400))));
+index = find(target(:,1:gammaLength)==max(max(target(:,1:gammaLength))));
 index = index(1);
-[chanLength CPStartPoint] = ind2sub([L+1,gammaLength],index);
-chanLength = chanLength - 1;
+[chanLength nmax] = ind2sub([L+1,gammaLength],index);
+
+rou = (SNR/(SNR+1))^2;
+gammaAbs2 = abs(gamma2);
+target2 = gammaAbs2 - rou*phi2;
+index = find(target2(:,nmax:gammaLength)==max(max(target2(:,nmax:gammaLength))));
+index = index(1);
+[kmax temp] = ind2sub([L2+1,gammaLength-nmax+1],index);
+kmax = kmax - 1;
+CPStartPoint = kmax+nmax-32+1;
 %{
 range = 1:1:400;
 figure; surf(gammaAbs(:,range)); grid on; title('gammaAbs');
@@ -58,6 +75,6 @@ figure; surf(target(:,range)); grid on; title('target');
 %}
 
 %% 小数频偏估计
-FCO = -atan(imag(gamma(1,CPStartPoint))/real(gamma(1,CPStartPoint))) / 2 / pi;
+FCO = -atan(imag(gamma(1,CPStartPoint))/real(gamma(1,CPStartPoint))) / 2 / pi
 
 end

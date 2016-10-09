@@ -12,15 +12,15 @@ data = [dataDelay(NFFT+1:end) zeros(1,NFFT)];
 
 %% 自相关、能量
 selfMult = dataDelay .* conj(data);
-% selfMultLength = length(selfMult);
-selfMultLength = 500;
-gamma = zeros(1,selfMultLength-31);
-for n = 1:1:selfMultLength-31
+% gammaLength = length(selfMult) - 256;
+gammaLength = 500;
+gamma = zeros(1,gammaLength);
+for n = 1:1:gammaLength
     gamma(n) = sum(selfMult(n:n+31));
 end
 
 target = abs(gamma);
-CPStartPoint = find(target(1:400)==max(target(1:400)));
+CPStartPoint = find(target(1:500)==max(target(1:500)));
 CPStartPoint = CPStartPoint(1); % CP起始位置
 
 %% 小数频偏估计

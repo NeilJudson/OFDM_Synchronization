@@ -9,37 +9,37 @@ function [CPStartPoint FCO] = MLOFDMSyn(data, NFFT, SNRdB)
 %   Copyright 2016 Neil Judson
 %   $Revision: 1.2 $  $Date: 2016/07/27 10:30:00 $
 
-%% Ê±ÑÓ
+%% æ—¶å»¶
 dataDelay = data;
 data = [dataDelay(NFFT+1:end) zeros(1,NFFT)];
 
-%% ×ÔÏà¹Ø¡¢ÄÜÁ¿
+%% è‡ªç›¸å…³ã€èƒ½é‡
 selfMult = dataDelay .* conj(data);
 dataDelayPwr = dataDelay .* conj(dataDelay);
 dataPwr = data .* conj(data);
-% selfMultLength = length(selfMult);
-selfMultLength = 500;
-gamma = zeros(1,selfMultLength-31);
-phi = zeros(1,selfMultLength-31);
-for n = 1:1:selfMultLength-31
+% gammaLength = length(selfMult) - 256;
+gammaLength = 500;
+gamma = zeros(1,gammaLength);
+phi = zeros(1,gammaLength);
+for n = 1:1:gammaLength
     gamma(n) = sum(selfMult(n:n+31));
     phi(n) = sum(dataDelayPwr(n:n+31)+dataPwr(n:n+31)) / 2;
 end
 
-%% Ê±¼äÍ¬²½
+%% æ—¶é—´åŒæ­¥
 SNR = 10 ^ (SNRdB/10);
 rou = SNR / (SNR+1);
 gammaAbs = abs(gamma);
 target = gammaAbs - rou*phi;
-CPStartPoint = find(target(1:400)==max(target(1:400)));
-CPStartPoint = CPStartPoint(1); % CPÆğÊ¼Î»ÖÃ
+CPStartPoint = find(target(1:500)==max(target(1:500)));
+CPStartPoint = CPStartPoint(1); % CPèµ·å§‹ä½ç½®
 %{
 figure; plot(gammaAbs); grid on; title('gammaAbs');
 figure; plot(phi); grid on; title('phi');
 figure; plot(target); grid on; title('target');
 %}
 
-%% Ğ¡ÊıÆµÆ«¹À¼Æ
+%% å°æ•°é¢‘åä¼°è®¡
 FCO = -atan(imag(gamma(CPStartPoint))/real(gamma(CPStartPoint))) / 2 / pi;
 
 end

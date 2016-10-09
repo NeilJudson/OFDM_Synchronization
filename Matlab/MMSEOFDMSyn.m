@@ -14,19 +14,20 @@ data = [dataDelay(NFFT+1:end) zeros(1,NFFT)];
 selfMult = dataDelay .* conj(data);
 dataDelayPwr = dataDelay .* conj(dataDelay);
 dataPwr = data .* conj(data);
-% selfMultLength = length(selfMult);
-selfMultLength = 500;
-gamma = zeros(1,selfMultLength-31);
-phi = zeros(1,selfMultLength-31);
-for n = 1:1:selfMultLength-31
-    gamma(n) = sum(selfMult(n:n+31));
-    phi(n) = sum(dataDelayPwr(n:n+31)+dataPwr(n:n+31)) / 2;
+% gammaLength = length(selfMult) - 256;
+gammaLength = 500;
+gamma = zeros(1,gammaLength);
+phi = zeros(1,gammaLength);
+L = 0;
+for n = 1:1:gammaLength
+    gamma(n) = sum(selfMult(n:n+31+L));
+    phi(n) = sum(dataDelayPwr(n:n+31+L)+dataPwr(n:n+31+L)) / 2;
 end
 
 %% 时间同步
 gammaAbs = abs(gamma);
 target = gammaAbs - phi;
-CPStartPoint = find(target(1:400)==max(target(1:400)));
+CPStartPoint = find(target(1:500)==max(target(1:500)));
 
 %% 小数频偏估计
 FCO = -atan(imag(gamma(CPStartPoint))/real(gamma(CPStartPoint))) / 2 / pi;
