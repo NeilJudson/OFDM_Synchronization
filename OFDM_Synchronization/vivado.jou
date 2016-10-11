@@ -2,10 +2,16 @@
 # Vivado v2015.2.1 (64-bit)
 # SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
 # IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
-# Start of session at: Tue Sep 06 09:59:42 2016
-# Process ID: 5060
-# Log file: G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/vivado.log
-# Journal file: G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization\vivado.jou
+# Start of session at: Tue Oct 11 14:49:55 2016
+# Process ID: 7968
+# Log file: F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/vivado.log
+# Journal file: F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.xpr
+open_project F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.xpr
+file mkdir F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sim_1/new/test_data_dpram.v w ]
+add_files -fileset sim_1 F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sim_1/new/test_data_dpram.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1

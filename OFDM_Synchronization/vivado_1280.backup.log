@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2015.2.1 (64-bit)
+# SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
+# IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
+# Start of session at: Tue Sep 06 09:59:42 2016
+# Process ID: 5060
+# Log file: G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/vivado.log
+# Journal file: G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.xpr
+INFO: [Project 1-313] Project file moved from 'G:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 658.215 ; gain = 97.977
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 06 11:53:43 2016...

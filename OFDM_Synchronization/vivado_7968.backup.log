@@ -2,8 +2,8 @@
 # Vivado v2015.2.1 (64-bit)
 # SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
 # IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
-# Start of session at: Tue Oct 11 14:49:55 2016
-# Process ID: 7968
+# Start of session at: Tue Oct 11 13:29:41 2016
+# Process ID: 1280
 # Log file: F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/vivado.log
 # Journal file: F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization\vivado.jou
 #-----------------------------------------------------------
@@ -15,12 +15,6 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/data/ip'.
-open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 712.949 ; gain = 137.570
-file mkdir F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sim_1/new
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sim_1/new/test_data_dpram.v w ]
-add_files -fileset sim_1 F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sim_1/new/test_data_dpram.v
-update_compile_order -fileset sim_1
-update_compile_order -fileset sources_1
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 650.500 ; gain = 91.367
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 11 17:21:17 2016...
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 11 13:38:18 2016...
