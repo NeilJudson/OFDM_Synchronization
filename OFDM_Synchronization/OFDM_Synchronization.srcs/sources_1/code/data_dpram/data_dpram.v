@@ -177,11 +177,12 @@ module data_dpram #(
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
 			m_axis_data_tvalid <= 1'b0;
+		end
 		else begin
 			m_axis_data_tvalid <= u1_dpram_wea;
 		end
 	end
-	assign m_axis_data_tlast = {u1_dpram_douta}
+	assign m_axis_data_tdata = u1_dpram_douta;
 /*
 //================================================================================
 // fine syn & syn data output

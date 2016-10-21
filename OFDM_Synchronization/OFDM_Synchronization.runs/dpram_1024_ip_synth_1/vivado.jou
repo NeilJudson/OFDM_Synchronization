@@ -2,9 +2,9 @@
 # Vivado v2015.2.1 (64-bit)
 # SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
 # IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
-# Start of session at: Fri Jun 10 00:04:48 2016
-# Process ID: 3836
-# Log file: G:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/dpram_1024_ip_synth_1/dpram_1024_ip.vds
-# Journal file: G:/jiaweiwei/FPGA workspace/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/dpram_1024_ip_synth_1\vivado.jou
+# Start of session at: Fri Oct 21 23:06:19 2016
+# Process ID: 18268
+# Log file: G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/dpram_1024_ip_synth_1/dpram_1024_ip.vds
+# Journal file: G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/dpram_1024_ip_synth_1\vivado.jou
 #-----------------------------------------------------------
 source dpram_1024_ip.tcl -notrace

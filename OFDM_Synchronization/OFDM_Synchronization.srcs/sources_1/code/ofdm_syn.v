@@ -95,52 +95,51 @@ module ofdm_syn #(
 //==============================================================================
 // sync_state
 //==============================================================================
-	always @(posedge axis_aclk or posedge axis_areset)
-		begin
-			if(axis_areset == 1'b1) begin
-				sync_state <= SYNC_IDLE;
-			end 
-			else begin
-				case(sync_state)
-					SYNC_IDLE: begin
-						if(rx_state == 1'b1) begin
-							sync_state <= SYNC_COARSE_SEARCH;
-						end
-						else begin
-							sync_state <= SYNC_IDLE;
-						end
+	always @(posedge axis_aclk or posedge axis_areset) begin
+		if(axis_areset == 1'b1) begin
+			sync_state <= SYNC_IDLE;
+		end 
+		else begin
+			case(sync_state)
+				SYNC_IDLE: begin
+					if(rx_state == 1'b1) begin
+						sync_state <= SYNC_COARSE_SEARCH;
 					end
-					SYNC_COARSE_SEARCH: begin
-						if(coarse_sync_state == 1'b1) begin
-							sync_state <= SYNC_COARSE_DONE;
-						end
-						else begin
-							sync_state <= SYNC_COARSE_SEARCH;
-						end
+					else begin
+						sync_state <= SYNC_IDLE;
 					end
-					SYNC_COARSE_DONE: begin
+				end
+				SYNC_COARSE_SEARCH: begin
+					if(coarse_sync_state == 1'b1) begin
+						sync_state <= SYNC_COARSE_DONE;
+					end
+					else begin
+						sync_state <= SYNC_COARSE_SEARCH;
+					end
+				end
+				SYNC_COARSE_DONE: begin
+					sync_state <= SYNC_FINE_SEARCH;
+				end
+				SYNC_FINE_SEARCH: begin
+					if(fine_sync_state == 1'b1) begin
+						sync_state <= SYNC_FINE_DONE;
+					end
+					else begin
 						sync_state <= SYNC_FINE_SEARCH;
 					end
-					SYNC_FINE_SEARCH: begin
-						if(fine_sync_state == 1'b1) begin
-							sync_state <= SYNC_FINE_DONE;
-						end
-						else begin
-							sync_state <= SYNC_FINE_SEARCH;
-						end
-					end
-					SYNC_FINE_DONE: begin
-						sync_state <= SYNC_DATA_OUTPUT;
-					end
-					SYNC_DATA_OUTPUT: begin
-					
-					end
-					default: begin
-						sync_state <= sync_state;
-					end
-				endcase
-			end
+				end
+				SYNC_FINE_DONE: begin
+					sync_state <= SYNC_DATA_OUTPUT;
+				end
+				SYNC_DATA_OUTPUT: begin
+				
+				end
+				default: begin
+					sync_state <= sync_state;
+				end
+			endcase
 		end
+	end
 	
 //==============================================================================
 // u1_data_dpram
@@ -172,7 +171,12 @@ module ofdm_syn #(
 		.m_axis_data_tvalid	(),
 		.m_axis_data_tlast	(),
 		.m_axis_data_tdata	(),
-		.m_axis_data_trdy	()
+		.m_axis_data_trdy	(),
+		
+		.m_axis_data_dly128_tvalid	(),
+		.m_axis_data_dly128_tlast	(),
+		.m_axis_data_dly128_tdata	(),
+		.m_axis_data_dly128_trdy	()
 	);
 	
 	
