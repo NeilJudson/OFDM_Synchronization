@@ -21,8 +21,8 @@
 
 
 module data_dpram #(
-	parameter	DATA_WIDTH		= 16,
-				SYN_DATA_WIDTH	= 13 // 同步数据位宽
+	parameter	DATA_WIDTH		= 5'd16,
+				SYN_DATA_WIDTH	= 5'd13 // 同步数据位宽
 	)
 	(
 	axis_aclk			,
@@ -81,7 +81,7 @@ module data_dpram #(
 	output				[31:0]	m_axis_data_dly128_tdata	;
 	input						m_axis_data_dly128_trdy		;
 	
-	localparam	RAM_ADDR_WIDTH = 10;
+	localparam	RAM_ADDR_WIDTH = 5'd10;
 	
 	// sync_state
 	localparam	SYNC_IDLE			= 3'd0,
@@ -101,7 +101,11 @@ module data_dpram #(
 	wire				[31:0]	u1_dpram_douta		;
 	reg					[9:0]	u1_dpram_addrb		;
 	wire				[31:0]	u1_dpram_doutb		;
-		
+	
+	reg							u1_dpram_wea_dly1	;
+	reg							u1_dpram_wea_dly2	;
+	reg							u1_dpram_wea_dly2	;
+	
 	wire						u2_dpram_wea		;
 	wire				[9:0]	u2_dpram_addra		;
 	wire				[31:0]	u2_dpram_dina		;
@@ -128,10 +132,10 @@ module data_dpram #(
 			u1_dpram_addra_wr	<= u1_dpram_addra_wr + 10'd1;
 			u1_dpram_dina		<= s_axis_data_tdata;
 		end
-			else begin
-				u1_dpram_wea		<= 1'b0;
-				u1_dpram_addra_wr	<= u1_dpram_addra_wr;
-				u1_dpram_dina		<= s_axis_data_tdata;
+		else begin
+			u1_dpram_wea		<= 1'b0;
+			u1_dpram_addra_wr	<= u1_dpram_addra_wr;
+			u1_dpram_dina		<= s_axis_data_tdata;
 			end
 	end
 	
@@ -142,9 +146,9 @@ module data_dpram #(
 		else if(s_axis_data_tvalid == 1'b1) begin
 			u1_dpram_addra_rd <= u1_dpram_addra_wr - 10'd2;
 		end
-			else begin
-				u1_dpram_addra_rd <= u1_dpram_addra_rd;
-			end
+		else begin
+			u1_dpram_addra_rd <= u1_dpram_addra_rd;
+		end
 	end
 	
 	assign u1_dpram_addra = (u1_dpram_wea == 1'b1) ? u1_dpram_addra_wr : u1_dpram_addra_rd;
@@ -156,9 +160,9 @@ module data_dpram #(
 		else if(s_axis_data_tvalid == 1'b1) begin
 			u1_dpram_addrb <= u1_dpram_addra_rd - 10'd31;
 		end
-			else begin
-				u1_dpram_addrb <= u1_dpram_addrb;
-			end
+		else begin
+			u1_dpram_addrb <= u1_dpram_addrb;
+		end
 	end
 	
 	dpram_1024_ip u1_dpram_1024_ip (
@@ -176,13 +180,22 @@ module data_dpram #(
 	
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
-			m_axis_data_tvalid <= 1'b0;
+			u1_dpram_wea_dly1	<= 1'b0;
+			u1_dpram_wea_dly2	<= 1'b0;
+			// u1_dpram_wea_dly3	<= 1'b0;
+			m_axis_data_tvalid	<= 1'b0;
 		end
 		else begin
-			m_axis_data_tvalid <= u1_dpram_wea;
+			u1_dpram_wea_dly1	<= u1_dpram_wea;
+			u1_dpram_wea_dly2	<= u1_dpram_wea_dly1;
+			// u1_dpram_wea_dly3	<= u1_dpram_wea_dly2;
+			m_axis_data_tvalid	<= u1_dpram_wea_dly2;
 		end
 	end
 	assign m_axis_data_tdata = u1_dpram_douta;
+	assign m_axis_data_dly128_tvalid = m_axis_data_tvalid;
+	assign m_axis_data_dly128_tdata = u1_dpram_doutb;
+	
 /*
 //================================================================================
 // fine syn & syn data output

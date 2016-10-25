@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Neil Judson
 // 
 // Create Date: 2016/06/05 20:55:31
 // Design Name: 
@@ -21,8 +21,8 @@
 
 
 module ofdm_syn #(
-	parameter	DATA_WIDTH		= 16,
-				SYN_DATA_WIDTH	= 13
+	parameter	DATA_WIDTH		= 5'd16,
+				SYN_DATA_WIDTH	= 5'd13
 	)
 	(
 	axis_aclk			,
