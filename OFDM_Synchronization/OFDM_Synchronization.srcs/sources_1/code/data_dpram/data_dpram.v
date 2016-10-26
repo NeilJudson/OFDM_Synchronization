@@ -22,7 +22,7 @@
 
 module data_dpram #(
 	parameter	DATA_WIDTH		= 5'd16,
-				SYN_DATA_WIDTH	= 5'd13 // 同步数据位宽
+				SYN_DATA_WIDTH	= 4'd13 // 同步数据位宽
 	)
 	(
 	axis_aclk			,
@@ -48,40 +48,40 @@ module data_dpram #(
 	m_axis_data_tdata	,
 	m_axis_data_trdy	,
 	
-	m_axis_data_dly128_tvalid	,
-	m_axis_data_dly128_tlast	,
-	m_axis_data_dly128_tdata	,
-	m_axis_data_dly128_trdy
+	m_axis_data_dly32_tvalid,
+	m_axis_data_dly32_tlast	,
+	m_axis_data_dly32_tdata	,
+	m_axis_data_dly32_trdy
     );
-	input						axis_aclk			;
-	input						axis_areset			;
-		
-	input						s_axis_ctrl_tvalid	;
-	input						s_axis_ctrl_tlast	;
-	input				[31:0]	s_axis_ctrl_tdata	;
-	output						s_axis_ctrl_trdy	;
-		
-	input						s_axis_data_tvalid	;
-	input						s_axis_data_tlast	;
-	input				[31:0]	s_axis_data_tdata	;
-	output						s_axis_data_trdy	;
-		
-	output						m_axis_ctrl_tvalid	;
-	output						m_axis_ctrl_tlast	;
-	output				[31:0]	m_axis_ctrl_tdata	;
-	input						m_axis_ctrl_trdy	;
-		
-	output	reg					m_axis_data_tvalid	;
-	output						m_axis_data_tlast	;
-	output				[31:0]	m_axis_data_tdata	;
-	input						m_axis_data_trdy	;
-		
-	output						m_axis_data_dly128_tvalid	;
-	output						m_axis_data_dly128_tlast	;
-	output				[31:0]	m_axis_data_dly128_tdata	;
-	input						m_axis_data_dly128_trdy		;
+	input				axis_aclk			;
+	input				axis_areset			;
 	
-	localparam	RAM_ADDR_WIDTH = 5'd10;
+	input				s_axis_ctrl_tvalid	;
+	input				s_axis_ctrl_tlast	;
+	input		[31:0]	s_axis_ctrl_tdata	;
+	output				s_axis_ctrl_trdy	;
+	
+	input				s_axis_data_tvalid	;
+	input				s_axis_data_tlast	;
+	input		[31:0]	s_axis_data_tdata	;
+	output				s_axis_data_trdy	;
+	
+	output				m_axis_ctrl_tvalid	;
+	output				m_axis_ctrl_tlast	;
+	output		[31:0]	m_axis_ctrl_tdata	;
+	input				m_axis_ctrl_trdy	;
+	
+	output				m_axis_data_tvalid	;
+	output				m_axis_data_tlast	;
+	output		[31:0]	m_axis_data_tdata	;
+	input				m_axis_data_trdy	;
+	
+	output				m_axis_data_dly32_tvalid;
+	output				m_axis_data_dly32_tlast	;
+	output		[31:0]	m_axis_data_dly32_tdata	;
+	input				m_axis_data_dly32_trdy	;
+	
+	localparam	RAM_ADDR_WIDTH = 4'd10;
 	
 	// sync_state
 	localparam	SYNC_IDLE			= 3'd0,
@@ -91,32 +91,42 @@ module data_dpram #(
 				SYNC_FINE_DONE		= 3'd4,
 				SYNC_DATA_OUTPUT	= 3'd5;
 	
-	wire				[2:0]	sync_state			;
-		
-	reg							u1_dpram_wea		;
-	reg					[9:0]	u1_dpram_addra_wr	;
-	reg					[9:0]	u1_dpram_addra_rd	;
-	wire				[9:0]	u1_dpram_addra		;
-	reg					[31:0]	u1_dpram_dina		;
-	wire				[31:0]	u1_dpram_douta		;
-	reg					[9:0]	u1_dpram_addrb		;
-	wire				[31:0]	u1_dpram_doutb		;
+	wire		[2:0]	sync_state			;
 	
-	reg							u1_dpram_wea_dly1	;
-	reg							u1_dpram_wea_dly2	;
-	reg							u1_dpram_wea_dly2	;
+	reg					u1_dpram_wea		;
+	reg			[9:0]	u1_dpram_addra_wr	;
+	reg			[9:0]	u1_dpram_addra_rd	;
+	wire		[9:0]	u1_dpram_addra		;
+	reg			[31:0]	u1_dpram_dina		;
+	wire		[31:0]	u1_dpram_douta		;
+	reg			[9:0]	u1_dpram_addrb		;
+	wire		[31:0]	u1_dpram_doutb		;
 	
-	wire						u2_dpram_wea		;
-	wire				[9:0]	u2_dpram_addra		;
-	wire				[31:0]	u2_dpram_dina		;
-	wire				[31:0]	u2_dpram_douta		;
-	reg					[9:0]	u2_dpram_addrb		;
-	wire				[31:0]	u2_dpram_doutb		;
+	reg					u1_dpram_wea_dly1	;
+	reg					u1_dpram_wea_dly2	;
+	reg					u1_dpram_wea_dly3	;
+	
+/* 	wire				u2_dpram_wea		;
+	wire		[9:0]	u2_dpram_addra		;
+	wire		[31:0]	u2_dpram_dina		;
+	wire		[31:0]	u2_dpram_douta		;
+	reg			[9:0]	u2_dpram_addrb		;
+	wire		[31:0]	u2_dpram_doutb		;
+ */	
+	reg					u3_data_valid		;
+	wire				u3_data_last		;
+	wire		[31:0]	u3_data				;
+	wire				u3_almost_full		;
+	
+	reg					u4_data_valid		;
+	wire				u4_data_last		;
+	wire		[31:0]	u4_data				;
+	wire				u4_almost_full		;
 	
 //================================================================================
 // s_axis_ctrl_tdata
 //================================================================================
-	assign sync_state = s_axis_ctrl_tdata[2:0];
+	// assign sync_state = s_axis_ctrl_tdata[2:0];
 	
 //================================================================================
 // coarse syn
@@ -183,18 +193,19 @@ module data_dpram #(
 			u1_dpram_wea_dly1	<= 1'b0;
 			u1_dpram_wea_dly2	<= 1'b0;
 			// u1_dpram_wea_dly3	<= 1'b0;
-			m_axis_data_tvalid	<= 1'b0;
+			u3_data_valid		<= 1'b0;
+			u4_data_valid		<= 1'b0;
 		end
 		else begin
 			u1_dpram_wea_dly1	<= u1_dpram_wea;
 			u1_dpram_wea_dly2	<= u1_dpram_wea_dly1;
 			// u1_dpram_wea_dly3	<= u1_dpram_wea_dly2;
-			m_axis_data_tvalid	<= u1_dpram_wea_dly2;
+			u3_data_valid		<= u1_dpram_wea_dly2;
+			u4_data_valid		<= u1_dpram_wea_dly2;
 		end
 	end
-	assign m_axis_data_tdata = u1_dpram_douta;
-	assign m_axis_data_dly128_tvalid = m_axis_data_tvalid;
-	assign m_axis_data_dly128_tdata = u1_dpram_doutb;
+	assign u3_data = u1_dpram_douta;
+	assign u4_data = u1_dpram_doutb;
 	
 /*
 //================================================================================
@@ -243,4 +254,38 @@ module data_dpram #(
 		.doutb	(u2_dpram_doutb	)	// output wire [31 : 0] doutb
 	);
 */
+
+//================================================================================
+// axis_interface_fifo
+//================================================================================
+	axis_interface_fifo #(
+		.DATA_WIDTH			(6'd32				)
+	)u3_axis_interface_fifo(
+		.axis_aclk			(axis_aclk			),
+		.axis_areset		(axis_areset		),
+		.data_valid			(u3_data_valid		),
+		.data_last			(1'b0				),
+		.data				(u3_data			),
+		.almost_full		(u3_almost_full		),
+		.m_axis_data_tvalid	(m_axis_data_tvalid	),
+		.m_axis_data_tlast	(m_axis_data_tlast	),
+		.m_axis_data_tdata	(m_axis_data_tdata	),
+		.m_axis_data_trdy	(m_axis_data_trdy	)
+	);
+	
+	axis_interface_fifo #(
+		.DATA_WIDTH			(6'd32				)
+	)u4_axis_interface_fifo(
+		.axis_aclk			(axis_aclk			),
+		.axis_areset		(axis_areset		),
+		.data_valid			(u4_data_valid		),
+		.data_last			(1'b0				),
+		.data				(u4_data			),
+		.almost_full		(u4_almost_full		),
+		.m_axis_data_tvalid	(m_axis_data_dly32_tvalid	),
+		.m_axis_data_tlast	(m_axis_data_dly32_tlast	),
+		.m_axis_data_tdata	(m_axis_data_dly32_tdata	),
+		.m_axis_data_trdy	(m_axis_data_dly32_trdy		)
+	);
+
 endmodule

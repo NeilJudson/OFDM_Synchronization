@@ -37,25 +37,25 @@ module axis_interface_fifo #(
 	m_axis_data_tdata	,
 	m_axis_data_trdy
 	);
-	input									axis_aclk	;
-	input									axis_areset	;
+	input							axis_aclk	;
+	input							axis_areset	;
 	
-	input									data_valid	;
-	input									data_last	;
-	input				[DATA_WIDTH-1:0]	data		;
-	output	reg								almost_full	;
+	input							data_valid	;
+	input							data_last	;
+	input		[DATA_WIDTH-1:0]	data		;
+	output	reg						almost_full	;
 	
-	output	reg								m_axis_data_tvalid	;
-	output									m_axis_data_tlast	;
-	output				[DATA_WIDTH-1:0]	m_axis_data_tdata	;
-	input									m_axis_data_trdy	;
+	output	reg						m_axis_data_tvalid	;
+	output							m_axis_data_tlast	;
+	output		[DATA_WIDTH-1:0]	m_axis_data_tdata	;
+	input							m_axis_data_trdy	;
 	
 	localparam DATA_DEPTH = 4'd8;
 	
-	reg					[DATA_WIDTH:0]		ram[DATA_DEPTH-1:0];
-	reg					[2:0]				waddr;
-	reg					[2:0]				raddr;
-	reg					[DATA_WIDTH:0]		rdata;
+	reg			[DATA_WIDTH:0]		ram[DATA_DEPTH-1:0];
+	reg			[2:0]				waddr;
+	reg			[2:0]				raddr;
+	reg			[DATA_WIDTH:0]		rdata;
 	
 // write
 	always @(posedge axis_aclk or negedge axis_areset) begin

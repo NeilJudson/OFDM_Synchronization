@@ -1,3 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/axis_interface_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_interface_fifo
 INFO: [VRFC 10-2263] Analyzing Verilog file "G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dpram_1024_ip/blk_mem_gen_v8_2/simulation/blk_mem_gen_v8_2.v" into library blk_mem_gen_v8_2
 INFO: [VRFC 10-311] analyzing module STATE_LOGIC_v8_2
 INFO: [VRFC 10-311] analyzing module beh_vlog_muxf7_v8_2
@@ -17,7 +19,7 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "G:/jiaweiwei/Project/OFDM_Synchroni
 INFO: [VRFC 10-311] analyzing module dpram_1024_ip
 INFO: [VRFC 10-2263] Analyzing Verilog file "G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/data_dpram/data_dpram.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module data_dpram
-INFO: [VRFC 10-2263] Analyzing Verilog file "G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sim_1/new/test_data_dpram.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/data_dpram/test_data_dpram.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module test_data_dpram
 INFO: [VRFC 10-2263] Analyzing Verilog file "G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl

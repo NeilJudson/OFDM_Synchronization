@@ -48,28 +48,28 @@ module ofdm_syn #(
 	m_axis_data_tdata	,
 	m_axis_data_trdy
     );
-	input						axis_aclk			;
-	input						axis_areset			;
+	input				axis_aclk			;
+	input				axis_areset			;
 	
-	input						s_axis_ctrl_tvalid	;
-	input						s_axis_ctrl_tlast	;
-	input				[31:0]	s_axis_ctrl_tdata	;
-	output						s_axis_ctrl_trdy	;
+	input				s_axis_ctrl_tvalid	;
+	input				s_axis_ctrl_tlast	;
+	input		[31:0]	s_axis_ctrl_tdata	;
+	output				s_axis_ctrl_trdy	;
 	
-	input						s_axis_data_tvalid	;
-	input						s_axis_data_tlast	;
-	input				[31:0]	s_axis_data_tdata	;
-	output						s_axis_data_trdy	;
+	input				s_axis_data_tvalid	;
+	input				s_axis_data_tlast	;
+	input		[31:0]	s_axis_data_tdata	;
+	output				s_axis_data_trdy	;
 	
-	output						m_axis_ctrl_tvalid	;
-	output						m_axis_ctrl_tlast	;
-	output				[31:0]	m_axis_ctrl_tdata	;
-	input						m_axis_ctrl_trdy	;
+	output				m_axis_ctrl_tvalid	;
+	output				m_axis_ctrl_tlast	;
+	output		[31:0]	m_axis_ctrl_tdata	;
+	input				m_axis_ctrl_trdy	;
 	
-	output						m_axis_data_tvalid	;
-	output						m_axis_data_tlast	;
-	output				[31:0]	m_axis_data_tdata	;
-	input						m_axis_data_trdy	;
+	output				m_axis_data_tvalid	;
+	output				m_axis_data_tlast	;
+	output		[31:0]	m_axis_data_tdata	;
+	input				m_axis_data_trdy	;
 	
 	// sync_state
 	localparam	SYNC_IDLE			= 3'd0,
@@ -79,13 +79,13 @@ module ofdm_syn #(
 				SYNC_FINE_DONE		= 3'd4,
 				SYNC_DATA_OUTPUT	= 3'd5;
 	
-	wire						rx_state;
+	wire				rx_state;
 	
-	reg					[2:0]	sync_state;
-	wire						coarse_sync_state;
-	wire						fine_sync_state;
+	reg			[2:0]	sync_state;
+	wire				coarse_sync_state;
+	wire				fine_sync_state;
 	
-	wire				[31:0]	u1_s_axis_ctrl_tdata;
+	wire		[31:0]	u1_s_axis_ctrl_tdata;
 	
 //==============================================================================
 // s_axis_ctrl_tdata
@@ -173,10 +173,10 @@ module ofdm_syn #(
 		.m_axis_data_tdata	(),
 		.m_axis_data_trdy	(),
 		
-		.m_axis_data_dly128_tvalid	(),
-		.m_axis_data_dly128_tlast	(),
-		.m_axis_data_dly128_tdata	(),
-		.m_axis_data_dly128_trdy	()
+		.m_axis_data_dly32_tvalid	(),
+		.m_axis_data_dly32_tlast	(),
+		.m_axis_data_dly32_tdata	(),
+		.m_axis_data_dly32_trdy	()
 	);
 	
 	

@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log ofdm_syn.vds -m64 -mode batch -messageDb vivado.pb -notrace -source ofdm_syn.tcl" );
+         "-log data_dpram.vds -m64 -mode batch -messageDb vivado.pb -notrace -source data_dpram.tcl" );
 
 
 
