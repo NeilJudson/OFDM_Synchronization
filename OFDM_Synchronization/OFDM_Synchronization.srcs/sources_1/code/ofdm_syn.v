@@ -171,12 +171,7 @@ module ofdm_syn #(
 		.m_axis_data_tvalid	(),
 		.m_axis_data_tlast	(),
 		.m_axis_data_tdata	(),
-		.m_axis_data_trdy	(),
-		
-		.m_axis_data_dly32_tvalid	(),
-		.m_axis_data_dly32_tlast	(),
-		.m_axis_data_dly32_tdata	(),
-		.m_axis_data_dly32_trdy	()
+		.m_axis_data_trdy	()
 	);
 	
 	

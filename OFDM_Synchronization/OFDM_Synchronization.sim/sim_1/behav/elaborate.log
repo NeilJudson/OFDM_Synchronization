@@ -3,6 +3,7 @@ Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
 Running: E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 89b8eba060cf4f92a4fcc10f3e2a1a35 --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_2 -L unisims_ver -L unimacro_ver -L secureip --snapshot test_data_dpram_behav xil_defaultlib.test_data_dpram xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 64 for port m_axis_data_tdata [G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/data_dpram/test_data_dpram.v:67]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -14,7 +15,7 @@ Compiling module blk_mem_gen_v8_2.BLK_MEM_GEN_v8_2_mem_module(C_CO...
 Compiling module blk_mem_gen_v8_2.blk_mem_axi_regs_fwd_v8_2(C_DATA...
 Compiling module blk_mem_gen_v8_2.blk_mem_gen_v8_2(C_FAMILY="zynq"...
 Compiling module xil_defaultlib.dpram_1024_ip
-Compiling module xil_defaultlib.axis_interface_fifo
+Compiling module xil_defaultlib.axis_interface_fifo(DATA_WIDTH=7...
 Compiling module xil_defaultlib.data_dpram
 Compiling module xil_defaultlib.test_data_dpram
 Compiling module xil_defaultlib.glbl

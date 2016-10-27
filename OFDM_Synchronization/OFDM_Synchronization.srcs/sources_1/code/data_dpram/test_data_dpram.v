@@ -33,7 +33,6 @@ module test_data_dpram;
 	reg [31:0] s_axis_data_tdata;
 	reg m_axis_ctrl_trdy;
 	reg m_axis_data_trdy;
-	reg m_axis_data_dly32_trdy;
 
 	// Outputs
 	wire s_axis_ctrl_trdy;
@@ -44,9 +43,6 @@ module test_data_dpram;
 	wire m_axis_data_tvalid;
 	wire m_axis_data_tlast;
 	wire [31:0] m_axis_data_tdata;
-	wire m_axis_data_dly32_tvalid;
-	wire m_axis_data_dly32_tlast;
-	wire [31:0] m_axis_data_dly32_tdata;
 	
 	reg [39:0] count;
 
@@ -69,11 +65,7 @@ module test_data_dpram;
 		.m_axis_data_tvalid(m_axis_data_tvalid), 
 		.m_axis_data_tlast(m_axis_data_tlast), 
 		.m_axis_data_tdata(m_axis_data_tdata), 
-		.m_axis_data_trdy(m_axis_data_trdy), 
-		.m_axis_data_dly32_tvalid(m_axis_data_dly32_tvalid), 
-		.m_axis_data_dly32_tlast(m_axis_data_dly32_tlast), 
-		.m_axis_data_dly32_tdata(m_axis_data_dly32_tdata), 
-		.m_axis_data_dly32_trdy(m_axis_data_dly32_trdy)
+		.m_axis_data_trdy(m_axis_data_trdy)
 	);
 
 	initial begin
@@ -86,7 +78,6 @@ module test_data_dpram;
 		s_axis_data_tlast = 0;
 		m_axis_ctrl_trdy = 0;
 		m_axis_data_trdy = 0;
-		m_axis_data_dly32_trdy = 0;
 
 		// Wait 100 ns for global reset to finish
 		#10;
@@ -129,19 +120,15 @@ module test_data_dpram;
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
 			m_axis_data_trdy		<= 1'b0;
-			m_axis_data_dly32_trdy	<= 1'b0;
 		end
 		else if((count[9]==1'b0) && (count[2:0]==3'd7)) begin
 			m_axis_data_trdy		<= 1'b1;
-			m_axis_data_dly32_trdy	<= 1'b1;
 		end
 		else if((count[9]==1'b1) && (count[3:0]==4'd15)) begin
 			m_axis_data_trdy		<= 1'b1;
-			m_axis_data_dly32_trdy	<= 1'b1;
 		end
 		else begin
 			m_axis_data_trdy		<= 1'b1;
-			m_axis_data_dly32_trdy	<= 1'b0;
 		end
 	end
 	

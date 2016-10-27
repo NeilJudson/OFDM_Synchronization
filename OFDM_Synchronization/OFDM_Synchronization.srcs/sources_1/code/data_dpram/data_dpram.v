@@ -46,12 +46,7 @@ module data_dpram #(
 	m_axis_data_tvalid	,
 	m_axis_data_tlast	,
 	m_axis_data_tdata	,
-	m_axis_data_trdy	,
-	
-	m_axis_data_dly32_tvalid,
-	m_axis_data_dly32_tlast	,
-	m_axis_data_dly32_tdata	,
-	m_axis_data_dly32_trdy
+	m_axis_data_trdy
     );
 	input				axis_aclk			;
 	input				axis_areset			;
@@ -64,7 +59,7 @@ module data_dpram #(
 	input				s_axis_data_tvalid	;
 	input				s_axis_data_tlast	;
 	input		[31:0]	s_axis_data_tdata	;
-	output				s_axis_data_trdy	;
+	output	reg			s_axis_data_trdy	;
 	
 	output				m_axis_ctrl_tvalid	;
 	output				m_axis_ctrl_tlast	;
@@ -73,13 +68,8 @@ module data_dpram #(
 	
 	output				m_axis_data_tvalid	;
 	output				m_axis_data_tlast	;
-	output		[31:0]	m_axis_data_tdata	;
+	output		[63:0]	m_axis_data_tdata	;
 	input				m_axis_data_trdy	;
-	
-	output				m_axis_data_dly32_tvalid;
-	output				m_axis_data_dly32_tlast	;
-	output		[31:0]	m_axis_data_dly32_tdata	;
-	input				m_axis_data_dly32_trdy	;
 	
 	localparam	RAM_ADDR_WIDTH = 4'd10;
 	
@@ -113,15 +103,7 @@ module data_dpram #(
 	reg			[9:0]	u2_dpram_addrb		;
 	wire		[31:0]	u2_dpram_doutb		;
  */	
-	reg					u3_data_valid		;
-	wire				u3_data_last		;
-	wire		[31:0]	u3_data				;
 	wire				u3_almost_full		;
-	
-	reg					u4_data_valid		;
-	wire				u4_data_last		;
-	wire		[31:0]	u4_data				;
-	wire				u4_almost_full		;
 	
 //================================================================================
 // s_axis_ctrl_tdata
@@ -185,7 +167,7 @@ module data_dpram #(
 		.web	(1'b0			),	// input wire [0 : 0] web
 		.addrb	(u1_dpram_addrb	),	// input wire [9 : 0] addrb
 		.dinb	(32'd0			),	// input wire [31 : 0] dinb
-		.doutb	(u1_dpram_doutb	)	// output wire [31 : 0] doutb
+		.doutb	(u1_dpram_doutb	)	// output wire [31 : 0] doutb // dly32
 	);
 	
 	always @(posedge axis_aclk or posedge axis_areset) begin
@@ -193,19 +175,13 @@ module data_dpram #(
 			u1_dpram_wea_dly1	<= 1'b0;
 			u1_dpram_wea_dly2	<= 1'b0;
 			// u1_dpram_wea_dly3	<= 1'b0;
-			u3_data_valid		<= 1'b0;
-			u4_data_valid		<= 1'b0;
 		end
 		else begin
 			u1_dpram_wea_dly1	<= u1_dpram_wea;
 			u1_dpram_wea_dly2	<= u1_dpram_wea_dly1;
 			// u1_dpram_wea_dly3	<= u1_dpram_wea_dly2;
-			u3_data_valid		<= u1_dpram_wea_dly2;
-			u4_data_valid		<= u1_dpram_wea_dly2;
 		end
 	end
-	assign u3_data = u1_dpram_douta;
-	assign u4_data = u1_dpram_doutb;
 	
 /*
 //================================================================================
@@ -255,37 +231,34 @@ module data_dpram #(
 	);
 */
 
+	always @(posedge axis_aclk or posedge axis_areset) begin
+		if(axis_areset == 1'b1) begin
+			s_axis_data_trdy <= 1'b0;
+		end
+		else if(u3_almost_full != 1'b1) begin
+			s_axis_data_trdy <= 1'b1;
+		end
+		else begin
+			s_axis_data_trdy <= 1'b0;
+		end
+	end
+
 //================================================================================
 // axis_interface_fifo
 //================================================================================
 	axis_interface_fifo #(
-		.DATA_WIDTH			(6'd32				)
+		.DATA_WIDTH			(7'd64				)
 	)u3_axis_interface_fifo(
 		.axis_aclk			(axis_aclk			),
 		.axis_areset		(axis_areset		),
-		.data_valid			(u3_data_valid		),
+		.data_valid			(u1_dpram_wea_dly2	),
 		.data_last			(1'b0				),
-		.data				(u3_data			),
+		.data				({u1_dpram_doutb,u1_dpram_douta}),
 		.almost_full		(u3_almost_full		),
 		.m_axis_data_tvalid	(m_axis_data_tvalid	),
 		.m_axis_data_tlast	(m_axis_data_tlast	),
 		.m_axis_data_tdata	(m_axis_data_tdata	),
 		.m_axis_data_trdy	(m_axis_data_trdy	)
-	);
-	
-	axis_interface_fifo #(
-		.DATA_WIDTH			(6'd32				)
-	)u4_axis_interface_fifo(
-		.axis_aclk			(axis_aclk			),
-		.axis_areset		(axis_areset		),
-		.data_valid			(u4_data_valid		),
-		.data_last			(1'b0				),
-		.data				(u4_data			),
-		.almost_full		(u4_almost_full		),
-		.m_axis_data_tvalid	(m_axis_data_dly32_tvalid	),
-		.m_axis_data_tlast	(m_axis_data_dly32_tlast	),
-		.m_axis_data_tdata	(m_axis_data_dly32_tdata	),
-		.m_axis_data_trdy	(m_axis_data_dly32_trdy		)
 	);
 
 endmodule
