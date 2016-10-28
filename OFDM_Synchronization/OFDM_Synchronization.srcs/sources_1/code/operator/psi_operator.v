@@ -21,52 +21,37 @@
 
 
 module psi_operator(
-	axis_aclk			,
-	axis_areset			,
+	clk			,
+	reset		,
 	
-	s_axis_ctrl_tvalid	,
-	s_axis_ctrl_tlast	,
-	s_axis_ctrl_tdata	,
-	s_axis_ctrl_trdy	,
+	i_data_valid,
+	i_data		,
 	
-	s_axis_data_tvalid	,
-	s_axis_data_tlast	,
-	s_axis_data_tdata	,
-	s_axis_data_trdy	,
+	o_data_en	,
+	o_data
 	
-	m_axis_ctrl_tvalid	,
-	m_axis_ctrl_tlast	,
-	m_axis_ctrl_tdata	,
-	m_axis_ctrl_trdy	,
+	);
+	input				clk			;
+	input				reset		;
 	
-	m_axis_data_tvalid	,
-	m_axis_data_tlast	,
-	m_axis_data_tdata	,
-	m_axis_data_trdy
-    );
-	input				axis_aclk			;
-	input				axis_areset			;
+	input				i_data_valid;
+	input		[63:0]	i_data		; // [63:32]：延时数据，[31:0]：原始数据；高位虚部，低位实部。
 	
-	input				s_axis_ctrl_tvalid	;
-	input				s_axis_ctrl_tlast	;
-	input		[31:0]	s_axis_ctrl_tdata	;
-	output				s_axis_ctrl_trdy	;
+	output				o_data_valid;
+	output		[]		o_data		;
 	
-	input				s_axis_data_tvalid	;
-	input				s_axis_data_tlast	;
-	input		[31:0]	s_axis_data_tdata	;
-	output				s_axis_data_trdy	;
+	wire				u1_data_valid;
+	wire				u1_data		;
 	
-	output				m_axis_ctrl_tvalid	;
-	output				m_axis_ctrl_tlast	;
-	output		[31:0]	m_axis_ctrl_tdata	;
-	input				m_axis_ctrl_trdy	;
-	
-	output				m_axis_data_tvalid	;
-	output				m_axis_data_tlast	;
-	output		[31:0]	m_axis_data_tdata	;
-	input				m_axis_data_trdy	;
+	complex_multiplier_ip_16_16 u1_complex_multiplier_ip_16_16(
+		.aclk				(clk			),	// aclk : IN STD_LOGIC;
+		.s_axis_a_tvalid	(i_data_valid	),	// s_axis_a_tvalid : IN STD_LOGIC;
+		.s_axis_a_tdata		(i_data[31:0]	),	// s_axis_a_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		.s_axis_b_tvalid	(i_data_valid	),	// s_axis_b_tvalid : IN STD_LOGIC;
+		.s_axis_b_tdata		(i_data[63:32]	),	// s_axis_b_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		.m_axis_dout_tvalid	(u1_data_valid	),	// m_axis_dout_tvalid : OUT STD_LOGIC;
+		.m_axis_dout_tdata	(u1_data		)	// m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
+	);
 	
 	
-
 endmodule

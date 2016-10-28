@@ -253,7 +253,7 @@ module data_dpram #(
 		.axis_areset		(axis_areset		),
 		.data_valid			(u1_dpram_wea_dly2	),
 		.data_last			(1'b0				),
-		.data				({u1_dpram_doutb,u1_dpram_douta}),
+		.data				({u1_dpram_doutb,u1_dpram_douta}), // [63:32]：延时数据，[31:0]：原始数据
 		.almost_full		(u3_almost_full		),
 		.m_axis_data_tvalid	(m_axis_data_tvalid	),
 		.m_axis_data_tlast	(m_axis_data_tlast	),

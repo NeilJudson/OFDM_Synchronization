@@ -91,6 +91,19 @@
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
+    <FileSet Name="complex_multiplier_ip_16_16" Type="BlockSrcs" RelSrcDir="$PSRCDIR/complex_multiplier_ip_16_16">
+      <File Path="$PSRCDIR/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="complex_multiplier_ip_16_16"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -124,9 +137,34 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
+    <Run Id="complex_multiplier_ip_16_16_synth_1" Type="Ft3:Synth" SrcSet="complex_multiplier_ip_16_16" Part="xc7z045fbg676-3" ConstrsSet="complex_multiplier_ip_16_16" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/complex_multiplier_ip_16_16_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="complex_multiplier_ip_16_16_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="complex_multiplier_ip_16_16" Description="Vivado Implementation Defaults" SynthRun="complex_multiplier_ip_16_16_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
