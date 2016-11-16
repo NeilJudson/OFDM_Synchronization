@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z045fbg676-3" LaunchTime="1477582951">
-  <File Type="RDS-DCP" Name="data_dpram.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7z045fbg676-3" LaunchTime="1479305020">
+  <File Type="RDS-DCP" Name="psi_operator.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
-  <File Type="RDS-UTIL-PB" Name="data_dpram_utilization_synth.pb"/>
+  <File Type="RDS-UTIL-PB" Name="psi_operator_utilization_synth.pb"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
-  <File Type="RDS-PROPCONSTRS" Name="data_dpram_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="data_dpram.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="psi_operator_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="psi_operator.tcl"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
-  <File Type="RDS-RDS" Name="data_dpram.vds"/>
-  <File Type="RDS-UTIL" Name="data_dpram_utilization_synth.rpt"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="data_dpram_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="data_dpram_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="psi_operator.vds"/>
+  <File Type="RDS-UTIL" Name="psi_operator_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="psi_operator_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="psi_operator_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/code/operator/psi_operator.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/code/tools/axis_interface_fifo.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -22,6 +30,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/ip/dpram_1024_ip/dpram_1024_ip.xci">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -29,6 +38,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/code/data_dpram/data_dpram.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -58,17 +68,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/code/operator/psi_operator.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="data_dpram"/>
+      <Option Name="TopModule" Val="psi_operator"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -81,4 +83,5 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="complex_multiplier_ip_16_16"/>
 </GenRun>

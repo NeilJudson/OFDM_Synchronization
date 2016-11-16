@@ -2,9 +2,9 @@
 # Vivado v2015.2.1 (64-bit)
 # SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
 # IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
-# Start of session at: Thu Oct 27 23:42:34 2016
-# Process ID: 3096
-# Log file: G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/data_dpram.vds
+# Start of session at: Wed Nov 16 22:03:42 2016
+# Process ID: 5800
+# Log file: G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/psi_operator.vds
 # Journal file: G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source data_dpram.tcl -notrace
+source psi_operator.tcl -notrace

@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log data_dpram.vds -m64 -mode batch -messageDb vivado.pb -notrace -source data_dpram.tcl
+EAStep vivado -log psi_operator.vds -m64 -mode batch -messageDb vivado.pb -notrace -source psi_operator.tcl

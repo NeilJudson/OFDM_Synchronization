@@ -14,8 +14,9 @@ set_property webtalk.parent_dir G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_S
 set_property parent.project_path G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-read_ip g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16.xci
-set_property is_locked true [get_files g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16.xci]
+read_ip G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16.xci
+set_property used_in_implementation false [get_files -all g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16.dcp]
+set_property is_locked true [get_files G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16.xci]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
@@ -24,27 +25,27 @@ rename_ref -prefix_all complex_multiplier_ip_16_16_
 write_checkpoint -noxdef complex_multiplier_ip_16_16.dcp
 catch { report_utilization -file complex_multiplier_ip_16_16_utilization_synth.rpt -pb complex_multiplier_ip_16_16_utilization_synth.pb }
 if { [catch {
-  file copy -force G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_ip_16_16_synth_1/complex_multiplier_ip_16_16.dcp g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16.dcp
+  file copy -force G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_ip_16_16_synth_1/complex_multiplier_ip_16_16.dcp G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16.dcp
 } _RESULT ] } { 
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 if { [catch {
-  write_verilog -force -mode synth_stub g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16_stub.v
+  write_verilog -force -mode synth_stub G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 if { [catch {
-  write_vhdl -force -mode synth_stub g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16_stub.vhdl
+  write_vhdl -force -mode synth_stub G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 if { [catch {
-  write_verilog -force -mode funcsim g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16_funcsim.v
+  write_verilog -force -mode funcsim G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16_funcsim.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 if { [catch {
-  write_vhdl -force -mode funcsim g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16_funcsim.vhdl
+  write_vhdl -force -mode funcsim G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16_funcsim.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }

@@ -27,7 +27,7 @@ module psi_operator(
 	i_data_valid,
 	i_data		,
 	
-	o_data_en	,
+	o_data_valid,
 	o_data
 	
 	);
@@ -38,10 +38,10 @@ module psi_operator(
 	input		[63:0]	i_data		; // [63:32]：延时数据，[31:0]：原始数据；高位虚部，低位实部。
 	
 	output				o_data_valid;
-	output		[]		o_data		;
+	output		[63:0]	o_data		;
 	
 	wire				u1_data_valid;
-	wire				u1_data		;
+	wire		[63:0]	u1_data		;
 	
 	complex_multiplier_ip_16_16 u1_complex_multiplier_ip_16_16(
 		.aclk				(clk			),	// aclk : IN STD_LOGIC;
