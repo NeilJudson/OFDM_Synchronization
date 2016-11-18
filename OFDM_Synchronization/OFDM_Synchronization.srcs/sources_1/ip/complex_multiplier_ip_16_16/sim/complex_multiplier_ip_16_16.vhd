@@ -64,7 +64,7 @@ ENTITY complex_multiplier_ip_16_16 IS
     s_axis_b_tvalid : IN STD_LOGIC;
     s_axis_b_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     m_axis_dout_tvalid : OUT STD_LOGIC;
-    m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
+    m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(79 DOWNTO 0)
   );
 END complex_multiplier_ip_16_16;
 
@@ -129,7 +129,7 @@ ARCHITECTURE complex_multiplier_ip_16_16_arch OF complex_multiplier_ip_16_16 IS
       m_axis_dout_tready : IN STD_LOGIC;
       m_axis_dout_tuser : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
       m_axis_dout_tlast : OUT STD_LOGIC;
-      m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
+      m_axis_dout_tdata : OUT STD_LOGIC_VECTOR(79 DOWNTO 0)
     );
   END COMPONENT cmpy_v6_0;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -148,7 +148,7 @@ BEGIN
       C_XDEVICE => "xc7z045",
       C_A_WIDTH => 16,
       C_B_WIDTH => 16,
-      C_OUT_WIDTH => 32,
+      C_OUT_WIDTH => 33,
       C_LATENCY => 6,
       C_MULT_TYPE => 1,
       C_OPTIMIZE_GOAL => 0,
@@ -172,7 +172,7 @@ BEGIN
       C_S_AXIS_B_TUSER_WIDTH => 1,
       C_S_AXIS_CTRL_TDATA_WIDTH => 8,
       C_S_AXIS_CTRL_TUSER_WIDTH => 1,
-      C_M_AXIS_DOUT_TDATA_WIDTH => 64,
+      C_M_AXIS_DOUT_TDATA_WIDTH => 80,
       C_M_AXIS_DOUT_TUSER_WIDTH => 1
     )
     PORT MAP (

@@ -1,3 +1,2 @@
 Vivado Simulator 2015.2
 Time resolution is 1 ps
-Block Memory Generator module test_data_dpram.uut.u1_dpram_1024_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.

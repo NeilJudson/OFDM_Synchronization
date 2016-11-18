@@ -106,7 +106,7 @@ architecture tb of tb_complex_multiplier_ip_16_16 is
 
   -- Master channel DOUT outputs
   signal m_axis_dout_tvalid : std_logic := '0';  -- TVALID for channel DOUT
-  signal m_axis_dout_tdata  : std_logic_vector(63 downto 0) := (others => '0');  -- TDATA for channel DOUT
+  signal m_axis_dout_tdata  : std_logic_vector(79 downto 0) := (others => '0');  -- TDATA for channel DOUT
 
   -----------------------------------------------------------------------
   -- Aliases for AXI channel TDATA fields
@@ -118,8 +118,8 @@ architecture tb of tb_complex_multiplier_ip_16_16 is
   signal s_axis_a_tdata_imag     : std_logic_vector(15 downto 0) := (others => '0');
   signal s_axis_b_tdata_real     : std_logic_vector(15 downto 0) := (others => '0');
   signal s_axis_b_tdata_imag     : std_logic_vector(15 downto 0) := (others => '0');
-  signal m_axis_dout_tdata_real  : std_logic_vector(31 downto 0) := (others => '0');
-  signal m_axis_dout_tdata_imag  : std_logic_vector(31 downto 0) := (others => '0');
+  signal m_axis_dout_tdata_real  : std_logic_vector(32 downto 0) := (others => '0');
+  signal m_axis_dout_tdata_imag  : std_logic_vector(32 downto 0) := (others => '0');
 
   -----------------------------------------------------------------------
   -- Testbench signals
@@ -378,8 +378,8 @@ begin
   s_axis_a_tdata_imag     <= s_axis_a_tdata(31 downto 16);
   s_axis_b_tdata_real     <= s_axis_b_tdata(15 downto 0);
   s_axis_b_tdata_imag     <= s_axis_b_tdata(31 downto 16);
-  m_axis_dout_tdata_real  <= m_axis_dout_tdata(31 downto 0);
-  m_axis_dout_tdata_imag  <= m_axis_dout_tdata(63 downto 32);
+  m_axis_dout_tdata_real  <= m_axis_dout_tdata(32 downto 0);
+  m_axis_dout_tdata_imag  <= m_axis_dout_tdata(72 downto 40);
 
 end tb;
 

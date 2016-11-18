@@ -61,7 +61,7 @@ complex_multiplier_ip_16_16 your_instance_name (
   .s_axis_b_tvalid(s_axis_b_tvalid),        // input wire s_axis_b_tvalid
   .s_axis_b_tdata(s_axis_b_tdata),          // input wire [31 : 0] s_axis_b_tdata
   .m_axis_dout_tvalid(m_axis_dout_tvalid),  // output wire m_axis_dout_tvalid
-  .m_axis_dout_tdata(m_axis_dout_tdata)    // output wire [63 : 0] m_axis_dout_tdata
+  .m_axis_dout_tdata(m_axis_dout_tdata)    // output wire [79 : 0] m_axis_dout_tdata
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 
