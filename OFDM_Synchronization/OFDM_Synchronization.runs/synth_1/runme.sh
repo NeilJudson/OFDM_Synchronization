@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=E:/jiaweiwei/Xilinx/15.2/SDK/2015.2/bin;E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/bin/nt64;E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/lib/nt64:E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/bin
+  PATH=D:/jiaweiwei/Xilinx/15.2/SDK/2015.2/bin;D:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/bin/nt64;D:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/lib/nt64:D:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/bin
 else
-  PATH=E:/jiaweiwei/Xilinx/15.2/SDK/2015.2/bin;E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/bin/nt64;E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/lib/nt64:E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/bin:$PATH
+  PATH=D:/jiaweiwei/Xilinx/15.2/SDK/2015.2/bin;D:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/bin/nt64;D:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/lib/nt64:D:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/bin:$PATH
 fi
 export PATH
 
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log psi_operator.vds -m64 -mode batch -messageDb vivado.pb -notrace -source psi_operator.tcl
+EAStep vivado -log test_psi_operator.vds -m64 -mode batch -messageDb vivado.pb -notrace -source test_psi_operator.tcl
