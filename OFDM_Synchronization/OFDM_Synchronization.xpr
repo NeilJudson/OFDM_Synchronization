@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.xpr">
+<Project Version="7" Minor="5" Path="G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="89b8eba060cf4f92a4fcc10f3e2a1a35"/>
@@ -32,6 +32,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/code/operator/test_spram_64_ip.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/code/tools/axis_interface_fifo.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -47,21 +55,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="dpram_1024_ip.xci" FileRelPathName="dpram_1024_ip.xml"/>
-        <CompFileExtendedInfo CompFileName="dpram_1024_ip.xci" FileRelPathName="synth/dpram_1024_ip.vhd"/>
-        <CompFileExtendedInfo CompFileName="dpram_1024_ip.xci" FileRelPathName="summary.log"/>
-        <CompFileExtendedInfo CompFileName="dpram_1024_ip.xci" FileRelPathName="dpram_1024_ip_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="dpram_1024_ip.xci" FileRelPathName="dpram_1024_ip_stub.v"/>
-        <CompFileExtendedInfo CompFileName="dpram_1024_ip.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd"/>
-        <CompFileExtendedInfo CompFileName="dpram_1024_ip.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="dpram_1024_ip.xci" FileRelPathName="dpram_1024_ip_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="dpram_1024_ip.xci" FileRelPathName="sim/dpram_1024_ip.v"/>
-        <CompFileExtendedInfo CompFileName="dpram_1024_ip.xci" FileRelPathName="dpram_1024_ip_funcsim.v"/>
-        <CompFileExtendedInfo CompFileName="dpram_1024_ip.xci" FileRelPathName="dpram_1024_ip.dcp"/>
-        <CompFileExtendedInfo CompFileName="dpram_1024_ip.xci" FileRelPathName="dpram_1024_ip_funcsim.vhdl"/>
-        <CompFileExtendedInfo CompFileName="dpram_1024_ip.xci" FileRelPathName="blk_mem_gen_v8_2/simulation/blk_mem_gen_v8_2.v"/>
-        <CompFileExtendedInfo CompFileName="dpram_1024_ip.xci" FileRelPathName="doc/blk_mem_gen_v8_2_changelog.txt"/>
-        <CompFileExtendedInfo CompFileName="dpram_1024_ip.xci" FileRelPathName="dpram_1024_ip.veo"/>
       </File>
       <File Path="$PSRCDIR/sources_1/code/data_dpram/data_dpram.v">
         <FileInfo>
@@ -122,61 +115,22 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="complex_multiplier_ip_16_16_funcsim.v"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="complex_multiplier_ip_16_16_stub.v"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="complex_multiplier_ip_16_16_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="complex_multiplier_ip_16_16_funcsim.vhdl"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="complex_multiplier_ip_16_16.dcp"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="complex_multiplier_ip_16_16.xml"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="axi_utils_v2_0/hdl/axi_utils_v2_0_vh_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="cmpy_v6_0/hdl/cmpy_v6_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="sim/complex_multiplier_ip_16_16.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_v3_0_vh_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="demo_tb/tb_complex_multiplier_ip_16_16.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="complex_multiplier_ip_16_16_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="synth/complex_multiplier_ip_16_16.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="cmodel/cmpy_v6_0_bitacc_cmodel_lin64.zip"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="complex_multiplier_ip_16_16.veo"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="cmodel/cmpy_v6_0_bitacc_cmodel_nt64.zip"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_ip_16_16.xci" FileRelPathName="doc/cmpy_v6_0_changelog.txt"/>
       </File>
       <Config>
         <Option Name="TopModule" Val="complex_multiplier_ip_16_16"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="spram_256_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/spram_256_ip">
-      <File Path="$PSRCDIR/sources_1/ip/spram_256_ip/spram_256_ip.xci">
+    <FileSet Name="spram_64_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/spram_64_ip">
+      <File Path="$PSRCDIR/sources_1/ip/spram_64_ip/spram_64_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="spram_256_ip.xci" FileRelPathName="spram_256_ip.veo"/>
-        <CompFileExtendedInfo CompFileName="spram_256_ip.xci" FileRelPathName="spram_256_ip.xml"/>
-        <CompFileExtendedInfo CompFileName="spram_256_ip.xci" FileRelPathName="spram_256_ip_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="spram_256_ip.xci" FileRelPathName="synth/spram_256_ip.vhd"/>
-        <CompFileExtendedInfo CompFileName="spram_256_ip.xci" FileRelPathName="blk_mem_gen_v8_2/simulation/blk_mem_gen_v8_2.v"/>
-        <CompFileExtendedInfo CompFileName="spram_256_ip.xci" FileRelPathName="doc/blk_mem_gen_v8_2_changelog.txt"/>
-        <CompFileExtendedInfo CompFileName="spram_256_ip.xci" FileRelPathName="spram_256_ip.dcp"/>
-        <CompFileExtendedInfo CompFileName="spram_256_ip.xci" FileRelPathName="spram_256_ip_funcsim.vhdl"/>
-        <CompFileExtendedInfo CompFileName="spram_256_ip.xci" FileRelPathName="spram_256_ip_stub.v"/>
-        <CompFileExtendedInfo CompFileName="spram_256_ip.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd"/>
-        <CompFileExtendedInfo CompFileName="spram_256_ip.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="spram_256_ip.xci" FileRelPathName="spram_256_ip_funcsim.v"/>
-        <CompFileExtendedInfo CompFileName="spram_256_ip.xci" FileRelPathName="spram_256_ip_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="spram_256_ip.xci" FileRelPathName="sim/spram_256_ip.v"/>
-        <CompFileExtendedInfo CompFileName="spram_256_ip.xci" FileRelPathName="summary.log"/>
       </File>
       <Config>
-        <Option Name="TopModule" Val="spram_256_ip"/>
+        <Option Name="TopModule" Val="spram_64_ip"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -220,7 +174,7 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="spram_256_ip_synth_1" Type="Ft3:Synth" SrcSet="spram_256_ip" Part="xc7z045fbg676-3" ConstrsSet="spram_256_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/spram_256_ip_synth_1">
+    <Run Id="spram_64_ip_synth_1" Type="Ft3:Synth" SrcSet="spram_64_ip" Part="xc7z045fbg676-3" ConstrsSet="spram_64_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/spram_64_ip_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -257,7 +211,7 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="spram_256_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="spram_256_ip" Description="Vivado Implementation Defaults" SynthRun="spram_256_ip_synth_1">
+    <Run Id="spram_64_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="spram_64_ip" Description="Vivado Implementation Defaults" SynthRun="spram_64_ip_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
           <Desc>Vivado Implementation Defaults</Desc>

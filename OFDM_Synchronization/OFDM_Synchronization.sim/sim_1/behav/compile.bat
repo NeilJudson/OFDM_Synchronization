@@ -1,5 +1,5 @@
 @echo off
-set xv_path=D:\\jiaweiwei\\Xilinx\\15.2\\Vivado\\2015.2\\bin
+set xv_path=E:\\jiaweiwei\\Xilinx\\15.2\\Vivado\\2015.2\\bin
 echo "xvlog -m64 --relax -prj test_psi_operator_vlog.prj"
 call %xv_path%/xvlog  -m64 --relax -prj test_psi_operator_vlog.prj -log compile.log
 echo "xvhdl -m64 --relax -prj test_psi_operator_vhdl.prj"
