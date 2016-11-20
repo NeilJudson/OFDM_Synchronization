@@ -1,6 +1,6 @@
 Vivado Simulator 2015.2
 Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: D:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 89b8eba060cf4f92a4fcc10f3e2a1a35 --debug typical --relax --mt 2 -L xbip_utils_v3_0 -L axi_utils_v2_0 -L xbip_pipe_v3_0 -L xbip_bram18k_v3_0 -L mult_gen_v12_0 -L cmpy_v6_0 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_psi_operator_behav xil_defaultlib.test_psi_operator xil_defaultlib.glbl -log elaborate.log 
+Running: E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 89b8eba060cf4f92a4fcc10f3e2a1a35 --debug typical --relax --mt 2 -L blk_mem_gen_v8_2 -L xil_defaultlib -L xbip_utils_v3_0 -L axi_utils_v2_0 -L xbip_pipe_v3_0 -L xbip_bram18k_v3_0 -L mult_gen_v12_0 -L cmpy_v6_0 -L unisims_ver -L unimacro_ver -L secureip --snapshot test_psi_operator_behav xil_defaultlib.test_psi_operator xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -49,6 +49,12 @@ Compiling architecture xilinx of entity cmpy_v6_0.cmpy_v6_0_synth [\cmpy_v6_0_sy
 Compiling architecture xilinx of entity cmpy_v6_0.cmpy_v6_0_viv [\cmpy_v6_0_viv(0,"zynq","xc7z045...]
 Compiling architecture xilinx of entity cmpy_v6_0.cmpy_v6_0 [\cmpy_v6_0(0,"zynq","xc7z045",16...]
 Compiling architecture complex_multiplier_ip_16_16_arch of entity xil_defaultlib.complex_multiplier_ip_16_16 [complex_multiplier_ip_16_16_defa...]
+Compiling module blk_mem_gen_v8_2.BLK_MEM_GEN_v8_2_output_stage(C_...
+Compiling module blk_mem_gen_v8_2.BLK_MEM_GEN_v8_2_output_stage(C_...
+Compiling module blk_mem_gen_v8_2.BLK_MEM_GEN_v8_2_softecc_output_...
+Compiling module blk_mem_gen_v8_2.BLK_MEM_GEN_v8_2_mem_module(C_CO...
+Compiling module blk_mem_gen_v8_2.blk_mem_gen_v8_2(C_FAMILY="zynq"...
+Compiling module xil_defaultlib.spram_64_ip
 Compiling module xil_defaultlib.psi_operator
 Compiling module xil_defaultlib.test_psi_operator
 Compiling module xil_defaultlib.glbl

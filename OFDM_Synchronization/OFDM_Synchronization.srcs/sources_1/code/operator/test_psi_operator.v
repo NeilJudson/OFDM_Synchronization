@@ -26,7 +26,8 @@ module test_psi_operator;
 	reg clk;
 	reg reset;
 	reg i_data_valid;
-	reg [63:0] i_data;
+	reg [31:0] i_data;
+	reg [31:0] i_data_dly;
 
 	// Outputs
 	wire o_data_valid;
@@ -40,6 +41,7 @@ module test_psi_operator;
 		.reset(reset), 
 		.i_data_valid(i_data_valid), 
 		.i_data(i_data), 
+		.i_data_dly(i_data_dly), 
 		.o_data_valid(o_data_valid), 
 		.o_data(o_data)
 	);
@@ -50,6 +52,7 @@ module test_psi_operator;
 		reset = 0;
 		i_data_valid = 0;
 		i_data = 0;
+		i_data_dly = 0;
 
 		// Wait 100 ns for global reset to finish
 		#10;
@@ -78,14 +81,17 @@ module test_psi_operator;
 		if(reset == 1'b1) begin
 			i_data_valid	<= 1'b0;
 			i_data			<= 32'd0;
+			i_data_dly		<= 32'd0;
 		end
 		else if(count[2:0] == 3'd7) begin
 			i_data_valid	<= 1'b1;
-			i_data			<= {count[34:3],count[34:3]};
+			i_data			<= count[34:3];
+			i_data_dly		<= 32'd1;
 		end
 		else begin
 			i_data_valid	<= 1'b0;
 			i_data			<= i_data;
+			i_data_dly		<= i_data_dly;
 		end
 	end
 	

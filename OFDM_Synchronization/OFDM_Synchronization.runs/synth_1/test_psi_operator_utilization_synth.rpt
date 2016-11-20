@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-| Date         : Fri Nov 18 11:45:48 2016
-| Host         : FUTURE3 running 64-bit Service Pack 1  (build 7601)
+| Date         : Sun Nov 20 22:20:55 2016
+| Host         : FUTURE2 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file test_psi_operator_utilization_synth.rpt -pb test_psi_operator_utilization_synth.pb
 | Design       : test_psi_operator
 | Device       : xc7z045
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   37 |     0 |    218600 |  0.02 |
-|   LUT as Logic          |   37 |     0 |    218600 |  0.02 |
+| Slice LUTs*             |   66 |     0 |    218600 |  0.03 |
+|   LUT as Logic          |   66 |     0 |    218600 |  0.03 |
 |   LUT as Memory         |    0 |     0 |     70400 |  0.00 |
-| Slice Registers         |  100 |     0 |    437200 |  0.02 |
-|   Register as Flip Flop |  100 |     0 |    437200 |  0.02 |
+| Slice Registers         |  186 |     0 |    437200 |  0.04 |
+|   Register as Flip Flop |  186 |     0 |    437200 |  0.04 |
 |   Register as Latch     |    0 |     0 |    437200 |  0.00 |
 | F7 Muxes                |    0 |     0 |    109300 |  0.00 |
 | F8 Muxes                |    0 |     0 |     54650 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 100   |          Yes |       Reset |            - |
+| 186   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -152,10 +152,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  100 |        Flop & Latch |
-| LUT1     |   36 |                 LUT |
-| CARRY4   |    9 |          CarryLogic |
-| LUT3     |    1 |                 LUT |
+| FDRE     |  186 |        Flop & Latch |
+| LUT1     |   54 |                 LUT |
+| CARRY4   |   13 |          CarryLogic |
+| LUT4     |    5 |                 LUT |
+| LUT5     |    4 |                 LUT |
+| LUT3     |    4 |                 LUT |
+| LUT6     |    3 |                 LUT |
+| LUT2     |    2 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
@@ -166,6 +170,7 @@ Table of Contents
 +-----------------------------+------+
 |           Ref Name          | Used |
 +-----------------------------+------+
+| spram_64_ip                 |    1 |
 | complex_multiplier_ip_16_16 |    1 |
 +-----------------------------+------+
 

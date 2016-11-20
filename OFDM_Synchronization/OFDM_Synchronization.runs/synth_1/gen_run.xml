@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z045fbg676-3" LaunchTime="1479440691">
-  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
+<GenRun Id="synth_1" LaunchPart="xc7z045fbg676-3" LaunchTime="1479651609">
   <File Type="RDS-DCP" Name="test_psi_operator.dcp"/>
-  <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
   <File Type="RDS-UTIL-PB" Name="test_psi_operator_utilization_synth.pb"/>
-  <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
-  <File Type="PA-TCL" Name="test_psi_operator.tcl"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
   <File Type="RDS-PROPCONSTRS" Name="test_psi_operator_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="test_psi_operator.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
   <File Type="RDS-RDS" Name="test_psi_operator.vds"/>
   <File Type="RDS-UTIL" Name="test_psi_operator_utilization_synth.rpt"/>
   <File Type="VDS-TIMINGSUMMARY" Name="test_psi_operator_timing_summary_synth.rpt"/>
@@ -22,6 +22,14 @@
     </File>
     <File Path="$PSRCDIR/sources_1/code/operator/test_psi_operator.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/operator/test_spram_64_ip.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -91,4 +99,5 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="complex_multiplier_ip_16_16"/>
+  <BlockFileSet Type="BlockSrcs" Name="spram_64_ip"/>
 </GenRun>
