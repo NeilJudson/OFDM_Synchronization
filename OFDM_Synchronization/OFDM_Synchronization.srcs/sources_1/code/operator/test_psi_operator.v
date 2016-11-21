@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Neil Judson
 // 
 // Create Date: 2016/11/18 11:29:32
 // Design Name: 
@@ -31,7 +31,7 @@ module test_psi_operator;
 
 	// Outputs
 	wire o_data_valid;
-	wire [63:0] o_data;
+	wire [68:0] o_data;
 	
 	reg [39:0] count;
 
