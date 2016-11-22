@@ -20,7 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module phi_operator(
+module phi_operator #(
+	parameter DATA_WIDTH = 32
+	)
+	(
 	clk			,
 	reset		,
 	
@@ -30,53 +33,57 @@ module phi_operator(
 	o_data_valid,
 	o_data
 	);
-	input				clk			;
-	input				reset		;
+	localparam PHI_WIDTH = DATA_WIDTH+2; // 34
 	
-	input				i_data_valid;
-	input		[31:0]	i_data		; // 高位虚部，低位实部。
+	input							clk			;
+	input							reset		;
 	
-	output				o_data_valid;
-	output		[33:0]	o_data		;
+	input							i_data_valid;
+	input		[DATA_WIDTH-1:0]	i_data		; // 高位虚部，低位实部。
+	
+	output							o_data_valid;
+	output		[PHI_WIDTH-1:0]		o_data		;
 	
 //================================================================================
 // variable
 //================================================================================
-	wire		[15:0]	i_data_i			;
-	wire		[15:0]	i_data_q_neg		;
+	localparam SPRAM_ADDR_WIDTH = 6;
+	localparam SPRAM_DATA_WIDTH = 32;
+	localparam IQDATA_WIDTH		= DATA_WIDTH/2	; // 16
+	localparam DATA_POWER_WIDTH	= 2*IQDATA_WIDTH; // 32
 	
-	reg					u1_i_data_valid		;
-	reg			[17:0]	u1_i_data_i			;
-	reg			[17:0]	u1_i_data_q			;
-	wire				u1_o_data_valid		;
-	wire		[35:0]	u1_o_data			;
+	reg										u1_i_data_valid	;
+	reg		signed	[17:0]					u1_i_data_i		;
+	reg		signed	[17:0]					u1_i_data_q		;
+	wire									u1_o_data_valid	;
+	wire	signed	[35:0]					u1_o_data		;
 	
-	reg					u2_wea				;
-	reg			[5:0]	u2_wr_addr			;
-	reg			[5:0]	u2_rd_addr			;
-	reg			[5:0]	u2_addra			;
-	reg			[63:0]	u2_dina				;
-	wire		[63:0]	u2_douta			;
+	reg										u2_wea			;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u2_wr_addr		;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u2_rd_addr		;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u2_addra		;
+	reg				[SPRAM_DATA_WIDTH-1:0]	u2_dina			;
+	wire			[SPRAM_DATA_WIDTH-1:0]	u2_douta		;
 
-	reg					u3_wea				;
-	reg			[5:0]	u3_wr_addr			;
-	reg			[5:0]	u3_rd_addr			;
-	reg			[5:0]	u3_addra			;
-	reg			[63:0]	u3_dina				;
-	wire		[63:0]	u3_douta			;
+	reg										u3_wea			;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u3_wr_addr		;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u3_rd_addr		;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u3_addra		;
+	reg				[SPRAM_DATA_WIDTH-1:0]	u3_dina			;
+	wire			[SPRAM_DATA_WIDTH-1:0]	u3_douta		;
 
-	reg					u4_wea				;
-	reg			[5:0]	u4_wr_addr			;
-	reg			[5:0]	u4_rd_addr			;
-	reg			[5:0]	u4_addra			;
-	reg			[63:0]	u4_dina				;
-	wire		[63:0]	u4_douta			;
+	reg										u4_wea			;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_wr_addr		;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_rd_addr		;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_addra		;
+	reg				[SPRAM_DATA_WIDTH-1:0]	u4_dina			;
+	wire			[SPRAM_DATA_WIDTH-1:0]	u4_douta		;
 	
-	reg					u1_o_data_valid_dly1;
-	reg					u1_o_data_valid_dly2;
-	reg			[32:0]	add12				;
-	reg			[32:0]	add34				;
-	reg			[33:0]	add1234				;
+	reg										u1_o_data_valid_dly1;
+	reg										u1_o_data_valid_dly2;
+	reg		signed	[DATA_POWER_WIDTH:0]	add12			;
+	reg		signed	[DATA_POWER_WIDTH:0]	add34			;
+	reg		signed	[DATA_POWER_WIDTH+1:0]	add1234			;
 	
 //================================================================================
 // complex abs power2
@@ -89,8 +96,8 @@ module phi_operator(
 		end
 		else if(i_data_valid == 1'b1) begin
 			u1_i_data_valid	<= 1'b1;
-			u1_i_data_i		<= {{(2){i_data[15]}},i_data[15:0]};
-			u1_i_data_q		<= {{(2){i_data[31]}},i_data[31:16]};
+			u1_i_data_i		<= {{(18-IQDATA_WIDTH){i_data[IQDATA_WIDTH-1]}},i_data[IQDATA_WIDTH-1:0]};
+			u1_i_data_q		<= {{(18-IQDATA_WIDTH){i_data[DATA_WIDTH-1]}},i_data[DATA_WIDTH-1:IQDATA_WIDTH]};
 		end
 		else begin
 			u1_i_data_valid	<= 1'b0;
@@ -114,17 +121,18 @@ module phi_operator(
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
 			u2_wea		<= 1'b0;
-			u2_wr_addr	<= 6'd0;
-			u2_rd_addr	<= 6'd1;
-			u2_addra	<= 6'd0;
-			u2_dina		<= 64'd0;
+			u2_wr_addr	<= 'd0;
+			u2_rd_addr	<= 'd1;
+			u2_addra	<= 'd0;
+			u2_dina		<= 'd0;
 		end
 		else if(u1_o_data_valid == 1'b1) begin
 			u2_wea		<= 1'b1;
 			u2_wr_addr	<= u2_wr_addr + 1'd1;
 			u2_rd_addr	<= u2_rd_addr + 1'd1;
 			u2_addra	<= u2_wr_addr + 1'd1;
-			u2_dina		<= {u1_o_data[31:0]};
+			u2_dina		<= {{(SPRAM_DATA_WIDTH-DATA_POWER_WIDTH){u1_o_data[DATA_POWER_WIDTH-1]}},
+							u1_o_data[DATA_POWER_WIDTH-1:0]};
 		end
 		else begin
 			u2_wea		<= 1'b0;
@@ -139,17 +147,17 @@ module phi_operator(
 		.clka	(clk		),	// input clka;
 		.wea	(u2_wea		),	// input [0:0]wea;
 		.addra	(u2_addra	),	// input [5:0]addra;
-		.dina	(u2_dina	),	// input [63:0]dina;
-		.douta	(u2_douta	)	// output [63:0]douta;
+		.dina	(u2_dina	),	// input [31:0]dina;
+		.douta	(u2_douta	)	// output [31:0]douta;
 	);
 	
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
 			u3_wea		<= 1'b0;
-			u3_wr_addr	<= 6'd0;
-			u3_rd_addr	<= 6'd1;
-			u3_addra	<= 6'd0;
-			u3_dina		<= 64'd0;
+			u3_wr_addr	<= 'd0;
+			u3_rd_addr	<= 'd1;
+			u3_addra	<= 'd0;
+			u3_dina		<= 'd0;
 		end
 		else if(u1_o_data_valid == 1'b1) begin
 			u3_wea		<= 1'b1;
@@ -171,17 +179,17 @@ module phi_operator(
 		.clka	(clk		),	// input clka;
 		.wea	(u3_wea		),	// input [0:0]wea;
 		.addra	(u3_addra	),	// input [5:0]addra;
-		.dina	(u3_dina	),	// input [63:0]dina;
-		.douta	(u3_douta	)	// output [63:0]douta;
+		.dina	(u3_dina	),	// input [31:0]dina;
+		.douta	(u3_douta	)	// output [31:0]douta;
 	);
 	
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
 			u4_wea		<= 1'b0;
-			u4_wr_addr	<= 6'd0;
-			u4_rd_addr	<= 6'd1;
-			u4_addra	<= 6'd0;
-			u4_dina		<= 64'd0;
+			u4_wr_addr	<= 'd0;
+			u4_rd_addr	<= 'd1;
+			u4_addra	<= 'd0;
+			u4_dina		<= 'd0;
 		end
 		else if(u1_o_data_valid == 1'b1) begin
 			u4_wea		<= 1'b1;
@@ -203,8 +211,8 @@ module phi_operator(
 		.clka	(clk		),	// input clka;
 		.wea	(u4_wea		),	// input [0:0]wea;
 		.addra	(u4_addra	),	// input [5:0]addra;
-		.dina	(u4_dina	),	// input [63:0]dina;
-		.douta	(u4_douta	)	// output [63:0]douta;
+		.dina	(u4_dina	),	// input [31:0]dina;
+		.douta	(u4_douta	)	// output [31:0]douta;
 	);
 	
 //================================================================================
@@ -223,12 +231,14 @@ module phi_operator(
 	
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
-			add12 <= 33'd0;
-			add34 <= 33'd0;
+			add12 <= 'd0;
+			add34 <= 'd0;
 		end
 		else if(u1_o_data_valid == 1'b1) begin
-			add12 <= u1_o_data[31:0] + u2_douta[31:0];
-			add34 <= u3_douta[31:0] + u4_douta[31:0];
+			add12 <= u1_o_data[DATA_POWER_WIDTH-1:0]
+					+ u2_douta[DATA_POWER_WIDTH-1:0];
+			add34 <= u3_douta[DATA_POWER_WIDTH-1:0]
+					+ u4_douta[DATA_POWER_WIDTH-1:0];
 		end
 		else begin
 			add12 <= add12;
@@ -236,11 +246,9 @@ module phi_operator(
 		end
 	end
 	
-
-	
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
-			add1234 <= 34'd0;
+			add1234 <= 'd0;
 		end
 		else if(u1_o_data_valid_dly1 == 1'b1) begin
 			add1234 <= add12 + add34;

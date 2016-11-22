@@ -31,12 +31,14 @@ module test_psi_operator;
 
 	// Outputs
 	wire o_data_valid;
-	wire [68:0] o_data;
+	wire [67:0] o_data;
 	
 	reg [39:0] count;
 
 	// Instantiate the Unit Under Test (UUT)
-	psi_operator uut (
+	psi_operator #(
+		.DATA_WIDTH(32)
+	)uut(
 		.clk(clk), 
 		.reset(reset), 
 		.i_data_valid(i_data_valid), 

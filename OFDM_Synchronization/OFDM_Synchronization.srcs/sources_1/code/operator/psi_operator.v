@@ -20,7 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module psi_operator(
+module psi_operator #(
+	parameter DATA_WIDTH = 32
+	)
+	(
 	clk			,
 	reset		,
 	
@@ -31,63 +34,74 @@ module psi_operator(
 	o_data_valid,
 	o_data
 	);
-	input				clk			;
-	input				reset		;
+	localparam PSI_WIDTH = 2*(DATA_WIDTH+2); // 68
 	
-	input				i_data_valid;
-	input		[31:0]	i_data		; // 高位虚部，低位实部。
-	input		[31:0]	i_data_dly	; // 高位虚部，低位实部。
+	input							clk			;
+	input							reset		;
 	
-	output				o_data_valid;
-	output		[67:0]	o_data		;
+	input							i_data_valid;
+	input		[DATA_WIDTH-1:0]	i_data		; // 高位虚部，低位实部。
+	input		[DATA_WIDTH-1:0]	i_data_dly	; // 高位虚部，低位实部。
+	
+	output							o_data_valid;
+	output		[PSI_WIDTH-1:0]		o_data		;
 	
 //================================================================================
 // variable
 //================================================================================
-	wire		[15:0]	i_data_i			;
-	wire		[15:0]	i_data_q_neg		;
+	localparam SPRAM_ADDR_WIDTH = 6;
+	localparam SPRAM_DATA_WIDTH = 64;
+	localparam IQDATA_WIDTH		= DATA_WIDTH/2	; // 16
+	localparam DATA_MUL_WIDTH	= 2*IQDATA_WIDTH; // 32
 	
-	reg					u1_s_axis_a_tvalid	;
-	reg			[31:0]	u1_s_axis_a_tdata	;
-	reg			[31:0]	u1_s_axis_b_tdata	;
-	wire				u1_m_axis_dout_tvalid;
-	wire		[79:0]	u1_m_axis_dout_tdata;
+	wire	signed	[IQDATA_WIDTH-1:0]		i_data_i			;
+	wire	signed	[IQDATA_WIDTH-1:0]		i_data_q_neg		;
+	wire	signed	[IQDATA_WIDTH-1:0]		i_data_dly_i		;
+	wire	signed	[IQDATA_WIDTH-1:0]		i_data_dly_q		;
 	
-	reg					u2_wea				;
-	reg			[5:0]	u2_wr_addr			;
-	reg			[5:0]	u2_rd_addr			;
-	reg			[5:0]	u2_addra			;
-	reg			[63:0]	u2_dina				;
-	wire		[63:0]	u2_douta			;
+	reg										u1_s_axis_a_tvalid	;
+	reg				[31:0]					u1_s_axis_a_tdata	;
+	reg				[31:0]					u1_s_axis_b_tdata	;
+	wire									u1_m_axis_dout_tvalid;
+	wire			[79:0]					u1_m_axis_dout_tdata;
+	
+	reg										u2_wea			;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u2_wr_addr		;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u2_rd_addr		;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u2_addra		;
+	reg				[SPRAM_DATA_WIDTH-1:0]	u2_dina			;
+	wire			[SPRAM_DATA_WIDTH-1:0]	u2_douta		;
 
-	reg					u3_wea				;
-	reg			[5:0]	u3_wr_addr			;
-	reg			[5:0]	u3_rd_addr			;
-	reg			[5:0]	u3_addra			;
-	reg			[63:0]	u3_dina				;
-	wire		[63:0]	u3_douta			;
+	reg										u3_wea			;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u3_wr_addr		;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u3_rd_addr		;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u3_addra		;
+	reg				[SPRAM_DATA_WIDTH-1:0]	u3_dina			;
+	wire			[SPRAM_DATA_WIDTH-1:0]	u3_douta		;
 
-	reg					u4_wea				;
-	reg			[5:0]	u4_wr_addr			;
-	reg			[5:0]	u4_rd_addr			;
-	reg			[5:0]	u4_addra			;
-	reg			[63:0]	u4_dina				;
-	wire		[63:0]	u4_douta			;
+	reg										u4_wea			;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_wr_addr		;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_rd_addr		;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_addra		;
+	reg				[SPRAM_DATA_WIDTH-1:0]	u4_dina			;
+	wire			[SPRAM_DATA_WIDTH-1:0]	u4_douta		;
 	
-	reg					u1_m_axis_dout_tvalid_dly1;
-	reg					u1_m_axis_dout_tvalid_dly2;
-	reg			[32:0]	add12_i				;
-	reg			[32:0]	add34_i				;
-	reg			[33:0]	add1234_i			;
-	reg			[32:0]	add12_q				;
-	reg			[32:0]	add34_q				;
-	reg			[33:0]	add1234_q			;
+	reg										u1_m_axis_dout_tvalid_dly1;
+	reg										u1_m_axis_dout_tvalid_dly2;
+	reg		signed	[DATA_MUL_WIDTH:0]		add12_i			;
+	reg		signed	[DATA_MUL_WIDTH:0]		add34_i			;
+	reg		signed	[DATA_MUL_WIDTH+1:0]	add1234_i		;
+	reg		signed	[DATA_MUL_WIDTH:0]		add12_q			;
+	reg		signed	[DATA_MUL_WIDTH:0]		add34_q			;
+	reg		signed	[DATA_MUL_WIDTH+1:0]	add1234_q		;
 	
 //================================================================================
 // complex multiply
 //================================================================================
-	assign i_data_i		= i_data[15:0];
-	assign i_data_q_neg	= -i_data[31:16];
+	assign i_data_i		= i_data[IQDATA_WIDTH-1:0];
+	assign i_data_q_neg	= -i_data[DATA_WIDTH-1:IQDATA_WIDTH];
+	assign i_data_dly_i	= i_data_dly[IQDATA_WIDTH-1:0];
+	assign i_data_dly_q	= i_data_dly[DATA_WIDTH-1:IQDATA_WIDTH];
 	
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
@@ -97,8 +111,10 @@ module psi_operator(
 		end
 		else if(i_data_valid == 1'b1) begin
 			u1_s_axis_a_tvalid	<= 1'b1;
-			u1_s_axis_a_tdata	<= {i_data_q_neg,i_data_i};
-			u1_s_axis_b_tdata	<= i_data_dly;
+			u1_s_axis_a_tdata	<= {{(16-IQDATA_WIDTH){i_data_q_neg[IQDATA_WIDTH-1]}},i_data_q_neg,
+									{(16-IQDATA_WIDTH){i_data_i[IQDATA_WIDTH-1]}},i_data_i};
+			u1_s_axis_b_tdata	<= {{(16-IQDATA_WIDTH){i_data_dly_q[IQDATA_WIDTH-1]}},i_data_dly_q,
+									{(16-IQDATA_WIDTH){i_data_dly_i[IQDATA_WIDTH-1]}},i_data_dly_i};
 		end
 		else begin
 			u1_s_axis_a_tvalid	<= 1'b0;
@@ -123,17 +139,19 @@ module psi_operator(
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
 			u2_wea		<= 1'b0;
-			u2_wr_addr	<= 6'd0;
-			u2_rd_addr	<= 6'd1;
-			u2_addra	<= 6'd0;
-			u2_dina		<= 64'd0;
+			u2_wr_addr	<= 'd0;
+			u2_rd_addr	<= 'd1;
+			u2_addra	<= 'd0;
+			u2_dina		<= 'd0;
 		end
 		else if(u1_m_axis_dout_tvalid == 1'b1) begin
 			u2_wea		<= 1'b1;
 			u2_wr_addr	<= u2_wr_addr + 1'd1;
 			u2_rd_addr	<= u2_rd_addr + 1'd1;
 			u2_addra	<= u2_wr_addr + 1'd1;
-			u2_dina		<= {u1_m_axis_dout_tdata[71:40],u1_m_axis_dout_tdata[31:0]};
+			u2_dina		<= {{(SPRAM_DATA_WIDTH-2*DATA_MUL_WIDTH){1'b0}},
+							u1_m_axis_dout_tdata[40+DATA_MUL_WIDTH-1:40],
+							u1_m_axis_dout_tdata[DATA_MUL_WIDTH-1:0]};
 		end
 		else begin
 			u2_wea		<= 1'b0;
@@ -155,10 +173,10 @@ module psi_operator(
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
 			u3_wea		<= 1'b0;
-			u3_wr_addr	<= 6'd0;
-			u3_rd_addr	<= 6'd1;
-			u3_addra	<= 6'd0;
-			u3_dina		<= 64'd0;
+			u3_wr_addr	<= 'd0;
+			u3_rd_addr	<= 'd1;
+			u3_addra	<= 'd0;
+			u3_dina		<= 'd0;
 		end
 		else if(u1_m_axis_dout_tvalid == 1'b1) begin
 			u3_wea		<= 1'b1;
@@ -187,10 +205,10 @@ module psi_operator(
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
 			u4_wea		<= 1'b0;
-			u4_wr_addr	<= 6'd0;
-			u4_rd_addr	<= 6'd1;
-			u4_addra	<= 6'd0;
-			u4_dina		<= 64'd0;
+			u4_wr_addr	<= 'd0;
+			u4_rd_addr	<= 'd1;
+			u4_addra	<= 'd0;
+			u4_dina		<= 'd0;
 		end
 		else if(u1_m_axis_dout_tvalid == 1'b1) begin
 			u4_wea		<= 1'b1;
@@ -232,16 +250,20 @@ module psi_operator(
 	
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
-			add12_i <= 33'd0;
-			add34_i <= 33'd0;
-			add12_q <= 33'd0;
-			add34_q <= 33'd0;
+			add12_i <= 'd0;
+			add34_i <= 'd0;
+			add12_q <= 'd0;
+			add34_q <= 'd0;
 		end
 		else if(u1_m_axis_dout_tvalid == 1'b1) begin
-			add12_i <= u1_m_axis_dout_tdata[31:0] + u2_douta[31:0];
-			add34_i <= u3_douta[31:0] + u4_douta[31:0];
-			add12_q <= u1_m_axis_dout_tdata[71:40] + u2_douta[63:32];
-			add34_q <= u3_douta[63:32] + u4_douta[63:32];
+			add12_i <= u1_m_axis_dout_tdata[DATA_MUL_WIDTH-1:0]
+						+ u2_douta[DATA_MUL_WIDTH-1:0];
+			add34_i <= u3_douta[DATA_MUL_WIDTH-1:0]
+						+ u4_douta[DATA_MUL_WIDTH-1:0];
+			add12_q <= u1_m_axis_dout_tdata[40+DATA_MUL_WIDTH-1:40]
+						+ u2_douta[2*DATA_MUL_WIDTH-1:DATA_MUL_WIDTH];
+			add34_q <= u3_douta[2*DATA_MUL_WIDTH-1:DATA_MUL_WIDTH]
+						+ u4_douta[2*DATA_MUL_WIDTH-1:DATA_MUL_WIDTH];
 		end
 		else begin
 			add12_i <= add12_i;
@@ -253,8 +275,8 @@ module psi_operator(
 	
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
-			add1234_i <= 34'd0;
-			add1234_q <= 34'd0;
+			add1234_i <= 'd0;
+			add1234_q <= 'd0;
 		end
 		else if(u1_m_axis_dout_tvalid_dly1 == 1'b1) begin
 			add1234_i <= add12_i + add34_i;

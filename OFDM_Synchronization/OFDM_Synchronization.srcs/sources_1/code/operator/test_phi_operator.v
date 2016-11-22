@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Neil Judson
 // 
 // Create Date: 2016/11/21 20:34:29
 // Design Name: 
@@ -26,17 +26,18 @@ module test_phi_operator;
 	reg clk;
 	reg reset;
 	reg i_data_valid;
-	reg i_data;
 	reg [31:0] i_data;
 
 	// Outputs
 	wire o_data_valid;
-	wire [68:0] o_data;
+	wire [33:0] o_data;
 	
 	reg [39:0] count;
 
 	// Instantiate the Unit Under Test (UUT)
-	phi_operator uut (
+	phi_operator #(
+		.DATA_WIDTH(32)
+	)uut(
 		.clk(clk), 
 		.reset(reset), 
 		.i_data_valid(i_data_valid), 

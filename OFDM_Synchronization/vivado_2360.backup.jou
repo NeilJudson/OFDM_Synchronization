@@ -1,0 +1,170 @@
+#-----------------------------------------------------------
+# Vivado v2015.2.1 (64-bit)
+# SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
+# IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
+# Start of session at: Mon Nov 21 09:18:46 2016
+# Process ID: 3028
+# Log file: E:/jiaweiwei/Project/OFDM_Synchronization/vivado.log
+# Journal file: E:/jiaweiwei/Project/OFDM_Synchronization\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.xpr
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.2 -module_name blk_mem_gen_0
+set_property -dict [list CONFIG.Write_Width_A {64} CONFIG.Write_Depth_A {128} CONFIG.Enable_A {Always_Enabled} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Read_Width_A {64} CONFIG.Write_Width_B {64} CONFIG.Read_Width_B {64}] [get_ips blk_mem_gen_0]
+generate_target {instantiation_template} [get_files e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+launch_run -jobs 2 blk_mem_gen_0_synth_1
+remove_files -fileset blk_mem_gen_0 e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+delete_fileset blk_mem_gen_0
+file delete -force e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/blk_mem_gen_0
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.2 -module_name spram_128_ip
+set_property -dict [list CONFIG.Write_Width_A {64} CONFIG.Write_Depth_A {128} CONFIG.Enable_A {Always_Enabled} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Read_Width_A {64} CONFIG.Write_Width_B {64} CONFIG.Read_Width_B {64}] [get_ips spram_128_ip]
+generate_target {instantiation_template} [get_files e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_128_ip/spram_128_ip.xci]
+generate_target all [get_files  e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_128_ip/spram_128_ip.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_128_ip/spram_128_ip.xci]
+launch_run -jobs 2 spram_128_ip_synth_1
+reset_run spram_64_ip_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation
+source test_psi_operator.tcl
+add_wave {{/test_psi_operator/uut/u2_wea}} {{/test_psi_operator/uut/u2_wr_addr}} {{/test_psi_operator/uut/u2_rd_addr}} {{/test_psi_operator/uut/u2_addra}} {{/test_psi_operator/uut/u2_dina}} {{/test_psi_operator/uut/u2_douta}} 
+run all
+close_sim
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.2 -module_name blk_mem_gen_0
+set_property -dict [list CONFIG.Write_Width_A {64} CONFIG.Write_Depth_A {192} CONFIG.Enable_A {Always_Enabled} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Read_Width_A {64} CONFIG.Write_Width_B {64} CONFIG.Read_Width_B {64}] [get_ips blk_mem_gen_0]
+generate_target {instantiation_template} [get_files e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+update_compile_order -fileset sources_1
+remove_files e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+file delete -force e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/blk_mem_gen_0
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.2 -module_name spram_192_ip
+set_property -dict [list CONFIG.Write_Width_A {64} CONFIG.Write_Depth_A {192} CONFIG.Enable_A {Always_Enabled} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Read_Width_A {64} CONFIG.Write_Width_B {64} CONFIG.Read_Width_B {64}] [get_ips spram_192_ip]
+generate_target {instantiation_template} [get_files e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_192_ip/spram_192_ip.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_192_ip/spram_192_ip.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_192_ip/spram_192_ip.xci]
+launch_run -jobs 2 spram_192_ip_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation
+source test_psi_operator.tcl
+add_wave {{/test_psi_operator/uut/u2_wea}} {{/test_psi_operator/uut/u2_wr_addr}} {{/test_psi_operator/uut/u2_rd_addr}} {{/test_psi_operator/uut/u2_addra}} {{/test_psi_operator/uut/u2_dina}} {{/test_psi_operator/uut/u2_douta}} {{/test_psi_operator/uut/u3_wea}} {{/test_psi_operator/uut/u3_wr_addr}} {{/test_psi_operator/uut/u3_rd_addr}} {{/test_psi_operator/uut/u3_addra}} {{/test_psi_operator/uut/u3_dina}} {{/test_psi_operator/uut/u3_douta}} {{/test_psi_operator/uut/u4_wea}} {{/test_psi_operator/uut/u4_wr_addr}} {{/test_psi_operator/uut/u4_rd_addr}} {{/test_psi_operator/uut/u4_addra}} {{/test_psi_operator/uut/u4_dina}} {{/test_psi_operator/uut/u4_douta}} 
+restart
+run all
+close_sim
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_simulation
+source test_psi_operator.tcl
+run all
+restart
+add_wave {{/test_psi_operator/uut/u1_data}} {{/test_psi_operator/uut/u2_douta}} {{/test_psi_operator/uut/u3_douta}} {{/test_psi_operator/uut/u4_douta}} {{/test_psi_operator/uut/i_2add1}} {{/test_psi_operator/uut/i_2add2}} {{/test_psi_operator/uut/i_4add}} {{/test_psi_operator/uut/q_2add1}} {{/test_psi_operator/uut/q_2add2}} {{/test_psi_operator/uut/q_4add}} 
+run all
+set_property -dict [list CONFIG.Operating_Mode_A {NO_CHANGE}] [get_ips spram_128_ip]
+generate_target all [get_files  e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_128_ip/spram_128_ip.xci]
+reset_run spram_128_ip_synth_1
+launch_run -jobs 2 spram_128_ip_synth_1
+set_property -dict [list CONFIG.Operating_Mode_A {NO_CHANGE}] [get_ips spram_192_ip]
+generate_target all [get_files  e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_192_ip/spram_192_ip.xci]
+reset_run spram_192_ip_synth_1
+launch_run -jobs 2 spram_192_ip_synth_1
+close_sim
+close [ open E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/phi_operator.v w ]
+add_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/phi_operator.v
+update_compile_order -fileset sources_1
+close [ open E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_18.v w ]
+add_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_18.v
+update_compile_order -fileset sources_1
+create_ip -name xbip_dsp48_macro -vendor xilinx.com -library ip -version 3.0 -module_name dsp48_ip_mul_add
+set_property -dict [list CONFIG.show_filtered {false} CONFIG.instruction1 {A*B+C} CONFIG.pipeline_options {Expert} CONFIG.areg_3 {false} CONFIG.breg_3 {false} CONFIG.instruction2 {#} CONFIG.instruction3 {#} CONFIG.instruction4 {#} CONFIG.instruction5 {#} CONFIG.instruction6 {#} CONFIG.instruction7 {#} CONFIG.instruction8 {#} CONFIG.areg_4 {true} CONFIG.breg_4 {true} CONFIG.creg_3 {false} CONFIG.creg_4 {false} CONFIG.creg_5 {false} CONFIG.mreg_5 {true} CONFIG.preg_6 {true} CONFIG.d_width {18} CONFIG.a_width {18} CONFIG.a_binarywidth {0} CONFIG.b_width {18} CONFIG.b_binarywidth {0} CONFIG.concat_width {48} CONFIG.concat_binarywidth {0} CONFIG.c_width {48} CONFIG.c_binarywidth {0} CONFIG.pcin_binarywidth {0} CONFIG.p_full_width {48} CONFIG.p_width {48} CONFIG.p_binarywidth {0}] [get_ips dsp48_ip_mul_add]
+generate_target {instantiation_template} [get_files e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_ip_mul_add/dsp48_ip_mul_add.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_ip_mul_add/dsp48_ip_mul_add.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_ip_mul_add/dsp48_ip_mul_add.xci]
+launch_run -jobs 2 dsp48_ip_mul_add_synth_1
+create_ip -name xbip_dsp48_macro -vendor xilinx.com -library ip -version 3.0 -module_name dsp48_ip_mul
+set_property -dict [list CONFIG.instruction1 {A*B} CONFIG.pipeline_options {Expert} CONFIG.areg_3 {false} CONFIG.areg_4 {true} CONFIG.breg_3 {false} CONFIG.breg_4 {true} CONFIG.mreg_5 {true} CONFIG.preg_6 {false} CONFIG.output_properties {User_Defined} CONFIG.p_width {48} CONFIG.creg_3 {false} CONFIG.creg_4 {false} CONFIG.creg_5 {false} CONFIG.d_width {18} CONFIG.a_width {18} CONFIG.a_binarywidth {0} CONFIG.b_width {18} CONFIG.b_binarywidth {0} CONFIG.concat_width {48} CONFIG.concat_binarywidth {0} CONFIG.c_binarywidth {0} CONFIG.pcin_binarywidth {0} CONFIG.p_full_width {36} CONFIG.p_binarywidth {0}] [get_ips dsp48_ip_mul]
+generate_target {instantiation_template} [get_files e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_ip_mul/dsp48_ip_mul.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_ip_mul/dsp48_ip_mul.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_ip_mul/dsp48_ip_mul.xci]
+launch_run -jobs 2 dsp48_ip_mul_synth_1
+remove_files -fileset spram_128_ip e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_128_ip/spram_128_ip.xci
+delete_fileset spram_128_ip
+file delete -force e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_128_ip
+remove_files -fileset spram_192_ip e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_192_ip/spram_192_ip.xci
+delete_fileset spram_192_ip
+file delete -force e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_192_ip
+remove_files -fileset spram_64_ip E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_64_ip/spram_64_ip.xci
+delete_fileset spram_64_ip
+file delete -force E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_64_ip
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.2 -module_name spram_64_64_ip
+set_property -dict [list CONFIG.Write_Width_A {64} CONFIG.Write_Depth_A {64} CONFIG.Operating_Mode_A {NO_CHANGE} CONFIG.Enable_A {Always_Enabled} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Read_Width_A {64} CONFIG.Write_Width_B {64} CONFIG.Read_Width_B {64}] [get_ips spram_64_64_ip]
+generate_target {instantiation_template} [get_files e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_64_64_ip/spram_64_64_ip.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_64_64_ip/spram_64_64_ip.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_64_64_ip/spram_64_64_ip.xci]
+launch_run -jobs 2 spram_64_64_ip_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation
+source test_psi_operator.tcl
+add_wave {{/test_psi_operator/uut/u1_m_axis_dout_tvalid}} {{/test_psi_operator/uut/u1_m_axis_dout_tdata}} 
+add_wave {{/test_psi_operator/uut/u2_wea}} {{/test_psi_operator/uut/u2_wr_addr}} {{/test_psi_operator/uut/u2_rd_addr}} {{/test_psi_operator/uut/u2_addra}} {{/test_psi_operator/uut/u2_dina}} {{/test_psi_operator/uut/u2_douta}} {{/test_psi_operator/uut/u3_wea}} {{/test_psi_operator/uut/u3_wr_addr}} {{/test_psi_operator/uut/u3_rd_addr}} {{/test_psi_operator/uut/u3_addra}} {{/test_psi_operator/uut/u3_dina}} {{/test_psi_operator/uut/u3_douta}} {{/test_psi_operator/uut/u4_wea}} {{/test_psi_operator/uut/u4_wr_addr}} {{/test_psi_operator/uut/u4_rd_addr}} {{/test_psi_operator/uut/u4_addra}} {{/test_psi_operator/uut/u4_dina}} {{/test_psi_operator/uut/u4_douta}} 
+add_wave {{/test_psi_operator/uut/add12_i}} {{/test_psi_operator/uut/add34_i}} {{/test_psi_operator/uut/add1234_i}} {{/test_psi_operator/uut/add12_q}} {{/test_psi_operator/uut/add34_q}} {{/test_psi_operator/uut/add1234_q}} 
+restart
+run all
+close_sim
+remove_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/test_spram_64_ip.v
+file delete -force E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/test_spram_64_ip.v
+close [ open E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/test_phi_operator.v w ]
+add_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/test_phi_operator.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top test_phi_operator [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top test_phi_operator [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.2 -module_name spram_32_64_ip
+set_property -dict [list CONFIG.Write_Width_A {32} CONFIG.Write_Depth_A {64} CONFIG.Operating_Mode_A {NO_CHANGE} CONFIG.Enable_A {Always_Enabled} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Read_Width_A {32} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32}] [get_ips spram_32_64_ip]
+generate_target {instantiation_template} [get_files e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_32_64_ip/spram_32_64_ip.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_32_64_ip/spram_32_64_ip.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_32_64_ip/spram_32_64_ip.xci]
+launch_run -jobs 2 spram_32_64_ip_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation

@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log test_phi_operator.vds -m64 -mode batch -messageDb vivado.pb -notrace -source test_phi_operator.tcl" );
+         "-log test_psi_operator.vds -m64 -mode batch -messageDb vivado.pb -notrace -source test_psi_operator.tcl" );
 
 
 
