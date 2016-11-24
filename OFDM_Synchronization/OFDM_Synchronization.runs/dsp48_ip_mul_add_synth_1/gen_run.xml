@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="dsp48_ip_mul_add_synth_1" LaunchPart="xc7z045fbg676-3" LaunchTime="1479725811">
-  <File Type="RDS-DCP" Name="dsp48_ip_mul_add.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/dsp48_ip_mul_add_synth_1/constrs_in.xml"/>
-  <File Type="RDS-UTIL-PB" Name="dsp48_ip_mul_add_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="dsp48_ip_mul_add.dcp"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/dsp48_ip_mul_add_synth_1/sources.xml"/>
-  <File Type="RDS-PROPCONSTRS" Name="dsp48_ip_mul_add_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="dsp48_ip_mul_add.tcl"/>
+  <File Type="RDS-UTIL-PB" Name="dsp48_ip_mul_add_utilization_synth.pb"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/dsp48_ip_mul_add_synth_1/dsp48_ip_mul_add_synth_1.psg"/>
+  <File Type="PA-TCL" Name="dsp48_ip_mul_add.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="dsp48_ip_mul_add_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="dsp48_ip_mul_add.vds"/>
   <File Type="RDS-UTIL" Name="dsp48_ip_mul_add_utilization_synth.rpt"/>
   <File Type="VDS-TIMINGSUMMARY" Name="dsp48_ip_mul_add_timing_summary_synth.rpt"/>

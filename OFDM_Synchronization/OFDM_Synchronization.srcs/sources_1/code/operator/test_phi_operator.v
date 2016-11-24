@@ -25,6 +25,8 @@ module test_phi_operator;
 	// Inputs
 	reg clk;
 	reg reset;
+	reg i_start_work;
+	reg i_stop_work;
 	reg i_data_valid;
 	reg [31:0] i_data;
 
@@ -36,10 +38,12 @@ module test_phi_operator;
 
 	// Instantiate the Unit Under Test (UUT)
 	phi_operator #(
-		.DATA_WIDTH(32)
+		.SYNC_DATA_WIDTH(16)
 	)uut(
 		.clk(clk), 
 		.reset(reset), 
+		.i_start_work(i_start_work),
+		.i_stop_work(i_stop_work),
 		.i_data_valid(i_data_valid), 
 		.i_data(i_data), 
 		.o_data_valid(o_data_valid), 
@@ -50,6 +54,8 @@ module test_phi_operator;
 		// Initialize Inputs
 		clk = 0;
 		reset = 0;
+		i_start_work = 0;
+		i_stop_work = 0;
 		i_data_valid = 0;
 		i_data = 0;
 
@@ -58,6 +64,8 @@ module test_phi_operator;
 		reset = 1;
 		#10;
 		reset = 0;
+		#10;
+		i_start_work =1;
 		#10;
         
 		// Add stimulus here

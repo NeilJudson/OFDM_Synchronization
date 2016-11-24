@@ -21,11 +21,15 @@
 
 
 module phi_operator #(
-	parameter DATA_WIDTH = 32
+	parameter SYNC_DATA_WIDTH = 16,
+	parameter PHI_WIDTH = 2*SYNC_DATA_WIDTH+2 // 34
 	)
 	(
 	clk			,
 	reset		,
+	
+	i_work_ctrl_en,
+	i_work_ctrl	,
 	
 	i_data_valid,
 	i_data		,
@@ -33,24 +37,31 @@ module phi_operator #(
 	o_data_valid,
 	o_data
 	);
-	localparam PHI_WIDTH = DATA_WIDTH+2; // 34
+	input								clk			;
+	input								reset		;
 	
-	input							clk			;
-	input							reset		;
+	input								i_work_ctrl_en;
+	input								i_work_ctrl	; // 1'b0: 停止工作；1'b1: 开始工作，进入清零状态
 	
-	input							i_data_valid;
-	input		[DATA_WIDTH-1:0]	i_data		; // 高位虚部，低位实部。
+	input								i_data_valid;
+	input		[2*SYNC_DATA_WIDTH-1:0]	i_data		; // 高位虚部，低位实部。输入应是延迟后的数据
 	
-	output							o_data_valid;
-	output		[PHI_WIDTH-1:0]		o_data		;
+	output								o_data_valid; // 6dly
+	output		[PHI_WIDTH-1:0]			o_data		;
 	
 //================================================================================
 // variable
 //================================================================================
 	localparam SPRAM_ADDR_WIDTH = 6;
 	localparam SPRAM_DATA_WIDTH = 32;
-	localparam IQDATA_WIDTH		= DATA_WIDTH/2	; // 16
-	localparam DATA_POWER_WIDTH	= 2*IQDATA_WIDTH; // 32
+	localparam DATA_POWER_WIDTH = 2*SYNC_DATA_WIDTH; // 32
+	// state
+	localparam	IDLE	= 2'd0,
+				CLEAR	= 2'd1,
+				WORK	= 2'd2;
+	
+	reg				[1:0]					state			;
+	reg				[SPRAM_ADDR_WIDTH:0]	clear_count		;
 	
 	reg										u1_i_data_valid	;
 	reg		signed	[17:0]					u1_i_data_i		;
@@ -65,18 +76,18 @@ module phi_operator #(
 	reg				[SPRAM_DATA_WIDTH-1:0]	u2_dina			;
 	wire			[SPRAM_DATA_WIDTH-1:0]	u2_douta		;
 
-	reg										u3_wea			;
-	reg				[SPRAM_ADDR_WIDTH-1:0]	u3_wr_addr		;
-	reg				[SPRAM_ADDR_WIDTH-1:0]	u3_rd_addr		;
-	reg				[SPRAM_ADDR_WIDTH-1:0]	u3_addra		;
-	reg				[SPRAM_DATA_WIDTH-1:0]	u3_dina			;
+	wire									u3_wea			;
+	wire			[SPRAM_ADDR_WIDTH-1:0]	u3_wr_addr		;
+	wire			[SPRAM_ADDR_WIDTH-1:0]	u3_rd_addr		;
+	wire			[SPRAM_ADDR_WIDTH-1:0]	u3_addra		;
+	wire			[SPRAM_DATA_WIDTH-1:0]	u3_dina			;
 	wire			[SPRAM_DATA_WIDTH-1:0]	u3_douta		;
 
-	reg										u4_wea			;
-	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_wr_addr		;
-	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_rd_addr		;
-	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_addra		;
-	reg				[SPRAM_DATA_WIDTH-1:0]	u4_dina			;
+	wire									u4_wea			;
+	wire			[SPRAM_ADDR_WIDTH-1:0]	u4_wr_addr		;
+	wire			[SPRAM_ADDR_WIDTH-1:0]	u4_rd_addr		;
+	wire			[SPRAM_ADDR_WIDTH-1:0]	u4_addra		;
+	wire			[SPRAM_DATA_WIDTH-1:0]	u4_dina			;
 	wire			[SPRAM_DATA_WIDTH-1:0]	u4_douta		;
 	
 	reg										u1_o_data_valid_dly1;
@@ -84,6 +95,71 @@ module phi_operator #(
 	reg		signed	[DATA_POWER_WIDTH:0]	add12			;
 	reg		signed	[DATA_POWER_WIDTH:0]	add34			;
 	reg		signed	[DATA_POWER_WIDTH+1:0]	add1234			;
+	
+//================================================================================
+// state
+//================================================================================
+	always @(posedge clk or posedge reset) begin
+		if(reset == 1'b1) begin
+			state <= IDLE;
+		end
+		else begin
+			case(state)
+				IDLE: begin
+					if((i_work_ctrl_en==1'b1) && (i_work_ctrl==1'b1)) begin
+						state <= CLEAR;
+					end
+					else begin
+						state <= IDLE;
+					end
+				end
+				CLEAR: begin
+					if((i_work_ctrl_en==1'b1) && (i_work_ctrl==1'b0)) begin
+						state <= IDLE;
+					end
+					else if(clear_count >= 'd65) begin
+						state <= WORK;
+					end
+					else begin
+						state <= CLEAR;
+					end
+				end
+				WORK: begin
+					if((i_work_ctrl_en==1'b1) && (i_work_ctrl==1'b0)) begin
+						state <= IDLE;
+					end
+					else begin
+						state <= WORK;
+					end
+				end
+				default: begin
+					state <= IDLE;
+				end
+			endcase
+		end
+	end
+	
+	always @(posedge clk or posedge reset) begin
+		if(reset == 1'b1) begin
+			clear_count <= 'd0;
+		end
+		else begin
+			case(state)
+				IDLE: begin
+					clear_count <= 'd0;
+				end
+				CLEAR: begin
+					clear_count <= clear_count + 1'd1;
+				end
+				WORK: begin
+					clear_count <= 'd0;
+				end
+				default: begin
+					clear_count <= 'd0;
+				end
+			endcase
+		end
+	end
 	
 //================================================================================
 // complex abs power2
@@ -94,10 +170,12 @@ module phi_operator #(
 			u1_i_data_i		<= 18'd0;
 			u1_i_data_q		<= 18'd0;
 		end
-		else if(i_data_valid == 1'b1) begin
+		else if((state==WORK) && (i_data_valid==1'b1)) begin
 			u1_i_data_valid	<= 1'b1;
-			u1_i_data_i		<= {{(18-IQDATA_WIDTH){i_data[IQDATA_WIDTH-1]}},i_data[IQDATA_WIDTH-1:0]};
-			u1_i_data_q		<= {{(18-IQDATA_WIDTH){i_data[DATA_WIDTH-1]}},i_data[DATA_WIDTH-1:IQDATA_WIDTH]};
+			u1_i_data_i		<= {{(18-SYNC_DATA_WIDTH){i_data[SYNC_DATA_WIDTH-1]}},
+								i_data[SYNC_DATA_WIDTH-1:0]};
+			u1_i_data_q		<= {{(18-SYNC_DATA_WIDTH){i_data[2*SYNC_DATA_WIDTH-1]}},
+								i_data[2*SYNC_DATA_WIDTH-1:SYNC_DATA_WIDTH]};
 		end
 		else begin
 			u1_i_data_valid	<= 1'b0;
@@ -105,7 +183,7 @@ module phi_operator #(
 			u1_i_data_q		<= u1_i_data_q;
 		end
 	end
-
+	
 	complex_abs_power2_18 u1_complex_abs_power2_18(
 		.i_clk			(clk			),
 		.i_data_valid	(u1_i_data_valid),
@@ -126,22 +204,62 @@ module phi_operator #(
 			u2_addra	<= 'd0;
 			u2_dina		<= 'd0;
 		end
-		else if(u1_o_data_valid == 1'b1) begin
-			u2_wea		<= 1'b1;
-			u2_wr_addr	<= u2_wr_addr + 1'd1;
-			u2_rd_addr	<= u2_rd_addr + 1'd1;
-			u2_addra	<= u2_wr_addr + 1'd1;
-			u2_dina		<= {{(SPRAM_DATA_WIDTH-DATA_POWER_WIDTH){u1_o_data[DATA_POWER_WIDTH-1]}},
-							u1_o_data[DATA_POWER_WIDTH-1:0]};
-		end
 		else begin
-			u2_wea		<= 1'b0;
-			u2_wr_addr	<= u2_wr_addr;
-			u2_rd_addr	<= u2_rd_addr;
-			u2_addra	<= u2_rd_addr;
-			u2_dina		<= u2_dina;
+			case(state)
+				IDLE: begin
+					u2_wea		<= 1'b0;
+					u2_wr_addr	<= 'd0;
+					u2_rd_addr	<= 'd1;
+					u2_addra	<= 'd0;
+					u2_dina		<= 'd0;
+				end
+				CLEAR: begin
+					u2_wea		<= 1'b1;
+					u2_wr_addr	<= 'd0;
+					u2_rd_addr	<= 'd1;
+					u2_addra	<= u2_addra + 1'd1;
+					u2_dina		<= 'd0;
+				end
+				WORK: begin
+					if(u1_o_data_valid == 1'b1) begin
+						u2_wea		<= 1'b1;
+						u2_wr_addr	<= u2_wr_addr + 1'd1;
+						u2_rd_addr	<= u2_rd_addr + 1'd1;
+						u2_addra	<= u2_wr_addr + 1'd1;
+						u2_dina		<= {{(SPRAM_DATA_WIDTH-DATA_POWER_WIDTH){u1_o_data[DATA_POWER_WIDTH-1]}},
+										u1_o_data[DATA_POWER_WIDTH-1:0]};
+					end
+					else begin
+						u2_wea		<= 1'b0;
+						u2_wr_addr	<= u2_wr_addr;
+						u2_rd_addr	<= u2_rd_addr;
+						u2_addra	<= u2_rd_addr;
+						u2_dina		<= u2_dina;
+					end
+				end
+				default: begin
+					u2_wea		<= 1'b0;
+					u2_wr_addr	<= 'd0;
+					u2_rd_addr	<= 'd1;
+					u2_addra	<= 'd0;
+					u2_dina		<= 'd0;
+				end
+			endcase
 		end
+		
 	end
+	
+	assign u3_wea		= u2_wea	;
+	assign u3_wr_addr	= u2_wr_addr;
+	assign u3_rd_addr	= u2_rd_addr;
+	assign u3_addra		= u2_addra	;
+	assign u3_dina		= u2_dina	;
+	
+	assign u4_wea		= u2_wea	;
+	assign u4_wr_addr	= u2_wr_addr;
+	assign u4_rd_addr	= u2_rd_addr;
+	assign u4_addra		= u2_addra	;
+	assign u4_dina		= u3_dina	;
 	
 	spram_32_64_ip u2_spram_32_64_ip (
 		.clka	(clk		),	// input clka;
@@ -151,30 +269,6 @@ module phi_operator #(
 		.douta	(u2_douta	)	// output [31:0]douta;
 	);
 	
-	always @(posedge clk or posedge reset) begin
-		if(reset == 1'b1) begin
-			u3_wea		<= 1'b0;
-			u3_wr_addr	<= 'd0;
-			u3_rd_addr	<= 'd1;
-			u3_addra	<= 'd0;
-			u3_dina		<= 'd0;
-		end
-		else if(u1_o_data_valid == 1'b1) begin
-			u3_wea		<= 1'b1;
-			u3_wr_addr	<= u3_wr_addr + 1'd1;
-			u3_rd_addr	<= u3_rd_addr + 1'd1;
-			u3_addra	<= u3_wr_addr + 1'd1;
-			u3_dina		<= u2_douta;
-		end
-		else begin
-			u3_wea		<= 1'b0;
-			u3_wr_addr	<= u3_wr_addr;
-			u3_rd_addr	<= u3_rd_addr;
-			u3_addra	<= u3_rd_addr;
-			u3_dina		<= u3_dina;
-		end
-	end
-	
 	spram_32_64_ip u3_spram_32_64_ip (
 		.clka	(clk		),	// input clka;
 		.wea	(u3_wea		),	// input [0:0]wea;
@@ -182,30 +276,6 @@ module phi_operator #(
 		.dina	(u3_dina	),	// input [31:0]dina;
 		.douta	(u3_douta	)	// output [31:0]douta;
 	);
-	
-	always @(posedge clk or posedge reset) begin
-		if(reset == 1'b1) begin
-			u4_wea		<= 1'b0;
-			u4_wr_addr	<= 'd0;
-			u4_rd_addr	<= 'd1;
-			u4_addra	<= 'd0;
-			u4_dina		<= 'd0;
-		end
-		else if(u1_o_data_valid == 1'b1) begin
-			u4_wea		<= 1'b1;
-			u4_wr_addr	<= u4_wr_addr + 1'd1;
-			u4_rd_addr	<= u4_rd_addr + 1'd1;
-			u4_addra	<= u4_wr_addr + 1'd1;
-			u4_dina		<= u3_douta;
-		end
-		else begin
-			u4_wea		<= 1'b0;
-			u4_wr_addr	<= u4_wr_addr;
-			u4_rd_addr	<= u4_rd_addr;
-			u4_addra	<= u4_rd_addr;
-			u4_dina		<= u4_dina;
-		end
-	end
 	
 	spram_32_64_ip u4_spram_32_64_ip (
 		.clka	(clk		),	// input clka;

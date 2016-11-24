@@ -61,7 +61,7 @@ module axis_interface_fifo #(
 	reg			[DATA_WIDTH:0]		rdata;
 	
 // write
-	always @(posedge axis_aclk or negedge axis_areset) begin
+	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
 			waddr <= 3'd0;
 			ram[0][DATA_WIDTH:0] <= {1'b0,{DATA_WIDTH{1'b0}}};
@@ -77,7 +77,7 @@ module axis_interface_fifo #(
 	end
 	
 // read
-	always @(posedge axis_aclk or negedge axis_areset) begin
+	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
 			raddr <= 3'd0;
 			rdata <= {1'b0,{DATA_WIDTH{1'b0}}};

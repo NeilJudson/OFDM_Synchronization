@@ -45,7 +45,7 @@ module data_dpram #(
 	
 	m_axis_data_tvalid	,
 	m_axis_data_tlast	,
-	m_axis_data_tdata	,
+	m_axis_data_tdata	, // [63:32]：延时数据，[31:0]：原始数据
 	m_axis_data_trdy
     );
 	input				axis_aclk			;
@@ -105,7 +105,7 @@ module data_dpram #(
 	wire		[31:0]	u2_dpram_douta		;
 	reg			[9:0]	u2_dpram_addrb		;
 	wire		[31:0]	u2_dpram_doutb		;
- */	
+*/
 	wire				u3_almost_full		;
 	
 //================================================================================

@@ -21,11 +21,15 @@
 
 
 module psi_operator #(
-	parameter DATA_WIDTH = 32
+	parameter SYNC_DATA_WIDTH = 16,
+	parameter PSI_WIDTH = 2*(2*SYNC_DATA_WIDTH+2) // 68
 	)
 	(
 	clk			,
 	reset		,
+	
+	i_work_ctrl_en,
+	i_work_ctrl	,
 	
 	i_data_valid,
 	i_data		,
@@ -34,30 +38,37 @@ module psi_operator #(
 	o_data_valid,
 	o_data
 	);
-	localparam PSI_WIDTH = 2*(DATA_WIDTH+2); // 68
+	input								clk			;
+	input								reset		;
 	
-	input							clk			;
-	input							reset		;
+	input								i_work_ctrl_en;
+	input								i_work_ctrl	; // 1'b0: 停止工作；1'b1: 开始工作，进入清零状态
 	
-	input							i_data_valid;
-	input		[DATA_WIDTH-1:0]	i_data		; // 高位虚部，低位实部。
-	input		[DATA_WIDTH-1:0]	i_data_dly	; // 高位虚部，低位实部。
+	input								i_data_valid;
+	input		[2*SYNC_DATA_WIDTH-1:0]	i_data		; // 高位虚部，低位实部。
+	input		[2*SYNC_DATA_WIDTH-1:0]	i_data_dly	; // 高位虚部，低位实部。
 	
-	output							o_data_valid;
-	output		[PSI_WIDTH-1:0]		o_data		;
+	output								o_data_valid; // 9dly
+	output		[PSI_WIDTH-1:0]			o_data		;
 	
 //================================================================================
 // variable
 //================================================================================
-	localparam SPRAM_ADDR_WIDTH = 6;
-	localparam SPRAM_DATA_WIDTH = 64;
-	localparam IQDATA_WIDTH		= DATA_WIDTH/2	; // 16
-	localparam DATA_MUL_WIDTH	= 2*IQDATA_WIDTH; // 32
+	localparam SPRAM_ADDR_WIDTH	= 6;
+	localparam SPRAM_DATA_WIDTH	= 64;
+	localparam DATA_MUL_WIDTH	= 2*SYNC_DATA_WIDTH; // 32
+	// state
+	localparam	IDLE	= 2'd0,
+				CLEAR	= 2'd1,
+				WORK	= 2'd2;
 	
-	wire	signed	[IQDATA_WIDTH-1:0]		i_data_i			;
-	wire	signed	[IQDATA_WIDTH-1:0]		i_data_q_neg		;
-	wire	signed	[IQDATA_WIDTH-1:0]		i_data_dly_i		;
-	wire	signed	[IQDATA_WIDTH-1:0]		i_data_dly_q		;
+	reg				[1:0]					state			;
+	reg				[SPRAM_ADDR_WIDTH:0]	clear_count		;
+	
+	wire	signed	[SYNC_DATA_WIDTH-1:0]	i_data_i		;
+	wire	signed	[SYNC_DATA_WIDTH-1:0]	i_data_q_neg	;
+	wire	signed	[SYNC_DATA_WIDTH-1:0]	i_data_dly_i	;
+	wire	signed	[SYNC_DATA_WIDTH-1:0]	i_data_dly_q	;
 	
 	reg										u1_s_axis_a_tvalid	;
 	reg				[31:0]					u1_s_axis_a_tdata	;
@@ -72,36 +83,101 @@ module psi_operator #(
 	reg				[SPRAM_DATA_WIDTH-1:0]	u2_dina			;
 	wire			[SPRAM_DATA_WIDTH-1:0]	u2_douta		;
 
-	reg										u3_wea			;
-	reg				[SPRAM_ADDR_WIDTH-1:0]	u3_wr_addr		;
-	reg				[SPRAM_ADDR_WIDTH-1:0]	u3_rd_addr		;
-	reg				[SPRAM_ADDR_WIDTH-1:0]	u3_addra		;
-	reg				[SPRAM_DATA_WIDTH-1:0]	u3_dina			;
+	wire									u3_wea			;
+	wire			[SPRAM_ADDR_WIDTH-1:0]	u3_wr_addr		;
+	wire			[SPRAM_ADDR_WIDTH-1:0]	u3_rd_addr		;
+	wire			[SPRAM_ADDR_WIDTH-1:0]	u3_addra		;
+	wire			[SPRAM_DATA_WIDTH-1:0]	u3_dina			;
 	wire			[SPRAM_DATA_WIDTH-1:0]	u3_douta		;
 
-	reg										u4_wea			;
-	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_wr_addr		;
-	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_rd_addr		;
-	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_addra		;
-	reg				[SPRAM_DATA_WIDTH-1:0]	u4_dina			;
+	wire									u4_wea			;
+	wire			[SPRAM_ADDR_WIDTH-1:0]	u4_wr_addr		;
+	wire			[SPRAM_ADDR_WIDTH-1:0]	u4_rd_addr		;
+	wire			[SPRAM_ADDR_WIDTH-1:0]	u4_addra		;
+	wire			[SPRAM_DATA_WIDTH-1:0]	u4_dina			;
 	wire			[SPRAM_DATA_WIDTH-1:0]	u4_douta		;
 	
 	reg										u1_m_axis_dout_tvalid_dly1;
 	reg										u1_m_axis_dout_tvalid_dly2;
-	reg		signed	[DATA_MUL_WIDTH:0]		add12_i			;
-	reg		signed	[DATA_MUL_WIDTH:0]		add34_i			;
-	reg		signed	[DATA_MUL_WIDTH+1:0]	add1234_i		;
-	reg		signed	[DATA_MUL_WIDTH:0]		add12_q			;
-	reg		signed	[DATA_MUL_WIDTH:0]		add34_q			;
-	reg		signed	[DATA_MUL_WIDTH+1:0]	add1234_q		;
+	reg		signed	[DATA_MUL_WIDTH:0]		add12_i				;
+	reg		signed	[DATA_MUL_WIDTH:0]		add34_i				;
+	reg		signed	[DATA_MUL_WIDTH+1:0]	add1234_i			;
+	reg		signed	[DATA_MUL_WIDTH:0]		add12_q				;
+	reg		signed	[DATA_MUL_WIDTH:0]		add34_q				;
+	reg		signed	[DATA_MUL_WIDTH+1:0]	add1234_q			;
+
+//================================================================================
+// state
+//================================================================================
+	always @(posedge clk or posedge reset) begin
+		if(reset == 1'b1) begin
+			state <= IDLE;
+		end
+		else begin
+			case(state)
+				IDLE: begin
+					if((i_work_ctrl_en==1'b1) && (i_work_ctrl==1'b1)) begin
+						state <= CLEAR;
+					end
+					else begin
+						state <= IDLE;
+					end
+				end
+				CLEAR: begin
+					if((i_work_ctrl_en==1'b1) && (i_work_ctrl==1'b0)) begin
+						state <= IDLE;
+					end
+					else if(clear_count >= 'd65) begin
+						state <= WORK;
+					end
+					else begin
+						state <= CLEAR;
+					end
+				end
+				WORK: begin
+					if((i_work_ctrl_en==1'b1) && (i_work_ctrl==1'b0)) begin
+						state <= IDLE;
+					end
+					else begin
+						state <= WORK;
+					end
+				end
+				default: begin
+					state <= IDLE;
+				end
+			endcase
+		end
+	end
+	
+	always @(posedge clk or posedge reset) begin
+		if(reset == 1'b1) begin
+			clear_count <= 'd0;
+		end
+		else begin
+			case(state)
+				IDLE: begin
+					clear_count <= 'd0;
+				end
+				CLEAR: begin
+					clear_count <= clear_count + 1'd1;
+				end
+				WORK: begin
+					clear_count <= 'd0;
+				end
+				default: begin
+					clear_count <= 'd0;
+				end
+			endcase
+		end
+	end
 	
 //================================================================================
 // complex multiply
 //================================================================================
-	assign i_data_i		= i_data[IQDATA_WIDTH-1:0];
-	assign i_data_q_neg	= -i_data[DATA_WIDTH-1:IQDATA_WIDTH];
-	assign i_data_dly_i	= i_data_dly[IQDATA_WIDTH-1:0];
-	assign i_data_dly_q	= i_data_dly[DATA_WIDTH-1:IQDATA_WIDTH];
+	assign i_data_i		= i_data[SYNC_DATA_WIDTH-1:0];
+	assign i_data_q_neg	= -i_data[2*SYNC_DATA_WIDTH-1:SYNC_DATA_WIDTH];
+	assign i_data_dly_i	= i_data_dly[SYNC_DATA_WIDTH-1:0];
+	assign i_data_dly_q	= i_data_dly[2*SYNC_DATA_WIDTH-1:SYNC_DATA_WIDTH];
 	
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
@@ -109,12 +185,12 @@ module psi_operator #(
 			u1_s_axis_a_tdata	<= 32'd0;
 			u1_s_axis_b_tdata	<= 32'd0;
 		end
-		else if(i_data_valid == 1'b1) begin
+		else if((state==WORK) && (i_data_valid==1'b1)) begin
 			u1_s_axis_a_tvalid	<= 1'b1;
-			u1_s_axis_a_tdata	<= {{(16-IQDATA_WIDTH){i_data_q_neg[IQDATA_WIDTH-1]}},i_data_q_neg,
-									{(16-IQDATA_WIDTH){i_data_i[IQDATA_WIDTH-1]}},i_data_i};
-			u1_s_axis_b_tdata	<= {{(16-IQDATA_WIDTH){i_data_dly_q[IQDATA_WIDTH-1]}},i_data_dly_q,
-									{(16-IQDATA_WIDTH){i_data_dly_i[IQDATA_WIDTH-1]}},i_data_dly_i};
+			u1_s_axis_a_tdata	<= {{(16-SYNC_DATA_WIDTH){i_data_q_neg[SYNC_DATA_WIDTH-1]}},i_data_q_neg,
+									{(16-SYNC_DATA_WIDTH){i_data_i[SYNC_DATA_WIDTH-1]}},i_data_i};
+			u1_s_axis_b_tdata	<= {{(16-SYNC_DATA_WIDTH){i_data_dly_q[SYNC_DATA_WIDTH-1]}},i_data_dly_q,
+									{(16-SYNC_DATA_WIDTH){i_data_dly_i[SYNC_DATA_WIDTH-1]}},i_data_dly_i};
 		end
 		else begin
 			u1_s_axis_a_tvalid	<= 1'b0;
@@ -144,23 +220,62 @@ module psi_operator #(
 			u2_addra	<= 'd0;
 			u2_dina		<= 'd0;
 		end
-		else if(u1_m_axis_dout_tvalid == 1'b1) begin
-			u2_wea		<= 1'b1;
-			u2_wr_addr	<= u2_wr_addr + 1'd1;
-			u2_rd_addr	<= u2_rd_addr + 1'd1;
-			u2_addra	<= u2_wr_addr + 1'd1;
-			u2_dina		<= {{(SPRAM_DATA_WIDTH-2*DATA_MUL_WIDTH){1'b0}},
-							u1_m_axis_dout_tdata[40+DATA_MUL_WIDTH-1:40],
-							u1_m_axis_dout_tdata[DATA_MUL_WIDTH-1:0]};
-		end
 		else begin
-			u2_wea		<= 1'b0;
-			u2_wr_addr	<= u2_wr_addr;
-			u2_rd_addr	<= u2_rd_addr;
-			u2_addra	<= u2_rd_addr;
-			u2_dina		<= u2_dina;
+			case(state)
+				IDLE: begin
+					u2_wea		<= 1'b0;
+					u2_wr_addr	<= 'd0;
+					u2_rd_addr	<= 'd1;
+					u2_addra	<= 'd0;
+					u2_dina		<= 'd0;
+				end
+				CLEAR: begin
+					u2_wea		<= 1'b1;
+					u2_wr_addr	<= 'd0;
+					u2_rd_addr	<= 'd1;
+					u2_addra	<= u2_addra + 1'd1;
+					u2_dina		<= 'd0;
+				end
+				WORK: begin
+					if(u1_m_axis_dout_tvalid == 1'b1) begin
+						u2_wea		<= 1'b1;
+						u2_wr_addr	<= u2_wr_addr + 1'd1;
+						u2_rd_addr	<= u2_rd_addr + 1'd1;
+						u2_addra	<= u2_wr_addr + 1'd1;
+						u2_dina		<= {{(SPRAM_DATA_WIDTH-2*DATA_MUL_WIDTH){1'b0}},
+										u1_m_axis_dout_tdata[40+DATA_MUL_WIDTH-1:40],
+										u1_m_axis_dout_tdata[DATA_MUL_WIDTH-1:0]};
+					end
+					else begin
+						u2_wea		<= 1'b0;
+						u2_wr_addr	<= u2_wr_addr;
+						u2_rd_addr	<= u2_rd_addr;
+						u2_addra	<= u2_rd_addr;
+						u2_dina		<= u2_dina;
+					end
+				end
+				default: begin
+					u2_wea		<= 1'b0;
+					u2_wr_addr	<= 'd0;
+					u2_rd_addr	<= 'd1;
+					u2_addra	<= 'd0;
+					u2_dina		<= 'd0;
+				end
+			endcase
 		end
 	end
+	
+	assign u3_wea		= u2_wea	;
+	assign u3_wr_addr	= u2_wr_addr;
+	assign u3_rd_addr	= u2_rd_addr;
+	assign u3_addra		= u2_addra	;
+	assign u3_dina		= u2_dina	;
+	
+	assign u4_wea		= u2_wea	;
+	assign u4_wr_addr	= u2_wr_addr;
+	assign u4_rd_addr	= u2_rd_addr;
+	assign u4_addra		= u2_addra	;
+	assign u4_dina		= u3_dina	;
 	
 	spram_64_64_ip u2_spram_64_64_ip (
 		.clka	(clk		),	// input clka;
@@ -170,30 +285,6 @@ module psi_operator #(
 		.douta	(u2_douta	)	// output [63:0]douta;
 	);
 	
-	always @(posedge clk or posedge reset) begin
-		if(reset == 1'b1) begin
-			u3_wea		<= 1'b0;
-			u3_wr_addr	<= 'd0;
-			u3_rd_addr	<= 'd1;
-			u3_addra	<= 'd0;
-			u3_dina		<= 'd0;
-		end
-		else if(u1_m_axis_dout_tvalid == 1'b1) begin
-			u3_wea		<= 1'b1;
-			u3_wr_addr	<= u3_wr_addr + 1'd1;
-			u3_rd_addr	<= u3_rd_addr + 1'd1;
-			u3_addra	<= u3_wr_addr + 1'd1;
-			u3_dina		<= u2_douta;
-		end
-		else begin
-			u3_wea		<= 1'b0;
-			u3_wr_addr	<= u3_wr_addr;
-			u3_rd_addr	<= u3_rd_addr;
-			u3_addra	<= u3_rd_addr;
-			u3_dina		<= u3_dina;
-		end
-	end
-	
 	spram_64_64_ip u3_spram_64_64_ip (
 		.clka	(clk		),	// input clka;
 		.wea	(u3_wea		),	// input [0:0]wea;
@@ -201,30 +292,6 @@ module psi_operator #(
 		.dina	(u3_dina	),	// input [63:0]dina;
 		.douta	(u3_douta	)	// output [63:0]douta;
 	);
-	
-	always @(posedge clk or posedge reset) begin
-		if(reset == 1'b1) begin
-			u4_wea		<= 1'b0;
-			u4_wr_addr	<= 'd0;
-			u4_rd_addr	<= 'd1;
-			u4_addra	<= 'd0;
-			u4_dina		<= 'd0;
-		end
-		else if(u1_m_axis_dout_tvalid == 1'b1) begin
-			u4_wea		<= 1'b1;
-			u4_wr_addr	<= u4_wr_addr + 1'd1;
-			u4_rd_addr	<= u4_rd_addr + 1'd1;
-			u4_addra	<= u4_wr_addr + 1'd1;
-			u4_dina		<= u3_douta;
-		end
-		else begin
-			u4_wea		<= 1'b0;
-			u4_wr_addr	<= u4_wr_addr;
-			u4_rd_addr	<= u4_rd_addr;
-			u4_addra	<= u4_rd_addr;
-			u4_dina		<= u4_dina;
-		end
-	end
 	
 	spram_64_64_ip u4_spram_64_64_ip (
 		.clka	(clk		),	// input clka;

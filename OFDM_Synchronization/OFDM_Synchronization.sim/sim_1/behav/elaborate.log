@@ -1,6 +1,6 @@
 Vivado Simulator 2015.2
 Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/15.2/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 89b8eba060cf4f92a4fcc10f3e2a1a35 --debug typical --relax --mt 2 -L blk_mem_gen_v8_2 -L xil_defaultlib -L xbip_utils_v3_0 -L axi_utils_v2_0 -L xbip_pipe_v3_0 -L xbip_bram18k_v3_0 -L mult_gen_v12_0 -L cmpy_v6_0 -L unisims_ver -L unimacro_ver -L secureip --snapshot test_psi_operator_behav xil_defaultlib.test_psi_operator xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Xilinx/15.2/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 89b8eba060cf4f92a4fcc10f3e2a1a35 --debug typical --relax --mt 2 -L xbip_dsp48_wrapper_v3_0 -L xbip_utils_v3_0 -L xbip_pipe_v3_0 -L xbip_dsp48_macro_v3_0 -L xil_defaultlib -L blk_mem_gen_v8_2 -L axi_utils_v2_0 -L xbip_bram18k_v3_0 -L mult_gen_v12_0 -L cmpy_v6_0 -L unisims_ver -L unimacro_ver -L secureip --snapshot test_psi_phi_operator_behav xil_defaultlib.test_psi_phi_operator xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -23,6 +23,8 @@ Compiling package mult_gen_v12_0.dsp_pkg
 Compiling package ieee.vital_timing
 Compiling package ieee.vital_primitives
 Compiling package unisim.vpkg
+Compiling package xbip_dsp48_macro_v3_0.xbip_dsp48_macro_v3_0_viv_comp
+Compiling package xbip_dsp48_macro_v3_0.xbip_dsp48_macro_v3_0_pkg
 Compiling architecture xilinx of entity cmpy_v6_0.delay_line [\delay_line("zynq",false,1,0,1,1...]
 Compiling architecture xilinx of entity cmpy_v6_0.delay_line [\delay_line("zynq",false,0,0,17,...]
 Compiling architecture xilinx of entity cmpy_v6_0.delay_line [\delay_line("zynq",false,0,0,25,...]
@@ -55,8 +57,32 @@ Compiling module blk_mem_gen_v8_2.BLK_MEM_GEN_v8_2_softecc_output_...
 Compiling module blk_mem_gen_v8_2.BLK_MEM_GEN_v8_2_mem_module(C_CO...
 Compiling module blk_mem_gen_v8_2.blk_mem_gen_v8_2(C_FAMILY="zynq"...
 Compiling module xil_defaultlib.spram_64_64_ip
-Compiling module xil_defaultlib.psi_operator_default
-Compiling module xil_defaultlib.test_psi_operator
+Compiling module xil_defaultlib.psi_operator(PSI_WIDTH=68)
+Compiling architecture synth of entity xbip_pipe_v3_0.xbip_pipe_v3_0_viv [\xbip_pipe_v3_0_viv(0,0,0,0,0,0,...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(1,0,0,1,"NO_RESET","DIR...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0.xbip_dsp48e1_wrapper_v3_0 [\xbip_dsp48e1_wrapper_v3_0(1,1,1...]
+Compiling architecture synth of entity xbip_pipe_v3_0.xbip_pipe_v3_0_viv [\xbip_pipe_v3_0_viv(0,0,0,0,0,0,...]
+Compiling architecture synth of entity xbip_pipe_v3_0.xbip_pipe_v3_0_viv [\xbip_pipe_v3_0_viv(0,0,0,0,0,0,...]
+Compiling architecture synth of entity xbip_pipe_v3_0.xbip_pipe_v3_0_viv [\xbip_pipe_v3_0_viv(0,0,0,0,0,0,...]
+Compiling architecture synth of entity xbip_dsp48_macro_v3_0.xbip_dsp48_macro_synth [\xbip_dsp48_macro_synth(0,0,"zyn...]
+Compiling architecture synth of entity xbip_dsp48_macro_v3_0.xbip_dsp48_macro_v3_0_viv [\xbip_dsp48_macro_v3_0_viv(0,0,"...]
+Compiling architecture xilinx of entity xbip_dsp48_macro_v3_0.xbip_dsp48_macro_v3_0 [\xbip_dsp48_macro_v3_0(0,0,"zynq...]
+Compiling architecture dsp48_ip_mul_arch of entity xil_defaultlib.dsp48_ip_mul [dsp48_ip_mul_default]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(1,0,0,1,"NO_RESET","DIR...]
+Compiling architecture synth of entity xbip_dsp48_wrapper_v3_0.xbip_dsp48e1_wrapper_v3_0 [\xbip_dsp48e1_wrapper_v3_0(1,1,1...]
+Compiling architecture synth of entity xbip_dsp48_macro_v3_0.xbip_dsp48_macro_synth [\xbip_dsp48_macro_synth(0,0,"zyn...]
+Compiling architecture synth of entity xbip_dsp48_macro_v3_0.xbip_dsp48_macro_v3_0_viv [\xbip_dsp48_macro_v3_0_viv(0,0,"...]
+Compiling architecture xilinx of entity xbip_dsp48_macro_v3_0.xbip_dsp48_macro_v3_0 [\xbip_dsp48_macro_v3_0(0,0,"zynq...]
+Compiling architecture dsp48_ip_mul_add_arch of entity xil_defaultlib.dsp48_ip_mul_add [dsp48_ip_mul_add_default]
+Compiling module xil_defaultlib.complex_abs_power2_18
+Compiling module blk_mem_gen_v8_2.BLK_MEM_GEN_v8_2_output_stage(C_...
+Compiling module blk_mem_gen_v8_2.BLK_MEM_GEN_v8_2_output_stage(C_...
+Compiling module blk_mem_gen_v8_2.BLK_MEM_GEN_v8_2_softecc_output_...
+Compiling module blk_mem_gen_v8_2.BLK_MEM_GEN_v8_2_mem_module(C_CO...
+Compiling module blk_mem_gen_v8_2.blk_mem_gen_v8_2(C_FAMILY="zynq"...
+Compiling module xil_defaultlib.spram_32_64_ip
+Compiling module xil_defaultlib.phi_operator(PHI_WIDTH=34)
+Compiling module xil_defaultlib.test_psi_phi_operator
 Compiling module xil_defaultlib.glbl
 Waiting for 4 sub-compilation(s) to finish...
-Built simulation snapshot test_psi_operator_behav
+Built simulation snapshot test_psi_phi_operator_behav
