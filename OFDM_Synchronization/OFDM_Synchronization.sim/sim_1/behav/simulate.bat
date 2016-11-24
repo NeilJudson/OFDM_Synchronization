@@ -1,6 +1,6 @@
 @echo off
-set xv_path=D:\\jiaweiwei\\Xilinx\\15.2\\Vivado\\2015.2\\bin
-call %xv_path%/xsim test_psi_operator_behav -key {Behavioral:sim_1:Functional:test_psi_operator} -tclbatch test_psi_operator.tcl -log simulate.log
+set xv_path=D:\\Xilinx\\15.2\\Vivado\\2015.2\\bin
+call %xv_path%/xsim test_psi_phi_operator_behav -key {Behavioral:sim_1:Functional:test_psi_phi_operator} -tclbatch test_psi_phi_operator.tcl -log simulate.log
 if "%errorlevel%"=="0" goto SUCCESS
 if "%errorlevel%"=="1" goto END
 :END

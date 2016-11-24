@@ -1,1 +1,0 @@
--wto "89b8eba060cf4f92a4fcc10f3e2a1a35" --debug "typical" --relax --mt "2" -L "xbip_utils_v3_0" -L "axi_utils_v2_0" -L "xbip_pipe_v3_0" -L "xbip_bram18k_v3_0" -L "mult_gen_v12_0" -L "cmpy_v6_0" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "test_psi_operator_behav" "xil_defaultlib.test_psi_operator" "xil_defaultlib.glbl" -log "elaborate.log" 
