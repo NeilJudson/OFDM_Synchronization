@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_psi_phi_operator_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_psi_phi_operator" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="40" />
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/i_work_ctrl_en" type="logic">
+      <obj_property name="ElementShortName">i_work_ctrl_en</obj_property>
+      <obj_property name="ObjectShortName">i_work_ctrl_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/i_work_ctrl" type="logic">
+      <obj_property name="ElementShortName">i_work_ctrl</obj_property>
+      <obj_property name="ObjectShortName">i_work_ctrl</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/i_data_valid" type="logic">
+      <obj_property name="ElementShortName">i_data_valid</obj_property>
+      <obj_property name="ObjectShortName">i_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/i_data" type="array">
+      <obj_property name="ElementShortName">i_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_data[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/i_data_dly" type="array">
+      <obj_property name="ElementShortName">i_data_dly[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_data_dly[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/o_data_valid_psi" type="logic">
+      <obj_property name="ElementShortName">o_data_valid_psi</obj_property>
+      <obj_property name="ObjectShortName">o_data_valid_psi</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/o_data_valid_phi" type="logic">
+      <obj_property name="ElementShortName">o_data_valid_phi</obj_property>
+      <obj_property name="ObjectShortName">o_data_valid_phi</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/o_data_psi" type="array">
+      <obj_property name="ElementShortName">o_data_psi[67:0]</obj_property>
+      <obj_property name="ObjectShortName">o_data_psi[67:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/o_data_phi" type="array">
+      <obj_property name="ElementShortName">o_data_phi[34:0]</obj_property>
+      <obj_property name="ObjectShortName">o_data_phi[34:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/count" type="array">
+      <obj_property name="ElementShortName">count[39:0]</obj_property>
+      <obj_property name="ObjectShortName">count[39:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/state" type="array">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u1_i_data_valid" type="logic">
+      <obj_property name="ElementShortName">u1_i_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u1_i_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u1_i_data_i" type="array">
+      <obj_property name="ElementShortName">u1_i_data_i[17:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_i_data_i[17:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u1_i_data_q" type="array">
+      <obj_property name="ElementShortName">u1_i_data_q[17:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_i_data_q[17:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u1_o_data_valid" type="logic">
+      <obj_property name="ElementShortName">u1_o_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u1_o_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u1_o_data" type="array">
+      <obj_property name="ElementShortName">u1_o_data[35:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_data[35:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u5_i_data_valid" type="logic">
+      <obj_property name="ElementShortName">u5_i_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u5_i_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u5_i_data_i" type="array">
+      <obj_property name="ElementShortName">u5_i_data_i[17:0]</obj_property>
+      <obj_property name="ObjectShortName">u5_i_data_i[17:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u5_i_data_q" type="array">
+      <obj_property name="ElementShortName">u5_i_data_q[17:0]</obj_property>
+      <obj_property name="ObjectShortName">u5_i_data_q[17:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u5_o_data_valid" type="logic">
+      <obj_property name="ElementShortName">u5_o_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u5_o_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u5_o_data" type="array">
+      <obj_property name="ElementShortName">u5_o_data[35:0]</obj_property>
+      <obj_property name="ObjectShortName">u5_o_data[35:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/power_add_valid" type="logic">
+      <obj_property name="ElementShortName">power_add_valid</obj_property>
+      <obj_property name="ObjectShortName">power_add_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/power_add" type="array">
+      <obj_property name="ElementShortName">power_add[32:0]</obj_property>
+      <obj_property name="ObjectShortName">power_add[32:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u2_wea" type="logic">
+      <obj_property name="ElementShortName">u2_wea</obj_property>
+      <obj_property name="ObjectShortName">u2_wea</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u2_dina" type="array">
+      <obj_property name="ElementShortName">u2_dina[32:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_dina[32:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u2_douta" type="array">
+      <obj_property name="ElementShortName">u2_douta[32:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_douta[32:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u3_wea" type="logic">
+      <obj_property name="ElementShortName">u3_wea</obj_property>
+      <obj_property name="ObjectShortName">u3_wea</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u3_dina" type="array">
+      <obj_property name="ElementShortName">u3_dina[32:0]</obj_property>
+      <obj_property name="ObjectShortName">u3_dina[32:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u3_douta" type="array">
+      <obj_property name="ElementShortName">u3_douta[32:0]</obj_property>
+      <obj_property name="ObjectShortName">u3_douta[32:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u4_wea" type="logic">
+      <obj_property name="ElementShortName">u4_wea</obj_property>
+      <obj_property name="ObjectShortName">u4_wea</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u4_dina" type="array">
+      <obj_property name="ElementShortName">u4_dina[32:0]</obj_property>
+      <obj_property name="ObjectShortName">u4_dina[32:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/u4_douta" type="array">
+      <obj_property name="ElementShortName">u4_douta[32:0]</obj_property>
+      <obj_property name="ObjectShortName">u4_douta[32:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/power_add_valid" type="logic">
+      <obj_property name="ElementShortName">power_add_valid</obj_property>
+      <obj_property name="ObjectShortName">power_add_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/add12" type="array">
+      <obj_property name="ElementShortName">add12[33:0]</obj_property>
+      <obj_property name="ObjectShortName">add12[33:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/add34" type="array">
+      <obj_property name="ElementShortName">add34[33:0]</obj_property>
+      <obj_property name="ObjectShortName">add34[33:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/power_add_valid_dly1" type="logic">
+      <obj_property name="ElementShortName">power_add_valid_dly1</obj_property>
+      <obj_property name="ObjectShortName">power_add_valid_dly1</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/add1234" type="array">
+      <obj_property name="ElementShortName">add1234[34:0]</obj_property>
+      <obj_property name="ObjectShortName">add1234[34:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_psi_phi_operator/uut_phi/power_add_valid_dly2" type="logic">
+      <obj_property name="ElementShortName">power_add_valid_dly2</obj_property>
+      <obj_property name="ObjectShortName">power_add_valid_dly2</obj_property>
+   </wvobject>
+</wave_config>

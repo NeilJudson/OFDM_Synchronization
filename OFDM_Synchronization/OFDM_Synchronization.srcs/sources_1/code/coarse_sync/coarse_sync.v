@@ -73,26 +73,37 @@ module coarse_sync #(
 //================================================================================
 // variable
 //================================================================================
-	localparam PSI_WIDTH = 2*(2*SYNC_DATA_WIDTH+2); // 68
-	localparam PHI_WIDTH = 2*SYNC_DATA_WIDTH+2; // 34
+	localparam PSI_WIDTH = 2*SYNC_DATA_WIDTH+2; // 34
+	localparam PHI_WIDTH = 2*SYNC_DATA_WIDTH+1+2; // 35
+	localparam TAR_WIDTH = 100;
 	
-	reg									ctrl_work_en	= 1'b0;
-	reg									ctrl_work		= 1'b0; // 1'b0: 停止工作；1'b1: 开始工作
+	reg										ctrl_work_en	= 1'b0;
+	reg										ctrl_work		= 1'b0; // 1'b0: 停止工作；1'b1: 开始工作
 	
-	wire								u1_i_work_ctrl_en;
-	wire								u1_i_work_ctrl	;
-	reg									u1_i_data_valid	;
-	reg			[2*SYNC_DATA_WIDTH-1:0]	u1_i_data		;
-	reg			[2*SYNC_DATA_WIDTH-1:0]	u1_i_data_dly	;
-	wire								u1_o_data_valid	;
-	wire		[PSI_WIDTH-1:0]			u1_o_data		;
+	wire									u1_i_work_ctrl_en	;
+	wire									u1_i_work_ctrl		;
+	reg										u1_i_data_valid		;
+	reg				[2*SYNC_DATA_WIDTH-1:0]	u1_i_data			;
+	reg				[2*SYNC_DATA_WIDTH-1:0]	u1_i_data_dly		;
+	wire									u1_o_data_valid		;
+	wire			[2*PSI_WIDTH-1:0]		u1_o_data			;
 	
-	wire								u2_i_work_ctrl_en;
-	wire								u2_i_work_ctrl	;
-	wire								u2_i_data_valid	;
-	wire		[2*SYNC_DATA_WIDTH-1:0]	u2_i_data		;
-	wire								u2_o_data_valid	;
-	wire		[PHI_WIDTH-1:0]			u2_o_data		;
+	wire									u2_i_work_ctrl_en	;
+	wire									u2_i_work_ctrl		;
+	wire									u2_i_data_valid		;
+	wire			[2*SYNC_DATA_WIDTH-1:0]	u2_i_data			;
+	wire			[2*SYNC_DATA_WIDTH-1:0]	u2_i_data_dly		;
+	wire									u2_o_data_valid		;
+	wire	signed	[PHI_WIDTH-1:0]			u2_o_data			;
+	
+	wire									u3_i_work_ctrl_en	;
+	wire									u3_i_work_ctrl		;
+	wire									u3_i_psi_data_valid	;
+	wire			[2*PSI_WIDTH-1:0]		u3_i_psi_data		;
+	wire									u3_i_phi_data_valid	;
+	wire	signed	[PHI_WIDTH-1:0]			u3_i_phi_data		;
+	wire									u3_o_data_valid		;
+	wire	signed	[TAR_WIDTH-1:0]			u3_o_data			;
 	
 //================================================================================
 // ctrl_decode
@@ -113,12 +124,12 @@ module coarse_sync #(
 	end
 	
 //================================================================================
-// accumulate
+// psi、phi
 //================================================================================
-	assign u1_i_work_ctrl_en= ctrl_work_en;
-	assign u1_i_work_ctrl	= ctrl_work;
-	assign u2_i_work_ctrl_en= ctrl_work_en;
-	assign u2_i_work_ctrl	= ctrl_work;
+	assign u1_i_work_ctrl_en	= ctrl_work_en;
+	assign u1_i_work_ctrl		= ctrl_work;
+	assign u2_i_work_ctrl_en	= ctrl_work_en;
+	assign u2_i_work_ctrl		= ctrl_work;
 	
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
@@ -139,7 +150,8 @@ module coarse_sync #(
 	end
 	
 	assign u2_i_data_valid	= u1_i_data_valid;
-	assign u2_i_data		= u1_i_data_dly;
+	assign u2_i_data		= u1_i_data;
+	assign u2_i_data_dly	= u1_i_data_dly;
 	
 	psi_operator #(
 		.SYNC_DATA_WIDTH(SYNC_DATA_WIDTH	),
@@ -166,10 +178,35 @@ module coarse_sync #(
 		.i_work_ctrl	(u2_i_work_ctrl		),
 		.i_data_valid	(u2_i_data_valid	),
 		.i_data			(u2_i_data			),
+		.i_data_dly		(u2_i_data_dly		),
 		.o_data_valid	(u2_o_data_valid	), // 6dly
 		.o_data			(u2_o_data			)
 	);
 	
+//================================================================================
+// tar
+//================================================================================
+	assign u3_i_work_ctrl_en	= ctrl_work_en;
+	assign u3_i_work_ctrl		= ctrl_work;
+	
+	
+	
+	tar_operator #(
+		.PSI_WIDTH			(PSI_WIDTH			),
+		.PHI_WIDTH			(PHI_WIDTH			),
+		.TAR_WIDTH			(TAR_WIDTH			)
+	)u3_tar_operator(
+		.clk				(axis_aclk			),
+		.reset				(axis_areset		),
+		.i_work_ctrl_en		(u3_i_work_ctrl_en	),
+		.i_work_ctrl		(u3_i_work_ctrl		),
+		.i_psi_data_valid	(u3_i_psi_data_valid),
+		.i_psi_data			(u3_i_psi_data		),
+		.i_phi_data_valid	(u3_i_phi_data_valid),
+		.i_phi_data			(u3_i_phi_data		),
+		.o_data_valid		(u3_o_data_valid	),
+		.o_data				(u3_o_data			)
+	);
 	
 	
 endmodule

@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log test_phi_operator.vds -m64 -mode batch -messageDb vivado.pb -notrace -source test_phi_operator.tcl
+EAStep vivado -log test_tar_operator.vds -m64 -mode batch -messageDb vivado.pb -notrace -source test_tar_operator.tcl

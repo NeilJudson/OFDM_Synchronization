@@ -22,7 +22,7 @@
 
 module psi_operator #(
 	parameter SYNC_DATA_WIDTH = 16,
-	parameter PSI_WIDTH = 2*(2*SYNC_DATA_WIDTH+2) // 68
+	parameter PSI_WIDTH = 2*SYNC_DATA_WIDTH+2 // 34
 	)
 	(
 	clk			,
@@ -42,14 +42,14 @@ module psi_operator #(
 	input								reset		;
 	
 	input								i_work_ctrl_en;
-	input								i_work_ctrl	; // 1'b0: 停止工作；1'b1: 开始工作，进入清零状态
+	input								i_work_ctrl	; // 1'b0: 停止工作；1'b1: 开始工作，先进入清零状态
 	
 	input								i_data_valid;
 	input		[2*SYNC_DATA_WIDTH-1:0]	i_data		; // 高位虚部，低位实部。
 	input		[2*SYNC_DATA_WIDTH-1:0]	i_data_dly	; // 高位虚部，低位实部。
 	
 	output								o_data_valid; // 9dly
-	output		[PSI_WIDTH-1:0]			o_data		;
+	output		[2*PSI_WIDTH-1:0]		o_data		;
 	
 //================================================================================
 // variable
@@ -269,13 +269,13 @@ module psi_operator #(
 	assign u3_wr_addr	= u2_wr_addr;
 	assign u3_rd_addr	= u2_rd_addr;
 	assign u3_addra		= u2_addra	;
-	assign u3_dina		= u2_dina	;
+	assign u3_dina		= u2_douta	;
 	
 	assign u4_wea		= u2_wea	;
 	assign u4_wr_addr	= u2_wr_addr;
 	assign u4_rd_addr	= u2_rd_addr;
 	assign u4_addra		= u2_addra	;
-	assign u4_dina		= u3_dina	;
+	assign u4_dina		= u3_douta	;
 	
 	spram_64_64_ip u2_spram_64_64_ip (
 		.clka	(clk		),	// input clka;

@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log test_phi_operator.vds -m64 -mode batch -messageDb vivado.pb -notrace -source test_phi_operator.tcl
+    with args -log test_tar_operator.vds -m64 -mode batch -messageDb vivado.pb -notrace -source test_tar_operator.tcl
 
 
 ****** Vivado v2015.2.1 (64-bit)
@@ -8,38 +8,36 @@
   **** IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 
-source test_phi_operator.tcl -notrace
-Command: synth_design -top test_phi_operator -part xc7z045fbg676-3
+source test_tar_operator.tcl -notrace
+Command: synth_design -top test_tar_operator -part xc7z045fbg676-3
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 243.820 ; gain = 58.074
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 244.316 ; gain = 58.699
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'test_phi_operator' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/test_phi_operator.v:23]
-INFO: [Synth 8-638] synthesizing module 'phi_operator' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/phi_operator.v:23]
-	Parameter SYNC_DATA_WIDTH bound to: 16 - type: integer 
-	Parameter PHI_WIDTH bound to: 34 - type: integer 
-	Parameter SPRAM_ADDR_WIDTH bound to: 6 - type: integer 
-	Parameter SPRAM_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter DATA_POWER_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'test_tar_operator' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/test_tar_operator.v:23]
+INFO: [Synth 8-638] synthesizing module 'tar_operator' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/tar_operator.v:23]
+	Parameter PSI_WIDTH bound to: 34 - type: integer 
+	Parameter PHI_WIDTH bound to: 35 - type: integer 
+	Parameter TAR_WIDTH bound to: 100 - type: integer 
+	Parameter SPRAM_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter SPRAM_DATA_WIDTH bound to: 103 - type: integer 
+	Parameter PSI_SUM_WIDTH bound to: 39 - type: integer 
+	Parameter PHI_SUM_WIDTH bound to: 40 - type: integer 
 	Parameter IDLE bound to: 2'b00 
 	Parameter CLEAR bound to: 2'b01 
 	Parameter WORK bound to: 2'b10 
-INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_18' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_18.v:23]
-INFO: [Synth 8-638] synthesizing module 'dsp48_ip_mul' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-884-txjs-130/realtime/dsp48_ip_mul_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'dsp48_ip_mul' (1#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-884-txjs-130/realtime/dsp48_ip_mul_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'dsp48_ip_mul_add' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-884-txjs-130/realtime/dsp48_ip_mul_add_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'dsp48_ip_mul_add' (2#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-884-txjs-130/realtime/dsp48_ip_mul_add_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_18' (3#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_18.v:23]
-INFO: [Synth 8-638] synthesizing module 'spram_32_64_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-884-txjs-130/realtime/spram_32_64_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'spram_32_64_ip' (4#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-884-txjs-130/realtime/spram_32_64_ip_stub.v:7]
-WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/phi_operator.v:229]
-INFO: [Synth 8-256] done synthesizing module 'phi_operator' (5#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/phi_operator.v:23]
-WARNING: [Synth 8-85] always block has no event control specified [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/test_phi_operator.v:75]
-INFO: [Synth 8-256] done synthesizing module 'test_phi_operator' (6#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/test_phi_operator.v:23]
+INFO: [Synth 8-638] synthesizing module 'spram_103_32_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4264-txjs-130/realtime/spram_103_32_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_103_32_ip' (1#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4264-txjs-130/realtime/spram_103_32_ip_stub.v:7]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/tar_operator.v:186]
+WARNING: [Synth 8-3848] Net o_data_valid in module/entity tar_operator does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/tar_operator.v:54]
+WARNING: [Synth 8-3848] Net o_data in module/entity tar_operator does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/tar_operator.v:55]
+INFO: [Synth 8-256] done synthesizing module 'tar_operator' (2#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/tar_operator.v:23]
+WARNING: [Synth 8-85] always block has no event control specified [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/test_tar_operator.v:86]
+INFO: [Synth 8-256] done synthesizing module 'test_tar_operator' (3#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/test_tar_operator.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 278.129 ; gain = 92.383
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 278.734 ; gain = 93.117
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -49,7 +47,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 278.129 ; gain = 92.383
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 278.734 ; gain = 93.117
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z045fbg676-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -61,26 +59,27 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 650.281 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 647.875 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z045fbg676-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5544] ROM "i_data_valid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'i_phi_data_valid_reg' into 'i_psi_data_valid_reg' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/test_tar_operator.v:102]
+INFO: [Synth 8-5544] ROM "i_psi_data_valid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -93,27 +92,25 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     34 Bit       Adders := 1     
-	   2 Input     33 Bit       Adders := 2     
-	   2 Input      7 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
+	   2 Input     35 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 3     
 +---Registers : 
-	               34 Bit    Registers := 1     
-	               33 Bit    Registers := 2     
-	               32 Bit    Registers := 2     
-	               18 Bit    Registers := 2     
-	                7 Bit    Registers := 1     
-	                6 Bit    Registers := 3     
+	              103 Bit    Registers := 1     
+	               68 Bit    Registers := 1     
+	               35 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 8     
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   4 Input     32 Bit        Muxes := 1     
-	   4 Input      7 Bit        Muxes := 1     
-	   4 Input      6 Bit        Muxes := 3     
-	   2 Input      6 Bit        Muxes := 1     
-	   7 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
+	   4 Input    103 Bit        Muxes := 1     
+	   4 Input      6 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 1     
+	   8 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -121,40 +118,33 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module test_phi_operator 
+Module test_tar_operator 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     35 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 1     
+	               68 Bit    Registers := 1     
+	               35 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
-Module complex_abs_power2_18 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 3     
-Module phi_operator 
+Module tar_operator 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     34 Bit       Adders := 1     
-	   2 Input     33 Bit       Adders := 2     
-	   2 Input      7 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 3     
 +---Registers : 
-	               34 Bit    Registers := 1     
-	               33 Bit    Registers := 2     
-	               32 Bit    Registers := 1     
-	               18 Bit    Registers := 2     
-	                7 Bit    Registers := 1     
-	                6 Bit    Registers := 3     
+	              103 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input     32 Bit        Muxes := 1     
-	   4 Input      7 Bit        Muxes := 1     
-	   4 Input      6 Bit        Muxes := 3     
-	   2 Input      6 Bit        Muxes := 1     
-	   7 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	   4 Input    103 Bit        Muxes := 1     
+	   4 Input      6 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 1     
+	   8 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -168,39 +158,39 @@ BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 650.281 ; gain = 464.535
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 647.875 ; gain = 462.258
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-WARNING: [Synth 8-3332] Sequential element (\count_reg[35] ) is unused and will be removed from module test_phi_operator.
-WARNING: [Synth 8-3332] Sequential element (\count_reg[36] ) is unused and will be removed from module test_phi_operator.
-WARNING: [Synth 8-3332] Sequential element (\count_reg[37] ) is unused and will be removed from module test_phi_operator.
-WARNING: [Synth 8-3332] Sequential element (\count_reg[38] ) is unused and will be removed from module test_phi_operator.
-WARNING: [Synth 8-3332] Sequential element (\count_reg[39] ) is unused and will be removed from module test_phi_operator.
+WARNING: [Synth 8-3332] Sequential element (\count_reg[35] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\count_reg[36] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\count_reg[37] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\count_reg[38] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\count_reg[39] ) is unused and will be removed from module test_tar_operator.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 647.875 ; gain = 462.258
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -208,10 +198,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -222,8 +212,104 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\uut/clear_count_reg[5] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/clear_count_reg[4] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/clear_count_reg[3] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/clear_count_reg[2] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/clear_count_reg[1] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/clear_count_reg[0] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/state_reg[1] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/state_reg[0] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_wea_reg ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_rd_addr_reg[0] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_rd_addr_reg[4] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_rd_addr_reg[3] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_rd_addr_reg[2] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_rd_addr_reg[1] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_wr_addr_reg[4] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_wr_addr_reg[3] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_wr_addr_reg[2] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_wr_addr_reg[1] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_wr_addr_reg[0] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_addra_reg[4] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_addra_reg[3] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_addra_reg[2] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_addra_reg[1] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\uut/u1_addra_reg[0] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[67] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[66] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[65] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[64] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[63] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[62] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[61] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[60] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[59] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[58] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[57] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[56] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[55] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[54] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[53] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[52] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[51] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[50] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[49] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[48] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[47] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[46] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[45] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[44] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[43] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[42] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[41] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[40] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[39] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[38] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[37] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[36] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[35] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[34] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[33] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[32] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[31] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[30] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[29] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[28] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[27] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[26] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[25] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[24] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[23] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[22] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[21] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[20] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[19] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[18] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[17] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[16] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[15] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[14] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[13] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[12] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[11] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[10] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[9] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[8] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[7] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[6] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[5] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[4] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[3] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[2] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[1] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_psi_data_reg[0] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_phi_data_reg[32] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_phi_data_reg[31] ) is unused and will be removed from module test_tar_operator.
+WARNING: [Synth 8-3332] Sequential element (\i_phi_data_reg[30] ) is unused and will be removed from module test_tar_operator.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -241,7 +327,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -254,7 +340,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -265,88 +351,57 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-115] binding instance 'i_0' in module 'test_tar_operator' to reference 'tar_operator' which has no pins
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 650.281 ; gain = 464.535
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 650.281 ; gain = 464.535
+Start Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-Static Shift Register:
-+------------------+----------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name       | RTL Name                                           | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------------+----------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|test_phi_operator | uut/u1_complex_abs_power2_18/i_data_valid_dly3_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-+------------------+----------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+-----------------+----------+
-|      |BlackBox name    |Instances |
-+------+-----------------+----------+
-|1     |spram_32_64_ip   |         3|
-|2     |dsp48_ip_mul     |         1|
-|3     |dsp48_ip_mul_add |         1|
-+------+-----------------+----------+
++------+----------------+----------+
+|      |BlackBox name   |Instances |
++------+----------------+----------+
+|1     |spram_103_32_ip |         1|
++------+----------------+----------+
 
 Report Cell Usage: 
-+------+------------------+------+
-|      |Cell              |Count |
-+------+------------------+------+
-|1     |dsp48_ip_mul      |     1|
-|2     |dsp48_ip_mul_add  |     1|
-|3     |spram_32_64_ip    |     1|
-|4     |spram_32_64_ip__1 |     1|
-|5     |spram_32_64_ip__2 |     1|
-|6     |BUFG              |     1|
-|7     |CARRY4            |     9|
-|8     |LUT1              |    36|
-|9     |LUT2              |    35|
-|10    |LUT3              |     9|
-|11    |LUT4              |     9|
-|12    |LUT5              |     8|
-|13    |LUT6              |    13|
-|14    |SRL16E            |     1|
-|15    |FDRE              |   163|
-+------+------------------+------+
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |spram_103_32_ip |     1|
+|2     |LUT1            |     1|
++------+----------------+------+
 
 Report Instance Areas: 
-+------+-----------------------------+----------------------+------+
-|      |Instance                     |Module                |Cells |
-+------+-----------------------------+----------------------+------+
-|1     |top                          |                      |   476|
-|2     |  uut                        |phi_operator          |   361|
-|3     |    u1_complex_abs_power2_18 |complex_abs_power2_18 |   142|
-+------+-----------------------------+----------------------+------+
++------+---------+-------------+------+
+|      |Instance |Module       |Cells |
++------+---------+-------------+------+
+|1     |top      |             |   104|
+|2     |  uut    |tar_operator |   104|
++------+---------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 650.281 ; gain = 464.535
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 647.875 ; gain = 462.258
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 650.281 ; gain = 70.512
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 650.281 ; gain = 464.535
+Synthesis finished with 0 errors, 0 critical warnings and 270 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 647.875 ; gain = 70.992
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 647.875 ; gain = 462.258
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-24 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+18 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 650.281 ; gain = 452.645
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 650.281 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 23 16:57:15 2016...
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 647.875 ; gain = 450.109
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 647.875 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 25 17:43:12 2016...
