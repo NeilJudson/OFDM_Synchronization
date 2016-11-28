@@ -21,8 +21,7 @@
 
 
 module ofdm_syn #(
-	parameter	DATA_WIDTH		= 5'd16,
-				SYN_DATA_WIDTH	= 5'd13
+	parameter SYNC_DATA_WIDTH = 16
 	)
 	(
 	axis_aclk			,
@@ -145,13 +144,12 @@ module ofdm_syn #(
 	end
 	
 //================================================================================
-// u1_data_dpram
+// data dpram
 //================================================================================
 	assign u1_s_axis_ctrl_tdata = {'d0,sync_state};
 	
 	data_dpram #(
-		.DATA_WIDTH			(DATA_WIDTH),
-		.SYN_DATA_WIDTH		(SYN_DATA_WIDTH)
+		.SYNC_DATA_WIDTH	(SYNC_DATA_WIDTH)
 	)u1_data_dpram(
 		.axis_aclk			(axis_aclk),
 		.axis_areset		(axis_areset),
@@ -177,6 +175,35 @@ module ofdm_syn #(
 		.m_axis_data_trdy	()
 	);
 	
+//================================================================================
+// coarse sync
+//================================================================================
+	coarse_sync #(
+		.SYNC_DATA_WIDTH	(SYNC_DATA_WIDTH)
+	)u2_coarse_sync(
+		.axis_aclk			(axis_aclk),
+		.axis_areset		(axis_areset),
+		
+		.s_axis_ctrl_tvalid	(),
+		.s_axis_ctrl_tlast	(),
+		.s_axis_ctrl_tdata	(),
+		.s_axis_ctrl_trdy	(),
+		
+		.s_axis_data_tvalid	(),
+		.s_axis_data_tlast	(),
+		.s_axis_data_tdata	(),
+		.s_axis_data_trdy	(),
+		
+		.m_axis_ctrl_tvalid	(),
+		.m_axis_ctrl_tlast	(),
+		.m_axis_ctrl_tdata	(),
+		.m_axis_ctrl_trdy	(),
+		
+		.m_axis_data_tvalid	(),
+		.m_axis_data_tlast	(),
+		.m_axis_data_tdata	(),
+		.m_axis_data_trdy	()
+	);
 	
 	
 endmodule

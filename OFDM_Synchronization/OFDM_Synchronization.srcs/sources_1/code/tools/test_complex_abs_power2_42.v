@@ -32,7 +32,8 @@ module test_complex_abs_power2_42;
 	wire o_data_valid;
 	wire [83:0] o_data;
 	
-	reg [39:0] count;
+	reg reset;
+	reg [49:0] count;
 
 	// Instantiate the Unit Under Test (UUT)
 	complex_abs_power2_42 uut (
@@ -63,18 +64,18 @@ module test_complex_abs_power2_42;
 	end
 	
 	always
-		#5 clk = ~clk;
+		#5 i_clk = ~i_clk;
 	
-	always @(posedge clk or posedge reset) begin
+	always @(posedge i_clk or posedge reset) begin
 		if(reset == 1'b1) begin
-			count <= 40'd0;
+			count <= 50'd0;
 		end
 		else begin
 			count <= count + 1'd1;
 		end
 	end
 	
-	always @(posedge clk or posedge reset) begin
+	always @(posedge i_clk or posedge reset) begin
 		if(reset == 1'b1) begin
 			i_data_valid	<= 1'b0;
 			i_data_i		<= 'd0;
@@ -82,8 +83,8 @@ module test_complex_abs_power2_42;
 		end
 		else if(count[2:0] == 3'd7) begin
 			i_data_valid	<= 1'b1;
-			i_data_i		<= count[34:3];
-			i_data_q		<= 1'b1;
+			i_data_i		<= count[44:3];
+			i_data_q		<= 42'd1;
 		end
 		else begin
 			i_data_valid	<= 1'b0;

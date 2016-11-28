@@ -35,8 +35,8 @@ module phi_operator #(
 	i_data		,
 	i_data_dly	,
 	
-	o_data_valid,
-	o_data
+	o_phi_data_valid,
+	o_phi_data
 	);
 	input									clk			;
 	input									reset		;
@@ -48,15 +48,15 @@ module phi_operator #(
 	input			[2*SYNC_DATA_WIDTH-1:0]	i_data		; // 高位虚部，低位实部。
 	input			[2*SYNC_DATA_WIDTH-1:0]	i_data_dly	; // 高位虚部，低位实部。
 	
-	output									o_data_valid; // 6dly
-	output	signed	[PHI_WIDTH-1:0]			o_data		;
+	output									o_phi_data_valid; // 6dly
+	output	signed	[PHI_WIDTH-1:0]			o_phi_data	;
 	
 //================================================================================
 // variable
 //================================================================================
-	localparam SPRAM_ADDR_WIDTH = 6;
-	localparam SPRAM_DATA_WIDTH = 33;
-	localparam DATA_POWER_WIDTH = 2*SYNC_DATA_WIDTH; // 32
+	localparam	SPRAM_ADDR_WIDTH = 6;
+	localparam	SPRAM_DATA_WIDTH = 33;
+	localparam	DATA_POWER_WIDTH = 2*SYNC_DATA_WIDTH; // 32
 	// state
 	localparam	IDLE	= 2'd0,
 				CLEAR	= 2'd1,
@@ -373,7 +373,7 @@ module phi_operator #(
 		end
 	end
 	
-	assign o_data_valid = power_add_valid_dly2;
-	assign o_data = add1234;
+	assign o_phi_data_valid	= power_add_valid_dly2;
+	assign o_phi_data		= add1234;
 	
 endmodule

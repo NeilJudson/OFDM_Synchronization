@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-| Date         : Fri Nov 25 19:47:50 2016
+| Date         : Mon Nov 28 15:19:04 2016
 | Host         : txjs-130 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file multiplier_ip_42_42_utilization_synth.rpt -pb multiplier_ip_42_42_utilization_synth.pb
 | Design       : multiplier_ip_42_42

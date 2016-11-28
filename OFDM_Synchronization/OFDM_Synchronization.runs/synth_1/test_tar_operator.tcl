@@ -16,7 +16,10 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_103_32_ip_synth_1/spram_103_32_ip.dcp
 set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_103_32_ip_synth_1/spram_103_32_ip.dcp]
+add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_ip_42_42_synth_1/multiplier_ip_42_42.dcp
+set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_ip_42_42_synth_1/multiplier_ip_42_42.dcp]
 read_verilog -library xil_defaultlib {
+  E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_42.v
   E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/tar_operator.v
   E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/test_tar_operator.v
 }

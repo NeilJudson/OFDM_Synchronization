@@ -16,6 +16,7 @@ set_property parent.project_path E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 read_ip e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_ip_42_42/multiplier_ip_42_42.xci
+set_property used_in_implementation false [get_files -all e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_ip_42_42/multiplier_ip_42_42.dcp]
 set_property is_locked true [get_files e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_ip_42_42/multiplier_ip_42_42.xci]
 
 read_xdc dont_touch.xdc

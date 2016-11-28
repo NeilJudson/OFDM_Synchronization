@@ -21,8 +21,7 @@
 
 
 module data_dpram #(
-	parameter	DATA_WIDTH		= 5'd16,
-				SYN_DATA_WIDTH	= 4'd13 // 同步数据位宽
+	parameter SYNC_DATA_WIDTH = 16
 	)
 	(
 	axis_aclk			,
@@ -71,8 +70,10 @@ module data_dpram #(
 	output		[63:0]	m_axis_data_tdata	;
 	input				m_axis_data_trdy	;
 	
-	localparam	RAM_ADDR_WIDTH = 4'd10;
-	
+//================================================================================
+// variable
+//================================================================================
+	localparam	RAM_ADDR_WIDTH = 10;
 	// sync_state
 	localparam	SYNC_IDLE			= 3'd0,
 				SYNC_COARSE_SEARCH	= 3'd1,

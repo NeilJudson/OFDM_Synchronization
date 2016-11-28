@@ -35,28 +35,28 @@ module psi_operator #(
 	i_data		,
 	i_data_dly	,
 	
-	o_data_valid,
-	o_data
+	o_psi_data_valid,
+	o_psi_data
 	);
-	input								clk			;
-	input								reset		;
+	input							clk			;
+	input							reset		;
 	
-	input								i_work_ctrl_en;
-	input								i_work_ctrl	; // 1'b0: 停止工作；1'b1: 开始工作，先进入清零状态
+	input							i_work_ctrl_en;
+	input							i_work_ctrl	; // 1'b0: 停止工作；1'b1: 开始工作，先进入清零状态
 	
-	input								i_data_valid;
-	input		[2*SYNC_DATA_WIDTH-1:0]	i_data		; // 高位虚部，低位实部。
-	input		[2*SYNC_DATA_WIDTH-1:0]	i_data_dly	; // 高位虚部，低位实部。
+	input							i_data_valid;
+	input	[2*SYNC_DATA_WIDTH-1:0]	i_data		; // 高位虚部，低位实部。
+	input	[2*SYNC_DATA_WIDTH-1:0]	i_data_dly	; // 高位虚部，低位实部。
 	
-	output								o_data_valid; // 9dly
-	output		[2*PSI_WIDTH-1:0]		o_data		;
+	output							o_psi_data_valid; // 9dly
+	output	[2*PSI_WIDTH-1:0]		o_psi_data	;
 	
 //================================================================================
 // variable
 //================================================================================
-	localparam SPRAM_ADDR_WIDTH	= 6;
-	localparam SPRAM_DATA_WIDTH	= 64;
-	localparam DATA_MUL_WIDTH	= 2*SYNC_DATA_WIDTH; // 32
+	localparam	SPRAM_ADDR_WIDTH	= 6;
+	localparam	SPRAM_DATA_WIDTH	= 64;
+	localparam	DATA_MUL_WIDTH	= 2*SYNC_DATA_WIDTH; // 32
 	// state
 	localparam	IDLE	= 2'd0,
 				CLEAR	= 2'd1,
@@ -355,7 +355,7 @@ module psi_operator #(
 		end
 	end
 	
-	assign o_data_valid = u1_m_axis_dout_tvalid_dly2;
-	assign o_data = {add1234_q,add1234_i};
+	assign o_psi_data_valid	= u1_m_axis_dout_tvalid_dly2;
+	assign o_psi_data		= {add1234_q,add1234_i};
 	
 endmodule
