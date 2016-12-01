@@ -76,9 +76,17 @@ module coarse_sync #(
 	localparam PSI_WIDTH = 2*SYNC_DATA_WIDTH+2; // 34
 	localparam PHI_WIDTH = 2*SYNC_DATA_WIDTH+1+2; // 35
 	localparam TAR_WIDTH = PSI_WIDTH+1; // 35
+	// coarse_sync_state
+	localparam	COARSE_SYNC_IDLE= 3'd0,
+				COARSE_SYNC_ING	= 3'd1, 
+				COARSE_SYNC_FIR	= 3'd2,
+				COARSE_SYNC_SEC	= 3'd3;
 	
 	reg										ctrl_work_en	= 1'b0;
 	reg										ctrl_work		= 1'b0; // 1'b0: 停止工作；1'b1: 开始工作
+	
+	reg				[2:0]					coarse_sync_state	;
+	reg				[6:0]					coarse_sync_fir_count;
 	
 	wire									u1_i_work_ctrl_en	;
 	wire									u1_i_work_ctrl		;
@@ -119,6 +127,95 @@ module coarse_sync #(
 		else begin
 			ctrl_work_en	<= ctrl_work_en;
 			ctrl_work		<= ctrl_work;
+		end
+	end
+	
+//================================================================================
+// coarse_sync_state
+//================================================================================
+	always @(posedge axis_aclk or posedge axis_areset) begin
+		if(axis_areset == 1'b1) begin
+			coarse_sync_state <= COARSE_SYNC_IDLE;
+		end
+		else begin
+			case(coarse_sync_state)
+				COARSE_SYNC_IDLE: begin
+					if((ctrl_work_en==1'b1) && (ctrl_work==1'b1)) begin
+						coarse_sync_state <= COARSE_SYNC_ING;
+					end
+					else begin
+						coarse_sync_state <= COARSE_SYNC_IDLE;
+					end
+				end
+				COARSE_SYNC_ING: begin							// 开始粗同步搜索
+					if((ctrl_work_en==1'b1) && (ctrl_work==1'b0)) begin
+						coarse_sync_state <= COARSE_SYNC_IDLE;
+					end
+					else if((u3_o_tar_dat_valid==1'b1) && (u3_o_tar_data[TAR_WIDTH-1]==1'b0)) begin
+						coarse_sync_state <= COARSE_SYNC_FIR;
+					end
+					else begin
+						coarse_sync_state <= COARSE_SYNC_ING;
+					end
+				end
+				COARSE_SYNC_FIR: begin							// 出现1次tar正值
+					if((ctrl_work_en==1'b1) && (ctrl_work==1'b0)) begin
+						coarse_sync_state <= COARSE_SYNC_IDLE;
+					end
+					if(coarse_sync_pre_count < 7'd70) begin
+						if((u3_o_tar_dat_valid==1'b1) && (u3_o_tar_data[TAR_WIDTH-1]==1'b0)) begin
+							coarse_sync_state <= COARSE_SYNC_SEC;
+						end
+						else begin
+							coarse_sync_state <= COARSE_SYNC_FIR;
+						end
+					end
+					else begin
+						coarse_sync_state <= COARSE_SYNC_ING;
+					end
+				end
+				COARSE_SYNC_SEC: begin							// 70个tar内有2次正值，确认为粗同步
+					if((ctrl_work_en==1'b1) && (ctrl_work==1'b0)) begin
+						coarse_sync_state <= COARSE_SYNC_IDLE;
+					end
+					else begin
+						coarse_sync_state <= COARSE_SYNC_IDLE;
+					end
+				end
+				default: begin
+					coarse_sync_state <= COARSE_SYNC_IDLE;
+				end
+			endcase
+		end
+	end
+	
+	always @(posedge axis_aclk or posedge axis_areset) begin
+		if(axis_areset == 1'b1) begin
+			coarse_sync_fir_count <= 7'd0;
+		end
+		else begin
+			case(coarse_sync_state)
+				// COARSE_SYNC_IDLE: begin
+					// coarse_sync_fir_count <= 7'd0;
+				// end
+				// COARSE_SYNC_ING: begin
+					// coarse_sync_fir_count <= 7'd0;
+				// end
+				COARSE_SYNC_FIR: begin
+					if(u3_o_tar_dat_valid == 1'b1) begin
+						coarse_sync_fir_count <= coarse_sync_fir_count + 1'd1;
+					end
+					else begin
+						coarse_sync_fir_count <= coarse_sync_fir_count;
+					end
+				end
+				// COARSE_SYNC_SEC: begin
+					// coarse_sync_fir_count <= 7'd0;
+				// end
+				default: begin
+					coarse_sync_fir_count <= 7'd0;
+				end
+			endcase
 		end
 	end
 	
@@ -207,9 +304,7 @@ module coarse_sync #(
 		.o_tar_data			(u3_o_tar_data		)
 	);
 	
-//================================================================================
-// search
-//================================================================================
+	
 	
 	
 endmodule

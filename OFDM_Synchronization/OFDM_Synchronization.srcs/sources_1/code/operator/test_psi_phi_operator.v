@@ -32,10 +32,10 @@ module test_psi_phi_operator;
 	reg [31:0] i_data_dly;
 
 	// Outputs
-	wire o_data_valid_psi;
-	wire o_data_valid_phi;
-	wire [67:0] o_data_psi;
-	wire [34:0] o_data_phi;
+	wire o_psi_data_valid;
+	wire o_phi_data_valid;
+	wire [67:0] o_psi_data;
+	wire [34:0] o_phi_data;
 	
 	reg [39:0] count;
 
@@ -51,8 +51,8 @@ module test_psi_phi_operator;
 		.i_data_valid(i_data_valid), 
 		.i_data(i_data), 
 		.i_data_dly(i_data_dly), 
-		.o_data_valid(o_data_valid_psi), 
-		.o_data(o_data_psi)
+		.o_psi_data_valid(o_psi_data_valid), 
+		.o_psi_data(o_psi_data)
 	);
 	
 	phi_operator #(
@@ -66,8 +66,8 @@ module test_psi_phi_operator;
 		.i_data_valid(i_data_valid), 
 		.i_data(i_data), 
 		.i_data_dly(i_data_dly), 
-		.o_data_valid(o_data_valid_phi), 
-		.o_data(o_data_phi)
+		.o_phi_data_valid(o_phi_data_valid), 
+		.o_phi_data(o_phi_data)
 	);
 
 	initial begin

@@ -21,8 +21,8 @@
 
 
 module phi_operator #(
-	parameter SYNC_DATA_WIDTH = 16,
-	parameter PHI_WIDTH = 2*SYNC_DATA_WIDTH+1+2 // 35
+	parameter SYNC_DATA_WIDTH	= 16,
+	parameter PHI_WIDTH			= 2*SYNC_DATA_WIDTH+1+2 // 35
 	)
 	(
 	clk			,
@@ -156,15 +156,15 @@ module phi_operator #(
 		end
 		else begin
 			case(state)
-				IDLE: begin
-					clear_count <= 'd0;
-				end
+				// IDLE: begin
+					// clear_count <= 'd0;
+				// end
 				CLEAR: begin
 					clear_count <= clear_count + 1'd1;
 				end
-				WORK: begin
-					clear_count <= 'd0;
-				end
+				// WORK: begin
+					// clear_count <= 'd0;
+				// end
 				default: begin
 					clear_count <= 'd0;
 				end

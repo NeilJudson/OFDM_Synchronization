@@ -32,8 +32,8 @@ module test_phi_operator;
 	reg [31:0] i_data_dly;
 
 	// Outputs
-	wire o_data_valid;
-	wire [33:0] o_data;
+	wire o_phi_data_valid;
+	wire [34:0] o_phi_data;
 	
 	reg [39:0] count;
 
@@ -49,8 +49,8 @@ module test_phi_operator;
 		.i_data_valid(i_data_valid), 
 		.i_data(i_data), 
 		.i_data_dly(i_data_dly), 
-		.o_data_valid(o_data_valid), 
-		.o_data(o_data)
+		.o_phi_data_valid(o_phi_data_valid), 
+		.o_phi_data(o_phi_data)
 	);
 
 	initial begin

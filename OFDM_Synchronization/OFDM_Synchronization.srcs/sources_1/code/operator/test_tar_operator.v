@@ -34,7 +34,7 @@ module test_tar_operator;
 
 	// Outputs
 	wire o_tar_data_valid;
-	wire [99:0] o_tar_data;
+	wire [34:0] o_tar_data;
 	
 	reg [39:0] count;
 
