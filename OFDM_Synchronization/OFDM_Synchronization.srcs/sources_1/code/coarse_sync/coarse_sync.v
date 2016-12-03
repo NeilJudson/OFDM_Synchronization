@@ -162,7 +162,7 @@ module coarse_sync #(
 					if((ctrl_work_en==1'b1) && (ctrl_work==1'b0)) begin
 						coarse_sync_state <= COARSE_SYNC_IDLE;
 					end
-					if(coarse_sync_pre_count < 7'd70) begin
+					if(coarse_sync_fir_count == 7'd64) begin
 						if((u3_o_tar_dat_valid==1'b1) && (u3_o_tar_data[TAR_WIDTH-1]==1'b0)) begin
 							coarse_sync_state <= COARSE_SYNC_SEC;
 						end
@@ -174,7 +174,7 @@ module coarse_sync #(
 						coarse_sync_state <= COARSE_SYNC_ING;
 					end
 				end
-				COARSE_SYNC_SEC: begin							// 70个tar内有2次正值，确认为粗同步
+				COARSE_SYNC_SEC: begin							// 64个tar后2次正值，确认为粗同步
 					if((ctrl_work_en==1'b1) && (ctrl_work==1'b0)) begin
 						coarse_sync_state <= COARSE_SYNC_IDLE;
 					end
