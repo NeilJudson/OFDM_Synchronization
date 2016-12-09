@@ -21,7 +21,8 @@
 
 
 module coarse_sync #(
-	parameter SYNC_DATA_WIDTH = 16
+	parameter SYNC_DATA_WIDTH	= 16,
+	parameter RAM_ADDR_WIDTH	= 10
 	)
 	(
 	axis_aclk			,
@@ -35,6 +36,7 @@ module coarse_sync #(
 	s_axis_data_tvalid	,
 	s_axis_data_tlast	,
 	s_axis_data_tdata	,
+	s_axis_data_taddr	,
 	s_axis_data_trdy	,
 	
 	m_axis_ctrl_tvalid	,
@@ -58,6 +60,7 @@ module coarse_sync #(
 	input			s_axis_data_tvalid	;
 	input			s_axis_data_tlast	;
 	input	[63:0]	s_axis_data_tdata	;
+	input	[15:0]	s_axis_data_taddr	;
 	output			s_axis_data_trdy	;
 	
 	output			m_axis_ctrl_tvalid	;
@@ -67,26 +70,30 @@ module coarse_sync #(
 	
 	output			m_axis_data_tvalid	;
 	output			m_axis_data_tlast	;
-	output	[31:0]	m_axis_data_tdata	;
+	output	[111:0]	m_axis_data_tdata	; // 高位为phi数据，低位为psi数据。
 	input			m_axis_data_trdy	;
 	
 //================================================================================
 // variable
 //================================================================================
-	localparam PSI_WIDTH = 2*SYNC_DATA_WIDTH+2; // 34
-	localparam PHI_WIDTH = 2*SYNC_DATA_WIDTH+1+2; // 35
-	localparam TAR_WIDTH = PSI_WIDTH+1; // 35
+	localparam	PSI_WIDTH		= 2*SYNC_DATA_WIDTH+2; // 34
+	localparam	PHI_WIDTH		= 2*SYNC_DATA_WIDTH+1+2; // 35
+	localparam	TAR_WIDTH		= PSI_WIDTH+1; // 35
+	localparam	SPRAM_ADDR_WIDTH= 9;
+	localparam	SPRAM_DATA_WIDTH= 108;
 	// coarse_sync_state
 	localparam	COARSE_SYNC_IDLE= 3'd0,
 				COARSE_SYNC_ING	= 3'd1, 
 				COARSE_SYNC_FIR	= 3'd2,
 				COARSE_SYNC_SEC	= 3'd3;
 	
-	reg										ctrl_work_en	= 1'b0;
-	reg										ctrl_work		= 1'b0; // 1'b0: 停止工作；1'b1: 开始工作
+	reg										ctrl_work_en		= 1'b0;
+	reg										ctrl_work_en_dly1	= 1'b0;
+	reg										ctrl_work			= 1'b0; // 1'b0: 停止工作；1'b1: 开始工作
 	
 	reg				[2:0]					coarse_sync_state	;
 	reg				[6:0]					coarse_sync_fir_count;
+	reg				[7:0]					coarse_sync_sec_count;
 	
 	wire									u1_i_work_ctrl_en	;
 	wire									u1_i_work_ctrl		;
@@ -112,26 +119,33 @@ module coarse_sync #(
 	wire									u3_o_tar_data_valid	;
 	wire	signed	[TAR_WIDTH-1:0]			u3_o_tar_data		;
 	
+	reg										u4_wea				;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_wr_addr			;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_rd_addr			;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_addra			;
+	reg				[SPRAM_DATA_WIDTH-1:0]	u4_dina				;
+	wire			[SPRAM_DATA_WIDTH-1:0]	u4_douta			;
+	
 //================================================================================
-// ctrl_decode
+// ctrl data decode
 //================================================================================
 	always @(posedge axis_aclk) begin
 		if(s_axis_ctrl_tvalid == 1'b1) begin
 			case(s_axis_ctrl_tdata[31:24])
-				8'd0: begin
+				8'd1: begin
 					ctrl_work_en	<= 1'b1;
 					ctrl_work		<= s_axis_ctrl_tdata[0]; // 1'b0: 停止工作；1'b1: 开始工作
 				end
 			endcase
 		end
 		else begin
-			ctrl_work_en	<= ctrl_work_en;
+			ctrl_work_en	<= 1'b0;
 			ctrl_work		<= ctrl_work;
 		end
 	end
 	
 //================================================================================
-// coarse_sync_state
+// coarse synchronization state
 //================================================================================
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
@@ -151,7 +165,7 @@ module coarse_sync #(
 					if((ctrl_work_en==1'b1) && (ctrl_work==1'b0)) begin
 						coarse_sync_state <= COARSE_SYNC_IDLE;
 					end
-					else if((u3_o_tar_dat_valid==1'b1) && (u3_o_tar_data[TAR_WIDTH-1]==1'b0)) begin
+					else if((u3_o_tar_data_valid==1'b1) && (u3_o_tar_data[TAR_WIDTH-1]==1'b0)) begin
 						coarse_sync_state <= COARSE_SYNC_FIR;
 					end
 					else begin
@@ -162,24 +176,27 @@ module coarse_sync #(
 					if((ctrl_work_en==1'b1) && (ctrl_work==1'b0)) begin
 						coarse_sync_state <= COARSE_SYNC_IDLE;
 					end
-					if(coarse_sync_fir_count == 7'd64) begin
-						if((u3_o_tar_dat_valid==1'b1) && (u3_o_tar_data[TAR_WIDTH-1]==1'b0)) begin
+					else if(coarse_sync_fir_count == 7'd64) begin
+						if((u3_o_tar_data_valid==1'b1) && (u3_o_tar_data[TAR_WIDTH-1]==1'b0)) begin
 							coarse_sync_state <= COARSE_SYNC_SEC;
 						end
 						else begin
-							coarse_sync_state <= COARSE_SYNC_FIR;
+							coarse_sync_state <= COARSE_SYNC_ING;
 						end
 					end
 					else begin
-						coarse_sync_state <= COARSE_SYNC_ING;
+						coarse_sync_state <= COARSE_SYNC_FIR;
 					end
 				end
 				COARSE_SYNC_SEC: begin							// 64个tar后2次正值，确认为粗同步
 					if((ctrl_work_en==1'b1) && (ctrl_work==1'b0)) begin
 						coarse_sync_state <= COARSE_SYNC_IDLE;
 					end
-					else begin
+					else if(coarse_sync_sec_count == 8'd250) begin
 						coarse_sync_state <= COARSE_SYNC_IDLE;
+					end
+					else begin
+						coarse_sync_state <= COARSE_SYNC_SEC;
 					end
 				end
 				default: begin
@@ -192,28 +209,35 @@ module coarse_sync #(
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
 			coarse_sync_fir_count <= 7'd0;
+			coarse_sync_sec_count <= 8'd0;
 		end
 		else begin
 			case(coarse_sync_state)
 				// COARSE_SYNC_IDLE: begin
-					// coarse_sync_fir_count <= 7'd0;
 				// end
 				// COARSE_SYNC_ING: begin
-					// coarse_sync_fir_count <= 7'd0;
 				// end
 				COARSE_SYNC_FIR: begin
-					if(u3_o_tar_dat_valid == 1'b1) begin
+					if(u3_o_tar_data_valid == 1'b1) begin
 						coarse_sync_fir_count <= coarse_sync_fir_count + 1'd1;
 					end
 					else begin
 						coarse_sync_fir_count <= coarse_sync_fir_count;
 					end
+					coarse_sync_sec_count <= 8'd0;
 				end
-				// COARSE_SYNC_SEC: begin
-					// coarse_sync_fir_count <= 7'd0;
-				// end
+				COARSE_SYNC_SEC: begin
+					coarse_sync_fir_count <= 7'd0;
+					if(u3_o_tar_data_valid == 1'b1) begin
+						coarse_sync_sec_count <= coarse_sync_sec_count + 1'd1;
+					end
+					else begin
+						coarse_sync_sec_count <= coarse_sync_sec_count;
+					end
+				end
 				default: begin
 					coarse_sync_fir_count <= 7'd0;
+					coarse_sync_sec_count <= 8'd0;
 				end
 			endcase
 		end
@@ -289,22 +313,101 @@ module coarse_sync #(
 	assign u3_i_phi_data			= u2_o_phi_data;
 	
 	tar_operator #(
-		.PSI_WIDTH			(PSI_WIDTH			),
-		.PHI_WIDTH			(PHI_WIDTH			),
-		.TAR_WIDTH			(TAR_WIDTH			)
+		.PSI_WIDTH				(PSI_WIDTH			),
+		.PHI_WIDTH				(PHI_WIDTH			),
+		.TAR_WIDTH				(TAR_WIDTH			)
 	)u3_tar_operator(
-		.clk				(axis_aclk			),
-		.reset				(axis_areset		),
-		.i_work_ctrl_en		(u3_i_work_ctrl_en	),
-		.i_work_ctrl		(u3_i_work_ctrl		),
-		.i_psi_data_valid	(u3_i_psi_phi_data_valid),
-		.i_psi_data			(u3_i_psi_data		),
-		.i_phi_data			(u3_i_phi_data		),
-		.o_tar_data_valid	(u3_o_tar_data_valid),
-		.o_tar_data			(u3_o_tar_data		)
+		.clk					(axis_aclk			),
+		.reset					(axis_areset		),
+		.i_work_ctrl_en			(u3_i_work_ctrl_en	),
+		.i_work_ctrl			(u3_i_work_ctrl		),
+		.i_psi_phi_data_valid	(u3_i_psi_phi_data_valid),
+		.i_psi_data				(u3_i_psi_data		),
+		.i_phi_data				(u3_i_phi_data		),
+		.o_tar_data_valid		(u3_o_tar_data_valid), // 11dly
+		.o_tar_data				(u3_o_tar_data		)
 	);
 	
+//================================================================================
+// 
+//================================================================================
+	localparam u4_rd_addr_init = 'd21; // 这个初值待仿真确定
+	always @(posedge axis_aclk or posedge axis_areset) begin
+		if(axis_areset == 1'b1) begin
+			u4_wea		<= 1'b0;
+			u4_wr_addr	<= 'd0;
+			u4_rd_addr	<= u4_rd_addr_init;
+			u4_addra	<= 'd0;
+			u4_dina		<= 'd0;
+		end
+		else begin
+			case(coarse_sync_state)
+				// COARSE_SYNC_IDLE: begin
+				// end
+				// COARSE_SYNC_ING: begin
+				// end
+				COARSE_SYNC_FIR: begin
+					if(u3_i_psi_phi_data_valid == 1'b1) begin
+						u4_wea		<= 1'b1;
+						u4_wr_addr	<= u4_wr_addr + 1'd1;
+						u4_rd_addr	<= u4_rd_addr_init;
+						u4_addra	<= u4_wr_addr + 1'd1;
+						u4_dina		<= {{(SPRAM_DATA_WIDTH-1-PHI_WIDTH-2*PSI_WIDTH){1'b0}},
+										1'b1,
+										u3_i_phi_data,
+										u3_i_psi_data};
+					end
+					else begin
+						u4_wea		<= 1'b0;
+						u4_wr_addr	<= u4_wr_addr;
+						u4_rd_addr	<= u4_rd_addr_init;
+						u4_addra	<= u4_wr_addr;
+						u4_dina		<= 'd0;
+					end
+				end
+				COARSE_SYNC_SEC: begin
+					if(u4_wr_addr == u4_rd_addr) begin
+						u4_rd_addr <= u4_rd_addr;
+					end
+					else begin
+						u4_rd_addr <= u4_rd_addr + 1'd1;
+					end
+					if(u3_i_psi_phi_data_valid == 1'b1) begin
+						u4_wea		<= 1'b1;
+						u4_wr_addr	<= u4_wr_addr + 1'd1;
+						u4_addra	<= u4_wr_addr + 1'd1;
+						u4_dina		<= {{(SPRAM_DATA_WIDTH-1-PHI_WIDTH-2*PSI_WIDTH){1'b0}},
+										1'b1,
+										u3_i_phi_data,
+										u3_i_psi_data};
+					end
+					else begin
+						u4_wea		<= 1'b0;
+						u4_wr_addr	<= u4_wr_addr;
+						u4_addra	<= u4_rd_addr;
+						u4_dina		<= 'd0;
+					end
+				end
+				default: begin
+					u4_wea		<= 1'b0;
+					u4_wr_addr	<= 'd0;
+					u4_rd_addr	<= u4_rd_addr_init;
+					u4_addra	<= 'd0;
+					u4_dina		<= 'd0;
+				end
+			endcase
+		end
+	end
 	
+	spram_108_512_ip u4_spram_108_512_ip (
+		.clka	(clk		),	// input clka;
+		.wea	(u4_wea		),	// input [0:0]wea;
+		.addra	(u4_addra	),	// input [8:0]addra;
+		.dina	(u4_dina	),	// input [107:0]dina;
+		.douta	(u4_douta	)	// output [107:0]douta;
+	);
 	
+	assign m_axis_data_tvalid	= u4_douta[PHI_WIDTH+2*PSI_WIDTH];
+	assign m_axis_data_tdata	= u4_douta[PHI_WIDTH+2*PSI_WIDTH-1:0];
 	
 endmodule

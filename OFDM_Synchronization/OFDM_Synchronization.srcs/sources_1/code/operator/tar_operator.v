@@ -36,7 +36,7 @@ module tar_operator #(
 	i_psi_data		,
 	i_phi_data		,
 	
-	o_tar_data_valid,
+	o_tar_data_valid, // 11dly
 	o_tar_data		
     );
 	input									clk				;
@@ -55,50 +55,50 @@ module tar_operator #(
 //================================================================================
 // variable
 //================================================================================
-	localparam SPRAM_ADDR_WIDTH	= 5;
-	localparam SPRAM_DATA_WIDTH	= 103;
-	localparam PSI_SUM_WIDTH	= PSI_WIDTH+5; // 39
-	localparam PHI_SUM_WIDTH	= PHI_WIDTH+5; // 40
-	localparam PSI_POWER_WIDTH	= 2*PSI_SUM_WIDTH; // 78
-	localparam PHI_POWER_WIDTH	= 2*PHI_SUM_WIDTH-1; // 79
+	localparam	SPRAM_ADDR_WIDTH= 5;
+	localparam	SPRAM_DATA_WIDTH= 108;
+	localparam	PSI_SUM_WIDTH	= PSI_WIDTH+5; // 39
+	localparam	PHI_SUM_WIDTH	= PHI_WIDTH+5; // 40
+	localparam	PSI_POWER_WIDTH	= 2*PSI_SUM_WIDTH; // 78
+	localparam	PHI_POWER_WIDTH	= 2*PHI_SUM_WIDTH-1; // 79
 	// state
-	localparam	IDLE	= 2'd0,
-				CLEAR	= 2'd1,
-				WORK	= 2'd2;
+	localparam	IDLE			= 2'd0,
+				CLEAR			= 2'd1,
+				WORK			= 2'd2;
 	
-	reg					[1:0]					state			;
-	reg					[SPRAM_ADDR_WIDTH:0]	clear_count		;
+	reg				[1:0]					state			;
+	reg				[SPRAM_ADDR_WIDTH:0]	clear_count		;
 	
-	reg											u1_wea			;
-	reg					[SPRAM_ADDR_WIDTH-1:0]	u1_wr_addr		;
-	reg					[SPRAM_ADDR_WIDTH-1:0]	u1_rd_addr		;
-	reg					[SPRAM_ADDR_WIDTH-1:0]	u1_addra		;
-	reg					[SPRAM_DATA_WIDTH-1:0]	u1_dina			;
-	wire				[SPRAM_DATA_WIDTH-1:0]	u1_douta		;
+	reg										u1_wea			;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u1_wr_addr		;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u1_rd_addr		;
+	reg				[SPRAM_ADDR_WIDTH-1:0]	u1_addra		;
+	reg				[SPRAM_DATA_WIDTH-1:0]	u1_dina			;
+	wire			[SPRAM_DATA_WIDTH-1:0]	u1_douta		;
 	
-	reg			signed	[PSI_WIDTH:0]			psi_i_add		;
-	reg			signed	[PSI_WIDTH:0]			psi_q_add		;
-	reg			signed	[PHI_WIDTH:0]			phi_add			;
+	reg		signed	[PSI_WIDTH:0]			psi_i_add		;
+	reg		signed	[PSI_WIDTH:0]			psi_q_add		;
+	reg		signed	[PHI_WIDTH:0]			phi_add			;
 	
-	reg											i_psi_phi_data_valid_dly1;
-	reg											sum_valid		;
-	reg			signed	[PSI_SUM_WIDTH-1:0]		psi_i_sum		;
-	reg			signed	[PSI_SUM_WIDTH-1:0]		psi_q_sum		;
-	reg			signed	[PHI_SUM_WIDTH-1:0]		phi_sum			;
+	reg										i_psi_phi_data_valid_dly1;
+	reg										sum_valid		;
+	reg		signed	[PSI_SUM_WIDTH-1:0]		psi_i_sum		;
+	reg		signed	[PSI_SUM_WIDTH-1:0]		psi_q_sum		;
+	reg		signed	[PHI_SUM_WIDTH-1:0]		phi_sum			;
 	
-	wire										u2_i_data_valid	;
-	wire		signed	[41:0]					u2_i_data_i		;
-	wire		signed	[41:0]					u2_i_data_q		;
-	wire										u2_o_data_valid	;
-	wire		signed	[83:0]					u2_o_data		;
+	wire									u2_i_data_valid	;
+	wire	signed	[41:0]					u2_i_data_i		;
+	wire	signed	[41:0]					u2_i_data_q		;
+	wire									u2_o_data_valid	;
+	wire	signed	[83:0]					u2_o_data		;
 	
-	wire		signed	[41:0]					u3_A			;
-	wire		signed	[41:0]					u3_B			;
-	wire		signed	[83:0]					u3_P			;
+	wire	signed	[41:0]					u3_A			;
+	wire	signed	[41:0]					u3_B			;
+	wire	signed	[83:0]					u3_P			;
 	
-	wire										power_valid		;
-	wire		signed	[PSI_POWER_WIDTH-1:0]	psi_power		;
-	wire		signed	[PHI_POWER_WIDTH-1:0]	phi_power		;
+	wire									power_valid		;
+	wire	signed	[PSI_POWER_WIDTH-1:0]	psi_power		;
+	wire	signed	[PHI_POWER_WIDTH-1:0]	phi_power		;
 	
 //================================================================================
 // state
@@ -149,15 +149,15 @@ module tar_operator #(
 		end
 		else begin
 			case(state)
-				IDLE: begin
-					clear_count <= 'd0;
-				end
+				// IDLE: begin
+					// clear_count <= 'd0;
+				// end
 				CLEAR: begin
 					clear_count <= clear_count + 1'd1;
 				end
-				WORK: begin
-					clear_count <= 'd0;
-				end
+				// WORK: begin
+					// clear_count <= 'd0;
+				// end
 				default: begin
 					clear_count <= 'd0;
 				end
@@ -168,11 +168,12 @@ module tar_operator #(
 //================================================================================
 // sum
 //================================================================================
+	localparam u1_rd_addr_init = 'd1;
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
 			u1_wea		<= 1'b0;
 			u1_wr_addr	<= 'd0;
-			u1_rd_addr	<= 'd1;
+			u1_rd_addr	<= u1_rd_addr_init;
 			u1_addra	<= 'd0;
 			u1_dina		<= 'd0;
 		end
@@ -181,14 +182,14 @@ module tar_operator #(
 				IDLE: begin
 					u1_wea		<= 1'b0;
 					u1_wr_addr	<= 'd0;
-					u1_rd_addr	<= 'd1;
+					u1_rd_addr	<= u1_rd_addr_init;
 					u1_addra	<= 'd0;
 					u1_dina		<= 'd0;
 				end
 				CLEAR: begin
 					u1_wea		<= 1'b1;
 					u1_wr_addr	<= 'd0;
-					u1_rd_addr	<= 'd1;
+					u1_rd_addr	<= u1_rd_addr_init;
 					u1_addra	<= u1_addra + 1'd1;
 					u1_dina		<= 'd0;
 				end
@@ -213,7 +214,7 @@ module tar_operator #(
 				default: begin
 					u1_wea		<= 1'b0;
 					u1_wr_addr	<= 'd0;
-					u1_rd_addr	<= 'd1;
+					u1_rd_addr	<= u1_rd_addr_init;
 					u1_addra	<= 'd0;
 					u1_dina		<= 'd0;
 				end
@@ -221,12 +222,12 @@ module tar_operator #(
 		end
 	end
 	
-	spram_103_32_ip u1_spram_103_32_ip (
+	spram_108_32_ip u1_spram_108_32_ip (
 		.clka	(clk		),	// input clka;
 		.wea	(u1_wea		),	// input [0:0]wea;
 		.addra	(u1_addra	),	// input [4:0]addra;
-		.dina	(u1_dina	),	// input [102:0]dina;
-		.douta	(u1_douta	)	// output [102:0]douta;
+		.dina	(u1_dina	),	// input [107:0]dina;
+		.douta	(u1_douta	)	// output [107:0]douta;
 	);
 	
 	always @(posedge clk or posedge reset) begin
@@ -298,7 +299,7 @@ module tar_operator #(
 		.o_data			(u2_o_data		)
 	);
 	
-	multiplier_ip_42_42 u3_multiplier_ip_42_42(
+	multiplier_42_42_ip u3_multiplier_42_42_ip(
 		.CLK(clk	),	// input CLK;
 		.A	(u3_A	),	// input [41:0]A;
 		.B	(u3_B	),	// input [41:0]B;
@@ -318,7 +319,7 @@ module tar_operator #(
 			o_tar_data			<= 'd0;
 		end
 		else if(power_valid == 1'b1) begin
-			o_tar_data_valid	<= 1'b1;
+			o_tar_data_valid	<= 1'b1; // 11dly
 			o_tar_data			<= psi_power - phi_power[PHI_POWER_WIDTH-1:1]; // tar=psi_power-0.5*phi_power
 		end
 		else begin

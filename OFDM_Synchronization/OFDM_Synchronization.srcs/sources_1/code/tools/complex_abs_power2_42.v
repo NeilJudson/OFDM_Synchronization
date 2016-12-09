@@ -38,13 +38,7 @@ module complex_abs_power2_42(
 //================================================================================
 // variable
 //================================================================================
-	reg						i_data_valid_dly1;
-	reg						i_data_valid_dly2;
-	reg						i_data_valid_dly3;
-	reg						i_data_valid_dly4;
-	reg						i_data_valid_dly5;
-	reg						i_data_valid_dly6;
-	reg						i_data_valid_dly7;
+	reg				[6:0]	i_data_valid_reg;
 	
 	wire	signed	[41:0]	u1_A;
 	wire	signed	[41:0]	u1_B;
@@ -55,13 +49,7 @@ module complex_abs_power2_42(
 	wire	signed	[83:0]	u2_P;
 	
 	always @(posedge i_clk) begin
-		i_data_valid_dly1 <= i_data_valid;
-		i_data_valid_dly2 <= i_data_valid_dly1;
-		i_data_valid_dly3 <= i_data_valid_dly2;
-		i_data_valid_dly4 <= i_data_valid_dly3;
-		i_data_valid_dly5 <= i_data_valid_dly4;
-		i_data_valid_dly6 <= i_data_valid_dly5;
-		i_data_valid_dly7 <= i_data_valid_dly6;
+		i_data_valid_reg <= {i_data_valid_reg[5:0],i_data_valid};
 	end
 	
 	assign u1_A = i_data_i;
@@ -69,14 +57,14 @@ module complex_abs_power2_42(
 	assign u2_A = i_data_q;
 	assign u2_B = i_data_q;
 	
-	multiplier_ip_42_42 u1_multiplier_ip_42_42(
+	multiplier_42_42_ip u1_multiplier_42_42_ip(
 		.CLK(i_clk	),	// input CLK;
 		.A	(u1_A	),	// input [41:0]A;
 		.B	(u1_B	),	// input [41:0]B;
 		.P	(u1_P	)	// output [83:0]P; // 7dly
 	);
 	
-	multiplier_ip_42_42 u2_multiplier_ip_42_42(
+	multiplier_42_42_ip u2_multiplier_42_42_ip(
 		.CLK(i_clk	),	// input CLK;
 		.A	(u2_A	),	// input [41:0]A;
 		.B	(u2_B	),	// input [41:0]B;
@@ -84,7 +72,7 @@ module complex_abs_power2_42(
 	);
 	
 	always @(posedge i_clk) begin
-		if(i_data_valid_dly7 == 1'b1) begin
+		if(i_data_valid_reg[6] == 1'b1) begin
 			o_data_valid	<= 1'b1;
 			o_data			<= u1_P[82:0] + u2_P[82:0];
 		end

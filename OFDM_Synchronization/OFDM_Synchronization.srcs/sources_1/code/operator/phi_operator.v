@@ -55,7 +55,7 @@ module phi_operator #(
 // variable
 //================================================================================
 	localparam	SPRAM_ADDR_WIDTH = 6;
-	localparam	SPRAM_DATA_WIDTH = 33;
+	localparam	SPRAM_DATA_WIDTH = 36;
 	localparam	DATA_POWER_WIDTH = 2*SYNC_DATA_WIDTH; // 32
 	// state
 	localparam	IDLE	= 2'd0,
@@ -157,13 +157,11 @@ module phi_operator #(
 		else begin
 			case(state)
 				// IDLE: begin
-					// clear_count <= 'd0;
 				// end
 				CLEAR: begin
 					clear_count <= clear_count + 1'd1;
 				end
 				// WORK: begin
-					// clear_count <= 'd0;
 				// end
 				default: begin
 					clear_count <= 'd0;
@@ -242,11 +240,12 @@ module phi_operator #(
 //================================================================================
 // 3级64深度延迟
 //================================================================================
+	localparam u2_rd_addr_init = 'd1;
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
 			u2_wea		<= 1'b0;
 			u2_wr_addr	<= 'd0;
-			u2_rd_addr	<= 'd1;
+			u2_rd_addr	<= u2_rd_addr_init;
 			u2_addra	<= 'd0;
 			u2_dina		<= 'd0;
 		end
@@ -255,14 +254,14 @@ module phi_operator #(
 				IDLE: begin
 					u2_wea		<= 1'b0;
 					u2_wr_addr	<= 'd0;
-					u2_rd_addr	<= 'd1;
+					u2_rd_addr	<= u2_rd_addr_init;
 					u2_addra	<= 'd0;
 					u2_dina		<= 'd0;
 				end
 				CLEAR: begin
 					u2_wea		<= 1'b1;
 					u2_wr_addr	<= 'd0;
-					u2_rd_addr	<= 'd1;
+					u2_rd_addr	<= u2_rd_addr_init;
 					u2_addra	<= u2_addra + 1'd1;
 					u2_dina		<= 'd0;
 				end
@@ -273,7 +272,7 @@ module phi_operator #(
 						u2_rd_addr	<= u2_rd_addr + 1'd1;
 						u2_addra	<= u2_wr_addr + 1'd1;
 						u2_dina		<= {{(SPRAM_DATA_WIDTH-DATA_POWER_WIDTH){power_add[DATA_POWER_WIDTH]}},
-										power_add}; // *0.5
+										power_add};
 					end
 					else begin
 						u2_wea		<= 1'b0;
@@ -286,7 +285,7 @@ module phi_operator #(
 				default: begin
 					u2_wea		<= 1'b0;
 					u2_wr_addr	<= 'd0;
-					u2_rd_addr	<= 'd1;
+					u2_rd_addr	<= u2_rd_addr_init;
 					u2_addra	<= 'd0;
 					u2_dina		<= 'd0;
 				end
@@ -306,28 +305,28 @@ module phi_operator #(
 	assign u4_addra		= u2_addra	;
 	assign u4_dina		= u3_douta	;
 	
-	spram_33_64_ip u2_spram_33_64_ip (
+	spram_36_64_ip u2_spram_36_64_ip (
 		.clka	(clk		),	// input clka;
 		.wea	(u2_wea		),	// input [0:0]wea;
 		.addra	(u2_addra	),	// input [5:0]addra;
-		.dina	(u2_dina	),	// input [32:0]dina;
-		.douta	(u2_douta	)	// output [32:0]douta;
+		.dina	(u2_dina	),	// input [35:0]dina;
+		.douta	(u2_douta	)	// output [35:0]douta;
 	);
 	
-	spram_33_64_ip u3_spram_33_64_ip (
+	spram_36_64_ip u3_spram_36_64_ip (
 		.clka	(clk		),	// input clka;
 		.wea	(u3_wea		),	// input [0:0]wea;
 		.addra	(u3_addra	),	// input [5:0]addra;
-		.dina	(u3_dina	),	// input [32:0]dina;
-		.douta	(u3_douta	)	// output [32:0]douta;
+		.dina	(u3_dina	),	// input [35:0]dina;
+		.douta	(u3_douta	)	// output [35:0]douta;
 	);
 	
-	spram_33_64_ip u4_spram_33_64_ip (
+	spram_36_64_ip u4_spram_36_64_ip (
 		.clka	(clk		),	// input clka;
 		.wea	(u4_wea		),	// input [0:0]wea;
 		.addra	(u4_addra	),	// input [5:0]addra;
-		.dina	(u4_dina	),	// input [32:0]dina;
-		.douta	(u4_douta	)	// output [32:0]douta;
+		.dina	(u4_dina	),	// input [35:0]dina;
+		.douta	(u4_douta	)	// output [35:0]douta;
 	);
 	
 //================================================================================

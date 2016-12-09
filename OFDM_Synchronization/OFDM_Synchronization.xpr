@@ -61,22 +61,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/code/operator/test_phi_operator.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/ip/dpram_1024_ip/dpram_1024_ip.xci">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/code/tools/axis_interface_fifo.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -86,6 +70,30 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/code/data_dpram/data_dpram.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/code/ofdm_syn.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/code/operator/test_tar_operator.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/code/operator/test_psi_phi_operator.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -110,30 +118,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/code/tools/test_axis_interface_fifo.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/code/operator/test_psi_phi_operator.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/code/operator/test_tar_operator.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/code/ofdm_syn.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -167,8 +151,8 @@
         <Option Name="XSimWcfgFile" Val="$PSRCDIR/sim_1/operator/test_psi_phi_operator_behav.wcfg"/>
       </Config>
     </FileSet>
-    <FileSet Name="complex_multiplier_ip_16_16" Type="BlockSrcs" RelSrcDir="$PSRCDIR/complex_multiplier_ip_16_16">
-      <File Path="$PSRCDIR/sources_1/ip/complex_multiplier_ip_16_16/complex_multiplier_ip_16_16.xci">
+    <FileSet Name="spram_72_64_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/spram_72_64_ip">
+      <File Path="$PSRCDIR/sources_1/ip/spram_72_64_ip/spram_72_64_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -176,12 +160,12 @@
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TopModule" Val="complex_multiplier_ip_16_16"/>
+        <Option Name="TopModule" Val="spram_72_64_ip"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="dsp48_ip_mul_add" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dsp48_ip_mul_add">
-      <File Path="$PSRCDIR/sources_1/ip/dsp48_ip_mul_add/dsp48_ip_mul_add.xci">
+    <FileSet Name="spram_36_64_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/spram_36_64_ip">
+      <File Path="$PSRCDIR/sources_1/ip/spram_36_64_ip/spram_36_64_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -189,12 +173,12 @@
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TopModule" Val="dsp48_ip_mul_add"/>
+        <Option Name="TopModule" Val="spram_36_64_ip"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="dsp48_ip_mul" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dsp48_ip_mul">
-      <File Path="$PSRCDIR/sources_1/ip/dsp48_ip_mul/dsp48_ip_mul.xci">
+    <FileSet Name="spram_108_32_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/spram_108_32_ip">
+      <File Path="$PSRCDIR/sources_1/ip/spram_108_32_ip/spram_108_32_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -202,25 +186,49 @@
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TopModule" Val="dsp48_ip_mul"/>
+        <Option Name="TopModule" Val="spram_108_32_ip"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="spram_64_64_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/spram_64_64_ip">
-      <File Path="$PSRCDIR/sources_1/ip/spram_64_64_ip/spram_64_64_ip.xci">
+    <FileSet Name="complex_multiplier_18_18_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/complex_multiplier_18_18_ip">
+      <File Path="$PSRCDIR/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_v3_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="sim/complex_multiplier_18_18_ip.vhd"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="cmpy_v6_0/hdl/cmpy_v6_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_v3_0_vh_rfs.vhd"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="cmodel/cmpy_v6_0_bitacc_cmodel_nt64.zip"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="cmodel/cmpy_v6_0_bitacc_cmodel_lin64.zip"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="axi_utils_v2_0/hdl/axi_utils_v2_0_vh_rfs.vhd"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="doc/cmpy_v6_0_changelog.txt"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip.dcp"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip_funcsim.vhdl"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip_funcsim.v"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip_stub.v"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip.xml"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip.veo"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="demo_tb/tb_complex_multiplier_18_18_ip.vhd"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="synth/complex_multiplier_18_18_ip.vhd"/>
       </File>
       <Config>
-        <Option Name="TopModule" Val="spram_64_64_ip"/>
+        <Option Name="TopModule" Val="complex_multiplier_18_18_ip"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="spram_33_64_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/spram_33_64_ip">
-      <File Path="$PSRCDIR/sources_1/ip/spram_33_64_ip/spram_33_64_ip.xci">
+    <FileSet Name="multiplier_42_42_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/multiplier_42_42_ip">
+      <File Path="$PSRCDIR/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -228,12 +236,12 @@
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TopModule" Val="spram_33_64_ip"/>
+        <Option Name="TopModule" Val="multiplier_42_42_ip"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="spram_103_32_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/spram_103_32_ip">
-      <File Path="$PSRCDIR/sources_1/ip/spram_103_32_ip/spram_103_32_ip.xci">
+    <FileSet Name="dpram_36_1024_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dpram_36_1024_ip">
+      <File Path="$PSRCDIR/sources_1/ip/dpram_36_1024_ip/dpram_36_1024_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -241,12 +249,12 @@
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TopModule" Val="spram_103_32_ip"/>
+        <Option Name="TopModule" Val="dpram_36_1024_ip"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="multiplier_ip_42_42" Type="BlockSrcs" RelSrcDir="$PSRCDIR/multiplier_ip_42_42">
-      <File Path="$PSRCDIR/sources_1/ip/multiplier_ip_42_42/multiplier_ip_42_42.xci">
+    <FileSet Name="dsp48_mul_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dsp48_mul_ip">
+      <File Path="$PSRCDIR/sources_1/ip/dsp48_mul_ip/dsp48_mul_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -254,7 +262,33 @@
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TopModule" Val="multiplier_ip_42_42"/>
+        <Option Name="TopModule" Val="dsp48_mul_ip"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="dsp48_mul_add_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dsp48_mul_add_ip">
+      <File Path="$PSRCDIR/sources_1/ip/dsp48_mul_add_ip/dsp48_mul_add_ip.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="dsp48_mul_add_ip"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="spram_108_512_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/spram_108_512_ip">
+      <File Path="$PSRCDIR/sources_1/ip/spram_108_512_ip/spram_108_512_ip.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="spram_108_512_ip"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -291,51 +325,83 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="complex_multiplier_ip_16_16_synth_1" Type="Ft3:Synth" SrcSet="complex_multiplier_ip_16_16" Part="xc7z045fbg676-3" ConstrsSet="complex_multiplier_ip_16_16" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/complex_multiplier_ip_16_16_synth_1">
+    <Run Id="spram_72_64_ip_synth_1" Type="Ft3:Synth" SrcSet="spram_72_64_ip" Part="xc7z045fbg676-3" ConstrsSet="spram_72_64_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/spram_72_64_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="dsp48_ip_mul_add_synth_1" Type="Ft3:Synth" SrcSet="dsp48_ip_mul_add" Part="xc7z045fbg676-3" ConstrsSet="dsp48_ip_mul_add" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/dsp48_ip_mul_add_synth_1">
+    <Run Id="spram_36_64_ip_synth_1" Type="Ft3:Synth" SrcSet="spram_36_64_ip" Part="xc7z045fbg676-3" ConstrsSet="spram_36_64_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/spram_36_64_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="dsp48_ip_mul_synth_1" Type="Ft3:Synth" SrcSet="dsp48_ip_mul" Part="xc7z045fbg676-3" ConstrsSet="dsp48_ip_mul" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/dsp48_ip_mul_synth_1">
+    <Run Id="spram_108_32_ip_synth_1" Type="Ft3:Synth" SrcSet="spram_108_32_ip" Part="xc7z045fbg676-3" ConstrsSet="spram_108_32_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/spram_108_32_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="spram_64_64_ip_synth_1" Type="Ft3:Synth" SrcSet="spram_64_64_ip" Part="xc7z045fbg676-3" ConstrsSet="spram_64_64_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/spram_64_64_ip_synth_1">
+    <Run Id="complex_multiplier_18_18_ip_synth_1" Type="Ft3:Synth" SrcSet="complex_multiplier_18_18_ip" Part="xc7z045fbg676-3" ConstrsSet="complex_multiplier_18_18_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/complex_multiplier_18_18_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="spram_33_64_ip_synth_1" Type="Ft3:Synth" SrcSet="spram_33_64_ip" Part="xc7z045fbg676-3" ConstrsSet="spram_33_64_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/spram_33_64_ip_synth_1">
+    <Run Id="multiplier_42_42_ip_synth_1" Type="Ft3:Synth" SrcSet="multiplier_42_42_ip" Part="xc7z045fbg676-3" ConstrsSet="multiplier_42_42_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/multiplier_42_42_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="spram_103_32_ip_synth_1" Type="Ft3:Synth" SrcSet="spram_103_32_ip" Part="xc7z045fbg676-3" ConstrsSet="spram_103_32_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/spram_103_32_ip_synth_1">
+    <Run Id="dpram_36_1024_ip_synth_1" Type="Ft3:Synth" SrcSet="dpram_36_1024_ip" Part="xc7z045fbg676-3" ConstrsSet="dpram_36_1024_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/dpram_36_1024_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="multiplier_ip_42_42_synth_1" Type="Ft3:Synth" SrcSet="multiplier_ip_42_42" Part="xc7z045fbg676-3" ConstrsSet="multiplier_ip_42_42" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/multiplier_ip_42_42_synth_1">
+    <Run Id="dsp48_mul_ip_synth_1" Type="Ft3:Synth" SrcSet="dsp48_mul_ip" Part="xc7z045fbg676-3" ConstrsSet="dsp48_mul_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/dsp48_mul_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="dsp48_mul_add_ip_synth_1" Type="Ft3:Synth" SrcSet="dsp48_mul_add_ip" Part="xc7z045fbg676-3" ConstrsSet="dsp48_mul_add_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/dsp48_mul_add_ip_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="spram_108_512_ip_synth_1" Type="Ft3:Synth" SrcSet="spram_108_512_ip" Part="xc7z045fbg676-3" ConstrsSet="spram_108_512_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/spram_108_512_ip_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -354,9 +420,11 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="complex_multiplier_ip_16_16_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="complex_multiplier_ip_16_16" Description="Vivado Implementation Defaults" SynthRun="complex_multiplier_ip_16_16_synth_1">
+    <Run Id="spram_72_64_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="spram_72_64_ip" Description="Vivado Implementation Defaults" SynthRun="spram_72_64_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -368,9 +436,11 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="dsp48_ip_mul_add_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="dsp48_ip_mul_add" Description="Vivado Implementation Defaults" SynthRun="dsp48_ip_mul_add_synth_1">
+    <Run Id="spram_36_64_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="spram_36_64_ip" Description="Vivado Implementation Defaults" SynthRun="spram_36_64_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -382,9 +452,11 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="dsp48_ip_mul_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="dsp48_ip_mul" Description="Vivado Implementation Defaults" SynthRun="dsp48_ip_mul_synth_1">
+    <Run Id="spram_108_32_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="spram_108_32_ip" Description="Vivado Implementation Defaults" SynthRun="spram_108_32_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -396,9 +468,11 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="spram_64_64_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="spram_64_64_ip" Description="Vivado Implementation Defaults" SynthRun="spram_64_64_ip_synth_1">
+    <Run Id="complex_multiplier_18_18_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="complex_multiplier_18_18_ip" Description="Vivado Implementation Defaults" SynthRun="complex_multiplier_18_18_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -410,9 +484,11 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="spram_33_64_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="spram_33_64_ip" Description="Vivado Implementation Defaults" SynthRun="spram_33_64_ip_synth_1">
+    <Run Id="multiplier_42_42_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="multiplier_42_42_ip" Description="Vivado Implementation Defaults" SynthRun="multiplier_42_42_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -424,9 +500,11 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="spram_103_32_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="spram_103_32_ip" Description="Vivado Implementation Defaults" SynthRun="spram_103_32_ip_synth_1">
+    <Run Id="dpram_36_1024_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="dpram_36_1024_ip" Description="Vivado Implementation Defaults" SynthRun="dpram_36_1024_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -438,9 +516,43 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="multiplier_ip_42_42_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="multiplier_ip_42_42" Description="Vivado Implementation Defaults" SynthRun="multiplier_ip_42_42_synth_1">
+    <Run Id="dsp48_mul_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="dsp48_mul_ip" Description="Vivado Implementation Defaults" SynthRun="dsp48_mul_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="dsp48_mul_add_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="dsp48_mul_add_ip" Description="Vivado Implementation Defaults" SynthRun="dsp48_mul_add_ip_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="spram_108_512_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="spram_108_512_ip" Description="Vivado Implementation Defaults" SynthRun="spram_108_512_ip_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

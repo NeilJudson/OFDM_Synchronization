@@ -14,20 +14,22 @@ set_property webtalk.parent_dir E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_S
 set_property parent.project_path E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_ip_16_16_synth_1/complex_multiplier_ip_16_16.dcp
-set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_ip_16_16_synth_1/complex_multiplier_ip_16_16.dcp]
-add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/dsp48_ip_mul_add_synth_1/dsp48_ip_mul_add.dcp
-set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/dsp48_ip_mul_add_synth_1/dsp48_ip_mul_add.dcp]
-add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/dsp48_ip_mul_synth_1/dsp48_ip_mul.dcp
-set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/dsp48_ip_mul_synth_1/dsp48_ip_mul.dcp]
-add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_64_64_ip_synth_1/spram_64_64_ip.dcp
-set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_64_64_ip_synth_1/spram_64_64_ip.dcp]
-add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_33_64_ip_synth_1/spram_33_64_ip.dcp
-set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_33_64_ip_synth_1/spram_33_64_ip.dcp]
-add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_103_32_ip_synth_1/spram_103_32_ip.dcp
-set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_103_32_ip_synth_1/spram_103_32_ip.dcp]
-add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_ip_42_42_synth_1/multiplier_ip_42_42.dcp
-set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_ip_42_42_synth_1/multiplier_ip_42_42.dcp]
+add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_72_64_ip_synth_1/spram_72_64_ip.dcp
+set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_72_64_ip_synth_1/spram_72_64_ip.dcp]
+add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_36_64_ip_synth_1/spram_36_64_ip.dcp
+set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_36_64_ip_synth_1/spram_36_64_ip.dcp]
+add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_108_32_ip_synth_1/spram_108_32_ip.dcp
+set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_108_32_ip_synth_1/spram_108_32_ip.dcp]
+add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1/complex_multiplier_18_18_ip.dcp
+set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1/complex_multiplier_18_18_ip.dcp]
+add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_42_42_ip_synth_1/multiplier_42_42_ip.dcp
+set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_42_42_ip_synth_1/multiplier_42_42_ip.dcp]
+add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/dsp48_mul_ip_synth_1/dsp48_mul_ip.dcp
+set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/dsp48_mul_ip_synth_1/dsp48_mul_ip.dcp]
+add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/dsp48_mul_add_ip_synth_1/dsp48_mul_add_ip.dcp
+set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/dsp48_mul_add_ip_synth_1/dsp48_mul_add_ip.dcp]
+add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_108_512_ip_synth_1/spram_108_512_ip.dcp
+set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_108_512_ip_synth_1/spram_108_512_ip.dcp]
 read_verilog -library xil_defaultlib {
   E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_42.v
   E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_18.v

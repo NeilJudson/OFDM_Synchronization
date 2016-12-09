@@ -80,7 +80,7 @@ module axis_interface_fifo #(
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
 			raddr <= 3'd0;
-			rdata <= {1'b0,{DATA_WIDTH{1'b0}}};
+			rdata <= 'd0;
 		end
 		else if((waddr!=raddr) && ((m_axis_data_tvalid==1'b0)||(m_axis_data_trdy==1'b1))) begin
 			raddr <= raddr + 1'd1;
