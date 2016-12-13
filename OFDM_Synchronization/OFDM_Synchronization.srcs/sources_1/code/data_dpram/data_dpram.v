@@ -254,7 +254,8 @@ module data_dpram #(
 	assign u3_data			= {u1_dpram_doutb[2*SYNC_DATA_WIDTH-1:0],u1_dpram_douta[2*SYNC_DATA_WIDTH-1:0]};
 	
 	axis_interface_fifo #(
-		.DATA_WIDTH			(4*SYNC_DATA_WIDTH	)
+		.DATA_IN_WIDTH		(4*SYNC_DATA_WIDTH	),
+		.DATA_OUT_WIDTH		(64					)
 	)u3_axis_interface_fifo(
 		.axis_aclk			(axis_aclk			),
 		.axis_areset		(axis_areset		),

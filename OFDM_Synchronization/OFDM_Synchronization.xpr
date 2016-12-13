@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.xpr">
+<Project Version="7" Minor="5" Path="G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="89b8eba060cf4f92a4fcc10f3e2a1a35"/>
@@ -197,30 +197,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="sim/complex_multiplier_18_18_ip.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="cmpy_v6_0/hdl/cmpy_v6_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_v3_0_vh_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="cmodel/cmpy_v6_0_bitacc_cmodel_nt64.zip"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="cmodel/cmpy_v6_0_bitacc_cmodel_lin64.zip"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="axi_utils_v2_0/hdl/axi_utils_v2_0_vh_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="doc/cmpy_v6_0_changelog.txt"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip.dcp"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip_funcsim.vhdl"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip_funcsim.v"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip_stub.v"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip.xml"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip.veo"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="demo_tb/tb_complex_multiplier_18_18_ip.vhd"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="complex_multiplier_18_18_ip_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="complex_multiplier_18_18_ip.xci" FileRelPathName="synth/complex_multiplier_18_18_ip.vhd"/>
       </File>
       <Config>
         <Option Name="TopModule" Val="complex_multiplier_18_18_ip"/>
@@ -327,81 +303,63 @@
     </Run>
     <Run Id="spram_72_64_ip_synth_1" Type="Ft3:Synth" SrcSet="spram_72_64_ip" Part="xc7z045fbg676-3" ConstrsSet="spram_72_64_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/spram_72_64_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="spram_36_64_ip_synth_1" Type="Ft3:Synth" SrcSet="spram_36_64_ip" Part="xc7z045fbg676-3" ConstrsSet="spram_36_64_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/spram_36_64_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="spram_108_32_ip_synth_1" Type="Ft3:Synth" SrcSet="spram_108_32_ip" Part="xc7z045fbg676-3" ConstrsSet="spram_108_32_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/spram_108_32_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="complex_multiplier_18_18_ip_synth_1" Type="Ft3:Synth" SrcSet="complex_multiplier_18_18_ip" Part="xc7z045fbg676-3" ConstrsSet="complex_multiplier_18_18_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/complex_multiplier_18_18_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="multiplier_42_42_ip_synth_1" Type="Ft3:Synth" SrcSet="multiplier_42_42_ip" Part="xc7z045fbg676-3" ConstrsSet="multiplier_42_42_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/multiplier_42_42_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="dpram_36_1024_ip_synth_1" Type="Ft3:Synth" SrcSet="dpram_36_1024_ip" Part="xc7z045fbg676-3" ConstrsSet="dpram_36_1024_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/dpram_36_1024_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="dsp48_mul_ip_synth_1" Type="Ft3:Synth" SrcSet="dsp48_mul_ip" Part="xc7z045fbg676-3" ConstrsSet="dsp48_mul_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/dsp48_mul_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="dsp48_mul_add_ip_synth_1" Type="Ft3:Synth" SrcSet="dsp48_mul_add_ip" Part="xc7z045fbg676-3" ConstrsSet="dsp48_mul_add_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/dsp48_mul_add_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="spram_108_512_ip_synth_1" Type="Ft3:Synth" SrcSet="spram_108_512_ip" Part="xc7z045fbg676-3" ConstrsSet="spram_108_512_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/spram_108_512_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -422,9 +380,7 @@
     </Run>
     <Run Id="spram_72_64_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="spram_72_64_ip" Description="Vivado Implementation Defaults" SynthRun="spram_72_64_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -438,9 +394,7 @@
     </Run>
     <Run Id="spram_36_64_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="spram_36_64_ip" Description="Vivado Implementation Defaults" SynthRun="spram_36_64_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -454,9 +408,7 @@
     </Run>
     <Run Id="spram_108_32_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="spram_108_32_ip" Description="Vivado Implementation Defaults" SynthRun="spram_108_32_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -470,9 +422,7 @@
     </Run>
     <Run Id="complex_multiplier_18_18_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="complex_multiplier_18_18_ip" Description="Vivado Implementation Defaults" SynthRun="complex_multiplier_18_18_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -486,9 +436,7 @@
     </Run>
     <Run Id="multiplier_42_42_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="multiplier_42_42_ip" Description="Vivado Implementation Defaults" SynthRun="multiplier_42_42_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -502,9 +450,7 @@
     </Run>
     <Run Id="dpram_36_1024_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="dpram_36_1024_ip" Description="Vivado Implementation Defaults" SynthRun="dpram_36_1024_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -518,9 +464,7 @@
     </Run>
     <Run Id="dsp48_mul_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="dsp48_mul_ip" Description="Vivado Implementation Defaults" SynthRun="dsp48_mul_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -534,9 +478,7 @@
     </Run>
     <Run Id="dsp48_mul_add_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="dsp48_mul_add_ip" Description="Vivado Implementation Defaults" SynthRun="dsp48_mul_add_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -550,9 +492,7 @@
     </Run>
     <Run Id="spram_108_512_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="spram_108_512_ip" Description="Vivado Implementation Defaults" SynthRun="spram_108_512_ip_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

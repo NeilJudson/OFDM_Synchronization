@@ -23,7 +23,7 @@
 module tar_operator #(
 	parameter PSI_WIDTH = 34,
 	parameter PHI_WIDTH = 35,
-	parameter TAR_WIDTH = PSI_WIDTH+1 // 35
+	parameter TAR_WIDTH = 2*(PSI_WIDTH+5)+1 // 79
 	)
 	(
 	clk				,
