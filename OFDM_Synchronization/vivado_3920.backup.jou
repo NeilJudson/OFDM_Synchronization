@@ -1,0 +1,168 @@
+#-----------------------------------------------------------
+# Vivado v2015.2.1 (64-bit)
+# SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
+# IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
+# Start of session at: Sun Nov 20 13:28:45 2016
+# Process ID: 7280
+# Log file: G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/vivado.log
+# Journal file: G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.xpr
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.2 -module_name spram_64_ip
+set_property -dict [list CONFIG.Memory_Type {Single_Port_RAM} CONFIG.Write_Width_A {64} CONFIG.Write_Depth_A {64} CONFIG.Enable_A {Always_Enabled} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Read_Width_A {64} CONFIG.Operating_Mode_A {NO_CHANGE} CONFIG.Write_Width_B {64} CONFIG.Read_Width_B {64} CONFIG.Enable_B {Always_Enabled} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Register_PortB_Output_of_Memory_Primitives {false} CONFIG.Port_B_Clock {0} CONFIG.Port_B_Enable_Rate {0}] [get_ips spram_64_ip]
+generate_target {instantiation_template} [get_files g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_64_ip/spram_64_ip.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_64_ip/spram_64_ip.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_64_ip/spram_64_ip.xci]
+launch_run -jobs 2 spram_64_ip_synth_1
+close [ open G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/test_spram_64_ip.v w ]
+add_files G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/test_spram_64_ip.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top test_spram_64_ip [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top test_spram_64_ip [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_simulation
+source test_spram_64_ip.tcl
+run all
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_simulation
+source test_spram_64_ip.tcl
+run all
+close_sim
+launch_simulation
+source test_spram_64_ip.tcl
+run all
+close_sim
+launch_simulation
+source test_spram_64_ip.tcl
+run all
+close_sim
+launch_simulation
+source test_spram_64_ip.tcl
+run all
+close_sim
+launch_simulation
+source test_spram_64_ip.tcl
+run all
+close_sim
+remove_files -fileset spram_256_ip G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_256_ip/spram_256_ip.xci
+delete_fileset spram_256_ip
+file delete -force G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_256_ip
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top test_psi_operator [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top test_psi_operator [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+reset_run complex_multiplier_ip_16_16_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_simulation
+source test_psi_operator.tcl
+restart
+add_wave {{/test_psi_operator/uut/u2_wea}} {{/test_psi_operator/uut/u2_wr_addr}} {{/test_psi_operator/uut/u2_rd_addr}} {{/test_psi_operator/uut/u2_addra}} {{/test_psi_operator/uut/u2_dina}} {{/test_psi_operator/uut/u2_douta}} 
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation
+source test_psi_operator.tcl
+add_wave {{/test_psi_operator/uut/u2_wea}} {{/test_psi_operator/uut/u2_wr_addr}} {{/test_psi_operator/uut/u2_rd_addr}} {{/test_psi_operator/uut/u2_addra}} {{/test_psi_operator/uut/u2_dina}} {{/test_psi_operator/uut/u2_douta}} 
+restart
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source test_psi_operator.tcl
+add_wave {{/test_psi_operator/uut/u2_wea}} {{/test_psi_operator/uut/u2_wr_addr}} {{/test_psi_operator/uut/u2_rd_addr}} {{/test_psi_operator/uut/u2_addra}} {{/test_psi_operator/uut/u2_dina}} {{/test_psi_operator/uut/u2_douta}} 
+restart
+run all
+close_sim
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation
+source test_psi_operator.tcl
+add_wave {{/test_psi_operator/uut/u2_wea}} {{/test_psi_operator/uut/u2_wr_addr}} {{/test_psi_operator/uut/u2_rd_addr}} {{/test_psi_operator/uut/u2_addra}} {{/test_psi_operator/uut/u2_dina}} {{/test_psi_operator/uut/u2_douta}} 
+restart
+run all
+remove_forces { {/test_psi_operator/count[2]} {/test_psi_operator/count[1]} {/test_psi_operator/count[0]} }
+restart
+add_wave {{/test_psi_operator/uut/u1_s_axis_a_tvalid}} {{/test_psi_operator/uut/u1_s_axis_a_tdata}} {{/test_psi_operator/uut/u1_s_axis_b_tdata}} {{/test_psi_operator/uut/u1_data_valid}} {{/test_psi_operator/uut/u1_data}} 
+run all
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation
+source test_psi_operator.tcl
+add_wave {{/test_psi_operator/uut/u1_s_axis_a_tvalid}} {{/test_psi_operator/uut/u1_s_axis_a_tdata}} {{/test_psi_operator/uut/u1_s_axis_b_tdata}} {{/test_psi_operator/uut/u1_data_valid}} {{/test_psi_operator/uut/u1_data}} 
+add_wave {{/test_psi_operator/uut/u2_wea}} {{/test_psi_operator/uut/u2_wr_addr}} {{/test_psi_operator/uut/u2_rd_addr}} {{/test_psi_operator/uut/u2_addra}} {{/test_psi_operator/uut/u2_dina}} {{/test_psi_operator/uut/u2_douta}} 
+restart
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_sim
+launch_simulation
+source test_psi_operator.tcl
+add_wave {{/test_psi_operator/uut/u1_s_axis_a_tvalid}} {{/test_psi_operator/uut/u1_s_axis_a_tdata}} {{/test_psi_operator/uut/u1_s_axis_b_tdata}} {{/test_psi_operator/uut/u1_data_valid}} {{/test_psi_operator/uut/u1_data}} 
+add_wave {{/test_psi_operator/uut/u2_wea}} {{/test_psi_operator/uut/u2_wr_addr}} {{/test_psi_operator/uut/u2_rd_addr}} {{/test_psi_operator/uut/u2_addra}} {{/test_psi_operator/uut/u2_dina}} {{/test_psi_operator/uut/u2_douta}} 
+restart
+run all
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_simulation
+source test_psi_operator.tcl
+add_wave {{/test_psi_operator/uut/u2_wea}} {{/test_psi_operator/uut/u2_wr_addr}} {{/test_psi_operator/uut/u2_rd_addr}} {{/test_psi_operator/uut/u2_addra}} {{/test_psi_operator/uut/u2_dina}} {{/test_psi_operator/uut/u2_douta}} 
+restart
+run all
+close_sim

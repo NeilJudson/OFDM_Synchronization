@@ -21,8 +21,8 @@
 
 
 module data_dpram #(
-	parameter	DATA_WIDTH		= 5'd16,
-				SYN_DATA_WIDTH	= 4'd13 // 同步数据位宽
+	parameter SYNC_DATA_WIDTH	= 16,
+	parameter RAM_ADDR_WIDTH	= 10
 	)
 	(
 	axis_aclk			,
@@ -45,7 +45,7 @@ module data_dpram #(
 	
 	m_axis_data_tvalid	,
 	m_axis_data_tlast	,
-	m_axis_data_tdata	,
+	m_axis_data_tdata	, // [63:32]：延时数据，[31:0]：原始数据
 	m_axis_data_trdy
     );
 	input				axis_aclk			;
@@ -71,8 +71,11 @@ module data_dpram #(
 	output		[63:0]	m_axis_data_tdata	;
 	input				m_axis_data_trdy	;
 	
-	localparam	RAM_ADDR_WIDTH = 4'd10;
-	
+//================================================================================
+// variable
+//================================================================================
+	localparam	DPRAM_ADDR_WIDTH	= 10;
+	localparam	DPRAM_DATA_WIDTH	= 36;
 	// sync_state
 	localparam	SYNC_IDLE			= 3'd0,
 				SYNC_COARSE_SEARCH	= 3'd1,
@@ -81,32 +84,31 @@ module data_dpram #(
 				SYNC_FINE_DONE		= 3'd4,
 				SYNC_DATA_OUTPUT	= 3'd5;
 	
-//================================================================================
-// variable
-//================================================================================
-	wire		[2:0]	sync_state			;
+	wire	[2:0]					sync_state			;
 	
-	reg					u1_dpram_wea		;
-	reg			[9:0]	u1_dpram_addra_wr	;
-	reg			[9:0]	u1_dpram_addra_rd	;
-	wire		[9:0]	u1_dpram_addra		;
-	reg			[31:0]	u1_dpram_dina		;
-	wire		[31:0]	u1_dpram_douta		;
-	reg			[9:0]	u1_dpram_addrb		;
-	wire		[31:0]	u1_dpram_doutb		;
+	reg								u1_dpram_wea		;
+	reg		[DPRAM_ADDR_WIDTH-1:0]	u1_dpram_addra_wr	;
+	reg		[DPRAM_ADDR_WIDTH-1:0]	u1_dpram_addra_rd	;
+	wire	[DPRAM_ADDR_WIDTH-1:0]	u1_dpram_addra		;
+	reg		[DPRAM_DATA_WIDTH-1:0]	u1_dpram_dina		;
+	wire	[DPRAM_DATA_WIDTH-1:0]	u1_dpram_douta		;
+	reg		[DPRAM_ADDR_WIDTH-1:0]	u1_dpram_addrb		;
+	wire	[DPRAM_DATA_WIDTH-1:0]	u1_dpram_doutb		;
 	
-	reg					u1_dpram_wea_dly1	;
-	reg					u1_dpram_wea_dly2	;
-	reg					u1_dpram_wea_dly3	;
+	reg								u1_dpram_wea_dly1	;
+	reg								u1_dpram_wea_dly2	;
+	reg								u1_dpram_wea_dly3	;
 	
-/* 	wire				u2_dpram_wea		;
-	wire		[9:0]	u2_dpram_addra		;
-	wire		[31:0]	u2_dpram_dina		;
-	wire		[31:0]	u2_dpram_douta		;
-	reg			[9:0]	u2_dpram_addrb		;
-	wire		[31:0]	u2_dpram_doutb		;
- */	
-	wire				u3_almost_full		;
+/* 	wire							u2_dpram_wea		;
+	wire	[9:0]					u2_dpram_addra		;
+	wire	[31:0]					u2_dpram_dina		;
+	wire	[31:0]					u2_dpram_douta		;
+	reg		[9:0]					u2_dpram_addrb		;
+	wire	[31:0]					u2_dpram_doutb		;
+*/
+	wire							u3_data_valid		;
+	wire	[4*SYNC_DATA_WIDTH-1:0]	u3_data				;
+	wire							u3_almost_full		;
 	
 //================================================================================
 // s_axis_ctrl_tdata
@@ -114,23 +116,23 @@ module data_dpram #(
 	// assign sync_state = s_axis_ctrl_tdata[2:0];
 	
 //================================================================================
-// coarse syn
+// coarse synchronization
 //================================================================================
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
 			u1_dpram_wea		<= 1'b0;
-			u1_dpram_addra_wr	<= 10'd0;
-			u1_dpram_dina		<= 32'd0;
+			u1_dpram_addra_wr	<= 'd0;
+			u1_dpram_dina		<= 'd0;
 		end
 		else if(s_axis_data_tvalid == 1'b1) begin
 			u1_dpram_wea		<= 1'b1;
-			u1_dpram_addra_wr	<= u1_dpram_addra_wr + 10'd1;
-			u1_dpram_dina		<= s_axis_data_tdata;
+			u1_dpram_addra_wr	<= u1_dpram_addra_wr + 1'd1;
+			u1_dpram_dina		<= {{(DPRAM_DATA_WIDTH-32){1'b0}},s_axis_data_tdata};
 		end
 		else begin
 			u1_dpram_wea		<= 1'b0;
 			u1_dpram_addra_wr	<= u1_dpram_addra_wr;
-			u1_dpram_dina		<= s_axis_data_tdata;
+			u1_dpram_dina		<= {{(DPRAM_DATA_WIDTH-32){1'b0}},s_axis_data_tdata};
 			end
 	end
 	
@@ -160,17 +162,17 @@ module data_dpram #(
 		end
 	end
 	
-	dpram_1024_ip u1_dpram_1024_ip (
-		.clka	(axis_aclk		),	// input wire clka
-		.wea	(u1_dpram_wea	),	// input wire [0 : 0] wea
-		.addra	(u1_dpram_addra	),	// input wire [9 : 0] addra
-		.dina	(u1_dpram_dina	),	// input wire [31 : 0] dina
-		.douta	(u1_dpram_douta	),	// output wire [31 : 0] douta
-		.clkb	(axis_aclk		),	// input wire clkb
-		.web	(1'b0			),	// input wire [0 : 0] web
-		.addrb	(u1_dpram_addrb	),	// input wire [9 : 0] addrb
-		.dinb	(32'd0			),	// input wire [31 : 0] dinb
-		.doutb	(u1_dpram_doutb	)	// output wire [31 : 0] doutb // dly32
+	dpram_36_1024_ip u1_dpram_36_1024_ip (
+		.clka	(axis_aclk		),	// input clka;
+		.wea	(u1_dpram_wea	),	// input [0:0]wea;
+		.addra	(u1_dpram_addra	),	// input [9:0]addra;
+		.dina	(u1_dpram_dina	),	// input [35:0]dina;
+		.douta	(u1_dpram_douta	),	// output [35:0]douta;
+		.clkb	(axis_aclk		),	// input clkb;
+		.web	(1'b0			),	// input [0:0]web;
+		.addrb	(u1_dpram_addrb	),	// input [9:0]addrb;
+		.dinb	('d0			),	// input [35:0]dinb;
+		.doutb	(u1_dpram_doutb	)	// output [35:0]doutb;
 	);
 	
 	always @(posedge axis_aclk or posedge axis_areset) begin
@@ -194,31 +196,30 @@ module data_dpram #(
 	assign u2_dpram_addra = u1_dpram_addra_wr;
 	assign u2_dpram_dina = u1_dpram_dina;
 	
-	always @(posedge axis_aclk or posedge axis_areset)
-		begin
-			if(axis_areset == 1'b1) begin
-				u2_dpram_addrb <= 10'd0;
-			end
-			else begin
-				case(sync_state)
-					SYNC_COARSE_DONE: begin
-						u2_dpram_addrb <= coarse_sync_addr;
-					end
-					SYNC_FINE_SEARCH: begin
-						u2_dpram_addrb <= u2_dpram_addrb + 10'd1;
-					end
-					SYNC_FINE_DONE: begin
-						u2_dpram_addrb <= fine_sync_addr;
-					end
-					SYNC_DATA_OUTPUT: begin
-						u2_dpram_addrb <= u2_dpram_addrb + 10'd1;
-					end
-					default: begin
-						u2_dpram_addrb <= 10'd0;
-					end
-				endcase
-			end
+	always @(posedge axis_aclk or posedge axis_areset) begin
+		if(axis_areset == 1'b1) begin
+			u2_dpram_addrb <= 10'd0;
 		end
+		else begin
+			case(sync_state)
+				SYNC_COARSE_DONE: begin
+					u2_dpram_addrb <= coarse_sync_addr;
+				end
+				SYNC_FINE_SEARCH: begin
+					u2_dpram_addrb <= u2_dpram_addrb + 10'd1;
+				end
+				SYNC_FINE_DONE: begin
+					u2_dpram_addrb <= fine_sync_addr;
+				end
+				SYNC_DATA_OUTPUT: begin
+					u2_dpram_addrb <= u2_dpram_addrb + 10'd1;
+				end
+				default: begin
+					u2_dpram_addrb <= 10'd0;
+				end
+			endcase
+		end
+	end
 	
 	dpram_1024_ip u2_dpram_1024_ip (
 		.clka	(axis_aclk		),	// input wire clka
@@ -233,7 +234,7 @@ module data_dpram #(
 		.doutb	(u2_dpram_doutb	)	// output wire [31 : 0] doutb
 	);
 */
-
+	
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
 			s_axis_data_trdy <= 1'b0;
@@ -245,23 +246,26 @@ module data_dpram #(
 			s_axis_data_trdy <= 1'b0;
 		end
 	end
-
+	
 //================================================================================
 // axis_interface_fifo
 //================================================================================
+	assign u3_data_valid	= u1_dpram_wea_dly2;
+	assign u3_data			= {u1_dpram_doutb[2*SYNC_DATA_WIDTH-1:0],u1_dpram_douta[2*SYNC_DATA_WIDTH-1:0]};
+	
 	axis_interface_fifo #(
-		.DATA_WIDTH			(7'd64				)
+		.DATA_WIDTH			(4*SYNC_DATA_WIDTH	)
 	)u3_axis_interface_fifo(
 		.axis_aclk			(axis_aclk			),
 		.axis_areset		(axis_areset		),
-		.data_valid			(u1_dpram_wea_dly2	),
+		.data_valid			(u3_data_valid		),
 		.data_last			(1'b0				),
-		.data				({u1_dpram_doutb,u1_dpram_douta}), // [63:32]：延时数据，[31:0]：原始数据
+		.data				(u3_data			), // [63:32]：延时数据，[31:0]：原始数据
 		.almost_full		(u3_almost_full		),
 		.m_axis_data_tvalid	(m_axis_data_tvalid	),
 		.m_axis_data_tlast	(m_axis_data_tlast	),
 		.m_axis_data_tdata	(m_axis_data_tdata	),
 		.m_axis_data_trdy	(m_axis_data_trdy	)
 	);
-
+	
 endmodule

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2.1 (64-bit)
+# SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
+# IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
+# Start of session at: Fri Dec 09 15:14:40 2016
+# Process ID: 4280
+# Log file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/dsp48_mul_add_ip_synth_1/dsp48_mul_add_ip.vds
+# Journal file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/dsp48_mul_add_ip_synth_1\vivado.jou
+#-----------------------------------------------------------
+source dsp48_mul_add_ip.tcl -notrace

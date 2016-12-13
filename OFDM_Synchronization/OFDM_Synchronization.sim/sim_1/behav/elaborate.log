@@ -1,62 +1,33 @@
 Vivado Simulator 2015.2
 Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 89b8eba060cf4f92a4fcc10f3e2a1a35 --debug typical --relax --mt 2 -L blk_mem_gen_v8_2 -L xil_defaultlib -L xbip_utils_v3_0 -L axi_utils_v2_0 -L xbip_pipe_v3_0 -L xbip_bram18k_v3_0 -L mult_gen_v12_0 -L cmpy_v6_0 -L unisims_ver -L unimacro_ver -L secureip --snapshot test_psi_operator_behav xil_defaultlib.test_psi_operator xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Xilinx/15.2/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 89b8eba060cf4f92a4fcc10f3e2a1a35 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_complex_abs_power2_42_behav xil_defaultlib.test_complex_abs_power2_42 xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package std.textio
-Compiling package xbip_utils_v3_0.xbip_utils_v3_0_pkg
-Compiling package cmpy_v6_0.cmpy_v6_0_viv_comp
-Compiling package axi_utils_v2_0.axi_utils_v2_0_pkg
-Compiling package mult_gen_v12_0.mult_gen_v12_0_pkg
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_signed
-Compiling package cmpy_v6_0.cmpy_v6_0_pkg
-Compiling package unisim.vcomponents
-Compiling package mult_gen_v12_0.dsp_pkg
-Compiling package ieee.vital_timing
-Compiling package ieee.vital_primitives
-Compiling package unisim.vpkg
-Compiling architecture xilinx of entity cmpy_v6_0.delay_line [\delay_line("zynq",false,1,0,1,1...]
-Compiling architecture xilinx of entity cmpy_v6_0.delay_line [\delay_line("zynq",false,0,0,17,...]
-Compiling architecture xilinx of entity cmpy_v6_0.delay_line [\delay_line("zynq",false,0,0,25,...]
-Compiling architecture xilinx of entity cmpy_v6_0.delay_line [\delay_line("zynq",false,0,0,16,...]
-Compiling architecture xilinx of entity mult_gen_v12_0.delay_line [\delay_line("zynq",false,0,0,25,...]
-Compiling architecture xilinx of entity mult_gen_v12_0.delay_line [\delay_line("zynq",false,0,0,18,...]
-Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(2,1,0,2,"NO_RESET","DIR...]
-Compiling architecture xilinx of entity mult_gen_v12_0.delay_line [\delay_line("zynq",false,0,0,43,...]
-Compiling architecture xilinx of entity mult_gen_v12_0.op_resize [\op_resize(17,16,0,0,0,25,18)\]
-Compiling architecture xilinx of entity mult_gen_v12_0.dsp [\dsp("zynq",17,0,16,0,0,0,3,0,0,...]
-Compiling architecture xilinx of entity cmpy_v6_0.cmpy_3_dsp48_mult [\cmpy_3_dsp48_mult("zynq",17,16,...]
-Compiling architecture xilinx of entity mult_gen_v12_0.delay_line [\delay_line("zynq",false,0,0,25,...]
-Compiling architecture xilinx of entity mult_gen_v12_0.delay_line [\delay_line("zynq",false,0,0,18,...]
-Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(1,1,0,1,"NO_RESET","DIR...]
-Compiling architecture xilinx of entity mult_gen_v12_0.dsp [\dsp("zynq",17,0,16,0,0,0,3,0,0,...]
-Compiling architecture xilinx of entity cmpy_v6_0.cmpy_3_dsp48_mult [\cmpy_3_dsp48_mult("zynq",17,16,...]
-Compiling architecture xilinx of entity mult_gen_v12_0.dsp [\dsp("zynq",17,0,16,0,0,0,3,0,0,...]
-Compiling architecture xilinx of entity cmpy_v6_0.cmpy_3_dsp48_mult [\cmpy_3_dsp48_mult("zynq",17,16,...]
-Compiling architecture xilinx of entity cmpy_v6_0.input_negation [\input_negation("zynq",16,16,0,0...]
-Compiling architecture xilinx of entity cmpy_v6_0.delay_line [\delay_line("zynq",false,0,0,1,0...]
-Compiling architecture xilinx of entity cmpy_v6_0.delay_line [\delay_line("zynq",false,0,0,33,...]
-Compiling architecture xilinx of entity cmpy_v6_0.cmpy_3_dsp48 [\cmpy_3_dsp48(0,"zynq",16,16,32,...]
-Compiling architecture xilinx of entity cmpy_v6_0.cmpy_v6_0_synth [\cmpy_v6_0_synth(0,"zynq","xc7z0...]
-Compiling architecture xilinx of entity cmpy_v6_0.cmpy_v6_0_viv [\cmpy_v6_0_viv(0,"zynq","xc7z045...]
-Compiling architecture xilinx of entity cmpy_v6_0.cmpy_v6_0 [\cmpy_v6_0(0,"zynq","xc7z045",16...]
-Compiling architecture complex_multiplier_ip_16_16_arch of entity xil_defaultlib.complex_multiplier_ip_16_16 [complex_multiplier_ip_16_16_defa...]
-Compiling module blk_mem_gen_v8_2.BLK_MEM_GEN_v8_2_output_stage(C_...
-Compiling module blk_mem_gen_v8_2.BLK_MEM_GEN_v8_2_output_stage(C_...
-Compiling module blk_mem_gen_v8_2.BLK_MEM_GEN_v8_2_softecc_output_...
-Compiling module blk_mem_gen_v8_2.BLK_MEM_GEN_v8_2_mem_module(C_CO...
-Compiling module blk_mem_gen_v8_2.blk_mem_gen_v8_2(C_FAMILY="zynq"...
-Compiling module xil_defaultlib.spram_64_ip
-Compiling module xil_defaultlib.psi_operator
-Compiling module xil_defaultlib.test_psi_operator
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.sffsrce_fdre
+Compiling module unisims_ver.FDRE
+Compiling module unisims_ver.SRL16E
+Compiling module xil_defaultlib.multiplier_ip_42_42_delay_line__...
+Compiling module unisims_ver.DSP48E1(ADREG=0,ALUMODEREG=0,CAR...
+Compiling module xil_defaultlib.multiplier_ip_42_42_delay_line__...
+Compiling module unisims_ver.DSP48E1(ACASCREG=2,AREG=2,BCASCR...
+Compiling module unisims_ver.DSP48E1(ACASCREG=2,ADREG=0,AREG=...
+Compiling module xil_defaultlib.multiplier_ip_42_42_delay_line__...
+Compiling module xil_defaultlib.multiplier_ip_42_42_delay_line__...
+Compiling module unisims_ver.DSP48E1(ACASCREG=2,ADREG=0,AREG=...
+Compiling module xil_defaultlib.multiplier_ip_42_42_delay_line__...
+Compiling module xil_defaultlib.multiplier_ip_42_42_delay_line__...
+Compiling module xil_defaultlib.multiplier_ip_42_42_delay_line__...
+Compiling module xil_defaultlib.multiplier_ip_42_42_dsp
+Compiling module xil_defaultlib.multiplier_ip_42_42_mult_gen_v12...
+Compiling module xil_defaultlib.multiplier_ip_42_42_mult_gen_v12...
+Compiling module xil_defaultlib.multiplier_ip_42_42
+Compiling module xil_defaultlib.complex_abs_power2_42
+Compiling module xil_defaultlib.test_complex_abs_power2_42
 Compiling module xil_defaultlib.glbl
-Waiting for 4 sub-compilation(s) to finish...
-Built simulation snapshot test_psi_operator_behav
+Waiting for 3 sub-compilation(s) to finish...
+Built simulation snapshot test_complex_abs_power2_42_behav
