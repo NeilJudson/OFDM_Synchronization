@@ -36,7 +36,6 @@ module coarse_sync #(
 	s_axis_data_tvalid	,
 	s_axis_data_tlast	,
 	s_axis_data_tdata	,
-	s_axis_data_taddr	,
 	s_axis_data_trdy	,
 	
 	m_axis_ctrl_tvalid	,
@@ -60,7 +59,6 @@ module coarse_sync #(
 	input			s_axis_data_tvalid	;
 	input			s_axis_data_tlast	;
 	input	[63:0]	s_axis_data_tdata	;
-	input	[15:0]	s_axis_data_taddr	;
 	output			s_axis_data_trdy	;
 	
 	output			m_axis_ctrl_tvalid	;
