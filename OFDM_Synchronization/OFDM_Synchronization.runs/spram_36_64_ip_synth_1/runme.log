@@ -11,20 +11,20 @@
 source spram_36_64_ip.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/15.2/Vivado/2015.2/data/ip'.
-WARNING: [IP_Flow 19-3664] IP 'spram_36_64_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'spram_36_64_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'spram_36_64_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'spram_36_64_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_funcsim.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'spram_36_64_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_funcsim.vhdl'. Please regenerate to continue.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'spram_36_64_ip' generated file not found 'g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'spram_36_64_ip' generated file not found 'g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'spram_36_64_ip' generated file not found 'g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'spram_36_64_ip' generated file not found 'g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_funcsim.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'spram_36_64_ip' generated file not found 'g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_funcsim.vhdl'. Please regenerate to continue.
 Command: synth_design -top spram_36_64_ip -part xc7z045fbg676-3 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 249.645 ; gain = 64.113
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 250.129 ; gain = 76.797
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'spram_36_64_ip' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/synth/spram_36_64_ip.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'spram_36_64_ip' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/synth/spram_36_64_ip.vhd:69]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -97,8 +97,8 @@ INFO: [Synth 8-638] synthesizing module 'spram_36_64_ip' [e:/jiaweiwei/Project/O
 	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     3.5531 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_2' declared at 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:123' bound to instance 'U0' of component 'blk_mem_gen_v8_2' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/synth/spram_36_64_ip.vhd:225]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:264]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_2' declared at 'g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:123' bound to instance 'U0' of component 'blk_mem_gen_v8_2' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/synth/spram_36_64_ip.vhd:225]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:264]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -171,7 +171,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2' [e:/jiaweiwei/Project
 	Parameter C_COUNT_36K_BRAM bound to: 0 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     3.5531 mW - type: string 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2_synth' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2_synth' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -239,7 +239,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_v8_2_synth' [e:/jiaweiwei/P
 	Parameter C_COMMON_CLK bound to: 0 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
@@ -309,22 +309,22 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_top' [e:/jiaweiwei/Project/
 	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:186860]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:4793]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:186860]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_MEM_TYPE bound to: 0 - type: integer 
 	Parameter C_HAS_RSTA bound to: 0 - type: integer 
@@ -361,13 +361,13 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_input_block' [e:/jiaweiwei/Proj
 	Parameter C_USE_ECC bound to: 0 - type: integer 
 	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
 	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_input_block' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:186860]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192945]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192949]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192953]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192957]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192971]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:184145]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_input_block' (1#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:186860]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192945]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192949]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192953]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192957]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192971]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:184145]
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
@@ -440,7 +440,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_generic_cstr' [e:/jiaweiwei
 	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
 	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_FAMILY bound to: virtex6 - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
@@ -497,7 +497,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_width' [e:/jiaweiwei/P
 	Parameter C_MEM_ADDR_WIDTH_A bound to: 6 - type: integer 
 	Parameter C_MEM_ADDR_WIDTH_B bound to: 6 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
 	Parameter C_SIM_DEVICE bound to: 7SERIES - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
 	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
@@ -552,7 +552,7 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_prim_wrapper_init' [e:/jiaw
 	Parameter C_MEM_ADDR_WIDTH_A bound to: 6 - type: integer 
 	Parameter C_MEM_ADDR_WIDTH_B bound to: 6 - type: integer 
 	Parameter DOUBLING_RESOURCE_FIX bound to: 0 - type: integer 
-INFO: [Synth 8-3919] null assignment ignored [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:101974]
+INFO: [Synth 8-3919] null assignment ignored [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:101974]
 	Parameter DOA_REG bound to: 1 - type: integer 
 	Parameter DOB_REG bound to: 1 - type: integer 
 	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -652,13 +652,13 @@ INFO: [Synth 8-3919] null assignment ignored [e:/jiaweiwei/Project/OFDM_Synchron
 	Parameter WRITE_MODE_B bound to: NO_CHANGE - type: string 
 	Parameter WRITE_WIDTH_A bound to: 18 - type: integer 
 	Parameter WRITE_WIDTH_B bound to: 18 - type: integer 
-INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB18E1' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:102017]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width' (3#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:185631]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:185784]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_generic_cstr' (4#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:184145]
-INFO: [Synth 8-638] synthesizing module 'blk_mem_output_block' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:187465]
+INFO: [Synth 8-113] binding component instance 'ram' to cell 'RAMB18E1' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:102017]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_wrapper_init' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:96206]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_prim_width' (3#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:182845]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:185631]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:185784]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_generic_cstr' (4#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:184145]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_output_block' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:187465]
 	Parameter C_MEM_TYPE bound to: 0 - type: integer 
 	Parameter C_WRITE_WIDTH_A bound to: 36 - type: integer 
 	Parameter C_READ_WIDTH_A bound to: 36 - type: integer 
@@ -669,13 +669,13 @@ INFO: [Synth 8-638] synthesizing module 'blk_mem_output_block' [e:/jiaweiwei/Pro
 	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
 	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
 	Parameter C_USE_ECC bound to: 0 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_output_block' (5#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:187465]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_top' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2_synth' (7#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
-INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2' (8#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:264]
-INFO: [Synth 8-256] done synthesizing module 'spram_36_64_ip' (9#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/synth/spram_36_64_ip.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_output_block' (5#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:187465]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_top' (6#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:192416]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2_synth' (7#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:193449]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_v8_2' (8#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd:264]
+INFO: [Synth 8-256] done synthesizing module 'spram_36_64_ip' (9#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/synth/spram_36_64_ip.vhd:69]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 446.836 ; gain = 261.305
+Finished RTL Elaboration : Time (s): cpu = 00:01:27 ; elapsed = 00:01:35 . Memory (MB): peak = 446.707 ; gain = 273.375
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -685,7 +685,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 446.836 ; gain = 261.305
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:28 ; elapsed = 00:01:35 . Memory (MB): peak = 446.707 ; gain = 273.375
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -694,35 +694,35 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_ooc.xdc] for cell 'U0'
-Parsing XDC File [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_36_64_ip_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_36_64_ip_synth_1/dont_touch.xdc]
+Parsing XDC File [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_ooc.xdc] for cell 'U0'
+Parsing XDC File [G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/spram_36_64_ip_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/spram_36_64_ip_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 586.035 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 586.590 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 586.035 ; gain = 400.504
+Finished Constraint Validation : Time (s): cpu = 00:01:41 ; elapsed = 00:01:52 . Memory (MB): peak = 586.590 ; gain = 413.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z045fbg676-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 586.035 ; gain = 400.504
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:41 ; elapsed = 00:01:52 . Memory (MB): peak = 586.590 ; gain = 413.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_36_64_ip_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/spram_36_64_ip_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 586.035 ; gain = 400.504
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:41 ; elapsed = 00:01:52 . Memory (MB): peak = 586.590 ; gain = 413.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 586.035 ; gain = 400.504
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:41 ; elapsed = 00:01:52 . Memory (MB): peak = 586.590 ; gain = 413.258
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -753,14 +753,14 @@ BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 586.035 ; gain = 400.504
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:41 ; elapsed = 00:01:53 . Memory (MB): peak = 586.590 ; gain = 413.258
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 586.035 ; gain = 400.504
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:41 ; elapsed = 00:01:53 . Memory (MB): peak = 586.590 ; gain = 413.258
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 586.035 ; gain = 400.504
+Finished Parallel Reinference  : Time (s): cpu = 00:01:41 ; elapsed = 00:01:53 . Memory (MB): peak = 586.590 ; gain = 413.258
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -771,16 +771,16 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 586.035 ; gain = 400.504
+Finished Area Optimization : Time (s): cpu = 00:01:41 ; elapsed = 00:01:53 . Memory (MB): peak = 586.590 ; gain = 413.258
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 586.035 ; gain = 400.504
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:41 ; elapsed = 00:01:53 . Memory (MB): peak = 586.590 ; gain = 413.258
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 586.035 ; gain = 400.504
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:41 ; elapsed = 00:01:53 . Memory (MB): peak = 586.590 ; gain = 413.258
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -788,10 +788,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 611.531 ; gain = 426.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:57 ; elapsed = 00:02:09 . Memory (MB): peak = 612.305 ; gain = 438.973
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 611.531 ; gain = 426.000
+Finished Timing Optimization : Time (s): cpu = 00:01:57 ; elapsed = 00:02:09 . Memory (MB): peak = 612.305 ; gain = 438.973
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -803,7 +803,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 621.141 ; gain = 435.609
+Finished Technology Mapping : Time (s): cpu = 00:01:57 ; elapsed = 00:02:09 . Memory (MB): peak = 621.902 ; gain = 448.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -821,7 +821,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 621.141 ; gain = 435.609
+Finished IO Insertion : Time (s): cpu = 00:01:58 ; elapsed = 00:02:10 . Memory (MB): peak = 621.902 ; gain = 448.570
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -834,7 +834,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 621.141 ; gain = 435.609
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:58 ; elapsed = 00:02:10 . Memory (MB): peak = 621.902 ; gain = 448.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -846,13 +846,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 621.141 ; gain = 435.609
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:58 ; elapsed = 00:02:10 . Memory (MB): peak = 621.902 ; gain = 448.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 621.141 ; gain = 435.609
+Start Renaming Generated Ports : Time (s): cpu = 00:01:58 ; elapsed = 00:02:10 . Memory (MB): peak = 621.902 ; gain = 448.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 621.141 ; gain = 435.609
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:58 ; elapsed = 00:02:10 . Memory (MB): peak = 621.902 ; gain = 448.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -884,17 +884,17 @@ Report Instance Areas:
 |7     |            \prim_init.ram            |blk_mem_gen_prim_wrapper_init |     1|
 +------+--------------------------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 621.141 ; gain = 435.609
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:58 ; elapsed = 00:02:10 . Memory (MB): peak = 621.902 ; gain = 448.570
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:01:16 . Memory (MB): peak = 621.141 ; gain = 276.945
-Synthesis Optimization Complete : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 621.141 ; gain = 435.609
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:01:51 . Memory (MB): peak = 621.902 ; gain = 280.445
+Synthesis Optimization Complete : Time (s): cpu = 00:01:58 ; elapsed = 00:02:10 . Memory (MB): peak = 621.902 ; gain = 448.570
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_ooc.xdc] for cell 'U0'
+Parsing XDC File [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/spram_36_64_ip_ooc.xdc] for cell 'U0'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
@@ -902,7 +902,7 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 37 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 621.141 ; gain = 418.934
+synth_design: Time (s): cpu = 00:01:58 ; elapsed = 00:02:10 . Memory (MB): peak = 621.902 ; gain = 420.328
 INFO: [Coretcl 2-1174] Renamed 6 cell refs.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 621.141 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 09 13:41:04 2016...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 621.902 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 14 00:32:29 2016...

@@ -2,9 +2,9 @@
 # Vivado v2015.2.1 (64-bit)
 # SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
 # IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
-# Start of session at: Fri Dec 09 13:52:57 2016
-# Process ID: 3132
-# Log file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1/complex_multiplier_18_18_ip.vds
-# Journal file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1\vivado.jou
+# Start of session at: Wed Dec 14 00:32:36 2016
+# Process ID: 524
+# Log file: G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1/complex_multiplier_18_18_ip.vds
+# Journal file: G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1\vivado.jou
 #-----------------------------------------------------------
 source complex_multiplier_18_18_ip.tcl -notrace

@@ -1,10 +1,10 @@
 // Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-// Date        : Fri Dec 09 15:12:50 2016
-// Host        : txjs-130 running 64-bit Service Pack 1  (build 7601)
+// Date        : Wed Dec 14 00:35:41 2016
+// Host        : FUTURE2 running 64-bit Service Pack 1  (build 7601)
 // Command     : write_verilog -force -mode synth_stub
-//               e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_ip/dsp48_mul_ip_stub.v
+//               G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_ip/dsp48_mul_ip_stub.v
 // Design      : dsp48_mul_ip
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z045fbg676-3

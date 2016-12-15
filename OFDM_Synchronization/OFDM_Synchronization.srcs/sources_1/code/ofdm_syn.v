@@ -82,34 +82,33 @@ module ofdm_syn #(
 				SYNC_FINE_DONE		= 3'd4,
 				SYNC_DATA_OUTPUT	= 3'd5;
 	
-	wire				rx_state;
+	wire			rx_state;
 	
-	reg			[2:0]	sync_state;
-	wire				coarse_sync_state;
-	wire				fine_sync_state;
+	reg		[2:0]	sync_state;
+	wire			coarse_sync_state;
+	wire			fine_sync_state;
 	
-	wire		[31:0]	u1_s_axis_ctrl_tdata;
+	wire	[31:0]	u1_s_axis_ctrl_tdata;
 	
-	wire				u2_s_axis_ctrl_tvalid	;
-	wire				u2_s_axis_ctrl_tlast	;
-	wire		[31:0]	u2_s_axis_ctrl_tdata	;
-	wire				u2_s_axis_ctrl_trdy		;
+	wire			u2_s_axis_ctrl_tvalid	;
+	wire			u2_s_axis_ctrl_tlast	;
+	wire	[31:0]	u2_s_axis_ctrl_tdata	;
+	wire			u2_s_axis_ctrl_trdy		;
 	
-	wire				u2_s_axis_data_tvalid	;
-	wire				u2_s_axis_data_tlast	;
-	wire		[63:0]	u2_s_axis_data_tdata	;
-	wire		[15:0]	u2_s_axis_data_taddr	;
-	wire				u2_s_axis_data_trdy		;
+	wire			u2_s_axis_data_tvalid	;
+	wire			u2_s_axis_data_tlast	;
+	wire	[63:0]	u2_s_axis_data_tdata	;
+	wire			u2_s_axis_data_trdy		;
 	
-	wire				u2_m_axis_ctrl_tvalid	;
-	wire				u2_m_axis_ctrl_tlast	;
-	wire		[31:0]	u2_m_axis_ctrl_tdata	;
-	wire				u2_m_axis_ctrl_trdy		;
+	wire			u2_m_axis_ctrl_tvalid	;
+	wire			u2_m_axis_ctrl_tlast	;
+	wire	[31:0]	u2_m_axis_ctrl_tdata	;
+	wire			u2_m_axis_ctrl_trdy		;
 	
-	wire				u2_m_axis_data_tvalid	;
-	wire				u2_m_axis_data_tlast	;
-	wire		[111:0]	u2_m_axis_data_tdata	;
-	wire				u2_m_axis_data_trdy		;
+	wire			u2_m_axis_data_tvalid	;
+	wire			u2_m_axis_data_tlast	;
+	wire	[111:0]	u2_m_axis_data_tdata	;
+	wire			u2_m_axis_data_trdy		;
 	
 //================================================================================
 // s_axis_ctrl_tdata
@@ -216,7 +215,6 @@ module ofdm_syn #(
 		.s_axis_data_tvalid	(u2_s_axis_data_tvalid	),
 		.s_axis_data_tlast	(u2_s_axis_data_tlast	),
 		.s_axis_data_tdata	(u2_s_axis_data_tdata	),
-		.s_axis_data_taddr	(u2_s_axis_data_taddr	),
 		.s_axis_data_trdy	(u2_s_axis_data_trdy	),
 		
 		.m_axis_ctrl_tvalid	(u2_m_axis_ctrl_tvalid	),
