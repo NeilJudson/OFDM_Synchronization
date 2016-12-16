@@ -15,7 +15,7 @@ seqLength = length(seq);
 if(seqLength < winWidth), errMsg = 'Input error: seqLeng is shorter than winWidth.'; end
 seqLengMinusDelay = seqLength - delay;
 if(seqLengMinusDelay < winWidth), errMsg = 'Input error: seqLeng-delay is shorter than winWidth.'; end
-if ~isempty(errMsg), error('JiaWeiwei:InputCheck',errMsg); end
+if ~isempty(errMsg), error('NeilJudson:InputCheck',errMsg); end
 
 %%
 seqDelay = seq;

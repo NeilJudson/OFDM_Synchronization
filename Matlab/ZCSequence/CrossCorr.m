@@ -11,7 +11,7 @@ errMsg = '';
 shortSeqLength = length(shortSeq);
 longSeqLength = length(longSeq);
 if(shortSeqLength > longSeqLength), errMsg = 'Input error: shortSeq is longer than longSeq.'; end
-if ~isempty(errMsg), error('JiaWeiwei:InputCheck',errMsg); end
+if ~isempty(errMsg), error('NeilJudson:InputCheck',errMsg); end
 
 %%
 crossCorrLength = longSeqLength - shortSeqLength + 1;
