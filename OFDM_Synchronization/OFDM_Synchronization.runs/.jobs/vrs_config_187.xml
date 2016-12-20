@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="spram_72_64_ip_synth_1" LaunchDir="E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_72_64_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="spram_36_64_ip_synth_1" LaunchDir="E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_36_64_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="spram_108_32_ip_synth_1" LaunchDir="E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_108_32_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="complex_multiplier_18_18_ip_synth_1" LaunchDir="E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="multiplier_42_42_ip_synth_1" LaunchDir="E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_42_42_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dsp48_mul_ip_synth_1" LaunchDir="E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/dsp48_mul_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dsp48_mul_add_ip_synth_1" LaunchDir="E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/dsp48_mul_add_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="spram_108_512_ip_synth_1" LaunchDir="E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_108_512_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="spram_72_64_ip_synth_1"/>
+		<Parent Id="spram_36_64_ip_synth_1"/>
+		<Parent Id="spram_108_32_ip_synth_1"/>
+		<Parent Id="complex_multiplier_18_18_ip_synth_1"/>
+		<Parent Id="multiplier_42_42_ip_synth_1"/>
+		<Parent Id="dsp48_mul_ip_synth_1"/>
+		<Parent Id="dsp48_mul_add_ip_synth_1"/>
+		<Parent Id="spram_108_512_ip_synth_1"/>
+	</Run>
+</Runs>
+

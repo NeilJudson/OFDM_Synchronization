@@ -30,7 +30,7 @@ module test_coarse_sync;
 	reg [31:0] s_axis_ctrl_tdata;
 	reg s_axis_data_tvalid;
 	reg s_axis_data_tlast;
-	reg [63:0] s_axis_data_tdata;
+	reg [95:0] s_axis_data_tdata;
 	reg m_axis_ctrl_trdy;
 	reg m_axis_data_trdy;
 
@@ -43,6 +43,10 @@ module test_coarse_sync;
 	wire m_axis_data_tvalid;
 	wire m_axis_data_tlast;
 	wire [111:0] m_axis_data_tdata;
+	
+	reg [31:0] data_in[0:20000];
+	integer clk_cnt;
+	integer data_cnt;
 
 	// Instantiate the Unit Under Test (UUT)
 	coarse_sync uut (
@@ -68,6 +72,7 @@ module test_coarse_sync;
 
 	initial begin
 		// Initialize Inputs
+		$readmemh("ofdm_source.txt",data_in);
 		axis_aclk = 0;
 		axis_areset = 0;
 		s_axis_ctrl_tvalid = 0;
@@ -80,10 +85,79 @@ module test_coarse_sync;
 		m_axis_data_trdy = 0;
 
 		// Wait 100 ns for global reset to finish
-		#100;
+		#10;
+		axis_areset = 1;
+		#10;
+		axis_areset = 0;
+		#10;
+		
         
 		// Add stimulus here
 
 	end
+	
+	always
+		#5 axis_aclk = ~axis_aclk;
+	
+	always @(posedge axis_aclk or posedge axis_areset) begin
+		if(axis_areset == 1'b1) begin
+			clk_cnt <= 4;
+		end
+		else begin
+			clk_cnt <= clk_cnt + 1;
+		end
+	end
+	
+	always @(posedge axis_aclk or posedge axis_areset) begin
+		if(axis_areset == 1'b1) begin
+			s_axis_ctrl_tvalid	<= 1'b0;
+			s_axis_ctrl_tdata	<= 32'd0;
+		end
+		else if(clk_cnt == 6) begin
+			s_axis_ctrl_tvalid	<= 1'b1;
+			s_axis_ctrl_tdata	<= {8'd1,24'd1};
+		end
+		else begin
+			s_axis_ctrl_tvalid	<= 1'b0;
+			s_axis_ctrl_tdata	<= 32'd0;
+		end
+	end
+	
+	always @(posedge axis_aclk or posedge axis_areset) begin
+		if(axis_areset == 1'b1) begin
+			s_axis_data_tvalid	<= 1'b0;
+			s_axis_data_tdata	<= 96'd0;
+			data_cnt			<= 0;
+		end
+		else begin
+			if(clk_cnt[2:0] == 3'd3) begin
+				if(data_cnt > 3200) begin
+					s_axis_data_tvalid	<= 1'b1;
+					s_axis_data_tdata	<= 96'd0;
+					data_cnt			<= data_cnt + 1;
+				end
+				else begin
+					s_axis_data_tvalid	<= 1'b1;
+					s_axis_data_tdata	<= {8'd0,data_in[data_cnt][15:0],
+											8'd0,data_in[data_cnt][31:16],
+											8'd0,data_in[data_cnt+32][15:0],
+											8'd0,data_in[data_cnt+32][31:16]};
+					data_cnt			<= data_cnt + 1;
+				end
+			end
+			else begin
+				s_axis_data_tvalid	<= 1'b0;
+				s_axis_data_tdata	<= s_axis_data_tdata;
+				data_cnt			<= data_cnt;
+			end
+		end
+	end
+	
+	always @(posedge axis_aclk) begin
+		if(clk_cnt == 40000) begin
+			$stop;
+		end
+	end
+	
       
 endmodule

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_coarse_sync_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_coarse_sync" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="87" />
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/axis_aclk" type="logic">
+      <obj_property name="ElementShortName">axis_aclk</obj_property>
+      <obj_property name="ObjectShortName">axis_aclk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/axis_areset" type="logic">
+      <obj_property name="ElementShortName">axis_areset</obj_property>
+      <obj_property name="ObjectShortName">axis_areset</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/s_axis_ctrl_tvalid" type="logic">
+      <obj_property name="ElementShortName">s_axis_ctrl_tvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axis_ctrl_tvalid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/s_axis_ctrl_tlast" type="logic">
+      <obj_property name="ElementShortName">s_axis_ctrl_tlast</obj_property>
+      <obj_property name="ObjectShortName">s_axis_ctrl_tlast</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/s_axis_ctrl_tdata" type="array">
+      <obj_property name="ElementShortName">s_axis_ctrl_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_ctrl_tdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/s_axis_data_tvalid" type="logic">
+      <obj_property name="ElementShortName">s_axis_data_tvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tvalid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/s_axis_data_tlast" type="logic">
+      <obj_property name="ElementShortName">s_axis_data_tlast</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tlast</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/s_axis_data_tdata" type="array">
+      <obj_property name="ElementShortName">s_axis_data_tdata[95:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tdata[95:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/m_axis_ctrl_trdy" type="logic">
+      <obj_property name="ElementShortName">m_axis_ctrl_trdy</obj_property>
+      <obj_property name="ObjectShortName">m_axis_ctrl_trdy</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/m_axis_data_trdy" type="logic">
+      <obj_property name="ElementShortName">m_axis_data_trdy</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_trdy</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/s_axis_ctrl_trdy" type="logic">
+      <obj_property name="ElementShortName">s_axis_ctrl_trdy</obj_property>
+      <obj_property name="ObjectShortName">s_axis_ctrl_trdy</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/s_axis_data_trdy" type="logic">
+      <obj_property name="ElementShortName">s_axis_data_trdy</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_trdy</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/m_axis_ctrl_tvalid" type="logic">
+      <obj_property name="ElementShortName">m_axis_ctrl_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_ctrl_tvalid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/m_axis_ctrl_tlast" type="logic">
+      <obj_property name="ElementShortName">m_axis_ctrl_tlast</obj_property>
+      <obj_property name="ObjectShortName">m_axis_ctrl_tlast</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/m_axis_ctrl_tdata" type="array">
+      <obj_property name="ElementShortName">m_axis_ctrl_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_ctrl_tdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/m_axis_data_tvalid" type="logic">
+      <obj_property name="ElementShortName">m_axis_data_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tvalid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/m_axis_data_tlast" type="logic">
+      <obj_property name="ElementShortName">m_axis_data_tlast</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tlast</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/m_axis_data_tdata" type="array">
+      <obj_property name="ElementShortName">m_axis_data_tdata[111:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tdata[111:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/clk_cnt" type="array">
+      <obj_property name="ElementShortName">clk_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_cnt[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/data_cnt" type="array">
+      <obj_property name="ElementShortName">data_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_cnt[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/axis_areset" type="logic">
+      <obj_property name="ElementShortName">axis_areset</obj_property>
+      <obj_property name="ObjectShortName">axis_areset</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/s_axis_ctrl_tvalid" type="logic">
+      <obj_property name="ElementShortName">s_axis_ctrl_tvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axis_ctrl_tvalid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/s_axis_ctrl_tlast" type="logic">
+      <obj_property name="ElementShortName">s_axis_ctrl_tlast</obj_property>
+      <obj_property name="ObjectShortName">s_axis_ctrl_tlast</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/s_axis_ctrl_tdata" type="array">
+      <obj_property name="ElementShortName">s_axis_ctrl_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_ctrl_tdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/s_axis_ctrl_trdy" type="logic">
+      <obj_property name="ElementShortName">s_axis_ctrl_trdy</obj_property>
+      <obj_property name="ObjectShortName">s_axis_ctrl_trdy</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/s_axis_data_tvalid" type="logic">
+      <obj_property name="ElementShortName">s_axis_data_tvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tvalid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/s_axis_data_tlast" type="logic">
+      <obj_property name="ElementShortName">s_axis_data_tlast</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tlast</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/s_axis_data_tdata" type="array">
+      <obj_property name="ElementShortName">s_axis_data_tdata[95:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tdata[95:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/s_axis_data_trdy" type="logic">
+      <obj_property name="ElementShortName">s_axis_data_trdy</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_trdy</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/m_axis_ctrl_tvalid" type="logic">
+      <obj_property name="ElementShortName">m_axis_ctrl_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_ctrl_tvalid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/m_axis_ctrl_tlast" type="logic">
+      <obj_property name="ElementShortName">m_axis_ctrl_tlast</obj_property>
+      <obj_property name="ObjectShortName">m_axis_ctrl_tlast</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/m_axis_ctrl_tdata" type="array">
+      <obj_property name="ElementShortName">m_axis_ctrl_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_ctrl_tdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/m_axis_ctrl_trdy" type="logic">
+      <obj_property name="ElementShortName">m_axis_ctrl_trdy</obj_property>
+      <obj_property name="ObjectShortName">m_axis_ctrl_trdy</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/m_axis_data_tvalid" type="logic">
+      <obj_property name="ElementShortName">m_axis_data_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tvalid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/m_axis_data_tlast" type="logic">
+      <obj_property name="ElementShortName">m_axis_data_tlast</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tlast</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/m_axis_data_tdata" type="array">
+      <obj_property name="ElementShortName">m_axis_data_tdata[111:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tdata[111:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/m_axis_data_trdy" type="logic">
+      <obj_property name="ElementShortName">m_axis_data_trdy</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_trdy</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/ctrl_work_flag" type="logic">
+      <obj_property name="ElementShortName">ctrl_work_flag</obj_property>
+      <obj_property name="ObjectShortName">ctrl_work_flag</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/ctrl_work_flag_dly1" type="logic">
+      <obj_property name="ElementShortName">ctrl_work_flag_dly1</obj_property>
+      <obj_property name="ObjectShortName">ctrl_work_flag_dly1</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/ctrl_work_data" type="logic">
+      <obj_property name="ElementShortName">ctrl_work_data</obj_property>
+      <obj_property name="ObjectShortName">ctrl_work_data</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/ctrl_work_en" type="logic">
+      <obj_property name="ElementShortName">ctrl_work_en</obj_property>
+      <obj_property name="ObjectShortName">ctrl_work_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/ctrl_work" type="logic">
+      <obj_property name="ElementShortName">ctrl_work</obj_property>
+      <obj_property name="ObjectShortName">ctrl_work</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/coarse_sync_state" type="array">
+      <obj_property name="ElementShortName">coarse_sync_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">coarse_sync_state[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/coarse_sync_fir_count" type="array">
+      <obj_property name="ElementShortName">coarse_sync_fir_count[6:0]</obj_property>
+      <obj_property name="ObjectShortName">coarse_sync_fir_count[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/coarse_sync_sec_count" type="array">
+      <obj_property name="ElementShortName">coarse_sync_sec_count[7:0]</obj_property>
+      <obj_property name="ObjectShortName">coarse_sync_sec_count[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u1_i_work_ctrl_en" type="logic">
+      <obj_property name="ElementShortName">u1_i_work_ctrl_en</obj_property>
+      <obj_property name="ObjectShortName">u1_i_work_ctrl_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u1_i_work_ctrl" type="logic">
+      <obj_property name="ElementShortName">u1_i_work_ctrl</obj_property>
+      <obj_property name="ObjectShortName">u1_i_work_ctrl</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u1_i_data_valid" type="logic">
+      <obj_property name="ElementShortName">u1_i_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u1_i_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u1_o_psi_data_valid" type="logic">
+      <obj_property name="ElementShortName">u1_o_psi_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u1_o_psi_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u2_i_work_ctrl_en" type="logic">
+      <obj_property name="ElementShortName">u2_i_work_ctrl_en</obj_property>
+      <obj_property name="ObjectShortName">u2_i_work_ctrl_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u2_i_work_ctrl" type="logic">
+      <obj_property name="ElementShortName">u2_i_work_ctrl</obj_property>
+      <obj_property name="ObjectShortName">u2_i_work_ctrl</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u2_i_data_valid" type="logic">
+      <obj_property name="ElementShortName">u2_i_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u2_i_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u2_o_phi_data_valid" type="logic">
+      <obj_property name="ElementShortName">u2_o_phi_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u2_o_phi_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u2_o_phi_data" type="array">
+      <obj_property name="ElementShortName">u2_o_phi_data[34:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_o_phi_data[34:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u3_i_work_ctrl_en" type="logic">
+      <obj_property name="ElementShortName">u3_i_work_ctrl_en</obj_property>
+      <obj_property name="ObjectShortName">u3_i_work_ctrl_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u3_i_work_ctrl" type="logic">
+      <obj_property name="ElementShortName">u3_i_work_ctrl</obj_property>
+      <obj_property name="ObjectShortName">u3_i_work_ctrl</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u3_i_psi_phi_data_valid" type="logic">
+      <obj_property name="ElementShortName">u3_i_psi_phi_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u3_i_psi_phi_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u3_i_phi_data" type="array">
+      <obj_property name="ElementShortName">u3_i_phi_data[34:0]</obj_property>
+      <obj_property name="ObjectShortName">u3_i_phi_data[34:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u3_o_tar_data_valid" type="logic">
+      <obj_property name="ElementShortName">u3_o_tar_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u3_o_tar_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u3_o_tar_data" type="array">
+      <obj_property name="ElementShortName">u3_o_tar_data[78:0]</obj_property>
+      <obj_property name="ObjectShortName">u3_o_tar_data[78:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/coarse_sync_fir_count" type="array">
+      <obj_property name="ElementShortName">coarse_sync_fir_count[6:0]</obj_property>
+      <obj_property name="ObjectShortName">coarse_sync_fir_count[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/coarse_sync_state" type="array">
+      <obj_property name="ElementShortName">coarse_sync_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">coarse_sync_state[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u4_wea" type="logic">
+      <obj_property name="ElementShortName">u4_wea</obj_property>
+      <obj_property name="ObjectShortName">u4_wea</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u4_wr_addr" type="array">
+      <obj_property name="ElementShortName">u4_wr_addr[8:0]</obj_property>
+      <obj_property name="ObjectShortName">u4_wr_addr[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u4_rd_addr" type="array">
+      <obj_property name="ElementShortName">u4_rd_addr[8:0]</obj_property>
+      <obj_property name="ObjectShortName">u4_rd_addr[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u4_addra" type="array">
+      <obj_property name="ElementShortName">u4_addra[8:0]</obj_property>
+      <obj_property name="ObjectShortName">u4_addra[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u4_dina" type="array">
+      <obj_property name="ElementShortName">u4_dina[107:0]</obj_property>
+      <obj_property name="ObjectShortName">u4_dina[107:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u4_douta" type="array">
+      <obj_property name="ElementShortName">u4_douta[107:0]</obj_property>
+      <obj_property name="ObjectShortName">u4_douta[107:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/rd_wea" type="logic">
+      <obj_property name="ElementShortName">rd_wea</obj_property>
+      <obj_property name="ObjectShortName">rd_wea</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/rd_wea_dly1" type="logic">
+      <obj_property name="ElementShortName">rd_wea_dly1</obj_property>
+      <obj_property name="ObjectShortName">rd_wea_dly1</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/rd_wea_dly2" type="logic">
+      <obj_property name="ElementShortName">rd_wea_dly2</obj_property>
+      <obj_property name="ObjectShortName">rd_wea_dly2</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/axis_aclk" type="logic">
+      <obj_property name="ElementShortName">axis_aclk</obj_property>
+      <obj_property name="ObjectShortName">axis_aclk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u1_o_psi_data_valid" type="logic">
+      <obj_property name="ElementShortName">u1_o_psi_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u1_o_psi_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u2_o_phi_data_valid" type="logic">
+      <obj_property name="ElementShortName">u2_o_phi_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u2_o_phi_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u2_o_phi_data" type="array">
+      <obj_property name="ElementShortName">u2_o_phi_data[34:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_o_phi_data[34:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u3_o_tar_data_valid" type="logic">
+      <obj_property name="ElementShortName">u3_o_tar_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u3_o_tar_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u3_o_tar_data" type="array">
+      <obj_property name="ElementShortName">u3_o_tar_data[78:0]</obj_property>
+      <obj_property name="ObjectShortName">u3_o_tar_data[78:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u3_tar_operator/test_psi_power" type="array">
+      <obj_property name="ElementShortName">test_psi_power[63:0]</obj_property>
+      <obj_property name="ObjectShortName">test_psi_power[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u3_tar_operator/test_phi_power" type="array">
+      <obj_property name="ElementShortName">test_phi_power[63:0]</obj_property>
+      <obj_property name="ObjectShortName">test_phi_power[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/test_u3_o_tar_data" type="array">
+      <obj_property name="ElementShortName">test_u3_o_tar_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">test_u3_o_tar_data[63:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">120</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/data_cnt" type="array">
+      <obj_property name="ElementShortName">data_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_cnt[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u1_psi_operator/u2_wea" type="logic">
+      <obj_property name="ElementShortName">u2_wea</obj_property>
+      <obj_property name="ObjectShortName">u2_wea</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u1_psi_operator/u2_wr_addr" type="array">
+      <obj_property name="ElementShortName">u2_wr_addr[5:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_wr_addr[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u1_psi_operator/u2_rd_addr" type="array">
+      <obj_property name="ElementShortName">u2_rd_addr[5:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_rd_addr[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u1_psi_operator/u2_addra" type="array">
+      <obj_property name="ElementShortName">u2_addra[5:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_addra[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u1_psi_operator/u2_dina" type="array">
+      <obj_property name="ElementShortName">u2_dina[71:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_dina[71:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u1_psi_operator/u2_douta" type="array">
+      <obj_property name="ElementShortName">u2_douta[71:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_douta[71:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

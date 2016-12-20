@@ -58,7 +58,7 @@ module coarse_sync #(
 	
 	input			s_axis_data_tvalid	;
 	input			s_axis_data_tlast	;
-	input	[63:0]	s_axis_data_tdata	;
+	input	[95:0]	s_axis_data_tdata	; // 高位为dly32数据，低位为最新数据，24bit
 	output			s_axis_data_trdy	;
 	
 	output			m_axis_ctrl_tvalid	;
@@ -98,23 +98,29 @@ module coarse_sync #(
 	wire									u1_i_work_ctrl_en	;
 	wire									u1_i_work_ctrl		;
 	reg										u1_i_data_valid		;
-	reg				[2*SYNC_DATA_WIDTH-1:0]	u1_i_data			;
-	reg				[2*SYNC_DATA_WIDTH-1:0]	u1_i_data_dly		;
+	reg		signed	[SYNC_DATA_WIDTH-1:0]	u1_i_data_i			;
+	reg		signed	[SYNC_DATA_WIDTH-1:0]	u1_i_data_q			;
+	reg		signed	[SYNC_DATA_WIDTH-1:0]	u1_i_data_dly_i		;
+	reg		signed	[SYNC_DATA_WIDTH-1:0]	u1_i_data_dly_q		;
 	wire									u1_o_psi_data_valid	;
-	wire			[2*PSI_WIDTH-1:0]		u1_o_psi_data		;
+	wire	signed	[PSI_WIDTH-1:0]			u1_o_psi_data_i		;
+	wire	signed	[PSI_WIDTH-1:0]			u1_o_psi_data_q		;
 	
 	wire									u2_i_work_ctrl_en	;
 	wire									u2_i_work_ctrl		;
 	wire									u2_i_data_valid		;
-	wire			[2*SYNC_DATA_WIDTH-1:0]	u2_i_data			;
-	wire			[2*SYNC_DATA_WIDTH-1:0]	u2_i_data_dly		;
+	wire	signed	[SYNC_DATA_WIDTH-1:0]	u2_i_data_i			;
+	wire	signed	[SYNC_DATA_WIDTH-1:0]	u2_i_data_q			;
+	wire	signed	[SYNC_DATA_WIDTH-1:0]	u2_i_data_dly_i		;
+	wire	signed	[SYNC_DATA_WIDTH-1:0]	u2_i_data_dly_q		;
 	wire									u2_o_phi_data_valid	;
 	wire	signed	[PHI_WIDTH-1:0]			u2_o_phi_data		;
 	
 	wire									u3_i_work_ctrl_en	;
 	wire									u3_i_work_ctrl		;
 	wire									u3_i_psi_phi_data_valid;
-	wire			[2*PSI_WIDTH-1:0]		u3_i_psi_data		;
+	wire	signed	[PSI_WIDTH-1:0]			u3_i_psi_data_i		;
+	wire	signed	[PSI_WIDTH-1:0]			u3_i_psi_data_q		;
 	wire	signed	[PHI_WIDTH-1:0]			u3_i_phi_data		;
 	wire									u3_o_tar_data_valid	;
 	wire	signed	[TAR_WIDTH-1:0]			u3_o_tar_data		;
@@ -129,6 +135,8 @@ module coarse_sync #(
 	reg										rd_wea				;
 	reg										rd_wea_dly1			;
 	reg										rd_wea_dly2			;
+	
+	wire			[63:0]					test_u3_o_tar_data	; // test
 	
 //================================================================================
 // ctrl data decode
@@ -147,7 +155,7 @@ module coarse_sync #(
 			endcase
 		end
 		else begin
-			ctrl_work_flag	<= 1'b0;
+			ctrl_work_flag	<= ctrl_work_flag;
 			ctrl_work_data	<= ctrl_work_data;
 		end
 	end
@@ -193,7 +201,7 @@ module coarse_sync #(
 					if((ctrl_work_en==1'b1) && (ctrl_work==1'b0)) begin
 						coarse_sync_state <= COARSE_SYNC_IDLE;
 					end
-					else if((u3_o_tar_data_valid==1'b1) && (u3_o_tar_data[TAR_WIDTH-1]==1'b0)) begin
+					else if((u3_o_tar_data_valid==1'b1) && ((u3_o_tar_data[TAR_WIDTH-1]==1'b0)&&(u3_o_tar_data>'d0))) begin
 						coarse_sync_state <= COARSE_SYNC_FIR;
 					end
 					else begin
@@ -205,12 +213,15 @@ module coarse_sync #(
 						coarse_sync_state <= COARSE_SYNC_IDLE;
 					end
 					else if(coarse_sync_fir_count == 7'd64) begin
-						if((u3_o_tar_data_valid==1'b1) && (u3_o_tar_data[TAR_WIDTH-1]==1'b0)) begin
+						if((u3_o_tar_data_valid==1'b1) && ((u3_o_tar_data[TAR_WIDTH-1]==1'b0)&&(u3_o_tar_data>'d0))) begin
 							coarse_sync_state <= COARSE_SYNC_SEC;
 						end
 						else begin
-							coarse_sync_state <= COARSE_SYNC_ING;
+							coarse_sync_state <= COARSE_SYNC_FIR;
 						end
+					end
+					else if(coarse_sync_fir_count == 7'd65) begin
+						coarse_sync_state <= COARSE_SYNC_ING;
 					end
 					else begin
 						coarse_sync_state <= COARSE_SYNC_FIR;
@@ -282,27 +293,35 @@ module coarse_sync #(
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
 			u1_i_data_valid	<= 1'b0;
-			u1_i_data		<= 'd0;
-			u1_i_data_dly	<= 'd0;
+			u1_i_data_i		<= 'd0;
+			u1_i_data_q		<= 'd0;
+			u1_i_data_dly_i	<= 'd0;
+			u1_i_data_dly_q	<= 'd0;
 		end
 		else if(s_axis_data_tvalid == 1'b1) begin
 			u1_i_data_valid	<= 1'b1;
-			u1_i_data		<= s_axis_data_tdata[2*SYNC_DATA_WIDTH-1:0];
-			u1_i_data_dly	<= s_axis_data_tdata[4*SYNC_DATA_WIDTH-1:2*SYNC_DATA_WIDTH];
+			u1_i_data_i		<= s_axis_data_tdata[SYNC_DATA_WIDTH-1:0];
+			u1_i_data_q		<= s_axis_data_tdata[24+SYNC_DATA_WIDTH-1:24];
+			u1_i_data_dly_i	<= s_axis_data_tdata[48+SYNC_DATA_WIDTH-1:48];
+			u1_i_data_dly_q	<= s_axis_data_tdata[72+SYNC_DATA_WIDTH-1:72];
 		end
 		else begin
 			u1_i_data_valid	<= 1'b0;
-			u1_i_data		<= u1_i_data;
-			u1_i_data_dly	<= u1_i_data_dly;
+			u1_i_data_i		<= u1_i_data_i;
+			u1_i_data_q		<= u1_i_data_q;
+			u1_i_data_dly_i	<= u1_i_data_dly_i;
+			u1_i_data_dly_q	<= u1_i_data_dly_q;
 		end
 	end
 	
 	assign u2_i_data_valid	= u1_i_data_valid;
-	assign u2_i_data		= u1_i_data;
-	assign u2_i_data_dly	= u1_i_data_dly;
+	assign u2_i_data_i		= u1_i_data_i;
+	assign u2_i_data_q		= u1_i_data_q;
+	assign u2_i_data_dly_i	= u1_i_data_dly_i;
+	assign u2_i_data_dly_q	= u1_i_data_dly_q;
 	
 	psi_operator #(
-		.SYNC_DATA_WIDTH	(SYNC_DATA_WIDTH	),
+		.SYNC_DATA_WIDTH	(SYNC_DATA_WIDTH	), // <=18
 		.PSI_WIDTH			(PSI_WIDTH			)
 	)u1_psi_operator(
 		.clk				(axis_aclk			),
@@ -310,14 +329,17 @@ module coarse_sync #(
 		.i_work_ctrl_en		(u1_i_work_ctrl_en	),
 		.i_work_ctrl		(u1_i_work_ctrl		),
 		.i_data_valid		(u1_i_data_valid	),
-		.i_data				(u1_i_data			),
-		.i_data_dly			(u1_i_data_dly		),
+		.i_data_i			(u1_i_data_i		),
+		.i_data_q			(u1_i_data_q		),
+		.i_data_dly_i		(u1_i_data_dly_i	),
+		.i_data_dly_q		(u1_i_data_dly_q	),
 		.o_psi_data_valid	(u1_o_psi_data_valid), // 9dly
-		.o_psi_data			(u1_o_psi_data		)
+		.o_psi_data_i		(u1_o_psi_data_i	),
+		.o_psi_data_q		(u1_o_psi_data_q	)
 	);
 	
 	phi_operator #(
-		.SYNC_DATA_WIDTH(SYNC_DATA_WIDTH	),
+		.SYNC_DATA_WIDTH	(SYNC_DATA_WIDTH	),
 		.PHI_WIDTH			(PHI_WIDTH			)
 	)u2_phi_operator(
 		.clk				(axis_aclk			),
@@ -325,8 +347,10 @@ module coarse_sync #(
 		.i_work_ctrl_en		(u2_i_work_ctrl_en	),
 		.i_work_ctrl		(u2_i_work_ctrl		),
 		.i_data_valid		(u2_i_data_valid	),
-		.i_data				(u2_i_data			),
-		.i_data_dly			(u2_i_data_dly		),
+		.i_data_i			(u2_i_data_i		),
+		.i_data_q			(u2_i_data_q		),
+		.i_data_dly_i		(u2_i_data_dly_i	),
+		.i_data_dly_q		(u2_i_data_dly_q	),
 		.o_phi_data_valid	(u2_o_phi_data_valid), // 6dly
 		.o_phi_data			(u2_o_phi_data		)
 	);
@@ -337,7 +361,8 @@ module coarse_sync #(
 	assign u3_i_work_ctrl_en		= ctrl_work_en;
 	assign u3_i_work_ctrl			= ctrl_work;
 	assign u3_i_psi_phi_data_valid	= u1_o_psi_data_valid;
-	assign u3_i_psi_data			= u1_o_psi_data;
+	assign u3_i_psi_data_i			= u1_o_psi_data_i;
+	assign u3_i_psi_data_q			= u1_o_psi_data_q;
 	assign u3_i_phi_data			= u2_o_phi_data;
 	
 	tar_operator #(
@@ -350,11 +375,13 @@ module coarse_sync #(
 		.i_work_ctrl_en			(u3_i_work_ctrl_en	),
 		.i_work_ctrl			(u3_i_work_ctrl		),
 		.i_psi_phi_data_valid	(u3_i_psi_phi_data_valid),
-		.i_psi_data				(u3_i_psi_data		),
+		.i_psi_data_i			(u3_i_psi_data_i	),
+		.i_psi_data_q			(u3_i_psi_data_q	),
 		.i_phi_data				(u3_i_phi_data		),
 		.o_tar_data_valid		(u3_o_tar_data_valid), // 11dly
 		.o_tar_data				(u3_o_tar_data		)
 	);
+	assign test_u3_o_tar_data = u3_o_tar_data[TAR_WIDTH-1:TAR_WIDTH-64];
 	
 //================================================================================
 // 
@@ -384,7 +411,8 @@ module coarse_sync #(
 						u4_addra	<= u4_wr_addr + 1'd1;
 						u4_dina		<= {{(SPRAM_DATA_WIDTH-PHI_WIDTH-2*PSI_WIDTH){1'b0}},
 										u3_i_phi_data,
-										u3_i_psi_data};
+										u3_i_psi_data_q,
+										u3_i_psi_data_i};
 					end
 					else begin
 						u4_wea		<= 1'b0;
@@ -392,11 +420,11 @@ module coarse_sync #(
 						rd_wea		<= 1'b0;
 						u4_rd_addr	<= u4_rd_addr_init;
 						u4_addra	<= u4_wr_addr;
-						u4_dina		<= 'd0;
+						u4_dina		<= u4_dina;
 					end
 				end
 				COARSE_SYNC_SEC: begin
-					if(u4_wr_addr == u4_rd_addr) begin
+					if((u3_i_psi_phi_data_valid==1'b1) || (u4_wr_addr==u4_rd_addr)) begin
 						rd_wea		<= 1'b0;
 						u4_rd_addr	<= u4_rd_addr;
 					end
@@ -410,13 +438,14 @@ module coarse_sync #(
 						u4_addra	<= u4_wr_addr + 1'd1;
 						u4_dina		<= {{(SPRAM_DATA_WIDTH-PHI_WIDTH-2*PSI_WIDTH){1'b0}},
 										u3_i_phi_data,
-										u3_i_psi_data};
+										u3_i_psi_data_q,
+										u3_i_psi_data_i};
 					end
 					else begin
 						u4_wea		<= 1'b0;
 						u4_wr_addr	<= u4_wr_addr;
 						u4_addra	<= u4_rd_addr;
-						u4_dina		<= 'd0;
+						u4_dina		<= u4_dina;
 					end
 				end
 				default: begin

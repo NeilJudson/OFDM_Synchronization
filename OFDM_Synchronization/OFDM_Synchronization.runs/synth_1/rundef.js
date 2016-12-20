@@ -8,9 +8,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "E:/jiaweiwei/Xilinx/15.2/SDK/2015.2/bin;E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/bin/nt64;E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/lib/nt64;E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/bin;";
+  PathVal = "D:/jiaweiwei/Xilinx/15.2/SDK/2015.2/bin;D:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/bin/nt64;D:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/lib/nt64;D:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/bin;";
 } else {
-  PathVal = "E:/jiaweiwei/Xilinx/15.2/SDK/2015.2/bin;E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/bin/nt64;E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/lib/nt64;E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/bin;" + PathVal;
+  PathVal = "D:/jiaweiwei/Xilinx/15.2/SDK/2015.2/bin;D:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/bin/nt64;D:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/ids_lite/ISE/lib/nt64;D:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log coarse_sync.vds -m64 -mode batch -messageDb vivado.pb -notrace -source coarse_sync.tcl" );
+         "-log test_coarse_sync.vds -m64 -mode batch -messageDb vivado.pb -notrace -source test_coarse_sync.tcl" );
 
 
 

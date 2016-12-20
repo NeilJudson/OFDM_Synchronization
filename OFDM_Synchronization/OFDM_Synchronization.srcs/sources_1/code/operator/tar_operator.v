@@ -33,7 +33,8 @@ module tar_operator #(
 	i_work_ctrl		,
 	
 	i_psi_phi_data_valid,
-	i_psi_data		,
+	i_psi_data_i	,
+	i_psi_data_q	,
 	i_phi_data		,
 	
 	o_tar_data_valid, // 11dly
@@ -46,7 +47,8 @@ module tar_operator #(
 	input									i_work_ctrl		; // 1'b0: 停止工作；1'b1: 开始工作，进入清零状态
 	
 	input									i_psi_phi_data_valid;
-	input				[2*PSI_WIDTH-1:0]	i_psi_data		; // 高位虚部，低位实部。输入应是延迟后的数据
+	input		signed	[PSI_WIDTH-1:0]		i_psi_data_i	;
+	input		signed	[PSI_WIDTH-1:0]		i_psi_data_q	;
 	input		signed	[PHI_WIDTH-1:0]		i_phi_data		;
 	
 	output	reg								o_tar_data_valid;
@@ -60,7 +62,7 @@ module tar_operator #(
 	localparam	PSI_SUM_WIDTH	= PSI_WIDTH+5; // 39
 	localparam	PHI_SUM_WIDTH	= PHI_WIDTH+5; // 40
 	localparam	PSI_POWER_WIDTH	= 2*PSI_SUM_WIDTH; // 78
-	localparam	PHI_POWER_WIDTH	= 2*PHI_SUM_WIDTH-1; // 79
+	localparam	PHI_POWER_WIDTH	= 2*(PHI_SUM_WIDTH-1); // 78
 	// state
 	localparam	IDLE			= 2'd0,
 				CLEAR			= 2'd1,
@@ -99,6 +101,9 @@ module tar_operator #(
 	wire									power_valid		;
 	wire	signed	[PSI_POWER_WIDTH-1:0]	psi_power		;
 	wire	signed	[PHI_POWER_WIDTH-1:0]	phi_power		;
+	
+	wire			[63:0]					test_psi_power	; // test
+	wire			[63:0]					test_phi_power	; // test
 	
 //================================================================================
 // state
@@ -201,7 +206,8 @@ module tar_operator #(
 						u1_addra	<= u1_wr_addr + 1'd1;
 						u1_dina		<= {{(SPRAM_DATA_WIDTH-PHI_WIDTH-2*PSI_WIDTH){1'b0}},
 										i_phi_data[PHI_WIDTH-1:0],
-										i_psi_data[2*PSI_WIDTH-1:0]};
+										i_psi_data_q,
+										i_psi_data_i};
 					end
 					else begin
 						u1_wea		<= 1'b0;
@@ -237,12 +243,12 @@ module tar_operator #(
 			phi_add		<= 'd0;
 		end
 		else if(i_psi_phi_data_valid == 1'b1) begin
-			psi_i_add	<= i_psi_data[PSI_WIDTH-1:0]
-							- u1_douta[PSI_WIDTH-1:0];
-			psi_q_add	<= i_psi_data[2*PSI_WIDTH-1:PSI_WIDTH]
-							- u1_douta[2*PSI_WIDTH-1:PSI_WIDTH];
-			phi_add		<= i_phi_data
-							- u1_douta[PHI_WIDTH+2*PSI_WIDTH-1:2*PSI_WIDTH];
+			psi_i_add	<= {i_psi_data_i[PSI_WIDTH-1],i_psi_data_i}
+							- {u1_douta[PSI_WIDTH-1],u1_douta[PSI_WIDTH-1:0]};
+			psi_q_add	<= {i_psi_data_q[PSI_WIDTH-1],i_psi_data_q}
+							- {u1_douta[2*PSI_WIDTH-1],u1_douta[2*PSI_WIDTH-1:PSI_WIDTH]};
+			phi_add		<= {i_phi_data[PHI_WIDTH-1],i_phi_data}
+							- {u1_douta[PHI_WIDTH+2*PSI_WIDTH-1],u1_douta[PHI_WIDTH+2*PSI_WIDTH-1:2*PSI_WIDTH]};
 		end
 		else begin
 			psi_i_add	<= psi_i_add;
@@ -262,16 +268,16 @@ module tar_operator #(
 	
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
-			sum_valid	<= 1'b1;
+			sum_valid	<= 1'b0;
 			psi_i_sum	<= 'd0;
 			psi_q_sum	<= 'd0;
 			phi_sum		<= 'd0;
 		end
 		else if(i_psi_phi_data_valid_dly1 == 1'b1) begin
 			sum_valid	<= 1'b1;
-			psi_i_sum	<= psi_i_sum + psi_i_add;
-			psi_q_sum	<= psi_q_sum + psi_q_add;
-			phi_sum		<= phi_sum + phi_add;
+			psi_i_sum	<= psi_i_sum + {{(PSI_SUM_WIDTH-PSI_WIDTH-1){psi_i_add[PSI_WIDTH]}},psi_i_add};
+			psi_q_sum	<= psi_q_sum + {{(PSI_SUM_WIDTH-PSI_WIDTH-1){psi_q_add[PSI_WIDTH]}},psi_q_add};
+			phi_sum		<= phi_sum + {{(PHI_SUM_WIDTH-PHI_WIDTH-1){phi_add[PHI_WIDTH]}},phi_add};
 		end
 		else begin
 			sum_valid	<= 1'b0;
@@ -287,8 +293,8 @@ module tar_operator #(
 	assign u2_i_data_valid	= sum_valid;
 	assign u2_i_data_i		= {{(42-PSI_SUM_WIDTH){psi_i_sum[PSI_SUM_WIDTH-1]}},psi_i_sum};
 	assign u2_i_data_q		= {{(42-PSI_SUM_WIDTH){psi_q_sum[PSI_SUM_WIDTH-1]}},psi_q_sum};
-	assign u3_A				= {{(42-PHI_SUM_WIDTH){phi_sum[PHI_SUM_WIDTH-1]}},phi_sum};
-	assign u3_B				= {{(42-PHI_SUM_WIDTH){phi_sum[PHI_SUM_WIDTH-1]}},phi_sum};
+	assign u3_A				= {{(42-PHI_SUM_WIDTH+1){phi_sum[PHI_SUM_WIDTH-1]}},phi_sum[PHI_SUM_WIDTH-1:1]}; // *0.5
+	assign u3_B				= {{(42-PHI_SUM_WIDTH+1){phi_sum[PHI_SUM_WIDTH-1]}},phi_sum[PHI_SUM_WIDTH-1:1]};
 	
 	complex_abs_power2_42 u2_complex_abs_power2_42 (
 		.i_clk			(clk			),
@@ -309,6 +315,8 @@ module tar_operator #(
 	assign power_valid	= u2_o_data_valid;
 	assign psi_power	= u2_o_data[PSI_POWER_WIDTH-1:0];
 	assign phi_power	= u3_P[PHI_POWER_WIDTH-1:0];
+	assign test_psi_power = psi_power[63:0]; // test
+	assign test_phi_power = phi_power[65:2]; // test
 	
 //================================================================================
 // tar
@@ -320,7 +328,9 @@ module tar_operator #(
 		end
 		else if(power_valid == 1'b1) begin
 			o_tar_data_valid	<= 1'b1; // 11dly
-			o_tar_data			<= psi_power - phi_power[PHI_POWER_WIDTH-1:1]; // tar=psi_power-0.5*phi_power
+			o_tar_data			<= {psi_power[PSI_POWER_WIDTH-1],psi_power}
+									- {{(PSI_POWER_WIDTH-PHI_POWER_WIDTH+3){phi_power[PHI_POWER_WIDTH-1]}},phi_power[PHI_POWER_WIDTH-1:2]};
+									// psi_power-(0.5*0.5)*phi_power
 		end
 		else begin
 			o_tar_data_valid	<= 1'b0;

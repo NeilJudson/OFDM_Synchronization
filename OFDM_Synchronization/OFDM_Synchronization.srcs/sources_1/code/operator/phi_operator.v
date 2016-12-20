@@ -21,7 +21,7 @@
 
 
 module phi_operator #(
-	parameter SYNC_DATA_WIDTH	= 16,
+	parameter SYNC_DATA_WIDTH	= 16, // <=18
 	parameter PHI_WIDTH			= 2*SYNC_DATA_WIDTH+1+2 // 35
 	)
 	(
@@ -32,8 +32,10 @@ module phi_operator #(
 	i_work_ctrl	,
 	
 	i_data_valid,
-	i_data		,
-	i_data_dly	,
+	i_data_i	,
+	i_data_q	,
+	i_data_dly_i,
+	i_data_dly_q,
 	
 	o_phi_data_valid,
 	o_phi_data
@@ -45,8 +47,10 @@ module phi_operator #(
 	input									i_work_ctrl	; // 1'b0: 停止工作；1'b1: 开始工作，先进入清零状态
 	
 	input									i_data_valid;
-	input			[2*SYNC_DATA_WIDTH-1:0]	i_data		; // 高位虚部，低位实部。
-	input			[2*SYNC_DATA_WIDTH-1:0]	i_data_dly	; // 高位虚部，低位实部。
+	input	signed	[SYNC_DATA_WIDTH-1:0]	i_data_i	;
+	input	signed	[SYNC_DATA_WIDTH-1:0]	i_data_q	;
+	input	signed	[SYNC_DATA_WIDTH-1:0]	i_data_dly_i;
+	input	signed	[SYNC_DATA_WIDTH-1:0]	i_data_dly_q;
 	
 	output									o_phi_data_valid; // 6dly
 	output	signed	[PHI_WIDTH-1:0]			o_phi_data	;
@@ -184,15 +188,11 @@ module phi_operator #(
 		end
 		else if((state==WORK) && (i_data_valid==1'b1)) begin
 			u1_i_data_valid	<= 1'b1;
-			u1_i_data_i		<= {{(18-SYNC_DATA_WIDTH){i_data[SYNC_DATA_WIDTH-1]}},
-								i_data[SYNC_DATA_WIDTH-1:0]};
-			u1_i_data_q		<= {{(18-SYNC_DATA_WIDTH){i_data[2*SYNC_DATA_WIDTH-1]}},
-								i_data[2*SYNC_DATA_WIDTH-1:SYNC_DATA_WIDTH]};
+			u1_i_data_i		<= {{(18-SYNC_DATA_WIDTH){i_data_i[SYNC_DATA_WIDTH-1]}},i_data_i};
+			u1_i_data_q		<= {{(18-SYNC_DATA_WIDTH){i_data_q[SYNC_DATA_WIDTH-1]}},i_data_q};
 			u5_i_data_valid	<= 1'b1;
-			u5_i_data_i		<= {{(18-SYNC_DATA_WIDTH){i_data_dly[SYNC_DATA_WIDTH-1]}},
-								i_data_dly[SYNC_DATA_WIDTH-1:0]};
-			u5_i_data_q		<= {{(18-SYNC_DATA_WIDTH){i_data_dly[2*SYNC_DATA_WIDTH-1]}},
-								i_data_dly[2*SYNC_DATA_WIDTH-1:SYNC_DATA_WIDTH]};
+			u5_i_data_i		<= {{(18-SYNC_DATA_WIDTH){i_data_dly_i[SYNC_DATA_WIDTH-1]}},i_data_dly_i};
+			u5_i_data_q		<= {{(18-SYNC_DATA_WIDTH){i_data_dly_q[SYNC_DATA_WIDTH-1]}},i_data_dly_q};
 		end
 		else begin
 			u1_i_data_valid	<= 1'b0;
@@ -229,7 +229,8 @@ module phi_operator #(
 		end
 		else if((u1_o_data_valid==1'b1) && (u5_o_data_valid==1'b1)) begin
 			power_add_valid	<= 1'b1;
-			power_add		<= u1_o_data[DATA_POWER_WIDTH-1:0] + u5_o_data[DATA_POWER_WIDTH-1:0];
+			power_add		<= {u1_o_data[DATA_POWER_WIDTH-1],u1_o_data[DATA_POWER_WIDTH-1:0]}
+								+ {u5_o_data[DATA_POWER_WIDTH-1],u5_o_data[DATA_POWER_WIDTH-1:0]};
 		end
 		else begin
 			power_add_valid	<= 1'b0;
@@ -271,7 +272,7 @@ module phi_operator #(
 						u2_wr_addr	<= u2_wr_addr + 1'd1;
 						u2_rd_addr	<= u2_rd_addr + 1'd1;
 						u2_addra	<= u2_wr_addr + 1'd1;
-						u2_dina		<= {{(SPRAM_DATA_WIDTH-DATA_POWER_WIDTH){power_add[DATA_POWER_WIDTH]}},
+						u2_dina		<= {{(SPRAM_DATA_WIDTH-DATA_POWER_WIDTH-1){power_add[DATA_POWER_WIDTH]}},
 										power_add};
 					end
 					else begin
@@ -349,10 +350,10 @@ module phi_operator #(
 			add34 <= 'd0;
 		end
 		else if(power_add_valid == 1'b1) begin
-			add12 <= power_add[DATA_POWER_WIDTH:0]
-					+ u2_douta[DATA_POWER_WIDTH-1:0];
-			add34 <= u3_douta[DATA_POWER_WIDTH-1:0]
-					+ u4_douta[DATA_POWER_WIDTH-1:0];
+			add12 <= {power_add[DATA_POWER_WIDTH],power_add[DATA_POWER_WIDTH:0]}
+					+ {u2_douta[DATA_POWER_WIDTH],u2_douta[DATA_POWER_WIDTH:0]};
+			add34 <= {u3_douta[DATA_POWER_WIDTH],u3_douta[DATA_POWER_WIDTH:0]}
+					+ {u4_douta[DATA_POWER_WIDTH],u4_douta[DATA_POWER_WIDTH:0]};
 		end
 		else begin
 			add12 <= add12;
@@ -365,7 +366,7 @@ module phi_operator #(
 			add1234 <= 'd0;
 		end
 		else if(power_add_valid_dly1 == 1'b1) begin
-			add1234 <= add12 + add34;
+			add1234 <= {add12[DATA_POWER_WIDTH+1],add12} + {add34[DATA_POWER_WIDTH+1],add34};
 		end
 		else begin
 			add1234 <= add1234;
