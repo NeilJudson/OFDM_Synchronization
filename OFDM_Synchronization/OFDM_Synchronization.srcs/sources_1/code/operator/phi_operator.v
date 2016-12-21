@@ -21,8 +21,7 @@
 
 
 module phi_operator #(
-	parameter SYNC_DATA_WIDTH	= 16, // <=18
-	parameter PHI_WIDTH			= 2*SYNC_DATA_WIDTH+1+2 // 35
+	parameter SYNC_DATA_WIDTH	= 16 // <=18
 	)
 	(
 	clk			,
@@ -40,27 +39,28 @@ module phi_operator #(
 	o_phi_data_valid,
 	o_phi_data
 	);
-	input									clk			;
-	input									reset		;
+	input					clk			;
+	input					reset		;
 	
-	input									i_work_ctrl_en;
-	input									i_work_ctrl	; // 1'b0: 停止工作；1'b1: 开始工作，先进入清零状态
+	input					i_work_ctrl_en;
+	input					i_work_ctrl	; // 1'b0: 停止工作；1'b1: 开始工作，先进入清零状态
 	
-	input									i_data_valid;
-	input	signed	[SYNC_DATA_WIDTH-1:0]	i_data_i	;
-	input	signed	[SYNC_DATA_WIDTH-1:0]	i_data_q	;
-	input	signed	[SYNC_DATA_WIDTH-1:0]	i_data_dly_i;
-	input	signed	[SYNC_DATA_WIDTH-1:0]	i_data_dly_q;
+	input					i_data_valid;
+	input	signed	[17:0]	i_data_i	;
+	input	signed	[17:0]	i_data_q	;
+	input	signed	[17:0]	i_data_dly_i;
+	input	signed	[17:0]	i_data_dly_q;
 	
-	output									o_phi_data_valid; // 6dly
-	output	signed	[PHI_WIDTH-1:0]			o_phi_data	;
+	output					o_phi_data_valid; // 6dly
+	output	signed	[38:0]	o_phi_data	;
 	
 //================================================================================
 // variable
 //================================================================================
-	localparam	SPRAM_ADDR_WIDTH = 6;
-	localparam	SPRAM_DATA_WIDTH = 36;
-	localparam	DATA_POWER_WIDTH = 2*SYNC_DATA_WIDTH; // 32
+	localparam	SPRAM_ADDR_WIDTH	= 6;
+	localparam	SPRAM_DATA_WIDTH	= 36;
+	localparam	DATA_POWER_WIDTH	= 2*SYNC_DATA_WIDTH; // 32
+	localparam	PHI_WIDTH			= 2*SYNC_DATA_WIDTH+1+2; // 35
 	// state
 	localparam	IDLE	= 2'd0,
 				CLEAR	= 2'd1,
@@ -109,7 +109,7 @@ module phi_operator #(
 	reg										power_add_valid_dly2;
 	reg		signed	[DATA_POWER_WIDTH+1:0]	add12			;
 	reg		signed	[DATA_POWER_WIDTH+1:0]	add34			;
-	reg		signed	[DATA_POWER_WIDTH+2:0]	add1234			;
+	reg		signed	[PHI_WIDTH-1:0]			add1234			;
 	
 //================================================================================
 // state
@@ -188,11 +188,11 @@ module phi_operator #(
 		end
 		else if((state==WORK) && (i_data_valid==1'b1)) begin
 			u1_i_data_valid	<= 1'b1;
-			u1_i_data_i		<= {{(18-SYNC_DATA_WIDTH){i_data_i[SYNC_DATA_WIDTH-1]}},i_data_i};
-			u1_i_data_q		<= {{(18-SYNC_DATA_WIDTH){i_data_q[SYNC_DATA_WIDTH-1]}},i_data_q};
+			u1_i_data_i		<= i_data_i;
+			u1_i_data_q		<= i_data_q;
 			u5_i_data_valid	<= 1'b1;
-			u5_i_data_i		<= {{(18-SYNC_DATA_WIDTH){i_data_dly_i[SYNC_DATA_WIDTH-1]}},i_data_dly_i};
-			u5_i_data_q		<= {{(18-SYNC_DATA_WIDTH){i_data_dly_q[SYNC_DATA_WIDTH-1]}},i_data_dly_q};
+			u5_i_data_i		<= i_data_dly_i;
+			u5_i_data_q		<= i_data_dly_q;
 		end
 		else begin
 			u1_i_data_valid	<= 1'b0;
@@ -272,8 +272,7 @@ module phi_operator #(
 						u2_wr_addr	<= u2_wr_addr + 1'd1;
 						u2_rd_addr	<= u2_rd_addr + 1'd1;
 						u2_addra	<= u2_wr_addr + 1'd1;
-						u2_dina		<= {{(SPRAM_DATA_WIDTH-DATA_POWER_WIDTH-1){power_add[DATA_POWER_WIDTH]}},
-										power_add};
+						u2_dina		<= {{(SPRAM_DATA_WIDTH-DATA_POWER_WIDTH-1){1'b0}},power_add};
 					end
 					else begin
 						u2_wea		<= 1'b0;
@@ -374,6 +373,6 @@ module phi_operator #(
 	end
 	
 	assign o_phi_data_valid	= power_add_valid_dly2;
-	assign o_phi_data		= add1234;
+	assign o_phi_data		= {{(39-PHI_WIDTH){add1234[PHI_WIDTH-1]}},add1234};
 	
 endmodule

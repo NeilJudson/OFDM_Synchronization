@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-| Date         : Tue Dec 20 20:27:31 2016
-| Host         : FUTURE3 running 64-bit Service Pack 1  (build 7601)
+| Date         : Wed Dec 21 20:35:06 2016
+| Host         : txjs-130 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file test_coarse_sync_utilization_synth.rpt -pb test_coarse_sync_utilization_synth.pb
 | Design       : test_coarse_sync
 | Device       : xc7z045
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 4657 |     0 |    218600 |  2.13 |
-|   LUT as Logic             | 4654 |     0 |    218600 |  2.13 |
+| Slice LUTs*                | 4667 |     0 |    218600 |  2.13 |
+|   LUT as Logic             | 4664 |     0 |    218600 |  2.13 |
 |   LUT as Memory            |    3 |     0 |     70400 | <0.01 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |    3 |     0 |           |       |
-| Slice Registers            | 1667 |     0 |    437200 |  0.38 |
-|   Register as Flip Flop    | 1667 |     0 |    437200 |  0.38 |
+| Slice Registers            | 1698 |     0 |    437200 |  0.39 |
+|   Register as Flip Flop    | 1698 |     0 |    437200 |  0.39 |
 |   Register as Latch        |    0 |     0 |    437200 |  0.00 |
 | F7 Muxes                   | 1536 |     0 |    109300 |  1.41 |
 | F8 Muxes                   |  768 |     0 |     54650 |  1.41 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 1667  |          Yes |       Reset |            - |
+| 1698  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -154,16 +154,16 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     | 3500 |                 LUT |
-| FDRE     | 1667 |        Flop & Latch |
+| LUT6     | 3503 |                 LUT |
+| FDRE     | 1698 |        Flop & Latch |
 | MUXF7    | 1536 |               MuxFx |
-| LUT2     |  847 |                 LUT |
+| LUT2     |  861 |                 LUT |
 | MUXF8    |  768 |               MuxFx |
-| LUT3     |  251 |                 LUT |
-| CARRY4   |  217 |          CarryLogic |
-| LUT5     |  119 |                 LUT |
-| LUT1     |  116 |                 LUT |
-| LUT4     |   44 |                 LUT |
+| LUT3     |  260 |                 LUT |
+| CARRY4   |  218 |          CarryLogic |
+| LUT1     |  118 |                 LUT |
+| LUT5     |  113 |                 LUT |
+| LUT4     |   41 |                 LUT |
 | SRL16E   |    3 |  Distributed Memory |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
@@ -180,8 +180,8 @@ Table of Contents
 | multiplier_42_42_ip         |    3 |
 | dsp48_mul_ip                |    2 |
 | dsp48_mul_add_ip            |    2 |
-| spram_108_512_ip            |    1 |
-| spram_108_32_ip             |    1 |
+| spram_144_512_ip            |    1 |
+| spram_144_32_ip             |    1 |
 | complex_multiplier_18_18_ip |    1 |
 +-----------------------------+------+
 

@@ -21,8 +21,7 @@
 
 
 module psi_operator #(
-	parameter SYNC_DATA_WIDTH	= 16, // <=18
-	parameter PSI_WIDTH			= 2*SYNC_DATA_WIDTH+2 // 34
+	parameter SYNC_DATA_WIDTH	= 16 // <=18
 	)
 	(
 	clk			,
@@ -41,21 +40,21 @@ module psi_operator #(
 	o_psi_data_i,
 	o_psi_data_q
 	);
-	input									clk			;
-	input									reset		;
+	input					clk			;
+	input					reset		;
 	
-	input									i_work_ctrl_en;
-	input									i_work_ctrl	; // 1'b0: 停止工作；1'b1: 开始工作，先进入清零状态
+	input					i_work_ctrl_en;
+	input					i_work_ctrl	; // 1'b0: 停止工作；1'b1: 开始工作，先进入清零状态
 	
-	input									i_data_valid;
-	input	signed	[SYNC_DATA_WIDTH-1:0]	i_data_i	;
-	input	signed	[SYNC_DATA_WIDTH-1:0]	i_data_q	;
-	input	signed	[SYNC_DATA_WIDTH-1:0]	i_data_dly_i;
-	input	signed	[SYNC_DATA_WIDTH-1:0]	i_data_dly_q;
+	input					i_data_valid;
+	input	signed	[17:0]	i_data_i	;
+	input	signed	[17:0]	i_data_q	;
+	input	signed	[17:0]	i_data_dly_i;
+	input	signed	[17:0]	i_data_dly_q;
 	
-	output									o_psi_data_valid; // 9dly
-	output	signed	[PSI_WIDTH-1:0]			o_psi_data_i;
-	output	signed	[PSI_WIDTH-1:0]			o_psi_data_q;
+	output					o_psi_data_valid; // 9dly
+	output	signed	[37:0]	o_psi_data_i;
+	output	signed	[37:0]	o_psi_data_q;
 	
 //================================================================================
 // variable
@@ -63,6 +62,7 @@ module psi_operator #(
 	localparam	SPRAM_ADDR_WIDTH	= 6;
 	localparam	SPRAM_DATA_WIDTH	= 72;
 	localparam	DATA_MUL_WIDTH		= 2*SYNC_DATA_WIDTH; // 32
+	localparam	PSI_WIDTH			= 2*SYNC_DATA_WIDTH+2; // 34
 	// state
 	localparam	IDLE	= 2'd0,
 				CLEAR	= 2'd1,
@@ -71,7 +71,7 @@ module psi_operator #(
 	reg				[1:0]					state			;
 	reg				[SPRAM_ADDR_WIDTH:0]	clear_count		;
 	
-	wire	signed	[SYNC_DATA_WIDTH-1:0]	i_data_q_neg	;
+	wire	signed	[17:0]					i_data_q_neg	;
 	
 	reg										u1_s_axis_a_tvalid	;
 	reg				[47:0]					u1_s_axis_a_tdata	;
@@ -104,10 +104,10 @@ module psi_operator #(
 	reg										u1_m_axis_dout_tvalid_dly2;
 	reg		signed	[DATA_MUL_WIDTH:0]		add12_i				;
 	reg		signed	[DATA_MUL_WIDTH:0]		add34_i				;
-	reg		signed	[DATA_MUL_WIDTH+1:0]	add1234_i			;
+	reg		signed	[PSI_WIDTH-1:0]			add1234_i			;
 	reg		signed	[DATA_MUL_WIDTH:0]		add12_q				;
 	reg		signed	[DATA_MUL_WIDTH:0]		add34_q				;
-	reg		signed	[DATA_MUL_WIDTH+1:0]	add1234_q			;
+	reg		signed	[PSI_WIDTH-1:0]			add1234_q			;
 
 //================================================================================
 // state
@@ -185,10 +185,10 @@ module psi_operator #(
 		end
 		else if((state==WORK) && (i_data_valid==1'b1)) begin
 			u1_s_axis_a_tvalid	<= 1'b1;
-			u1_s_axis_a_tdata	<= {{(24-SYNC_DATA_WIDTH){i_data_q_neg[SYNC_DATA_WIDTH-1]}},i_data_q_neg,
-									{(24-SYNC_DATA_WIDTH){i_data_i[SYNC_DATA_WIDTH-1]}},i_data_i};
-			u1_s_axis_b_tdata	<= {{(24-SYNC_DATA_WIDTH){i_data_dly_q[SYNC_DATA_WIDTH-1]}},i_data_dly_q,
-									{(24-SYNC_DATA_WIDTH){i_data_dly_i[SYNC_DATA_WIDTH-1]}},i_data_dly_i};
+			u1_s_axis_a_tdata	<= {{(6){i_data_q_neg[17]}},i_data_q_neg,
+									{(6){i_data_i[17]}},i_data_i};
+			u1_s_axis_b_tdata	<= {{(6){i_data_dly_q[17]}},i_data_dly_q,
+									{(6){i_data_dly_i[17]}},i_data_dly_i};
 		end
 		else begin
 			u1_s_axis_a_tvalid	<= 1'b0;
@@ -354,7 +354,7 @@ module psi_operator #(
 	end
 	
 	assign o_psi_data_valid	= u1_m_axis_dout_tvalid_dly2;
-	assign o_psi_data_i		= add1234_i;
-	assign o_psi_data_q		= add1234_q;
+	assign o_psi_data_i		= {{(38-PSI_WIDTH){add1234_i[PSI_WIDTH-1]}},add1234_i};
+	assign o_psi_data_q		= {{(38-PSI_WIDTH){add1234_q[PSI_WIDTH-1]}},add1234_q};
 	
 endmodule

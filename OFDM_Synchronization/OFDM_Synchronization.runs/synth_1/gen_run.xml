@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z045fbg676-3" LaunchTime="1482236729">
+<GenRun Id="synth_1" LaunchPart="xc7z045fbg676-3" LaunchTime="1482323619">
   <File Type="RDS-DCP" Name="test_coarse_sync.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
   <File Type="RDS-UTIL-PB" Name="test_coarse_sync_utilization_synth.pb"/>
@@ -13,13 +13,6 @@
   <File Type="VDS-TIMING-PB" Name="test_coarse_sync_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/code/tools/complex_abs_power2_18.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/code/tools/complex_abs_power2_42.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -27,7 +20,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/code/operator/phi_operator.v">
+    <File Path="$PSRCDIR/sources_1/code/tools/complex_abs_power2_18.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -42,6 +35,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/code/operator/psi_operator.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/operator/phi_operator.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -71,6 +71,14 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/code/data_dpram/data_dpram.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/ofdm_syn.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -118,14 +126,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/code/ofdm_syn.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="test_coarse_sync"/>
@@ -144,9 +144,9 @@
   <BlockFileSet Type="BlockSrcs" Name="dsp48_mul_add_ip"/>
   <BlockFileSet Type="BlockSrcs" Name="spram_36_64_ip"/>
   <BlockFileSet Type="BlockSrcs" Name="spram_72_64_ip"/>
-  <BlockFileSet Type="BlockSrcs" Name="spram_108_32_ip"/>
   <BlockFileSet Type="BlockSrcs" Name="complex_multiplier_18_18_ip"/>
   <BlockFileSet Type="BlockSrcs" Name="multiplier_42_42_ip"/>
-  <BlockFileSet Type="BlockSrcs" Name="spram_108_512_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="spram_144_512_ip"/>
   <BlockFileSet Type="BlockSrcs" Name="dsp48_mul_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="spram_144_32_ip"/>
 </GenRun>
