@@ -2,44 +2,23 @@
 # Vivado v2015.2.1 (64-bit)
 # SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
 # IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
-# Start of session at: Tue Nov 22 15:14:58 2016
-# Process ID: 3428
+# Start of session at: Fri Dec 16 10:56:53 2016
+# Process ID: 3760
 # Log file: E:/jiaweiwei/Project/OFDM_Synchronization/vivado.log
 # Journal file: E:/jiaweiwei/Project/OFDM_Synchronization\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run spram_72_64_ip_synth_1
+reset_run spram_36_64_ip_synth_1
+reset_run spram_108_32_ip_synth_1
+reset_run complex_multiplier_18_18_ip_synth_1
+reset_run multiplier_42_42_ip_synth_1
+reset_run dsp48_mul_ip_synth_1
+reset_run dsp48_mul_add_ip_synth_1
+reset_run spram_108_512_ip_synth_1
 reset_run synth_1
 launch_runs synth_1 -jobs 2
 wait_on_run synth_1
-launch_simulation
-source test_phi_operator.tcl
-close_sim
-launch_simulation
-source test_phi_operator.tcl
-run all
-close_sim
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top test_psi_operator [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top test_psi_operator [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-launch_simulation
-source test_psi_operator.tcl
-run all
-close_sim
-launch_simulation
-source test_psi_operator.tcl
-run all
-close_sim

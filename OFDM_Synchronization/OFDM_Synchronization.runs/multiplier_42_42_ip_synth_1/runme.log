@@ -11,187 +11,187 @@
 source multiplier_42_42_ip.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/data/ip'.
-WARNING: [IP_Flow 19-3664] IP 'multiplier_42_42_ip' generated file not found 'g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'multiplier_42_42_ip' generated file not found 'g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'multiplier_42_42_ip' generated file not found 'g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'multiplier_42_42_ip' generated file not found 'g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_funcsim.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'multiplier_42_42_ip' generated file not found 'g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_funcsim.vhdl'. Please regenerate to continue.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/15.2/Vivado/2015.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'multiplier_42_42_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'multiplier_42_42_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'multiplier_42_42_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'multiplier_42_42_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_funcsim.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'multiplier_42_42_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_funcsim.vhdl'. Please regenerate to continue.
 Command: synth_design -top multiplier_42_42_ip -part xc7z045fbg676-3 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 249.523 ; gain = 76.727
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 249.426 ; gain = 62.980
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'multiplier_42_42_ip' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/synth/multiplier_42_42_ip.vhd:68]
-INFO: [Synth 8-3491] module 'mult_gen_v12_0' declared at 'g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0.vhd:106' bound to instance 'U0' of component 'mult_gen_v12_0' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/synth/multiplier_42_42_ip.vhd:116]
-INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0.vhd:145]
-INFO: [Synth 8-3491] module 'mult_gen_v12_0_viv' declared at 'g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:20722' bound to instance 'i_mult' of component 'mult_gen_v12_0_viv' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0.vhd:151]
-INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_viv' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:20771]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:852]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:853]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:860]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:874]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:881]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:891]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:900]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:922]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:929]
-INFO: [Synth 8-638] synthesizing module 'dsp' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1364]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1456]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1457]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1459]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1460]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1474]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1475]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1477]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1478]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1389]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1390]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1440]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:8882]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:8903]
-INFO: [Synth 8-638] synthesizing module 'op_resize' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4018]
-INFO: [Synth 8-256] done synthesizing module 'op_resize' (1#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4018]
-INFO: [Synth 8-638] synthesizing module 'delay_line' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'delay_line' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized0' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized0' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized1' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized1' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized2' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized2' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized3' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized3' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized4' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4287]
-INFO: [Synth 8-113] binding component instance 'i_fdre' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4299]
-INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized4' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized5' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized5' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-113] binding component instance 'iDSP48E1' to cell 'DSP48E1' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:11042]
-INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized6' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4287]
-INFO: [Synth 8-113] binding component instance 'i_fdre' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4299]
-INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized6' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized7' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized7' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-113] binding component instance 'iDSP48E1' to cell 'DSP48E1' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:11042]
-INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized8' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
-INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
-INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
-INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
-INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-638] synthesizing module 'multiplier_42_42_ip' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/synth/multiplier_42_42_ip.vhd:68]
+INFO: [Synth 8-3491] module 'mult_gen_v12_0' declared at 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0.vhd:106' bound to instance 'U0' of component 'mult_gen_v12_0' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/synth/multiplier_42_42_ip.vhd:116]
+INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0.vhd:145]
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_viv' declared at 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:20722' bound to instance 'i_mult' of component 'mult_gen_v12_0_viv' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0.vhd:151]
+INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_viv' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:20771]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:852]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:853]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:860]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:874]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:881]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:891]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:900]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:922]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:929]
+INFO: [Synth 8-638] synthesizing module 'dsp' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1364]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1456]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1457]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1459]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1460]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1474]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1475]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1477]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1478]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1389]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1390]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1440]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:8882]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:8903]
+INFO: [Synth 8-638] synthesizing module 'op_resize' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4018]
+INFO: [Synth 8-256] done synthesizing module 'op_resize' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4018]
+INFO: [Synth 8-638] synthesizing module 'delay_line' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'delay_line' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized0' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized0' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized1' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized1' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized2' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized2' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized3' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized3' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized4' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4287]
+INFO: [Synth 8-113] binding component instance 'i_fdre' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4299]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized4' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized5' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized5' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-113] binding component instance 'iDSP48E1' to cell 'DSP48E1' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:11042]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized6' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4287]
+INFO: [Synth 8-113] binding component instance 'i_fdre' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4299]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized6' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized7' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized7' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-113] binding component instance 'iDSP48E1' to cell 'DSP48E1' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:11042]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized8' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
+INFO: [Synth 8-113] binding component instance 'i_srl16e1' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4264]
+INFO: [Synth 8-113] binding component instance 'i_fdre1' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4276]
+INFO: [Synth 8-113] binding component instance 'i_srl16e0' to cell 'SRL16E' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4243]
+INFO: [Synth 8-113] binding component instance 'i_fdre0' to cell 'FDRE' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4255]
 INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized8' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized9' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized9' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized10' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized10' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized11' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized11' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized12' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized12' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized13' [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized13' (2#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'dsp' (3#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
-INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_viv' (4#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:20771]
-INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0' (5#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0.vhd:145]
-INFO: [Synth 8-256] done synthesizing module 'multiplier_42_42_ip' (6#1) [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/synth/multiplier_42_42_ip.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized8' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized9' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized9' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized10' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized10' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized11' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized11' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized12' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized12' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-638] synthesizing module 'delay_line__parameterized13' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'delay_line__parameterized13' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'dsp' (3#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_viv' (4#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:20771]
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0' (5#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/mult_gen_v12_0/hdl/mult_gen_v12_0.vhd:145]
+INFO: [Synth 8-256] done synthesizing module 'multiplier_42_42_ip' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/synth/multiplier_42_42_ip.vhd:68]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 296.617 ; gain = 123.820
+Finished RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 296.543 ; gain = 110.098
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -201,7 +201,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 296.617 ; gain = 123.820
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 296.543 ; gain = 110.098
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -210,35 +210,35 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_ooc.xdc] for cell 'U0'
-Parsing XDC File [G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_42_42_ip_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_42_42_ip_synth_1/dont_touch.xdc]
+Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_ooc.xdc] for cell 'U0'
+Parsing XDC File [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_42_42_ip_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_42_42_ip_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.016 . Memory (MB): peak = 606.422 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 606.852 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 606.422 ; gain = 433.625
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 606.852 ; gain = 420.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z045fbg676-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 606.422 ; gain = 433.625
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 606.852 ; gain = 420.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_42_42_ip_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_42_42_ip_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 606.422 ; gain = 433.625
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 606.852 ; gain = 420.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 606.422 ; gain = 433.625
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 606.852 ; gain = 420.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -267,14 +267,14 @@ BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 606.422 ; gain = 433.625
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 606.852 ; gain = 420.406
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 606.422 ; gain = 433.625
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 606.852 ; gain = 420.406
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 606.422 ; gain = 433.625
+Finished Parallel Reinference  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 606.852 ; gain = 420.406
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -285,16 +285,16 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 606.422 ; gain = 433.625
+Finished Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 606.852 ; gain = 420.406
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 606.422 ; gain = 433.625
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 606.852 ; gain = 420.406
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 606.422 ; gain = 433.625
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 606.852 ; gain = 420.406
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -302,10 +302,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 658.918 ; gain = 486.121
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 658.945 ; gain = 472.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 659.926 ; gain = 487.129
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 659.965 ; gain = 473.520
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -320,7 +320,7 @@ INFO: [Synth 8-3332] Sequential element (\gDSP.gDSP_only.iDSP/use_prim.appDSP48[
 INFO: [Synth 8-3332] Sequential element (\gDSP.gDSP_only.iDSP/use_prim.appDSP48[0].bppDSP48[1].use_subtract_delay.subtract_delay/d1.dout_i_reg[0] ) is unused and will be removed from module mult_gen_v12_0_viv.
 INFO: [Synth 8-3332] Sequential element (\gDSP.gDSP_only.iDSP/use_prim.appDSP48[1].bppDSP48[1].use_subtract_delay.subtract_delay/d1.dout_i_reg[0] ) is unused and will be removed from module mult_gen_v12_0_viv.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 680.207 ; gain = 507.410
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:00:57 . Memory (MB): peak = 680.277 ; gain = 493.832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -338,7 +338,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 680.207 ; gain = 507.410
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:58 . Memory (MB): peak = 680.277 ; gain = 493.832
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -351,7 +351,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 680.207 ; gain = 507.410
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:58 . Memory (MB): peak = 680.277 ; gain = 493.832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -363,13 +363,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 680.207 ; gain = 507.410
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:58 . Memory (MB): peak = 680.277 ; gain = 493.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 680.207 ; gain = 507.410
+Start Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:58 . Memory (MB): peak = 680.277 ; gain = 493.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 680.207 ; gain = 507.410
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:58 . Memory (MB): peak = 680.277 ; gain = 493.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -393,17 +393,17 @@ Report Cell Usage:
 |6     |FDRE      |   118|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 680.207 ; gain = 507.410
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:58 . Memory (MB): peak = 680.277 ; gain = 493.832
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:54 . Memory (MB): peak = 680.207 ; gain = 167.996
-Synthesis Optimization Complete : Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 680.207 ; gain = 507.410
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 680.277 ; gain = 164.523
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:58 . Memory (MB): peak = 680.277 ; gain = 493.832
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [g:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_ooc.xdc] for cell 'U0'
+Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_ooc.xdc] for cell 'U0'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
@@ -411,7 +411,7 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 162 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 680.207 ; gain = 477.801
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:58 . Memory (MB): peak = 680.277 ; gain = 477.719
 INFO: [Coretcl 2-1174] Renamed 10 cell refs.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 680.207 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 14 00:35:13 2016...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 680.277 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 16 14:58:16 2016...

@@ -21,8 +21,7 @@
 
 
 module psi_operator #(
-	parameter SYNC_DATA_WIDTH	= 16,
-	parameter PSI_WIDTH			= 2*SYNC_DATA_WIDTH+2 // 34
+	parameter SYNC_DATA_WIDTH	= 16 // <=18
 	)
 	(
 	clk			,
@@ -32,24 +31,30 @@ module psi_operator #(
 	i_work_ctrl	,
 	
 	i_data_valid,
-	i_data		,
-	i_data_dly	,
+	i_data_i	,
+	i_data_q	,
+	i_data_dly_i,
+	i_data_dly_q,
 	
 	o_psi_data_valid,
-	o_psi_data
+	o_psi_data_i,
+	o_psi_data_q
 	);
-	input							clk			;
-	input							reset		;
+	input					clk			;
+	input					reset		;
 	
-	input							i_work_ctrl_en;
-	input							i_work_ctrl	; // 1'b0: 停止工作；1'b1: 开始工作，先进入清零状态
+	input					i_work_ctrl_en;
+	input					i_work_ctrl	; // 1'b0: 停止工作；1'b1: 开始工作，先进入清零状态
 	
-	input							i_data_valid;
-	input	[2*SYNC_DATA_WIDTH-1:0]	i_data		; // 高位虚部，低位实部。
-	input	[2*SYNC_DATA_WIDTH-1:0]	i_data_dly	; // 高位虚部，低位实部。
+	input					i_data_valid;
+	input	signed	[17:0]	i_data_i	;
+	input	signed	[17:0]	i_data_q	;
+	input	signed	[17:0]	i_data_dly_i;
+	input	signed	[17:0]	i_data_dly_q;
 	
-	output							o_psi_data_valid; // 9dly
-	output	[2*PSI_WIDTH-1:0]		o_psi_data	;
+	output					o_psi_data_valid; // 9dly
+	output	signed	[37:0]	o_psi_data_i;
+	output	signed	[37:0]	o_psi_data_q;
 	
 //================================================================================
 // variable
@@ -57,6 +62,7 @@ module psi_operator #(
 	localparam	SPRAM_ADDR_WIDTH	= 6;
 	localparam	SPRAM_DATA_WIDTH	= 72;
 	localparam	DATA_MUL_WIDTH		= 2*SYNC_DATA_WIDTH; // 32
+	localparam	PSI_WIDTH			= 2*SYNC_DATA_WIDTH+2; // 34
 	// state
 	localparam	IDLE	= 2'd0,
 				CLEAR	= 2'd1,
@@ -65,10 +71,7 @@ module psi_operator #(
 	reg				[1:0]					state			;
 	reg				[SPRAM_ADDR_WIDTH:0]	clear_count		;
 	
-	wire	signed	[SYNC_DATA_WIDTH-1:0]	i_data_i		;
-	wire	signed	[SYNC_DATA_WIDTH-1:0]	i_data_q_neg	;
-	wire	signed	[SYNC_DATA_WIDTH-1:0]	i_data_dly_i	;
-	wire	signed	[SYNC_DATA_WIDTH-1:0]	i_data_dly_q	;
+	wire	signed	[17:0]					i_data_q_neg	;
 	
 	reg										u1_s_axis_a_tvalid	;
 	reg				[47:0]					u1_s_axis_a_tdata	;
@@ -101,10 +104,10 @@ module psi_operator #(
 	reg										u1_m_axis_dout_tvalid_dly2;
 	reg		signed	[DATA_MUL_WIDTH:0]		add12_i				;
 	reg		signed	[DATA_MUL_WIDTH:0]		add34_i				;
-	reg		signed	[DATA_MUL_WIDTH+1:0]	add1234_i			;
+	reg		signed	[PSI_WIDTH-1:0]			add1234_i			;
 	reg		signed	[DATA_MUL_WIDTH:0]		add12_q				;
 	reg		signed	[DATA_MUL_WIDTH:0]		add34_q				;
-	reg		signed	[DATA_MUL_WIDTH+1:0]	add1234_q			;
+	reg		signed	[PSI_WIDTH-1:0]			add1234_q			;
 
 //================================================================================
 // state
@@ -172,10 +175,7 @@ module psi_operator #(
 //================================================================================
 // complex multiply
 //================================================================================
-	assign i_data_i		= i_data[SYNC_DATA_WIDTH-1:0];
-	assign i_data_q_neg	= -i_data[2*SYNC_DATA_WIDTH-1:SYNC_DATA_WIDTH];
-	assign i_data_dly_i	= i_data_dly[SYNC_DATA_WIDTH-1:0];
-	assign i_data_dly_q	= i_data_dly[2*SYNC_DATA_WIDTH-1:SYNC_DATA_WIDTH];
+	assign i_data_q_neg = -i_data_q;
 	
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
@@ -185,10 +185,10 @@ module psi_operator #(
 		end
 		else if((state==WORK) && (i_data_valid==1'b1)) begin
 			u1_s_axis_a_tvalid	<= 1'b1;
-			u1_s_axis_a_tdata	<= {{(24-SYNC_DATA_WIDTH){i_data_q_neg[SYNC_DATA_WIDTH-1]}},i_data_q_neg,
-									{(24-SYNC_DATA_WIDTH){i_data_i[SYNC_DATA_WIDTH-1]}},i_data_i};
-			u1_s_axis_b_tdata	<= {{(24-SYNC_DATA_WIDTH){i_data_dly_q[SYNC_DATA_WIDTH-1]}},i_data_dly_q,
-									{(24-SYNC_DATA_WIDTH){i_data_dly_i[SYNC_DATA_WIDTH-1]}},i_data_dly_i};
+			u1_s_axis_a_tdata	<= {{(6){i_data_q_neg[17]}},i_data_q_neg,
+									{(6){i_data_i[17]}},i_data_i};
+			u1_s_axis_b_tdata	<= {{(6){i_data_dly_q[17]}},i_data_dly_q,
+									{(6){i_data_dly_i[17]}},i_data_dly_i};
 		end
 		else begin
 			u1_s_axis_a_tvalid	<= 1'b0;
@@ -241,9 +241,8 @@ module psi_operator #(
 						u2_wr_addr	<= u2_wr_addr + 1'd1;
 						u2_rd_addr	<= u2_rd_addr + 1'd1;
 						u2_addra	<= u2_wr_addr + 1'd1;
-						u2_dina		<= {{(SPRAM_DATA_WIDTH-2*DATA_MUL_WIDTH){1'b0}},
-										u1_m_axis_dout_tdata[40+DATA_MUL_WIDTH-1:40],
-										u1_m_axis_dout_tdata[DATA_MUL_WIDTH-1:0]};
+						u2_dina		<= {u1_m_axis_dout_tdata[40+SPRAM_DATA_WIDTH/2-1:40],
+										u1_m_axis_dout_tdata[SPRAM_DATA_WIDTH/2-1:0]};
 					end
 					else begin
 						u2_wea		<= 1'b0;
@@ -322,14 +321,14 @@ module psi_operator #(
 			add34_q <= 'd0;
 		end
 		else if(u1_m_axis_dout_tvalid == 1'b1) begin
-			add12_i <= u1_m_axis_dout_tdata[DATA_MUL_WIDTH-1:0]
-						+ u2_douta[DATA_MUL_WIDTH-1:0];
-			add34_i <= u3_douta[DATA_MUL_WIDTH-1:0]
-						+ u4_douta[DATA_MUL_WIDTH-1:0];
-			add12_q <= u1_m_axis_dout_tdata[40+DATA_MUL_WIDTH-1:40]
-						+ u2_douta[2*DATA_MUL_WIDTH-1:DATA_MUL_WIDTH];
-			add34_q <= u3_douta[2*DATA_MUL_WIDTH-1:DATA_MUL_WIDTH]
-						+ u4_douta[2*DATA_MUL_WIDTH-1:DATA_MUL_WIDTH];
+			add12_i <= {u1_m_axis_dout_tdata[DATA_MUL_WIDTH-1],u1_m_axis_dout_tdata[DATA_MUL_WIDTH-1:0]}
+						+ {u2_douta[DATA_MUL_WIDTH-1],u2_douta[DATA_MUL_WIDTH-1:0]};
+			add34_i <= {u3_douta[DATA_MUL_WIDTH-1],u3_douta[DATA_MUL_WIDTH-1:0]}
+						+ {u4_douta[DATA_MUL_WIDTH-1],u4_douta[DATA_MUL_WIDTH-1:0]};
+			add12_q <= {u1_m_axis_dout_tdata[40+DATA_MUL_WIDTH-1],u1_m_axis_dout_tdata[40+DATA_MUL_WIDTH-1:40]}
+						+ {u2_douta[SPRAM_DATA_WIDTH/2+DATA_MUL_WIDTH-1],u2_douta[SPRAM_DATA_WIDTH/2+DATA_MUL_WIDTH-1:SPRAM_DATA_WIDTH/2]};
+			add34_q <= {u3_douta[SPRAM_DATA_WIDTH/2+DATA_MUL_WIDTH-1],u3_douta[SPRAM_DATA_WIDTH/2+DATA_MUL_WIDTH-1:SPRAM_DATA_WIDTH/2]}
+						+ {u4_douta[SPRAM_DATA_WIDTH/2+DATA_MUL_WIDTH-1],u4_douta[SPRAM_DATA_WIDTH/2+DATA_MUL_WIDTH-1:SPRAM_DATA_WIDTH/2]};
 		end
 		else begin
 			add12_i <= add12_i;
@@ -345,8 +344,8 @@ module psi_operator #(
 			add1234_q <= 'd0;
 		end
 		else if(u1_m_axis_dout_tvalid_dly1 == 1'b1) begin
-			add1234_i <= add12_i + add34_i;
-			add1234_q <= add12_q + add34_q;
+			add1234_i <= {add12_i[DATA_MUL_WIDTH],add12_i} + {add34_i[DATA_MUL_WIDTH],add34_i};
+			add1234_q <= {add12_q[DATA_MUL_WIDTH],add12_q} + {add34_q[DATA_MUL_WIDTH],add34_q};
 		end
 		else begin
 			add1234_i <= add1234_i;
@@ -355,6 +354,7 @@ module psi_operator #(
 	end
 	
 	assign o_psi_data_valid	= u1_m_axis_dout_tvalid_dly2;
-	assign o_psi_data		= {add1234_q,add1234_i};
+	assign o_psi_data_i		= {{(38-PSI_WIDTH){add1234_i[PSI_WIDTH-1]}},add1234_i};
+	assign o_psi_data_q		= {{(38-PSI_WIDTH){add1234_q[PSI_WIDTH-1]}},add1234_q};
 	
 endmodule
