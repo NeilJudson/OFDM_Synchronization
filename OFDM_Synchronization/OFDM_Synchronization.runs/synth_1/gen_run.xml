@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z045fbg676-3" LaunchTime="1479891397">
-  <File Type="RDS-DCP" Name="test_phi_operator.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7z045fbg676-3" LaunchTime="1482323619">
+  <File Type="RDS-DCP" Name="test_coarse_sync.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
-  <File Type="RDS-UTIL-PB" Name="test_phi_operator_utilization_synth.pb"/>
+  <File Type="RDS-UTIL-PB" Name="test_coarse_sync_utilization_synth.pb"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
-  <File Type="RDS-PROPCONSTRS" Name="test_phi_operator_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="test_phi_operator.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="test_coarse_sync_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="test_coarse_sync.tcl"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
-  <File Type="RDS-RDS" Name="test_phi_operator.vds"/>
-  <File Type="RDS-UTIL" Name="test_phi_operator_utilization_synth.rpt"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="test_phi_operator_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="test_phi_operator_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="test_coarse_sync.vds"/>
+  <File Type="RDS-UTIL" Name="test_coarse_sync_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="test_coarse_sync_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="test_coarse_sync_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/code/tools/complex_abs_power2_42.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/code/tools/complex_abs_power2_18.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/operator/tar_operator.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/operator/psi_operator.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -27,32 +48,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/code/operator/test_phi_operator.v">
+    <File Path="$PSRCDIR/sources_1/code/coarse_sync/coarse_sync.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/code/operator/psi_operator.v">
+    <File Path="$PSRCDIR/sources_1/code/coarse_sync/test_coarse_sync.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/code/operator/test_psi_phi_operator.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/ip/dpram_1024_ip/dpram_1024_ip.xci">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -74,7 +78,39 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/code/ofdm_syn.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/operator/test_tar_operator.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/operator/test_psi_phi_operator.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/code/data_dpram/test_data_dpram.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/tools/test_complex_abs_power2_42.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -90,25 +126,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/code/ofdm_syn.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/code/coarse_sync/coarse_sync.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="test_phi_operator"/>
+      <Option Name="TopModule" Val="test_coarse_sync"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -121,7 +141,12 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="dsp48_ip_mul_add"/>
-  <BlockFileSet Type="BlockSrcs" Name="spram_32_64_ip"/>
-  <BlockFileSet Type="BlockSrcs" Name="dsp48_ip_mul"/>
+  <BlockFileSet Type="BlockSrcs" Name="dsp48_mul_add_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="spram_36_64_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="spram_72_64_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="complex_multiplier_18_18_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="multiplier_42_42_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="spram_144_512_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="dsp48_mul_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="spram_144_32_ip"/>
 </GenRun>

@@ -21,8 +21,7 @@
 
 
 module ofdm_syn #(
-	parameter	DATA_WIDTH		= 5'd16,
-				SYN_DATA_WIDTH	= 5'd13
+	parameter SYNC_DATA_WIDTH = 16
 	)
 	(
 	axis_aclk			,
@@ -71,6 +70,10 @@ module ofdm_syn #(
 	output		[31:0]	m_axis_data_tdata	;
 	input				m_axis_data_trdy	;
 	
+//================================================================================
+// variable
+//================================================================================
+	localparam	RAM_ADDR_WIDTH		= 10;
 	// sync_state
 	localparam	SYNC_IDLE			= 3'd0,
 				SYNC_COARSE_SEARCH	= 3'd1,
@@ -79,16 +82,33 @@ module ofdm_syn #(
 				SYNC_FINE_DONE		= 3'd4,
 				SYNC_DATA_OUTPUT	= 3'd5;
 	
-//================================================================================
-// variable
-//================================================================================
-	wire				rx_state;
+	wire			rx_state;
 	
-	reg			[2:0]	sync_state;
-	wire				coarse_sync_state;
-	wire				fine_sync_state;
+	reg		[2:0]	sync_state;
+	wire			coarse_sync_state;
+	wire			fine_sync_state;
 	
-	wire		[31:0]	u1_s_axis_ctrl_tdata;
+	wire	[31:0]	u1_s_axis_ctrl_tdata;
+	
+	wire			u2_s_axis_ctrl_tvalid	;
+	wire			u2_s_axis_ctrl_tlast	;
+	wire	[31:0]	u2_s_axis_ctrl_tdata	;
+	wire			u2_s_axis_ctrl_trdy		;
+	
+	wire			u2_s_axis_data_tvalid	;
+	wire			u2_s_axis_data_tlast	;
+	wire	[63:0]	u2_s_axis_data_tdata	;
+	wire			u2_s_axis_data_trdy		;
+	
+	wire			u2_m_axis_ctrl_tvalid	;
+	wire			u2_m_axis_ctrl_tlast	;
+	wire	[31:0]	u2_m_axis_ctrl_tdata	;
+	wire			u2_m_axis_ctrl_trdy		;
+	
+	wire			u2_m_axis_data_tvalid	;
+	wire			u2_m_axis_data_tlast	;
+	wire	[111:0]	u2_m_axis_data_tdata	;
+	wire			u2_m_axis_data_trdy		;
 	
 //================================================================================
 // s_axis_ctrl_tdata
@@ -96,7 +116,7 @@ module ofdm_syn #(
 	assign rx_state = s_axis_ctrl_tdata[0];
 	
 //================================================================================
-// sync_state
+// synchronization state
 //================================================================================
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
@@ -145,20 +165,20 @@ module ofdm_syn #(
 	end
 	
 //================================================================================
-// u1_data_dpram
+// data dpram
 //================================================================================
 	assign u1_s_axis_ctrl_tdata = {'d0,sync_state};
 	
 	data_dpram #(
-		.DATA_WIDTH			(DATA_WIDTH),
-		.SYN_DATA_WIDTH		(SYN_DATA_WIDTH)
+		.SYNC_DATA_WIDTH	(SYNC_DATA_WIDTH		),
+		.RAM_ADDR_WIDTH		(RAM_ADDR_WIDTH			)
 	)u1_data_dpram(
-		.axis_aclk			(axis_aclk),
-		.axis_areset		(axis_areset),
+		.axis_aclk			(axis_aclk				),
+		.axis_areset		(axis_areset			),
 		
 		.s_axis_ctrl_tvalid	(),
 		.s_axis_ctrl_tlast	(),
-		.s_axis_ctrl_tdata	(u1_s_axis_ctrl_tdata),
+		.s_axis_ctrl_tdata	(u1_s_axis_ctrl_tdata	),
 		.s_axis_ctrl_trdy	(),
 		
 		.s_axis_data_tvalid	(),
@@ -177,6 +197,36 @@ module ofdm_syn #(
 		.m_axis_data_trdy	()
 	);
 	
+//================================================================================
+// coarse synchronization
+//================================================================================
+	coarse_sync #(
+		.SYNC_DATA_WIDTH	(SYNC_DATA_WIDTH		),
+		.RAM_ADDR_WIDTH		(RAM_ADDR_WIDTH			)
+	)u2_coarse_sync(
+		.axis_aclk			(axis_aclk				),
+		.axis_areset		(axis_areset			),
+		
+		.s_axis_ctrl_tvalid	(u2_s_axis_ctrl_tvalid	),
+		.s_axis_ctrl_tlast	(u2_s_axis_ctrl_tlast	),
+		.s_axis_ctrl_tdata	(u2_s_axis_ctrl_tdata	),
+		.s_axis_ctrl_trdy	(u2_s_axis_ctrl_trdy	),
+		
+		.s_axis_data_tvalid	(u2_s_axis_data_tvalid	),
+		.s_axis_data_tlast	(u2_s_axis_data_tlast	),
+		.s_axis_data_tdata	(u2_s_axis_data_tdata	),
+		.s_axis_data_trdy	(u2_s_axis_data_trdy	),
+		
+		.m_axis_ctrl_tvalid	(u2_m_axis_ctrl_tvalid	),
+		.m_axis_ctrl_tlast	(u2_m_axis_ctrl_tlast	),
+		.m_axis_ctrl_tdata	(u2_m_axis_ctrl_tdata	),
+		.m_axis_ctrl_trdy	(u2_m_axis_ctrl_trdy	),
+		
+		.m_axis_data_tvalid	(u2_m_axis_data_tvalid	),
+		.m_axis_data_tlast	(u2_m_axis_data_tlast	),
+		.m_axis_data_tdata	(u2_m_axis_data_tdata	),
+		.m_axis_data_trdy	(u2_m_axis_data_trdy	)
+	);
 	
 	
 endmodule

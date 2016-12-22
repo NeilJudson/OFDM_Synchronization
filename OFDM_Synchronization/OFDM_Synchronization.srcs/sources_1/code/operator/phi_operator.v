@@ -21,8 +21,7 @@
 
 
 module phi_operator #(
-	parameter SYNC_DATA_WIDTH = 16,
-	parameter PHI_WIDTH = 2*SYNC_DATA_WIDTH+2 // 34
+	parameter SYNC_DATA_WIDTH	= 16 // <=18
 	)
 	(
 	clk			,
@@ -32,29 +31,36 @@ module phi_operator #(
 	i_work_ctrl	,
 	
 	i_data_valid,
-	i_data		,
+	i_data_i	,
+	i_data_q	,
+	i_data_dly_i,
+	i_data_dly_q,
 	
-	o_data_valid,
-	o_data
+	o_phi_data_valid,
+	o_phi_data
 	);
-	input								clk			;
-	input								reset		;
+	input					clk			;
+	input					reset		;
 	
-	input								i_work_ctrl_en;
-	input								i_work_ctrl	; // 1'b0: 停止工作；1'b1: 开始工作，进入清零状态
+	input					i_work_ctrl_en;
+	input					i_work_ctrl	; // 1'b0: 停止工作；1'b1: 开始工作，先进入清零状态
 	
-	input								i_data_valid;
-	input		[2*SYNC_DATA_WIDTH-1:0]	i_data		; // 高位虚部，低位实部。输入应是延迟后的数据
+	input					i_data_valid;
+	input	signed	[17:0]	i_data_i	;
+	input	signed	[17:0]	i_data_q	;
+	input	signed	[17:0]	i_data_dly_i;
+	input	signed	[17:0]	i_data_dly_q;
 	
-	output								o_data_valid; // 6dly
-	output		[PHI_WIDTH-1:0]			o_data		;
+	output					o_phi_data_valid; // 6dly
+	output	signed	[38:0]	o_phi_data	;
 	
 //================================================================================
 // variable
 //================================================================================
-	localparam SPRAM_ADDR_WIDTH = 6;
-	localparam SPRAM_DATA_WIDTH = 32;
-	localparam DATA_POWER_WIDTH = 2*SYNC_DATA_WIDTH; // 32
+	localparam	SPRAM_ADDR_WIDTH	= 6;
+	localparam	SPRAM_DATA_WIDTH	= 36;
+	localparam	DATA_POWER_WIDTH	= 2*SYNC_DATA_WIDTH; // 32
+	localparam	PHI_WIDTH			= 2*SYNC_DATA_WIDTH+1+2; // 35
 	// state
 	localparam	IDLE	= 2'd0,
 				CLEAR	= 2'd1,
@@ -68,6 +74,15 @@ module phi_operator #(
 	reg		signed	[17:0]					u1_i_data_q		;
 	wire									u1_o_data_valid	;
 	wire	signed	[35:0]					u1_o_data		;
+	
+	reg										u5_i_data_valid	;
+	reg		signed	[17:0]					u5_i_data_i		;
+	reg		signed	[17:0]					u5_i_data_q		;
+	wire									u5_o_data_valid	;
+	wire	signed	[35:0]					u5_o_data		;
+	
+	reg										power_add_valid	;
+	reg		signed	[DATA_POWER_WIDTH:0]	power_add		;
 	
 	reg										u2_wea			;
 	reg				[SPRAM_ADDR_WIDTH-1:0]	u2_wr_addr		;
@@ -90,11 +105,11 @@ module phi_operator #(
 	wire			[SPRAM_DATA_WIDTH-1:0]	u4_dina			;
 	wire			[SPRAM_DATA_WIDTH-1:0]	u4_douta		;
 	
-	reg										u1_o_data_valid_dly1;
-	reg										u1_o_data_valid_dly2;
-	reg		signed	[DATA_POWER_WIDTH:0]	add12			;
-	reg		signed	[DATA_POWER_WIDTH:0]	add34			;
-	reg		signed	[DATA_POWER_WIDTH+1:0]	add1234			;
+	reg										power_add_valid_dly1;
+	reg										power_add_valid_dly2;
+	reg		signed	[DATA_POWER_WIDTH+1:0]	add12			;
+	reg		signed	[DATA_POWER_WIDTH+1:0]	add34			;
+	reg		signed	[PHI_WIDTH-1:0]			add1234			;
 	
 //================================================================================
 // state
@@ -145,15 +160,13 @@ module phi_operator #(
 		end
 		else begin
 			case(state)
-				IDLE: begin
-					clear_count <= 'd0;
-				end
+				// IDLE: begin
+				// end
 				CLEAR: begin
 					clear_count <= clear_count + 1'd1;
 				end
-				WORK: begin
-					clear_count <= 'd0;
-				end
+				// WORK: begin
+				// end
 				default: begin
 					clear_count <= 'd0;
 				end
@@ -169,18 +182,25 @@ module phi_operator #(
 			u1_i_data_valid	<= 1'b0;
 			u1_i_data_i		<= 18'd0;
 			u1_i_data_q		<= 18'd0;
+			u5_i_data_valid	<= 1'b0;
+			u5_i_data_i		<= 18'd0;
+			u5_i_data_q		<= 18'd0;
 		end
 		else if((state==WORK) && (i_data_valid==1'b1)) begin
 			u1_i_data_valid	<= 1'b1;
-			u1_i_data_i		<= {{(18-SYNC_DATA_WIDTH){i_data[SYNC_DATA_WIDTH-1]}},
-								i_data[SYNC_DATA_WIDTH-1:0]};
-			u1_i_data_q		<= {{(18-SYNC_DATA_WIDTH){i_data[2*SYNC_DATA_WIDTH-1]}},
-								i_data[2*SYNC_DATA_WIDTH-1:SYNC_DATA_WIDTH]};
+			u1_i_data_i		<= i_data_i;
+			u1_i_data_q		<= i_data_q;
+			u5_i_data_valid	<= 1'b1;
+			u5_i_data_i		<= i_data_dly_i;
+			u5_i_data_q		<= i_data_dly_q;
 		end
 		else begin
 			u1_i_data_valid	<= 1'b0;
 			u1_i_data_i		<= u1_i_data_i;
 			u1_i_data_q		<= u1_i_data_q;
+			u5_i_data_valid	<= 1'b0;
+			u5_i_data_i		<= u5_i_data_i;
+			u5_i_data_q		<= u5_i_data_q;
 		end
 	end
 	
@@ -193,14 +213,40 @@ module phi_operator #(
 		.o_data			(u1_o_data		)
 	);
 	
+	complex_abs_power2_18 u5_complex_abs_power2_18(
+		.i_clk			(clk			),
+		.i_data_valid	(u5_i_data_valid),
+		.i_data_i		(u5_i_data_i	),
+		.i_data_q		(u5_i_data_q	),
+		.o_data_valid	(u5_o_data_valid), // 3dly
+		.o_data			(u5_o_data		)
+	);
+	
+	always @(posedge clk or posedge reset) begin
+		if(reset == 1'b1) begin
+			power_add_valid	<= 1'b0;
+			power_add		<= 'd0;
+		end
+		else if((u1_o_data_valid==1'b1) && (u5_o_data_valid==1'b1)) begin
+			power_add_valid	<= 1'b1;
+			power_add		<= {u1_o_data[DATA_POWER_WIDTH-1],u1_o_data[DATA_POWER_WIDTH-1:0]}
+								+ {u5_o_data[DATA_POWER_WIDTH-1],u5_o_data[DATA_POWER_WIDTH-1:0]};
+		end
+		else begin
+			power_add_valid	<= 1'b0;
+			power_add		<= power_add;
+		end
+	end
+	
 //================================================================================
 // 3级64深度延迟
 //================================================================================
+	localparam u2_rd_addr_init = 'd1;
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
 			u2_wea		<= 1'b0;
 			u2_wr_addr	<= 'd0;
-			u2_rd_addr	<= 'd1;
+			u2_rd_addr	<= u2_rd_addr_init;
 			u2_addra	<= 'd0;
 			u2_dina		<= 'd0;
 		end
@@ -209,25 +255,24 @@ module phi_operator #(
 				IDLE: begin
 					u2_wea		<= 1'b0;
 					u2_wr_addr	<= 'd0;
-					u2_rd_addr	<= 'd1;
+					u2_rd_addr	<= u2_rd_addr_init;
 					u2_addra	<= 'd0;
 					u2_dina		<= 'd0;
 				end
 				CLEAR: begin
 					u2_wea		<= 1'b1;
 					u2_wr_addr	<= 'd0;
-					u2_rd_addr	<= 'd1;
+					u2_rd_addr	<= u2_rd_addr_init;
 					u2_addra	<= u2_addra + 1'd1;
 					u2_dina		<= 'd0;
 				end
 				WORK: begin
-					if(u1_o_data_valid == 1'b1) begin
+					if(power_add_valid == 1'b1) begin
 						u2_wea		<= 1'b1;
 						u2_wr_addr	<= u2_wr_addr + 1'd1;
 						u2_rd_addr	<= u2_rd_addr + 1'd1;
 						u2_addra	<= u2_wr_addr + 1'd1;
-						u2_dina		<= {{(SPRAM_DATA_WIDTH-DATA_POWER_WIDTH){u1_o_data[DATA_POWER_WIDTH-1]}},
-										u1_o_data[DATA_POWER_WIDTH-1:0]};
+						u2_dina		<= {{(SPRAM_DATA_WIDTH-DATA_POWER_WIDTH-1){1'b0}},power_add};
 					end
 					else begin
 						u2_wea		<= 1'b0;
@@ -240,49 +285,48 @@ module phi_operator #(
 				default: begin
 					u2_wea		<= 1'b0;
 					u2_wr_addr	<= 'd0;
-					u2_rd_addr	<= 'd1;
+					u2_rd_addr	<= u2_rd_addr_init;
 					u2_addra	<= 'd0;
 					u2_dina		<= 'd0;
 				end
 			endcase
 		end
-		
 	end
 	
 	assign u3_wea		= u2_wea	;
 	assign u3_wr_addr	= u2_wr_addr;
 	assign u3_rd_addr	= u2_rd_addr;
 	assign u3_addra		= u2_addra	;
-	assign u3_dina		= u2_dina	;
+	assign u3_dina		= u2_douta	;
 	
 	assign u4_wea		= u2_wea	;
 	assign u4_wr_addr	= u2_wr_addr;
 	assign u4_rd_addr	= u2_rd_addr;
 	assign u4_addra		= u2_addra	;
-	assign u4_dina		= u3_dina	;
+	assign u4_dina		= u3_douta	;
 	
-	spram_32_64_ip u2_spram_32_64_ip (
+	spram_36_64_ip u2_spram_36_64_ip (
 		.clka	(clk		),	// input clka;
 		.wea	(u2_wea		),	// input [0:0]wea;
 		.addra	(u2_addra	),	// input [5:0]addra;
-		.dina	(u2_dina	),	// input [31:0]dina;
-		.douta	(u2_douta	)	// output [31:0]douta;
+		.dina	(u2_dina	),	// input [35:0]dina;
+		.douta	(u2_douta	)	// output [35:0]douta;
 	);
 	
-	spram_32_64_ip u3_spram_32_64_ip (
+	spram_36_64_ip u3_spram_36_64_ip (
 		.clka	(clk		),	// input clka;
 		.wea	(u3_wea		),	// input [0:0]wea;
 		.addra	(u3_addra	),	// input [5:0]addra;
-		.dina	(u3_dina	),	// input [31:0]dina;
-		.douta	(u3_douta	)	// output [31:0]douta;
+		.dina	(u3_dina	),	// input [35:0]dina;
+		.douta	(u3_douta	)	// output [35:0]douta;
 	);
 	
-	spram_32_64_ip u4_spram_32_64_ip (
+	spram_36_64_ip u4_spram_36_64_ip (
 		.clka	(clk		),	// input clka;
 		.wea	(u4_wea		),	// input [0:0]wea;
 		.addra	(u4_addra	),	// input [5:0]addra;
-		.dina	(u4_dina	),	// input [31:0]dina;
-		.douta	(u4_douta	)	// output [31:0]douta;
+		.dina	(u4_dina	),	// input [35:0]dina;
+		.douta	(u4_douta	)	// output [35:0]douta;
 	);
 	
 //================================================================================
@@ -290,12 +334,12 @@ module phi_operator #(
 //================================================================================
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
-			u1_o_data_valid_dly1 <= 1'b0;
-			u1_o_data_valid_dly2 <= 1'b0;
+			power_add_valid_dly1 <= 1'b0;
+			power_add_valid_dly2 <= 1'b0;
 		end
 		else begin
-			u1_o_data_valid_dly1 <= u1_o_data_valid;
-			u1_o_data_valid_dly2 <= u1_o_data_valid_dly1;
+			power_add_valid_dly1 <= power_add_valid;
+			power_add_valid_dly2 <= power_add_valid_dly1;
 		end
 	end
 	
@@ -304,11 +348,11 @@ module phi_operator #(
 			add12 <= 'd0;
 			add34 <= 'd0;
 		end
-		else if(u1_o_data_valid == 1'b1) begin
-			add12 <= u1_o_data[DATA_POWER_WIDTH-1:0]
-					+ u2_douta[DATA_POWER_WIDTH-1:0];
-			add34 <= u3_douta[DATA_POWER_WIDTH-1:0]
-					+ u4_douta[DATA_POWER_WIDTH-1:0];
+		else if(power_add_valid == 1'b1) begin
+			add12 <= {power_add[DATA_POWER_WIDTH],power_add[DATA_POWER_WIDTH:0]}
+					+ {u2_douta[DATA_POWER_WIDTH],u2_douta[DATA_POWER_WIDTH:0]};
+			add34 <= {u3_douta[DATA_POWER_WIDTH],u3_douta[DATA_POWER_WIDTH:0]}
+					+ {u4_douta[DATA_POWER_WIDTH],u4_douta[DATA_POWER_WIDTH:0]};
 		end
 		else begin
 			add12 <= add12;
@@ -320,15 +364,15 @@ module phi_operator #(
 		if(reset == 1'b1) begin
 			add1234 <= 'd0;
 		end
-		else if(u1_o_data_valid_dly1 == 1'b1) begin
-			add1234 <= add12 + add34;
+		else if(power_add_valid_dly1 == 1'b1) begin
+			add1234 <= {add12[DATA_POWER_WIDTH+1],add12} + {add34[DATA_POWER_WIDTH+1],add34};
 		end
 		else begin
 			add1234 <= add1234;
 		end
 	end
 	
-	assign o_data_valid = u1_o_data_valid_dly2;
-	assign o_data = add1234;
+	assign o_phi_data_valid	= power_add_valid_dly2;
+	assign o_phi_data		= {{(39-PHI_WIDTH){add1234[PHI_WIDTH-1]}},add1234};
 	
 endmodule

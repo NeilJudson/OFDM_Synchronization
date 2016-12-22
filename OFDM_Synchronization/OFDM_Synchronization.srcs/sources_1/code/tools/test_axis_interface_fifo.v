@@ -40,7 +40,7 @@ module test_axis_interface_fifo;
 
 	// Instantiate the Unit Under Test (UUT)
 	axis_interface_fifo #(
-		.DATA_WIDTH(6'd32)
+		.DATA_WIDTH(32)
 	)uut(
 		.axis_aclk(axis_aclk), 
 		.axis_areset(axis_areset), 

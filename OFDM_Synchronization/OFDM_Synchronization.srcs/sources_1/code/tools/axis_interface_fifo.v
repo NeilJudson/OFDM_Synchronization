@@ -21,7 +21,8 @@
 
 
 module axis_interface_fifo #(
-	parameter DATA_WIDTH = 6'd32
+	parameter DATA_IN_WIDTH		= 32,
+	parameter DATA_OUT_WIDTH	= 32
 	)
 	(
 	axis_aclk	,
@@ -37,42 +38,42 @@ module axis_interface_fifo #(
 	m_axis_data_tdata	,
 	m_axis_data_trdy
 	);
-	input							axis_aclk	;
-	input							axis_areset	;
+	input								axis_aclk	;
+	input								axis_areset	;
 	
-	input							data_valid	;
-	input							data_last	;
-	input		[DATA_WIDTH-1:0]	data		;
-	output	reg						almost_full	;
+	input								data_valid	;
+	input								data_last	;
+	input		[DATA_IN_WIDTH-1:0]		data		;
+	output	reg							almost_full	;
 	
-	output	reg						m_axis_data_tvalid	;
-	output							m_axis_data_tlast	;
-	output		[DATA_WIDTH-1:0]	m_axis_data_tdata	;
-	input							m_axis_data_trdy	;
-	
-	localparam DATA_DEPTH = 4'd8;
+	output	reg							m_axis_data_tvalid	;
+	output								m_axis_data_tlast	;
+	output		[DATA_OUT_WIDTH-1:0]	m_axis_data_tdata	;
+	input								m_axis_data_trdy	;
 	
 //================================================================================
 // variable
 //================================================================================
-	reg			[DATA_WIDTH:0]		ram[DATA_DEPTH-1:0];
+	localparam DATA_DEPTH = 8;
+	
+	reg			[DATA_IN_WIDTH:0]	ram[DATA_DEPTH-1:0];
 	reg			[2:0]				waddr;
 	reg			[2:0]				raddr;
-	reg			[DATA_WIDTH:0]		rdata;
+	reg			[DATA_IN_WIDTH:0]	rdata;
 	
 // write
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
-			waddr <= 3'd0;
-			ram[0][DATA_WIDTH:0] <= {1'b0,{DATA_WIDTH{1'b0}}};
+			waddr					<= 3'd0;
+			ram[0][DATA_IN_WIDTH:0]	<= 'd0;
 		end
 		else if(data_valid == 1'b1) begin
-			waddr <= waddr + 1'b1;
-			ram[waddr][DATA_WIDTH:0] <= {data_last,data};
+			waddr						<= waddr + 1'd1;
+			ram[waddr][DATA_IN_WIDTH:0]	<= {data_last,data};
 		end
 		else begin
-			waddr <= waddr;
-			ram[waddr][DATA_WIDTH:0] <= ram[waddr][DATA_WIDTH:0];
+			waddr						<= waddr;
+			ram[waddr][DATA_IN_WIDTH:0]	<= ram[waddr][DATA_IN_WIDTH:0];
 		end
 	end
 	
@@ -80,10 +81,10 @@ module axis_interface_fifo #(
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
 			raddr <= 3'd0;
-			rdata <= {1'b0,{DATA_WIDTH{1'b0}}};
+			rdata <= 'd0;
 		end
 		else if((waddr!=raddr) && ((m_axis_data_tvalid==1'b0)||(m_axis_data_trdy==1'b1))) begin
-			raddr <= raddr + 1'b1;
+			raddr <= raddr + 1'd1;
 			rdata <= ram[raddr];
 		end
 		else begin
@@ -106,8 +107,8 @@ module axis_interface_fifo #(
 			m_axis_data_tvalid <= 1'b0;
 		end
 	end
-	assign m_axis_data_tlast = rdata[DATA_WIDTH];
-	assign m_axis_data_tdata = rdata[DATA_WIDTH-1:0];
+	assign m_axis_data_tlast = rdata[DATA_IN_WIDTH];
+	assign m_axis_data_tdata = {{(DATA_OUT_WIDTH-DATA_IN_WIDTH){1'b0}},rdata[DATA_IN_WIDTH-1:0]};
 	
 	always @(posedge axis_aclk or negedge axis_areset) begin
 		if(axis_areset == 1'b1)

@@ -1,7 +1,0 @@
-Running: xsim.dir/test_psi_phi_operator_behav/xsimk.exe -simmode gui -wdb test_psi_phi_operator_behav.wdb -simrunnum 0 -socket 52156
-Design successfully loaded
-Design Loading Memory Usage: 20756 KB (Peak: 20756 KB)
-Design Loading CPU Usage: 156 ms
-Simulation completed
-Simulation Memory Usage: 25632 KB (Peak: 25632 KB)
-Simulation CPU Usage: 1231 ms

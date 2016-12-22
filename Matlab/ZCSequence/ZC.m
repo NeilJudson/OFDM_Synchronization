@@ -13,7 +13,7 @@ errMsg = '';
 if(N ~= fix(N)), errMsg = 'Input error: N is not an integer.'; end
 if(M ~= fix(M)), errMsg = 'Input error: M is not an integer.'; end
 % if(mod(N,M) == 0), errMsg = 'input error: N can be divided exactly by M.'; end
-if ~isempty(errMsg), error('JiaWeiwei:InputCheck',errMsg); end
+if ~isempty(errMsg), error('NeilJudson:InputCheck',errMsg); end
 
 %%
 k = 1:1:N;

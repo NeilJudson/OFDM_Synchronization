@@ -35,34 +35,46 @@ module complex_abs_power2_18(
 	output					o_data_valid;
 	output	signed	[35:0]	o_data;
 	
-	reg						i_data_valid_dly1;
-	reg						i_data_valid_dly2;
-	reg						i_data_valid_dly3;
-	wire	signed	[47:0]	u1_p;
-	wire	signed	[47:0]	u2_p;
-
+//================================================================================
+// variable
+//================================================================================
+	reg				[2:0]	i_data_valid_reg;
+	
+	wire	signed	[17:0]	u1_A;
+	wire	signed	[17:0]	u1_B;
+	wire	signed	[47:0]	u1_P;
+	
+	wire	signed	[17:0]	u2_A;
+	wire	signed	[17:0]	u2_B;
+	wire	signed	[47:0]	u2_C;
+	wire	signed	[47:0]	u2_P;
+	
 	always @(posedge i_clk) begin
-		i_data_valid_dly1 <= i_data_valid;
-		i_data_valid_dly2 <= i_data_valid_dly1;
-		i_data_valid_dly3 <= i_data_valid_dly2;
+		i_data_valid_reg <= {i_data_valid_reg[1:0],i_data_valid};
 	end
 	
-	dsp48_ip_mul u1_dsp48_ip_mul(
-		.CLK	(i_clk		),	// input CLK;
-		.A		(i_data_i	),	// input [17:0]A;
-		.B		(i_data_i	),	// input [17:0]B;
-		.P		(u1_p		)	// output [47:0]P; // 2dly
+	assign u1_A = i_data_i;
+	assign u1_B = i_data_i;
+	assign u2_A = i_data_q;
+	assign u2_B = i_data_q;
+	assign u2_C = u1_P;
+	
+	dsp48_mul_ip u1_dsp48_mul_ip(
+		.CLK	(i_clk	),	// input CLK;
+		.A		(u1_A	),	// input [17:0]A;
+		.B		(u1_B	),	// input [17:0]B;
+		.P		(u1_P	)	// output [47:0]P; // 2dly
 	);
 	
-	dsp48_ip_mul_add u2_dsp48_ip_mul_add(
-		.CLK	(i_clk		),	// input CLK;
-		.A		(i_data_q	),	// input [17:0]A;
-		.B		(i_data_q	),	// input [17:0]B;
-		.C		(u1_p		),	// input [47:0]C;
-		.P		(u2_p		)	// output [47:0]P; // 3dly
+	dsp48_mul_add_ip u2_dsp48_mul_add_ip(
+		.CLK	(i_clk	),	// input CLK;
+		.A		(u2_A	),	// input [17:0]A;
+		.B		(u2_B	),	// input [17:0]B;
+		.C		(u2_C	),	// input [47:0]C;
+		.P		(u2_P	)	// output [47:0]P; // 3dly
 	);
 	
-	assign o_data_valid = i_data_valid_dly3;
-	assign o_data = u2_p[35:0];
+	assign o_data_valid	= i_data_valid_reg[2];
+	assign o_data		= u2_P[35:0];
 
 endmodule

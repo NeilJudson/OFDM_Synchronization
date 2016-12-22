@@ -1,0 +1,334 @@
+
+*** Running vivado
+    with args -log dsp48_mul_add_ip.vds -m64 -mode batch -messageDb vivado.pb -notrace -source dsp48_mul_add_ip.tcl
+
+
+****** Vivado v2015.2.1 (64-bit)
+  **** SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
+  **** IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source dsp48_mul_add_ip.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/15.2/Vivado/2015.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'dsp48_mul_add_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/dsp48_mul_add_ip.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'dsp48_mul_add_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/dsp48_mul_add_ip_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'dsp48_mul_add_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/dsp48_mul_add_ip_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'dsp48_mul_add_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/dsp48_mul_add_ip_funcsim.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'dsp48_mul_add_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/dsp48_mul_add_ip_funcsim.vhdl'. Please regenerate to continue.
+Command: synth_design -top dsp48_mul_add_ip -part xc7z045fbg676-3 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 255.516 ; gain = 69.180
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'dsp48_mul_add_ip' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/synth/dsp48_mul_add_ip.vhd:69]
+INFO: [Synth 8-3491] module 'xbip_dsp48_macro_v3_0' declared at 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0.vhd:109' bound to instance 'U0' of component 'xbip_dsp48_macro_v3_0' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/synth/dsp48_mul_add_ip.vhd:203]
+INFO: [Synth 8-638] synthesizing module 'xbip_dsp48_macro_v3_0' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0.vhd:229]
+INFO: [Synth 8-3491] module 'xbip_dsp48_macro_v3_0_viv' declared at 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:4318' bound to instance 'i_synth' of component 'xbip_dsp48_macro_v3_0_viv' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0.vhd:235]
+INFO: [Synth 8-638] synthesizing module 'xbip_dsp48_macro_v3_0_viv' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:4450]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:818]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:821]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:824]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:828]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:833]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:837]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:845]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:848]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:851]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:854]
+INFO: [Synth 8-638] synthesizing module 'xbip_dsp48_macro_synth' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:3223]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-5534] Detected attribute (* rom_style = "distributed" *) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:3392]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized0' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized0' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized1' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized1' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized2' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized2' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized3' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized3' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized4' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized4' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized5' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized5' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized6' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized6' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized7' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized7' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized8' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized8' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized9' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized9' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized10' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized10' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'xbip_pipe_v3_0_viv__parameterized11' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:581]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'xbip_pipe_v3_0_viv__parameterized11' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:299]
+INFO: [Synth 8-638] synthesizing module 'xbip_dsp48e1_wrapper_v3_0' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1649]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1675]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1678]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1681]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1684]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1687]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1690]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1693]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1696]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1699]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1702]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1705]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1708]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1711]
+INFO: [Synth 8-113] binding component instance 'i_primitive' to cell 'DSP48E1' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'xbip_dsp48e1_wrapper_v3_0' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd:1649]
+INFO: [Synth 8-256] done synthesizing module 'xbip_dsp48_macro_synth' (3#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:3223]
+INFO: [Synth 8-256] done synthesizing module 'xbip_dsp48_macro_v3_0_viv' (4#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0_vh_rfs.vhd:4450]
+INFO: [Synth 8-256] done synthesizing module 'xbip_dsp48_macro_v3_0' (5#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/xbip_dsp48_macro_v3_0/hdl/xbip_dsp48_macro_v3_0.vhd:229]
+INFO: [Synth 8-256] done synthesizing module 'dsp48_mul_add_ip' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/synth/dsp48_mul_add_ip.vhd:69]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 293.836 ; gain = 107.500
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 293.836 ; gain = 107.500
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z045fbg676-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/dsp48_mul_add_ip_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/dsp48_mul_add_ip_ooc.xdc] for cell 'U0'
+Parsing XDC File [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/dsp48_mul_add_ip_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/dsp48_mul_add_ip_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 585.953 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 585.953 ; gain = 399.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z045fbg676-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 585.953 ; gain = 399.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/dsp48_mul_add_ip_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 585.953 ; gain = 399.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 585.953 ; gain = 399.617
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 900 (col length:140)
+BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 585.953 ; gain = 399.617
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 585.953 ; gain = 399.617
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 585.953 ; gain = 399.617
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 585.953 ; gain = 399.617
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 585.953 ; gain = 399.617
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 585.953 ; gain = 399.617
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 662.605 ; gain = 476.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 662.605 ; gain = 476.270
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 673.230 ; gain = 486.895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 673.230 ; gain = 486.895
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 673.230 ; gain = 486.895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 673.230 ; gain = 486.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 673.230 ; gain = 486.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 673.230 ; gain = 486.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |DSP48E1 |     1|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 673.230 ; gain = 486.895
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 673.230 ; gain = 169.805
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 673.230 ; gain = 486.895
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/dsp48_mul_add_ip_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/dsp48_mul_add_ip/dsp48_mul_add_ip_ooc.xdc] for cell 'U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+56 Infos, 56 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 673.230 ; gain = 461.922
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.093 . Memory (MB): peak = 673.230 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 16 14:59:39 2016...

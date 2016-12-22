@@ -42,7 +42,7 @@ module test_data_dpram;
 	wire [31:0] m_axis_ctrl_tdata;
 	wire m_axis_data_tvalid;
 	wire m_axis_data_tlast;
-	wire [31:0] m_axis_data_tdata;
+	wire [63:0] m_axis_data_tdata;
 	
 	reg [39:0] count;
 
