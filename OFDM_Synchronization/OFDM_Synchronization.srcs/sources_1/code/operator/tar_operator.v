@@ -318,8 +318,8 @@ module tar_operator #(
 	assign power_valid	= u2_o_data_valid;
 	assign psi_power	= u2_o_data[PSI_POWER_WIDTH-1:0];
 	assign phi_power	= u3_P[PHI_POWER_WIDTH-1:0];
-	assign test_psi_power = psi_power[65:2]; // test
-	assign test_phi_power = phi_power[67:4]; // test
+	assign test_psi_power = psi_power[63:0]; // test
+	assign test_phi_power = phi_power[65:2]; // test
 	
 //================================================================================
 // tar
