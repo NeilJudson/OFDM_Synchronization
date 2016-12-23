@@ -34,8 +34,8 @@ set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_S
 read_verilog -library xil_defaultlib {
   E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_42.v
   E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_18.v
-  E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/tar_operator.v
   E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/psi_operator.v
+  E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/tar_operator.v
   E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/phi_operator.v
   E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v
   E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/test_coarse_sync.v

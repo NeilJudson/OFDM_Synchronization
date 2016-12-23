@@ -21,7 +21,8 @@
 
 
 module psi_operator #(
-	parameter SYNC_DATA_WIDTH	= 16 // <=18
+	parameter SYNC_DATA_WIDTH	= 16, // <=18
+	parameter RAM_ADDR_WIDTH	= 10
 	)
 	(
 	clk			,
@@ -35,10 +36,16 @@ module psi_operator #(
 	i_data_q	,
 	i_data_dly_i,
 	i_data_dly_q,
+	i_data_dly_addr,
 	
 	o_psi_data_valid,
 	o_psi_data_i,
-	o_psi_data_q
+	o_psi_data_q,
+	
+	o_self_corr_valid,
+	o_self_corr_i,
+	o_self_corr_q,
+	o_self_corr_addr
 	);
 	input					clk			;
 	input					reset		;
@@ -51,10 +58,16 @@ module psi_operator #(
 	input	signed	[17:0]	i_data_q	;
 	input	signed	[17:0]	i_data_dly_i;
 	input	signed	[17:0]	i_data_dly_q;
+	input			[15:0]	i_data_dly_addr;
 	
 	output					o_psi_data_valid; // 9dly
 	output	signed	[37:0]	o_psi_data_i;
 	output	signed	[37:0]	o_psi_data_q;
+	
+	output					o_self_corr_valid;
+	output	signed	[35:0]	o_self_corr_i;
+	output	signed	[35:0]	o_self_corr_q;
+	output			[15:0]	o_self_corr_addr;
 	
 //================================================================================
 // variable
@@ -90,14 +103,14 @@ module psi_operator #(
 	wire			[SPRAM_ADDR_WIDTH-1:0]	u3_wr_addr		;
 	wire			[SPRAM_ADDR_WIDTH-1:0]	u3_rd_addr		;
 	wire			[SPRAM_ADDR_WIDTH-1:0]	u3_addra		;
-	wire			[SPRAM_DATA_WIDTH-1:0]	u3_dina			;
+	reg				[SPRAM_DATA_WIDTH-1:0]	u3_dina			;
 	wire			[SPRAM_DATA_WIDTH-1:0]	u3_douta		;
 
 	wire									u4_wea			;
 	wire			[SPRAM_ADDR_WIDTH-1:0]	u4_wr_addr		;
 	wire			[SPRAM_ADDR_WIDTH-1:0]	u4_rd_addr		;
 	wire			[SPRAM_ADDR_WIDTH-1:0]	u4_addra		;
-	wire			[SPRAM_DATA_WIDTH-1:0]	u4_dina			;
+	reg				[SPRAM_DATA_WIDTH-1:0]	u4_dina			;
 	wire			[SPRAM_DATA_WIDTH-1:0]	u4_douta		;
 	
 	reg										u1_m_axis_dout_tvalid_dly1;
@@ -108,6 +121,8 @@ module psi_operator #(
 	reg		signed	[DATA_MUL_WIDTH:0]		add12_q				;
 	reg		signed	[DATA_MUL_WIDTH:0]		add34_q				;
 	reg		signed	[PSI_WIDTH-1:0]			add1234_q			;
+	
+	reg				[RAM_ADDR_WIDTH-1:0]	self_corr_addr		;
 
 //================================================================================
 // state
@@ -227,6 +242,8 @@ module psi_operator #(
 					u2_rd_addr	<= u2_rd_addr_init;
 					u2_addra	<= 'd0;
 					u2_dina		<= 'd0;
+					u3_dina		<= 'd0;
+					u4_dina		<= 'd0;
 				end
 				CLEAR: begin
 					u2_wea		<= 1'b1;
@@ -234,6 +251,8 @@ module psi_operator #(
 					u2_rd_addr	<= u2_rd_addr_init;
 					u2_addra	<= u2_addra + 1'd1;
 					u2_dina		<= 'd0;
+					u3_dina		<= 'd0;
+					u4_dina		<= 'd0;
 				end
 				WORK: begin
 					if(u1_m_axis_dout_tvalid == 1'b1) begin
@@ -243,6 +262,8 @@ module psi_operator #(
 						u2_addra	<= u2_wr_addr + 1'd1;
 						u2_dina		<= {u1_m_axis_dout_tdata[40+SPRAM_DATA_WIDTH/2-1:40],
 										u1_m_axis_dout_tdata[SPRAM_DATA_WIDTH/2-1:0]};
+						u3_dina		<= u2_douta;
+						u4_dina		<= u3_douta;
 					end
 					else begin
 						u2_wea		<= 1'b0;
@@ -250,6 +271,8 @@ module psi_operator #(
 						u2_rd_addr	<= u2_rd_addr;
 						u2_addra	<= u2_rd_addr;
 						u2_dina		<= u2_dina;
+						u3_dina		<= u3_dina;
+						u4_dina		<= u4_dina;
 					end
 				end
 				default: begin
@@ -258,6 +281,8 @@ module psi_operator #(
 					u2_rd_addr	<= u2_rd_addr_init;
 					u2_addra	<= 'd0;
 					u2_dina		<= 'd0;
+					u3_dina		<= 'd0;
+					u4_dina		<= 'd0;
 				end
 			endcase
 		end
@@ -267,13 +292,11 @@ module psi_operator #(
 	assign u3_wr_addr	= u2_wr_addr;
 	assign u3_rd_addr	= u2_rd_addr;
 	assign u3_addra		= u2_addra	;
-	assign u3_dina		= u2_douta	;
 	
 	assign u4_wea		= u2_wea	;
 	assign u4_wr_addr	= u2_wr_addr;
 	assign u4_rd_addr	= u2_rd_addr;
 	assign u4_addra		= u2_addra	;
-	assign u4_dina		= u3_douta	;
 	
 	spram_72_64_ip u2_spram_72_64_ip (
 		.clka	(clk		),	// input clka;
@@ -356,5 +379,25 @@ module psi_operator #(
 	assign o_psi_data_valid	= u1_m_axis_dout_tvalid_dly2;
 	assign o_psi_data_i		= {{(38-PSI_WIDTH){add1234_i[PSI_WIDTH-1]}},add1234_i};
 	assign o_psi_data_q		= {{(38-PSI_WIDTH){add1234_q[PSI_WIDTH-1]}},add1234_q};
+	
+//================================================================================
+// 
+//================================================================================
+	always @(posedge clk or posedge reset) begin
+		if(reset == 1'b1) begin
+			self_corr_addr <= 'd0;
+		end
+		else if(u1_m_axis_dout_tvalid == 1'b1) begin
+			self_corr_addr <= i_data_dly_addr[RAM_ADDR_WIDTH-1:0] - 8'd193;
+		end
+		else begin
+			self_corr_addr <= self_corr_addr;
+		end
+	end
+	
+	assign o_self_corr_valid	= u1_m_axis_dout_tvalid_dly1;
+	assign o_self_corr_i		= u4_douta[35:0];
+	assign o_self_corr_q		= u4_douta[SPRAM_DATA_WIDTH/2+35:SPRAM_DATA_WIDTH/2];
+	assign o_self_corr_addr		= {{(16-RAM_ADDR_WIDTH){1'b0}},self_corr_addr};
 	
 endmodule

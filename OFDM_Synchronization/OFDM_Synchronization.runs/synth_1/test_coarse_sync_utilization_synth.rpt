@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-| Date         : Wed Dec 21 20:35:06 2016
+| Date         : Fri Dec 23 17:52:47 2016
 | Host         : txjs-130 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file test_coarse_sync_utilization_synth.rpt -pb test_coarse_sync_utilization_synth.pb
 | Design       : test_coarse_sync
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 4667 |     0 |    218600 |  2.13 |
-|   LUT as Logic             | 4664 |     0 |    218600 |  2.13 |
+| Slice LUTs*                | 4743 |     0 |    218600 |  2.17 |
+|   LUT as Logic             | 4740 |     0 |    218600 |  2.17 |
 |   LUT as Memory            |    3 |     0 |     70400 | <0.01 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |    3 |     0 |           |       |
-| Slice Registers            | 1698 |     0 |    437200 |  0.39 |
-|   Register as Flip Flop    | 1698 |     0 |    437200 |  0.39 |
+| Slice Registers            | 1843 |     0 |    437200 |  0.42 |
+|   Register as Flip Flop    | 1843 |     0 |    437200 |  0.42 |
 |   Register as Latch        |    0 |     0 |    437200 |  0.00 |
 | F7 Muxes                   | 1536 |     0 |    109300 |  1.41 |
 | F8 Muxes                   |  768 |     0 |     54650 |  1.41 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 1698  |          Yes |       Reset |            - |
+| 1843  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -154,10 +154,10 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     | 3503 |                 LUT |
-| FDRE     | 1698 |        Flop & Latch |
+| LUT6     | 3504 |                 LUT |
+| FDRE     | 1843 |        Flop & Latch |
 | MUXF7    | 1536 |               MuxFx |
-| LUT2     |  861 |                 LUT |
+| LUT2     | 1008 |                 LUT |
 | MUXF8    |  768 |               MuxFx |
 | LUT3     |  260 |                 LUT |
 | CARRY4   |  218 |          CarryLogic |

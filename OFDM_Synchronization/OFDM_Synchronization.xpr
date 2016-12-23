@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="G:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.xpr">
+<Project Version="7" Minor="5" Path="E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="89b8eba060cf4f92a4fcc10f3e2a1a35"/>
@@ -33,14 +33,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/code/operator/tar_operator.v">
+      <File Path="$PSRCDIR/sources_1/code/operator/psi_operator.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/code/operator/psi_operator.v">
+      <File Path="$PSRCDIR/sources_1/code/operator/tar_operator.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

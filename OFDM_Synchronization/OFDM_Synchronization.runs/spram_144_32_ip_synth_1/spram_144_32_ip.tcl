@@ -4,6 +4,7 @@
 
 set_param simulator.modelsimInstallPath D:/modeltech64_10.4/win64
 debug::add_scope template.lib 1
+set_msg_config -id {Common-41} -limit 4294967295
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7z045fbg676-3
@@ -15,8 +16,9 @@ set_property webtalk.parent_dir E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_S
 set_property parent.project_path E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-read_ip e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/spram_144_32_ip.xci
-set_property is_locked true [get_files e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/spram_144_32_ip.xci]
+read_ip E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/spram_144_32_ip.xci
+set_property used_in_implementation false [get_files -all e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/spram_144_32_ip.dcp]
+set_property is_locked true [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/spram_144_32_ip.xci]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
@@ -25,27 +27,27 @@ rename_ref -prefix_all spram_144_32_ip_
 write_checkpoint -noxdef spram_144_32_ip.dcp
 catch { report_utilization -file spram_144_32_ip_utilization_synth.rpt -pb spram_144_32_ip_utilization_synth.pb }
 if { [catch {
-  file copy -force E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_144_32_ip_synth_1/spram_144_32_ip.dcp e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/spram_144_32_ip.dcp
+  file copy -force E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/spram_144_32_ip_synth_1/spram_144_32_ip.dcp E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/spram_144_32_ip.dcp
 } _RESULT ] } { 
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 if { [catch {
-  write_verilog -force -mode synth_stub e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/spram_144_32_ip_stub.v
+  write_verilog -force -mode synth_stub E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/spram_144_32_ip_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 if { [catch {
-  write_vhdl -force -mode synth_stub e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/spram_144_32_ip_stub.vhdl
+  write_vhdl -force -mode synth_stub E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/spram_144_32_ip_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 if { [catch {
-  write_verilog -force -mode funcsim e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/spram_144_32_ip_funcsim.v
+  write_verilog -force -mode funcsim E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/spram_144_32_ip_funcsim.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 if { [catch {
-  write_vhdl -force -mode funcsim e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/spram_144_32_ip_funcsim.vhdl
+  write_vhdl -force -mode funcsim E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/spram_144_32_ip_funcsim.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }

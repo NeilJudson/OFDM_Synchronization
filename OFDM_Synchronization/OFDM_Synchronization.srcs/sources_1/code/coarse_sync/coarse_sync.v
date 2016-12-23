@@ -39,16 +39,13 @@ module coarse_sync #(
 	s_axis_data_taddr	,
 	s_axis_data_trdy	,
 	
-	m_axis_ctrl_tvalid	,
-	m_axis_ctrl_tlast	,
-	m_axis_ctrl_tdata	,
-	m_axis_ctrl_trdy	,
-	
 	m_axis_data_tvalid	,
 	m_axis_data_tlast	,
 	m_axis_data_tdata	,
 	m_axis_data_taddr	,
-	m_axis_data_trdy
+	m_axis_data_trdy	,
+	
+	o_coarse_sync_ok
     );
 	input			axis_aclk			;
 	input			axis_areset			;
@@ -64,16 +61,13 @@ module coarse_sync #(
 	input	[15:0]	s_axis_data_taddr	;
 	output			s_axis_data_trdy	;
 	
-	output			m_axis_ctrl_tvalid	;
-	output			m_axis_ctrl_tlast	;
-	output	[31:0]	m_axis_ctrl_tdata	;
-	input			m_axis_ctrl_trdy	;
-	
 	output			m_axis_data_tvalid	;
 	output			m_axis_data_tlast	;
 	output	[119:0]	m_axis_data_tdata	; // 高位为phi数据，低位为psi数据，40bit
 	output	[15:0]	m_axis_data_taddr	;
 	input			m_axis_data_trdy	;
+	
+	output			o_coarse_sync_ok	;
 	
 //================================================================================
 // variable
@@ -106,9 +100,14 @@ module coarse_sync #(
 	reg		signed	[17:0]					u1_i_data_q			;
 	reg		signed	[17:0]					u1_i_data_dly_i		;
 	reg		signed	[17:0]					u1_i_data_dly_q		;
+	reg				[15:0]					u1_i_data_dly_addr	;
 	wire									u1_o_psi_data_valid	;
 	wire	signed	[37:0]					u1_o_psi_data_i		;
 	wire	signed	[37:0]					u1_o_psi_data_q		;
+	wire									u1_o_self_corr_valid;
+	wire	signed	[35:0]					u1_o_self_corr_i	;
+	wire	signed	[35:0]					u1_o_self_corr_q	;
+	wire	signed	[15:0]					u1_o_self_corr_addr	;
 	
 	wire									u2_i_work_ctrl_en	;
 	wire									u2_i_work_ctrl		;
@@ -117,6 +116,7 @@ module coarse_sync #(
 	wire	signed	[17:0]					u2_i_data_q			;
 	wire	signed	[17:0]					u2_i_data_dly_i		;
 	wire	signed	[17:0]					u2_i_data_dly_q		;
+	wire			[15:0]					u2_i_data_dly_addr	;
 	wire									u2_o_phi_data_valid	;
 	wire	signed	[38:0]					u2_o_phi_data		;
 	
@@ -141,6 +141,8 @@ module coarse_sync #(
 	reg										rd_wea_dly2			;
 	reg				[RAM_ADDR_WIDTH-1:0]	data_addr			;
 	
+	reg										coarse_sync_ok		;
+	
 	wire			[63:0]					test_u3_o_tar_data	; // test
 	
 //================================================================================
@@ -153,10 +155,24 @@ module coarse_sync #(
 		end
 		else if(s_axis_ctrl_tvalid == 1'b1) begin
 			case(s_axis_ctrl_tdata[31:24])
-				8'd1: begin
+				8'b0000_0001: begin
 					ctrl_work_flag	<= ~ctrl_work_flag;
 					ctrl_work_data	<= s_axis_ctrl_tdata[0]; // 1'b0: 停止工作；1'b1: 开始工作
 				end
+				// 8'b0000_0010: begin
+				// end
+				// 8'b0000_0100: begin
+				// end
+				// 8'b0000_1000: begin
+				// end
+				// 8'b0001_0000: begin
+				// end
+				// 8'b0010_0000: begin
+				// end
+				// 8'b0100_0000: begin
+				// end
+				// 8'b1000_0000: begin
+				// end
 			endcase
 		end
 		else begin
@@ -181,16 +197,16 @@ module coarse_sync #(
 		end
 		else begin
 			case(coarse_sync_state)
-				// COARSE_SYNC_IDLE: begin
-					// if(coarse_sync_state_dly1 == COARSE_SYNC_SEC) begin
-						// ctrl_work_en	<= 1'b1;
-						// ctrl_work		<= 1'b0;
-					// end
-					// else begin
-						// ctrl_work_en	<= ctrl_work_flag^ctrl_work_flag_dly1;
-						// ctrl_work		<= ctrl_work_data;
-					// end
-				// end
+				COARSE_SYNC_IDLE: begin
+					if(coarse_sync_state_dly1 == COARSE_SYNC_SEC) begin
+						ctrl_work_en	<= 1'b1;
+						ctrl_work		<= 1'b0;
+					end
+					else begin
+						ctrl_work_en	<= ctrl_work_flag^ctrl_work_flag_dly1;
+						ctrl_work		<= ctrl_work_data;
+					end
+				end
 				// COARSE_SYNC_ING: begin
 				// end
 				// COARSE_SYNC_FIR: begin
@@ -326,36 +342,41 @@ module coarse_sync #(
 	
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
-			u1_i_data_valid	<= 1'b0;
-			u1_i_data_i		<= 18'd0;
-			u1_i_data_q		<= 18'd0;
-			u1_i_data_dly_i	<= 18'd0;
-			u1_i_data_dly_q	<= 18'd0;
+			u1_i_data_valid		<= 1'b0;
+			u1_i_data_i			<= 18'd0;
+			u1_i_data_q			<= 18'd0;
+			u1_i_data_dly_i		<= 18'd0;
+			u1_i_data_dly_q		<= 18'd0;
+			u1_i_data_dly_addr	<= 16'd0;
 		end
 		else if(s_axis_data_tvalid == 1'b1) begin
-			u1_i_data_valid	<= 1'b1;
-			u1_i_data_i		<= {{(18-SYNC_DATA_WIDTH){s_axis_data_tdata[SYNC_DATA_WIDTH-1]}},s_axis_data_tdata[SYNC_DATA_WIDTH-1:0]};
-			u1_i_data_q		<= {{(18-SYNC_DATA_WIDTH){s_axis_data_tdata[24+SYNC_DATA_WIDTH-1]}},s_axis_data_tdata[24+SYNC_DATA_WIDTH-1:24]};
-			u1_i_data_dly_i	<= {{(18-SYNC_DATA_WIDTH){s_axis_data_tdata[48+SYNC_DATA_WIDTH-1]}},s_axis_data_tdata[48+SYNC_DATA_WIDTH-1:48]};
-			u1_i_data_dly_q	<= {{(18-SYNC_DATA_WIDTH){s_axis_data_tdata[72+SYNC_DATA_WIDTH-1]}},s_axis_data_tdata[72+SYNC_DATA_WIDTH-1:72]};
+			u1_i_data_valid		<= 1'b1;
+			u1_i_data_i			<= {{(18-SYNC_DATA_WIDTH){s_axis_data_tdata[SYNC_DATA_WIDTH-1]}},s_axis_data_tdata[SYNC_DATA_WIDTH-1:0]};
+			u1_i_data_q			<= {{(18-SYNC_DATA_WIDTH){s_axis_data_tdata[24+SYNC_DATA_WIDTH-1]}},s_axis_data_tdata[24+SYNC_DATA_WIDTH-1:24]};
+			u1_i_data_dly_i		<= {{(18-SYNC_DATA_WIDTH){s_axis_data_tdata[48+SYNC_DATA_WIDTH-1]}},s_axis_data_tdata[48+SYNC_DATA_WIDTH-1:48]};
+			u1_i_data_dly_q		<= {{(18-SYNC_DATA_WIDTH){s_axis_data_tdata[72+SYNC_DATA_WIDTH-1]}},s_axis_data_tdata[72+SYNC_DATA_WIDTH-1:72]};
+			u1_i_data_dly_addr	<= s_axis_data_taddr;
 		end
 		else begin
-			u1_i_data_valid	<= 1'b0;
-			u1_i_data_i		<= u1_i_data_i;
-			u1_i_data_q		<= u1_i_data_q;
-			u1_i_data_dly_i	<= u1_i_data_dly_i;
-			u1_i_data_dly_q	<= u1_i_data_dly_q;
+			u1_i_data_valid		<= 1'b0;
+			u1_i_data_i			<= u1_i_data_i;
+			u1_i_data_q			<= u1_i_data_q;
+			u1_i_data_dly_i		<= u1_i_data_dly_i;
+			u1_i_data_dly_q		<= u1_i_data_dly_q;
+			u1_i_data_dly_addr	<= u1_i_data_dly_addr;
 		end
 	end
 	
-	assign u2_i_data_valid	= u1_i_data_valid;
-	assign u2_i_data_i		= u1_i_data_i;
-	assign u2_i_data_q		= u1_i_data_q;
-	assign u2_i_data_dly_i	= u1_i_data_dly_i;
-	assign u2_i_data_dly_q	= u1_i_data_dly_q;
+	assign u2_i_data_valid		= u1_i_data_valid;
+	assign u2_i_data_i			= u1_i_data_i;
+	assign u2_i_data_q			= u1_i_data_q;
+	assign u2_i_data_dly_i		= u1_i_data_dly_i;
+	assign u2_i_data_dly_q		= u1_i_data_dly_q;
+	assign u2_i_data_dly_addr	= u1_i_data_dly_addr;
 	
 	psi_operator #(
-		.SYNC_DATA_WIDTH	(SYNC_DATA_WIDTH	) // <=18
+		.SYNC_DATA_WIDTH	(SYNC_DATA_WIDTH	), // <=18
+		.RAM_ADDR_WIDTH		(RAM_ADDR_WIDTH		) // <=18
 	)u1_psi_operator(
 		.clk				(axis_aclk			),
 		.reset				(axis_areset		),
@@ -366,9 +387,14 @@ module coarse_sync #(
 		.i_data_q			(u1_i_data_q		),
 		.i_data_dly_i		(u1_i_data_dly_i	),
 		.i_data_dly_q		(u1_i_data_dly_q	),
+		.i_data_dly_addr	(u1_i_data_dly_addr	),
 		.o_psi_data_valid	(u1_o_psi_data_valid), // 9dly
 		.o_psi_data_i		(u1_o_psi_data_i	),
-		.o_psi_data_q		(u1_o_psi_data_q	)
+		.o_psi_data_q		(u1_o_psi_data_q	),
+		.o_self_corr_valid	(u1_o_self_corr_valid),
+		.o_self_corr_i		(u1_o_self_corr_i	),
+		.o_self_corr_q		(u1_o_self_corr_q	),
+		.o_self_corr_addr	(u1_o_self_corr_addr)
 	);
 	
 	phi_operator #(
@@ -383,6 +409,7 @@ module coarse_sync #(
 		.i_data_q			(u2_i_data_q		),
 		.i_data_dly_i		(u2_i_data_dly_i	),
 		.i_data_dly_q		(u2_i_data_dly_q	),
+		.i_data_dly_addr	(u2_i_data_dly_addr	),
 		.o_phi_data_valid	(u2_o_phi_data_valid), // 6dly
 		.o_phi_data			(u2_o_phi_data		)
 	);
@@ -522,7 +549,7 @@ module coarse_sync #(
 				// end
 				COARSE_SYNC_FIR: begin
 					if(s_axis_data_tvalid == 1'b1) begin
-						data_addr <= s_axis_data_taddr[RAM_ADDR_WIDTH-1:0] - 10'd225;
+						data_addr <= s_axis_data_taddr[RAM_ADDR_WIDTH-1:0] - 8'd225;
 					end
 					else begin
 						data_addr <= data_addr;
@@ -546,5 +573,21 @@ module coarse_sync #(
 	assign m_axis_data_tvalid	= rd_wea_dly2;
 	assign m_axis_data_tdata	= u4_douta[119:0];
 	assign m_axis_data_taddr	= {{(16-RAM_ADDR_WIDTH){1'b0}},data_addr};
+	
+//================================================================================
+// 
+//================================================================================
+	always @(posedge axis_aclk or posedge axis_areset) begin
+		if(axis_areset == 1'b1) begin
+			coarse_sync_ok <= 1'b0;
+		end
+		else if((coarse_sync_state==COARSE_SYNC_SEC) && (coarse_sync_state_dly1==COARSE_SYNC_FIR)) begin
+			coarse_sync_ok <= 1'b1;
+		end
+		else begin
+			coarse_sync_ok <= 1'b0;
+		end
+	end
+	assign o_coarse_sync_ok = coarse_sync_ok;
 	
 endmodule

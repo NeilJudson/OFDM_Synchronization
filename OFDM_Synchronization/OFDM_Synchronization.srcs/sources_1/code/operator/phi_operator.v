@@ -35,6 +35,7 @@ module phi_operator #(
 	i_data_q	,
 	i_data_dly_i,
 	i_data_dly_q,
+	i_data_dly_addr,
 	
 	o_phi_data_valid,
 	o_phi_data
@@ -50,6 +51,7 @@ module phi_operator #(
 	input	signed	[17:0]	i_data_q	;
 	input	signed	[17:0]	i_data_dly_i;
 	input	signed	[17:0]	i_data_dly_q;
+	input			[15:0]	i_data_dly_addr;
 	
 	output					o_phi_data_valid; // 6dly
 	output	signed	[38:0]	o_phi_data	;
