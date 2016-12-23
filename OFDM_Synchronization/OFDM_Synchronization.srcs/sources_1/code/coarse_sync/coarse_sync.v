@@ -181,16 +181,16 @@ module coarse_sync #(
 		end
 		else begin
 			case(coarse_sync_state)
-				COARSE_SYNC_IDLE: begin
-					if(coarse_sync_state_dly1 == COARSE_SYNC_SEC) begin
-						ctrl_work_en	<= 1'b1;
-						ctrl_work		<= 1'b0;
-					end
-					else begin
-						ctrl_work_en	<= ctrl_work_flag^ctrl_work_flag_dly1;
-						ctrl_work		<= ctrl_work_data;
-					end
-				end
+				// COARSE_SYNC_IDLE: begin
+					// if(coarse_sync_state_dly1 == COARSE_SYNC_SEC) begin
+						// ctrl_work_en	<= 1'b1;
+						// ctrl_work		<= 1'b0;
+					// end
+					// else begin
+						// ctrl_work_en	<= ctrl_work_flag^ctrl_work_flag_dly1;
+						// ctrl_work		<= ctrl_work_data;
+					// end
+				// end
 				// COARSE_SYNC_ING: begin
 				// end
 				// COARSE_SYNC_FIR: begin
@@ -412,7 +412,7 @@ module coarse_sync #(
 		.o_tar_data_valid		(u3_o_tar_data_valid), // 11dly
 		.o_tar_data				(u3_o_tar_data		)
 	);
-	assign test_u3_o_tar_data = u3_o_tar_data[65:2]; // test
+	assign test_u3_o_tar_data = u3_o_tar_data[63:0]; // test
 	
 //================================================================================
 // output data for fine synchronization

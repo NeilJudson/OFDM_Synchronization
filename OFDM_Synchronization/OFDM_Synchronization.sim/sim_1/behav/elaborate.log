@@ -1,6 +1,6 @@
 Vivado Simulator 2015.2
 Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/15.2/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 89b8eba060cf4f92a4fcc10f3e2a1a35 --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_2 -L unisims_ver -L unimacro_ver -L secureip --snapshot test_coarse_sync_behav xil_defaultlib.test_coarse_sync xil_defaultlib.glbl -log elaborate.log 
+Running: E:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 89b8eba060cf4f92a4fcc10f3e2a1a35 --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_2 -L unisims_ver -L unimacro_ver -L secureip --snapshot test_coarse_sync_behav xil_defaultlib.test_coarse_sync xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
