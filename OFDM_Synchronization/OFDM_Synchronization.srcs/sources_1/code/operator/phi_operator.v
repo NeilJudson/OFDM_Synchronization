@@ -21,7 +21,8 @@
 
 
 module phi_operator #(
-	parameter SYNC_DATA_WIDTH	= 16 // <=18
+	parameter SYNC_DATA_WIDTH	= 16, // <=18
+	parameter RAM_ADDR_WIDTH	= 10 // <=10
 	)
 	(
 	clk			,
@@ -38,7 +39,8 @@ module phi_operator #(
 	i_data_dly_addr,
 	
 	o_phi_data_valid,
-	o_phi_data
+	o_phi_data,
+	o_phi_data_addr
 	);
 	input					clk			;
 	input					reset		;
@@ -55,6 +57,7 @@ module phi_operator #(
 	
 	output					o_phi_data_valid; // 6dly
 	output	signed	[38:0]	o_phi_data	;
+	output			[15:0]	o_phi_data_addr; // 对应phi期望的第一个值的地址
 	
 //================================================================================
 // variable
@@ -70,6 +73,7 @@ module phi_operator #(
 	
 	reg				[1:0]					state			;
 	reg				[SPRAM_ADDR_WIDTH:0]	clear_count		;
+	reg				[2:0]					cnt				;
 	
 	reg										u1_i_data_valid	;
 	reg		signed	[17:0]					u1_i_data_i		;
@@ -85,6 +89,7 @@ module phi_operator #(
 	
 	reg										power_add_valid	;
 	reg		signed	[DATA_POWER_WIDTH:0]	power_add		;
+	reg				[RAM_ADDR_WIDTH-1:0]	power_add_addr	;
 	
 	reg										u2_wea			;
 	reg				[SPRAM_ADDR_WIDTH-1:0]	u2_wr_addr		;
@@ -107,11 +112,17 @@ module phi_operator #(
 	wire			[SPRAM_DATA_WIDTH-1:0]	u4_dina			;
 	wire			[SPRAM_DATA_WIDTH-1:0]	u4_douta		;
 	
+	reg				[RAM_ADDR_WIDTH-1:0]	u2_dout_addr	;
+	reg				[RAM_ADDR_WIDTH-1:0]	u3_dout_addr	;
+	reg				[RAM_ADDR_WIDTH-1:0]	u4_dout_addr	;
+	reg										u234_dout_valid	;
+	
 	reg										power_add_valid_dly1;
 	reg										power_add_valid_dly2;
 	reg		signed	[DATA_POWER_WIDTH+1:0]	add12			;
 	reg		signed	[DATA_POWER_WIDTH+1:0]	add34			;
 	reg		signed	[PHI_WIDTH-1:0]			add1234			;
+	reg				[RAM_ADDR_WIDTH-1:0]	phi_data_addr	;
 	
 //================================================================================
 // state
@@ -176,6 +187,18 @@ module phi_operator #(
 		end
 	end
 	
+	always @(posedge clk or posedge reset) begin
+		if(reset == 1'b1) begin
+			cnt <= 3'd0;
+		end
+		else if(i_data_valid == 1'b1) begin
+			cnt <= 3'd1;
+		end
+		else begin
+			cnt <= cnt + 1'd1;
+		end
+	end
+	
 //================================================================================
 // complex abs power2
 //================================================================================
@@ -189,7 +212,7 @@ module phi_operator #(
 			u5_i_data_q		<= 18'd0;
 		end
 		else if((state==WORK) && (i_data_valid==1'b1)) begin
-			u1_i_data_valid	<= 1'b1;
+			u1_i_data_valid	<= 1'b1; // cnt=1
 			u1_i_data_i		<= i_data_i;
 			u1_i_data_q		<= i_data_q;
 			u5_i_data_valid	<= 1'b1;
@@ -211,7 +234,7 @@ module phi_operator #(
 		.i_data_valid	(u1_i_data_valid),
 		.i_data_i		(u1_i_data_i	),
 		.i_data_q		(u1_i_data_q	),
-		.o_data_valid	(u1_o_data_valid), // 3dly
+		.o_data_valid	(u1_o_data_valid), // 3dly，cnt=4
 		.o_data			(u1_o_data		)
 	);
 	
@@ -220,7 +243,7 @@ module phi_operator #(
 		.i_data_valid	(u5_i_data_valid),
 		.i_data_i		(u5_i_data_i	),
 		.i_data_q		(u5_i_data_q	),
-		.o_data_valid	(u5_o_data_valid), // 3dly
+		.o_data_valid	(u5_o_data_valid), // 3dly，cnt=4
 		.o_data			(u5_o_data		)
 	);
 	
@@ -228,15 +251,18 @@ module phi_operator #(
 		if(reset == 1'b1) begin
 			power_add_valid	<= 1'b0;
 			power_add		<= 'd0;
+			power_add_addr	<= 'd0;
 		end
 		else if((u1_o_data_valid==1'b1) && (u5_o_data_valid==1'b1)) begin
-			power_add_valid	<= 1'b1;
+			power_add_valid	<= 1'b1; // cnt=5
 			power_add		<= {u1_o_data[DATA_POWER_WIDTH-1],u1_o_data[DATA_POWER_WIDTH-1:0]}
 								+ {u5_o_data[DATA_POWER_WIDTH-1],u5_o_data[DATA_POWER_WIDTH-1:0]};
+			power_add_addr	<= i_data_dly_addr[RAM_ADDR_WIDTH-1:0];
 		end
 		else begin
 			power_add_valid	<= 1'b0;
 			power_add		<= power_add;
+			power_add_addr	<= power_add_addr;
 		end
 	end
 	
@@ -270,7 +296,7 @@ module phi_operator #(
 				end
 				WORK: begin
 					if(power_add_valid == 1'b1) begin
-						u2_wea		<= 1'b1;
+						u2_wea		<= 1'b1; // cnt=6
 						u2_wr_addr	<= u2_wr_addr + 1'd1;
 						u2_rd_addr	<= u2_rd_addr + 1'd1;
 						u2_addra	<= u2_wr_addr + 1'd1;
@@ -331,6 +357,27 @@ module phi_operator #(
 		.douta	(u4_douta	)	// output [35:0]douta;
 	);
 	
+	always @(posedge clk or posedge reset) begin
+		if(reset == 1'b1) begin
+			u234_dout_valid	<= 1'b0;
+			u2_dout_addr	<= 'd0;
+			u3_dout_addr	<= 'd0;
+			u4_dout_addr	<= 'd0;
+		end
+		else if(cnt == 3'd0) begin
+			u234_dout_valid	<= 1'b1; // cnt=1
+			u2_dout_addr	<= power_add_addr - 8'd63;
+			u3_dout_addr	<= u2_dout_addr - 8'd63;
+			u4_dout_addr	<= u3_dout_addr - 8'd63;
+		end
+		else begin
+			u234_dout_valid	<= 1'b0;
+			u2_dout_addr	<= u2_dout_addr;
+			u3_dout_addr	<= u3_dout_addr;
+			u4_dout_addr	<= u4_dout_addr;
+		end
+	end
+	
 //================================================================================
 // exception
 //================================================================================
@@ -340,8 +387,8 @@ module phi_operator #(
 			power_add_valid_dly2 <= 1'b0;
 		end
 		else begin
-			power_add_valid_dly1 <= power_add_valid;
-			power_add_valid_dly2 <= power_add_valid_dly1;
+			power_add_valid_dly1 <= power_add_valid; // cnt=6
+			power_add_valid_dly2 <= power_add_valid_dly1; // cnt=7
 		end
 	end
 	
@@ -364,17 +411,21 @@ module phi_operator #(
 	
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
-			add1234 <= 'd0;
+			add1234			<= 'd0;
+			phi_data_addr	<= 'd0;
 		end
 		else if(power_add_valid_dly1 == 1'b1) begin
-			add1234 <= {add12[DATA_POWER_WIDTH+1],add12} + {add34[DATA_POWER_WIDTH+1],add34};
+			add1234			<= {add12[DATA_POWER_WIDTH+1],add12} + {add34[DATA_POWER_WIDTH+1],add34};
+			phi_data_addr	<= u4_dout_addr;
 		end
 		else begin
-			add1234 <= add1234;
+			add1234			<= add1234;
+			phi_data_addr	<= phi_data_addr;
 		end
 	end
 	
 	assign o_phi_data_valid	= power_add_valid_dly2;
 	assign o_phi_data		= {{(39-PHI_WIDTH){add1234[PHI_WIDTH-1]}},add1234};
+	assign o_phi_data_addr	= {{(16-RAM_ADDR_WIDTH){1'b0}},phi_data_addr};
 	
 endmodule

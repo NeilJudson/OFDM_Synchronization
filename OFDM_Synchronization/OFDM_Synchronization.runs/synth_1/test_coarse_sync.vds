@@ -2,8 +2,8 @@
 # Vivado v2015.2.1 (64-bit)
 # SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
 # IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
-# Start of session at: Fri Dec 23 17:51:40 2016
-# Process ID: 3868
+# Start of session at: Fri Dec 30 17:20:44 2016
+# Process ID: 157088
 # Log file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/test_coarse_sync.vds
 # Journal file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -13,7 +13,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 243.953 ; gain = 58.164
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 244.352 ; gain = 58.117
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'test_coarse_sync' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/test_coarse_sync.v:23]
 INFO: [Synth 8-638] synthesizing module 'coarse_sync' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:23]
@@ -39,14 +39,14 @@ INFO: [Synth 8-638] synthesizing module 'psi_operator' [E:/jiaweiwei/Project/OFD
 	Parameter CLEAR bound to: 2'b01 
 	Parameter WORK bound to: 2'b10 
 	Parameter u2_rd_addr_init bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'complex_multiplier_18_18_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/complex_multiplier_18_18_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'complex_multiplier_18_18_ip' (1#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/complex_multiplier_18_18_ip_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'spram_72_64_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/spram_72_64_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'spram_72_64_ip' (2#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/spram_72_64_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'complex_multiplier_18_18_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/complex_multiplier_18_18_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'complex_multiplier_18_18_ip' (1#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/complex_multiplier_18_18_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'spram_72_64_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_72_64_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_72_64_ip' (2#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_72_64_ip_stub.v:7]
 INFO: [Synth 8-256] done synthesizing module 'psi_operator' (3#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/psi_operator.v:23]
-WARNING: [Synth 8-350] instance 'u1_psi_operator' of module 'psi_operator' requires 17 connections, but only 16 given [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:379]
 INFO: [Synth 8-638] synthesizing module 'phi_operator' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/phi_operator.v:23]
 	Parameter SYNC_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
 	Parameter SPRAM_ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter SPRAM_DATA_WIDTH bound to: 36 - type: integer 
 	Parameter DATA_POWER_WIDTH bound to: 32 - type: integer 
@@ -56,17 +56,18 @@ INFO: [Synth 8-638] synthesizing module 'phi_operator' [E:/jiaweiwei/Project/OFD
 	Parameter WORK bound to: 2'b10 
 	Parameter u2_rd_addr_init bound to: 1 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_18' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_18.v:23]
-INFO: [Synth 8-638] synthesizing module 'dsp48_mul_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/dsp48_mul_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'dsp48_mul_ip' (4#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/dsp48_mul_ip_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'dsp48_mul_add_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/dsp48_mul_add_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'dsp48_mul_add_ip' (5#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/dsp48_mul_add_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'dsp48_mul_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/dsp48_mul_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'dsp48_mul_ip' (4#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/dsp48_mul_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'dsp48_mul_add_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/dsp48_mul_add_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'dsp48_mul_add_ip' (5#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/dsp48_mul_add_ip_stub.v:7]
 INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_18' (6#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_18.v:23]
-INFO: [Synth 8-638] synthesizing module 'spram_36_64_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/spram_36_64_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'spram_36_64_ip' (7#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/spram_36_64_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'spram_36_64_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_36_64_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_36_64_ip' (7#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_36_64_ip_stub.v:7]
 INFO: [Synth 8-256] done synthesizing module 'phi_operator' (8#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/phi_operator.v:23]
 INFO: [Synth 8-638] synthesizing module 'tar_operator' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/tar_operator.v:23]
 	Parameter PSI_WIDTH bound to: 34 - type: integer 
 	Parameter PHI_WIDTH bound to: 35 - type: integer 
+	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
 	Parameter SPRAM_ADDR_WIDTH bound to: 5 - type: integer 
 	Parameter SPRAM_DATA_WIDTH bound to: 144 - type: integer 
 	Parameter PSI_SUM_WIDTH bound to: 39 - type: integer 
@@ -78,16 +79,16 @@ INFO: [Synth 8-638] synthesizing module 'tar_operator' [E:/jiaweiwei/Project/OFD
 	Parameter CLEAR bound to: 2'b01 
 	Parameter WORK bound to: 2'b10 
 	Parameter u1_rd_addr_init bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'spram_144_32_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/spram_144_32_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'spram_144_32_ip' (9#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/spram_144_32_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'spram_144_32_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_144_32_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_144_32_ip' (9#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_144_32_ip_stub.v:7]
 INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_42' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_42.v:23]
-INFO: [Synth 8-638] synthesizing module 'multiplier_42_42_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/multiplier_42_42_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'multiplier_42_42_ip' (10#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/multiplier_42_42_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'multiplier_42_42_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/multiplier_42_42_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'multiplier_42_42_ip' (10#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/multiplier_42_42_ip_stub.v:7]
 INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_42' (11#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_42.v:23]
 INFO: [Synth 8-256] done synthesizing module 'tar_operator' (12#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/tar_operator.v:23]
-INFO: [Synth 8-638] synthesizing module 'spram_144_512_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/spram_144_512_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'spram_144_512_ip' (13#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-3868-txjs-130/realtime/spram_144_512_ip_stub.v:7]
-INFO: [Synth 8-155] case statement is not full and has no default [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:156]
+INFO: [Synth 8-638] synthesizing module 'spram_144_512_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_144_512_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_144_512_ip' (13#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_144_512_ip_stub.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:161]
 WARNING: [Synth 8-3848] Net s_axis_ctrl_trdy in module/entity coarse_sync does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:56]
 WARNING: [Synth 8-3848] Net s_axis_data_trdy in module/entity coarse_sync does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:62]
 WARNING: [Synth 8-3848] Net m_axis_data_tlast in module/entity coarse_sync does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:65]
@@ -96,7 +97,7 @@ INFO: [Synth 8-3876] $readmem data file 'ofdm_source.txt' is read successfully [
 WARNING: [Synth 8-85] always block has no event control specified [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/test_coarse_sync.v:98]
 INFO: [Synth 8-256] done synthesizing module 'test_coarse_sync' (15#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/test_coarse_sync.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 281.793 ; gain = 96.004
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 282.195 ; gain = 95.961
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -106,7 +107,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 281.793 ; gain = 96.004
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 282.195 ; gain = 95.961
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z045fbg676-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -118,24 +119,27 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 659.250 ; gain = 0.004
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 660.277 ; gain = 0.004
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 659.250 ; gain = 473.461
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 660.277 ; gain = 474.043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z045fbg676-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 659.250 ; gain = 473.461
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 660.277 ; gain = 474.043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 659.250 ; gain = 473.461
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 660.277 ; gain = 474.043
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'u5_i_data_valid_reg' into 'u1_i_data_valid_reg' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/phi_operator.v:187]
+INFO: [Synth 8-5544] ROM "u1_dout_addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "u234_dout_valid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'u5_i_data_valid_reg' into 'u1_i_data_valid_reg' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/phi_operator.v:210]
+INFO: [Synth 8-5544] ROM "u2_dout_addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'coarse_sync_state_reg' in module 'coarse_sync'
 INFO: [Synth 8-5546] ROM "ctrl_work_flag" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "coarse_sync_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -156,7 +160,7 @@ INFO: [Synth 8-5544] ROM "data_cnt" won't be mapped to Block RAM because address
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'coarse_sync_state_reg' using encoding 'sequential' in module 'coarse_sync'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 659.250 ; gain = 473.461
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 660.277 ; gain = 474.043
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -178,12 +182,13 @@ Detailed RTL Component Info :
 	   2 Input     33 Bit       Adders := 5     
 	   2 Input     32 Bit       Adders := 1     
 	   2 Input     16 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 3     
+	   2 Input     10 Bit       Adders := 10    
 	   2 Input      9 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 3     
 	   2 Input      6 Bit       Adders := 7     
 	   2 Input      5 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 2     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
@@ -200,15 +205,15 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 1     
 	               18 Bit    Registers := 8     
 	               16 Bit    Registers := 2     
-	               10 Bit    Registers := 2     
+	               10 Bit    Registers := 13    
 	                9 Bit    Registers := 3     
 	                8 Bit    Registers := 1     
 	                7 Bit    Registers := 4     
 	                6 Bit    Registers := 7     
 	                5 Bit    Registers := 3     
-	                3 Bit    Registers := 3     
+	                3 Bit    Registers := 5     
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 27    
+	                1 Bit    Registers := 28    
 +---Muxes : 
 	   4 Input    144 Bit        Muxes := 1     
 	   3 Input    144 Bit        Muxes := 1     
@@ -225,9 +230,10 @@ Detailed RTL Component Info :
 	   2 Input      6 Bit        Muxes := 3     
 	   4 Input      5 Bit        Muxes := 3     
 	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 	   7 Input      2 Bit        Muxes := 3     
 	  13 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 13    
 	   4 Input      1 Bit        Muxes := 6     
 	   3 Input      1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
@@ -255,26 +261,29 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     34 Bit       Adders := 2     
 	   2 Input     33 Bit       Adders := 4     
-	   2 Input     10 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 3     
 	   2 Input      7 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
 	               72 Bit    Registers := 3     
 	               48 Bit    Registers := 2     
 	               34 Bit    Registers := 2     
 	               33 Bit    Registers := 4     
-	               10 Bit    Registers := 1     
+	               10 Bit    Registers := 5     
 	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
 +---Muxes : 
 	   4 Input     72 Bit        Muxes := 3     
 	   2 Input      7 Bit        Muxes := 1     
 	   4 Input      6 Bit        Muxes := 3     
 	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
 	   4 Input      1 Bit        Muxes := 2     
 Module complex_abs_power2_18 
 Detailed RTL Component Info : 
@@ -286,16 +295,20 @@ Detailed RTL Component Info :
 	   2 Input     35 Bit       Adders := 1     
 	   2 Input     34 Bit       Adders := 2     
 	   2 Input     33 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 3     
 	   2 Input      7 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
 	               36 Bit    Registers := 1     
 	               35 Bit    Registers := 1     
 	               34 Bit    Registers := 2     
 	               33 Bit    Registers := 1     
 	               18 Bit    Registers := 4     
+	               10 Bit    Registers := 5     
 	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 5     
 +---Muxes : 
@@ -303,8 +316,9 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit        Muxes := 1     
 	   4 Input      6 Bit        Muxes := 3     
 	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 2     
 Module complex_abs_power2_42 
 Detailed RTL Component Info : 
@@ -320,6 +334,7 @@ Detailed RTL Component Info :
 	   3 Input     79 Bit       Adders := 1     
 	   3 Input     36 Bit       Adders := 1     
 	   3 Input     35 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 2     
 	   2 Input      6 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 3     
 +---Registers : 
@@ -327,6 +342,7 @@ Detailed RTL Component Info :
 	               79 Bit    Registers := 1     
 	               36 Bit    Registers := 1     
 	               35 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
 	                6 Bit    Registers := 1     
 	                5 Bit    Registers := 3     
 	                2 Bit    Registers := 1     
@@ -380,7 +396,7 @@ BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 659.250 ; gain = 473.461
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 660.277 ; gain = 474.043
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -389,9 +405,9 @@ INFO: [Synth 8-5546] ROM "ctrl_work_flag" won't be mapped to RAM because it is t
 INFO: [Synth 8-5545] ROM "s_axis_ctrl_tvalid" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "s_axis_ctrl_tdata" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 915.430 ; gain = 729.641
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 916.473 ; gain = 730.238
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 915.430 ; gain = 729.641
+Finished Parallel Reinference  : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 916.473 ; gain = 730.238
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -415,121 +431,121 @@ ROM:
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/self_corr_addr_reg[9] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/self_corr_addr_reg[8] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/self_corr_addr_reg[7] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/self_corr_addr_reg[6] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/self_corr_addr_reg[5] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/self_corr_addr_reg[4] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/self_corr_addr_reg[3] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/self_corr_addr_reg[2] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/self_corr_addr_reg[1] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/self_corr_addr_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/cnt_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/cnt_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/cnt_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u234_dout_valid_reg ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u1_dout_addr_reg[9] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u1_dout_addr_reg[8] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u1_dout_addr_reg[7] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u1_dout_addr_reg[6] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u1_dout_addr_reg[5] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u1_dout_addr_reg[4] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u1_dout_addr_reg[3] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u1_dout_addr_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u1_dout_addr_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u1_dout_addr_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u2_dout_addr_reg[9] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u2_dout_addr_reg[8] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u2_dout_addr_reg[7] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u2_dout_addr_reg[6] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u2_dout_addr_reg[5] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u2_dout_addr_reg[4] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u2_dout_addr_reg[3] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u2_dout_addr_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u2_dout_addr_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u2_dout_addr_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u3_dout_addr_reg[9] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u3_dout_addr_reg[8] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u3_dout_addr_reg[7] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u3_dout_addr_reg[6] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u3_dout_addr_reg[5] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u3_dout_addr_reg[4] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u3_dout_addr_reg[3] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u3_dout_addr_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u3_dout_addr_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u3_dout_addr_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u4_dout_addr_reg[9] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u4_dout_addr_reg[8] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u4_dout_addr_reg[7] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u4_dout_addr_reg[6] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u4_dout_addr_reg[5] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u4_dout_addr_reg[4] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u4_dout_addr_reg[3] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u4_dout_addr_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u4_dout_addr_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/u4_dout_addr_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/psi_data_addr_reg[9] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/psi_data_addr_reg[8] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/psi_data_addr_reg[7] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/psi_data_addr_reg[6] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/psi_data_addr_reg[5] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/psi_data_addr_reg[4] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/psi_data_addr_reg[3] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/psi_data_addr_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/psi_data_addr_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi_operator/psi_data_addr_reg[0] ) is unused and will be removed from module coarse_sync.
 WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/power_add_valid_dly2_reg ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_addr_reg[9] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_addr_reg[8] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_addr_reg[7] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_addr_reg[6] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_addr_reg[5] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_addr_reg[4] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_addr_reg[3] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_addr_reg[2] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_addr_reg[1] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_addr_reg[0] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (rd_wea_reg) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (rd_wea_dly1_reg) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (rd_wea_dly2_reg) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (coarse_sync_ok_reg) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[15] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[14] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[13] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[12] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[11] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[10] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[9] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[8] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[7] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[6] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[5] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[4] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[3] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[2] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[1] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[0] ) is unused and will be removed from module coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[23] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[22] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[21] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[20] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[19] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[18] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[17] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[16] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[15] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[14] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[13] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[12] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[11] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[10] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[9] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[8] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[7] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[6] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[5] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[4] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[3] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[2] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_ctrl_tdata_reg[1] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[31] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[30] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[29] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[28] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[27] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[26] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[25] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[24] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[23] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[22] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[21] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[20] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[19] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[18] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[17] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[16] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[15] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[14] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[13] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\data_cnt_reg_rep[12] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[95] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[94] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[93] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[92] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[91] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[90] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[89] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[88] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[71] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[70] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[69] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[68] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[67] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[66] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[65] ) is unused and will be removed from module test_coarse_sync.
-WARNING: [Synth 8-3332] Sequential element (\s_axis_data_tdata_reg[64] ) is unused and will be removed from module test_coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/cnt_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/cnt_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/cnt_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/power_add_addr_reg[9] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/power_add_addr_reg[8] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/power_add_addr_reg[7] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/power_add_addr_reg[6] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/power_add_addr_reg[5] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/power_add_addr_reg[4] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/power_add_addr_reg[3] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/power_add_addr_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/power_add_addr_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/power_add_addr_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u2_dout_addr_reg[9] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u2_dout_addr_reg[8] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u2_dout_addr_reg[7] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u2_dout_addr_reg[6] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u2_dout_addr_reg[5] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u2_dout_addr_reg[4] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u2_dout_addr_reg[3] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u2_dout_addr_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u2_dout_addr_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u2_dout_addr_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u3_dout_addr_reg[9] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u3_dout_addr_reg[8] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u3_dout_addr_reg[7] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u3_dout_addr_reg[6] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u3_dout_addr_reg[5] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u3_dout_addr_reg[4] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u3_dout_addr_reg[3] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u3_dout_addr_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u3_dout_addr_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u3_dout_addr_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u4_dout_addr_reg[9] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u4_dout_addr_reg[8] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u4_dout_addr_reg[7] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u4_dout_addr_reg[6] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u4_dout_addr_reg[5] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u4_dout_addr_reg[4] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u4_dout_addr_reg[3] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u4_dout_addr_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u4_dout_addr_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/u4_dout_addr_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/phi_data_addr_reg[9] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi_operator/phi_data_addr_reg[8] ) is unused and will be removed from module coarse_sync.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 915.430 ; gain = 729.641
+Finished Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 916.473 ; gain = 730.238
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 915.430 ; gain = 729.641
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 916.473 ; gain = 730.238
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 915.430 ; gain = 729.641
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 916.473 ; gain = 730.238
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -537,10 +553,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 915.430 ; gain = 729.641
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 916.473 ; gain = 730.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 915.430 ; gain = 729.641
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 916.473 ; gain = 730.238
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -552,7 +568,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 915.430 ; gain = 729.641
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 916.473 ; gain = 730.238
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -570,7 +586,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 915.430 ; gain = 729.641
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 916.473 ; gain = 730.238
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -583,7 +599,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 915.430 ; gain = 729.641
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 916.473 ; gain = 730.238
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -595,13 +611,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 915.430 ; gain = 729.641
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 916.473 ; gain = 730.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 915.430 ; gain = 729.641
+Start Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 916.473 ; gain = 730.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 915.430 ; gain = 729.641
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 916.473 ; gain = 730.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -685,11 +701,11 @@ Report Instance Areas:
 |8     |      u2_complex_abs_power2_42 |complex_abs_power2_42   |   445|
 +------+-------------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 915.430 ; gain = 729.641
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 916.473 ; gain = 730.238
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 202 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 915.430 ; gain = 330.273
-Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 915.430 ; gain = 729.641
+Synthesis finished with 0 errors, 0 critical warnings and 319 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 916.473 ; gain = 330.277
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 916.473 ; gain = 730.238
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 218 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -699,8 +715,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-59 Infos, 106 Warnings, 0 Critical Warnings and 0 Errors encountered.
+62 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 915.430 ; gain = 716.781
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.188 . Memory (MB): peak = 915.430 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 23 17:52:47 2016...
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 916.473 ; gain = 718.348
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.187 . Memory (MB): peak = 916.473 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 30 17:21:49 2016...

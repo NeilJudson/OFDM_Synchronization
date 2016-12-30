@@ -21,8 +21,9 @@
 
 
 module tar_operator #(
-	parameter PSI_WIDTH = 34,
-	parameter PHI_WIDTH = 35
+	parameter PSI_WIDTH		= 34, // <=38
+	parameter PHI_WIDTH		= 35, // <=39
+	parameter RAM_ADDR_WIDTH= 10
 	)
 	(
 	clk				,
@@ -35,9 +36,11 @@ module tar_operator #(
 	i_psi_data_i	,
 	i_psi_data_q	,
 	i_phi_data		,
+	i_psi_phi_data_addr,
 	
 	o_tar_data_valid, // 11dly
-	o_tar_data		
+	o_tar_data		,
+	o_tar_data_addr
     );
 	input						clk				;
 	input						reset			;
@@ -49,9 +52,12 @@ module tar_operator #(
 	input		signed	[37:0]	i_psi_data_i	;
 	input		signed	[37:0]	i_psi_data_q	;
 	input		signed	[38:0]	i_phi_data		;
+	input				[15:0]	i_psi_phi_data_addr;
 	
 	output						o_tar_data_valid;
 	output		signed	[86:0]	o_tar_data		;
+	output				[15:0]	o_tar_data_addr	;
+
 	
 //================================================================================
 // variable
@@ -70,6 +76,7 @@ module tar_operator #(
 	
 	reg				[1:0]					state			;
 	reg				[SPRAM_ADDR_WIDTH:0]	clear_count		;
+	reg				[2:0]					cnt				;
 	
 	reg										u1_wea			;
 	reg				[SPRAM_ADDR_WIDTH-1:0]	u1_wr_addr		;
@@ -87,6 +94,7 @@ module tar_operator #(
 	reg		signed	[PSI_SUM_WIDTH-1:0]		psi_i_sum		;
 	reg		signed	[PSI_SUM_WIDTH-1:0]		psi_q_sum		;
 	reg		signed	[PHI_SUM_WIDTH-1:0]		phi_sum			;
+	reg				[RAM_ADDR_WIDTH-1:0]	sum_addr		;
 	
 	wire									u2_i_data_valid	;
 	wire	signed	[41:0]					u2_i_data_i		;
@@ -104,6 +112,7 @@ module tar_operator #(
 	
 	reg										tar_data_valid	;
 	reg		signed	[TAR_WIDTH-1:0]			tar_data		;
+	reg				[RAM_ADDR_WIDTH-1:0]	tar_data_addr	;
 	
 	wire			[63:0]					test_psi_power	; // test
 	wire			[63:0]					test_phi_power	; // test
@@ -173,6 +182,18 @@ module tar_operator #(
 		end
 	end
 	
+	always @(posedge clk or posedge reset) begin
+		if(reset == 1'b1) begin
+			cnt <= 3'd0;
+		end
+		else if(i_psi_phi_data_valid == 1'b1) begin
+			cnt <= 3'd1;
+		end
+		else begin
+			cnt <= cnt + 1'd1;
+		end
+	end
+	
 //================================================================================
 // sum
 //================================================================================
@@ -203,7 +224,7 @@ module tar_operator #(
 				end
 				WORK: begin
 					if(i_psi_phi_data_valid == 1'b1) begin
-						u1_wea		<= 1'b1;
+						u1_wea		<= 1'b1; // cnt=1
 						u1_wr_addr	<= u1_wr_addr + 1'd1;
 						u1_rd_addr	<= u1_rd_addr + 1'd1;
 						u1_addra	<= u1_wr_addr + 1'd1;
@@ -265,7 +286,7 @@ module tar_operator #(
 			i_psi_phi_data_valid_dly1 <= 1'b0;
 		end
 		else begin
-			i_psi_phi_data_valid_dly1 <= i_psi_phi_data_valid;
+			i_psi_phi_data_valid_dly1 <= i_psi_phi_data_valid; // cnt=1
 		end
 	end
 	
@@ -275,18 +296,21 @@ module tar_operator #(
 			psi_i_sum	<= 'd0;
 			psi_q_sum	<= 'd0;
 			phi_sum		<= 'd0;
+			sum_addr	<= 'd0;
 		end
 		else if(i_psi_phi_data_valid_dly1 == 1'b1) begin
-			sum_valid	<= 1'b1;
+			sum_valid	<= 1'b1; // cnt=2
 			psi_i_sum	<= psi_i_sum + {{(PSI_SUM_WIDTH-PSI_WIDTH-1){psi_i_add[PSI_WIDTH]}},psi_i_add};
 			psi_q_sum	<= psi_q_sum + {{(PSI_SUM_WIDTH-PSI_WIDTH-1){psi_q_add[PSI_WIDTH]}},psi_q_add};
 			phi_sum		<= phi_sum + {{(PHI_SUM_WIDTH-PHI_WIDTH-1){phi_add[PHI_WIDTH]}},phi_add};
+			sum_addr	<= i_psi_phi_data_addr[RAM_ADDR_WIDTH-1:0] - 5'd31;
 		end
 		else begin
 			sum_valid	<= 1'b0;
 			psi_i_sum	<= psi_i_sum;
 			psi_q_sum	<= psi_q_sum;
 			phi_sum		<= phi_sum;
+			sum_addr	<= sum_addr;
 		end
 	end
 	
@@ -304,7 +328,7 @@ module tar_operator #(
 		.i_data_valid	(u2_i_data_valid),
 		.i_data_i		(u2_i_data_i	),
 		.i_data_q		(u2_i_data_q	),
-		.o_data_valid	(u2_o_data_valid), // 8dly
+		.o_data_valid	(u2_o_data_valid), // 8dly，cnt=2
 		.o_data			(u2_o_data		)
 	);
 	
@@ -312,7 +336,7 @@ module tar_operator #(
 		.CLK(clk	),	// input CLK;
 		.A	(u3_A	),	// input [41:0]A;
 		.B	(u3_B	),	// input [41:0]B;
-		.P	(u3_P	)	// output [83:0]P; // 7dly
+		.P	(u3_P	)	// output [83:0]P; // 7dly，cnt=1
 	);
 	
 	assign power_valid	= u2_o_data_valid;
@@ -328,20 +352,25 @@ module tar_operator #(
 		if(reset == 1'b1) begin
 			tar_data_valid	<= 1'b0;
 			tar_data		<= 'd0;
+			tar_data_addr	<= 'd0;
 		end
 		else if(power_valid == 1'b1) begin
-			tar_data_valid	<= 1'b1; // 11dly
+			tar_data_valid	<= 1'b1; // 11dly，cnt=3
 			tar_data		<= {psi_power[PSI_POWER_WIDTH-1],psi_power}
 								- {{(PSI_POWER_WIDTH-PHI_POWER_WIDTH+3){phi_power[PHI_POWER_WIDTH-1]}},phi_power[PHI_POWER_WIDTH-1:2]};
 								// psi_power-(0.5*0.5)*phi_power
+			tar_data_addr	<= sum_addr - 1'd1;
 		end
 		else begin
 			tar_data_valid	<= 1'b0;
 			tar_data		<= tar_data;
+			tar_data_addr	<= tar_data_addr;
 		end
 	end
 	
 	assign o_tar_data_valid	= tar_data_valid;
 	assign o_tar_data		= {{(87-TAR_WIDTH){tar_data[TAR_WIDTH-1]}},tar_data};
+	assign o_tar_data_addr	= {{(16-RAM_ADDR_WIDTH){1'b0}},tar_data_addr};
+
 	
 endmodule

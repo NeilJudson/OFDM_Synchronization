@@ -101,13 +101,14 @@ module coarse_sync #(
 	reg		signed	[17:0]					u1_i_data_dly_i		;
 	reg		signed	[17:0]					u1_i_data_dly_q		;
 	reg				[15:0]					u1_i_data_dly_addr	;
-	wire									u1_o_psi_data_valid	;
-	wire	signed	[37:0]					u1_o_psi_data_i		;
-	wire	signed	[37:0]					u1_o_psi_data_q		;
 	wire									u1_o_self_corr_valid;
 	wire	signed	[35:0]					u1_o_self_corr_i	;
 	wire	signed	[35:0]					u1_o_self_corr_q	;
 	wire	signed	[15:0]					u1_o_self_corr_addr	;
+	wire									u1_o_psi_data_valid	;
+	wire	signed	[37:0]					u1_o_psi_data_i		;
+	wire	signed	[37:0]					u1_o_psi_data_q		;
+	wire			[15:0]					u1_o_psi_data_addr	;
 	
 	wire									u2_i_work_ctrl_en	;
 	wire									u2_i_work_ctrl		;
@@ -119,6 +120,7 @@ module coarse_sync #(
 	wire			[15:0]					u2_i_data_dly_addr	;
 	wire									u2_o_phi_data_valid	;
 	wire	signed	[38:0]					u2_o_phi_data		;
+	wire			[15:0]					u2_o_phi_data_addr	;
 	
 	wire									u3_i_work_ctrl_en	;
 	wire									u3_i_work_ctrl		;
@@ -126,8 +128,10 @@ module coarse_sync #(
 	wire	signed	[37:0]					u3_i_psi_data_i		;
 	wire	signed	[37:0]					u3_i_psi_data_q		;
 	wire	signed	[38:0]					u3_i_phi_data		;
+	wire			[15:0]					u3_i_psi_phi_data_addr;
 	wire									u3_o_tar_data_valid	;
 	wire	signed	[86:0]					u3_o_tar_data		;
+	wire			[15:0]					u3_o_tar_data_addr	;
 	
 	reg										u4_wea				;
 	reg				[SPRAM_ADDR_WIDTH-1:0]	u4_wr_addr			;
@@ -272,7 +276,7 @@ module coarse_sync #(
 					if((ctrl_work_en==1'b1) && (ctrl_work==1'b0)) begin
 						coarse_sync_state <= COARSE_SYNC_IDLE;
 					end
-					else if(coarse_sync_sec_count == 8'd200) begin
+					else if(coarse_sync_sec_count == 8'd255) begin
 						coarse_sync_state <= COARSE_SYNC_IDLE;
 					end
 					else begin
@@ -376,7 +380,7 @@ module coarse_sync #(
 	
 	psi_operator #(
 		.SYNC_DATA_WIDTH	(SYNC_DATA_WIDTH	), // <=18
-		.RAM_ADDR_WIDTH		(RAM_ADDR_WIDTH		) // <=18
+		.RAM_ADDR_WIDTH		(RAM_ADDR_WIDTH		) // <=16
 	)u1_psi_operator(
 		.clk				(axis_aclk			),
 		.reset				(axis_areset		),
@@ -388,17 +392,19 @@ module coarse_sync #(
 		.i_data_dly_i		(u1_i_data_dly_i	),
 		.i_data_dly_q		(u1_i_data_dly_q	),
 		.i_data_dly_addr	(u1_i_data_dly_addr	),
-		.o_psi_data_valid	(u1_o_psi_data_valid), // 9dly
-		.o_psi_data_i		(u1_o_psi_data_i	),
-		.o_psi_data_q		(u1_o_psi_data_q	),
 		.o_self_corr_valid	(u1_o_self_corr_valid),
 		.o_self_corr_i		(u1_o_self_corr_i	),
 		.o_self_corr_q		(u1_o_self_corr_q	),
-		.o_self_corr_addr	(u1_o_self_corr_addr)
+		.o_self_corr_addr	(u1_o_self_corr_addr),
+		.o_psi_data_valid	(u1_o_psi_data_valid), // 9dly
+		.o_psi_data_i		(u1_o_psi_data_i	),
+		.o_psi_data_q		(u1_o_psi_data_q	),
+		.o_psi_data_addr	(u1_o_psi_data_addr	)
 	);
 	
 	phi_operator #(
-		.SYNC_DATA_WIDTH	(SYNC_DATA_WIDTH	)
+		.SYNC_DATA_WIDTH	(SYNC_DATA_WIDTH	), // <=18
+		.RAM_ADDR_WIDTH		(RAM_ADDR_WIDTH		) // <=16
 	)u2_phi_operator(
 		.clk				(axis_aclk			),
 		.reset				(axis_areset		),
@@ -411,7 +417,8 @@ module coarse_sync #(
 		.i_data_dly_q		(u2_i_data_dly_q	),
 		.i_data_dly_addr	(u2_i_data_dly_addr	),
 		.o_phi_data_valid	(u2_o_phi_data_valid), // 6dly
-		.o_phi_data			(u2_o_phi_data		)
+		.o_phi_data			(u2_o_phi_data		),
+		.o_phi_data_addr	(u2_o_phi_data_addr	)
 	);
 	
 //================================================================================
@@ -423,10 +430,12 @@ module coarse_sync #(
 	assign u3_i_psi_data_i			= u1_o_psi_data_i;
 	assign u3_i_psi_data_q			= u1_o_psi_data_q;
 	assign u3_i_phi_data			= u2_o_phi_data;
+	assign u3_i_psi_phi_data_addr	= u1_o_psi_data_addr;
 	
 	tar_operator #(
-		.PSI_WIDTH				(PSI_WIDTH			),
-		.PHI_WIDTH				(PHI_WIDTH			)
+		.PSI_WIDTH				(PSI_WIDTH			), // <=38
+		.PHI_WIDTH				(PHI_WIDTH			), // <=39
+		.RAM_ADDR_WIDTH			(RAM_ADDR_WIDTH		) // <=16
 	)u3_tar_operator(
 		.clk					(axis_aclk			),
 		.reset					(axis_areset		),
@@ -436,8 +445,10 @@ module coarse_sync #(
 		.i_psi_data_i			(u3_i_psi_data_i	),
 		.i_psi_data_q			(u3_i_psi_data_q	),
 		.i_phi_data				(u3_i_phi_data		),
+		.i_psi_phi_data_addr	(u3_i_psi_phi_data_addr),
 		.o_tar_data_valid		(u3_o_tar_data_valid), // 11dly
-		.o_tar_data				(u3_o_tar_data		)
+		.o_tar_data				(u3_o_tar_data		),
+		.o_tar_data_addr		(u3_o_tar_data_addr	)
 	);
 	assign test_u3_o_tar_data = u3_o_tar_data[63:0]; // test
 	
