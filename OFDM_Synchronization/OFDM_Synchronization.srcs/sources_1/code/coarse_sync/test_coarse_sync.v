@@ -32,15 +32,10 @@ module test_coarse_sync;
 	reg s_axis_data_tlast;
 	reg [95:0] s_axis_data_tdata;
 	reg [15:0] s_axis_data_taddr;
-	reg m_axis_ctrl_trdy;
 	reg m_axis_data_trdy;
 
 	// Outputs
-	wire s_axis_ctrl_trdy;
 	wire s_axis_data_trdy;
-	wire m_axis_ctrl_tvalid;
-	wire m_axis_ctrl_tlast;
-	wire [31:0] m_axis_ctrl_tdata;
 	wire m_axis_data_tvalid;
 	wire m_axis_data_tlast;
 	wire [119:0] m_axis_data_tdata;
@@ -66,15 +61,12 @@ module test_coarse_sync;
 		.s_axis_data_tdata(s_axis_data_tdata), 
 		.s_axis_data_taddr(s_axis_data_taddr), 
 		.s_axis_data_trdy(s_axis_data_trdy), 
-		.m_axis_ctrl_tvalid(m_axis_ctrl_tvalid), 
-		.m_axis_ctrl_tlast(m_axis_ctrl_tlast), 
-		.m_axis_ctrl_tdata(m_axis_ctrl_tdata), 
-		.m_axis_ctrl_trdy(m_axis_ctrl_trdy), 
 		.m_axis_data_tvalid(m_axis_data_tvalid), 
 		.m_axis_data_tlast(m_axis_data_tlast), 
 		.m_axis_data_tdata(m_axis_data_tdata), 
 		.m_axis_data_taddr(m_axis_data_taddr), 
-		.m_axis_data_trdy(m_axis_data_trdy)
+		.m_axis_data_trdy(m_axis_data_trdy),
+		.o_coarse_sync_ok(o_coarse_sync_ok)
 	);
 
 	initial begin
@@ -89,7 +81,6 @@ module test_coarse_sync;
 		s_axis_data_tlast = 0;
 		s_axis_data_tdata = 0;
 		s_axis_data_taddr = 0;
-		m_axis_ctrl_trdy = 0;
 		m_axis_data_trdy = 0;
 
 		// Wait 100 ns for global reset to finish
@@ -172,12 +163,12 @@ module test_coarse_sync;
 	end
 	
 //================================================================================
-// 时序计数器
+// 时序计数
 //================================================================================
 	// 与valid信号对齐
-	integer u1_u2_o_data_cnt; // 期望运算中最后一个数的号码
-	integer u3_o_tar_data_cnt; // 第四个32数据窗口中最后一个数的号码
-	integer u3_o_tar_data_cnt_first; // 第一个32数据窗口中第一个数的号码
+	integer u1_u2_o_data_cnt; // 期望运算中最后一个数的号�?
+	integer u3_o_tar_data_cnt; // 第四�?32数据窗口中最后一个数的号�?
+	integer u3_o_tar_data_cnt_first; // 第一�?32数据窗口中第�?个数的号�?
 	
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin

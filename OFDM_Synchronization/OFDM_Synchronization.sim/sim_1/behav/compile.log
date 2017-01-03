@@ -73,10 +73,10 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchroni
 INFO: [VRFC 10-311] analyzing module complex_abs_power2_18
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_512_ip/sim/spram_144_512_ip.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module spram_144_512_ip
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/tar_operator.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tar_operator
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/psi_operator.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module psi_operator
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/tar_operator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tar_operator
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/phi_operator.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module phi_operator
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v" into library xil_defaultlib
