@@ -96,11 +96,13 @@ module ofdm_syn #(
 	wire			u2_s_axis_data_tvalid	;
 	wire			u2_s_axis_data_tlast	;
 	wire	[63:0]	u2_s_axis_data_tdata	;
+	wire	[15:0]	u2_s_axis_data_taddr	;
 	wire			u2_s_axis_data_trdy		;
 	
 	wire			u2_m_axis_data_tvalid	;
 	wire			u2_m_axis_data_tlast	;
 	wire	[111:0]	u2_m_axis_data_tdata	;
+	wire	[15:0]	u2_m_axis_data_taddr	;
 	wire			u2_m_axis_data_trdy		;
 	
 	wire			u2_o_coarse_sync_ok		;
@@ -208,6 +210,7 @@ module ofdm_syn #(
 		.s_axis_data_tvalid	(u2_s_axis_data_tvalid	),
 		.s_axis_data_tlast	(u2_s_axis_data_tlast	),
 		.s_axis_data_tdata	(u2_s_axis_data_tdata	),
+		.s_axis_data_taddr	(u2_s_axis_data_taddr	),
 		.s_axis_data_trdy	(u2_s_axis_data_trdy	),
 		
 		.m_axis_data_tvalid	(u2_m_axis_data_tvalid	),

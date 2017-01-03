@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="93" />
+   <WVObjectSize size="97" />
    <wvobject db_ref_id="1" fp_name="/test_coarse_sync/axis_aclk" type="logic">
       <obj_property name="ElementShortName">axis_aclk</obj_property>
       <obj_property name="ObjectShortName">axis_aclk</obj_property>
@@ -334,6 +334,22 @@
    <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u3_o_tar_data" type="array">
       <obj_property name="ElementShortName">u3_o_tar_data[86:0]</obj_property>
       <obj_property name="ObjectShortName">u3_o_tar_data[86:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u3_o_tar_data_addr" type="array">
+      <obj_property name="ElementShortName">u3_o_tar_data_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">u3_o_tar_data_addr[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/coarse_sync_state" type="array">
+      <obj_property name="ElementShortName">coarse_sync_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">coarse_sync_state[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/coarse_sync_fir_count" type="array">
+      <obj_property name="ElementShortName">coarse_sync_fir_count[6:0]</obj_property>
+      <obj_property name="ObjectShortName">coarse_sync_fir_count[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/u4_wea" type="logic">
       <obj_property name="ElementShortName">u4_wea</obj_property>
@@ -374,6 +390,12 @@
    <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/data_addr" type="array">
       <obj_property name="ElementShortName">data_addr[9:0]</obj_property>
       <obj_property name="ObjectShortName">data_addr[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/data_addr2" type="array">
+      <obj_property name="ElementShortName">data_addr2[9:0]</obj_property>
+      <obj_property name="ObjectShortName">data_addr2[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/test_coarse_sync/uut/coarse_sync_ok" type="logic">
       <obj_property name="ElementShortName">coarse_sync_ok</obj_property>

@@ -2,8 +2,8 @@
 # Vivado v2015.2.1 (64-bit)
 # SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
 # IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
-# Start of session at: Fri Dec 30 17:20:44 2016
-# Process ID: 157088
+# Start of session at: Tue Jan 03 14:16:45 2017
+# Process ID: 2108
 # Log file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/test_coarse_sync.vds
 # Journal file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -12,8 +12,9 @@ Command: synth_design -top test_coarse_sync -part xc7z045fbg676-3
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-1223] The version limit for your license is '2017.01' and will expire in 28 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 244.352 ; gain = 58.117
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 243.898 ; gain = 58.215
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'test_coarse_sync' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/test_coarse_sync.v:23]
 INFO: [Synth 8-638] synthesizing module 'coarse_sync' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:23]
@@ -39,10 +40,10 @@ INFO: [Synth 8-638] synthesizing module 'psi_operator' [E:/jiaweiwei/Project/OFD
 	Parameter CLEAR bound to: 2'b01 
 	Parameter WORK bound to: 2'b10 
 	Parameter u2_rd_addr_init bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'complex_multiplier_18_18_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/complex_multiplier_18_18_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'complex_multiplier_18_18_ip' (1#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/complex_multiplier_18_18_ip_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'spram_72_64_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_72_64_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'spram_72_64_ip' (2#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_72_64_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'complex_multiplier_18_18_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/complex_multiplier_18_18_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'complex_multiplier_18_18_ip' (1#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/complex_multiplier_18_18_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'spram_72_64_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/spram_72_64_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_72_64_ip' (2#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/spram_72_64_ip_stub.v:7]
 INFO: [Synth 8-256] done synthesizing module 'psi_operator' (3#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/psi_operator.v:23]
 INFO: [Synth 8-638] synthesizing module 'phi_operator' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/phi_operator.v:23]
 	Parameter SYNC_DATA_WIDTH bound to: 16 - type: integer 
@@ -56,13 +57,13 @@ INFO: [Synth 8-638] synthesizing module 'phi_operator' [E:/jiaweiwei/Project/OFD
 	Parameter WORK bound to: 2'b10 
 	Parameter u2_rd_addr_init bound to: 1 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_18' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_18.v:23]
-INFO: [Synth 8-638] synthesizing module 'dsp48_mul_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/dsp48_mul_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'dsp48_mul_ip' (4#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/dsp48_mul_ip_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'dsp48_mul_add_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/dsp48_mul_add_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'dsp48_mul_add_ip' (5#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/dsp48_mul_add_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'dsp48_mul_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/dsp48_mul_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'dsp48_mul_ip' (4#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/dsp48_mul_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'dsp48_mul_add_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/dsp48_mul_add_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'dsp48_mul_add_ip' (5#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/dsp48_mul_add_ip_stub.v:7]
 INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_18' (6#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_18.v:23]
-INFO: [Synth 8-638] synthesizing module 'spram_36_64_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_36_64_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'spram_36_64_ip' (7#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_36_64_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'spram_36_64_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/spram_36_64_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_36_64_ip' (7#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/spram_36_64_ip_stub.v:7]
 INFO: [Synth 8-256] done synthesizing module 'phi_operator' (8#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/phi_operator.v:23]
 INFO: [Synth 8-638] synthesizing module 'tar_operator' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/tar_operator.v:23]
 	Parameter PSI_WIDTH bound to: 34 - type: integer 
@@ -79,15 +80,15 @@ INFO: [Synth 8-638] synthesizing module 'tar_operator' [E:/jiaweiwei/Project/OFD
 	Parameter CLEAR bound to: 2'b01 
 	Parameter WORK bound to: 2'b10 
 	Parameter u1_rd_addr_init bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'spram_144_32_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_144_32_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'spram_144_32_ip' (9#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_144_32_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'spram_144_32_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/spram_144_32_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_144_32_ip' (9#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/spram_144_32_ip_stub.v:7]
 INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_42' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_42.v:23]
-INFO: [Synth 8-638] synthesizing module 'multiplier_42_42_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/multiplier_42_42_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'multiplier_42_42_ip' (10#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/multiplier_42_42_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'multiplier_42_42_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/multiplier_42_42_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'multiplier_42_42_ip' (10#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/multiplier_42_42_ip_stub.v:7]
 INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_42' (11#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_42.v:23]
 INFO: [Synth 8-256] done synthesizing module 'tar_operator' (12#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/operator/tar_operator.v:23]
-INFO: [Synth 8-638] synthesizing module 'spram_144_512_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_144_512_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'spram_144_512_ip' (13#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-157088-txjs-130/realtime/spram_144_512_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'spram_144_512_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/spram_144_512_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_144_512_ip' (13#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-2108-txjs-130/realtime/spram_144_512_ip_stub.v:7]
 INFO: [Synth 8-155] case statement is not full and has no default [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:161]
 WARNING: [Synth 8-3848] Net s_axis_ctrl_trdy in module/entity coarse_sync does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:56]
 WARNING: [Synth 8-3848] Net s_axis_data_trdy in module/entity coarse_sync does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:62]
@@ -97,7 +98,7 @@ INFO: [Synth 8-3876] $readmem data file 'ofdm_source.txt' is read successfully [
 WARNING: [Synth 8-85] always block has no event control specified [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/test_coarse_sync.v:98]
 INFO: [Synth 8-256] done synthesizing module 'test_coarse_sync' (15#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/test_coarse_sync.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 282.195 ; gain = 95.961
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 281.797 ; gain = 96.113
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -107,7 +108,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 282.195 ; gain = 95.961
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 281.797 ; gain = 96.113
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z045fbg676-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -119,22 +120,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 660.277 ; gain = 0.004
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 660.004 ; gain = 0.004
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 660.277 ; gain = 474.043
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 660.004 ; gain = 474.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z045fbg676-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 660.277 ; gain = 474.043
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 660.004 ; gain = 474.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 660.277 ; gain = 474.043
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 660.004 ; gain = 474.320
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "u1_dout_addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "u234_dout_valid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -160,7 +161,7 @@ INFO: [Synth 8-5544] ROM "data_cnt" won't be mapped to Block RAM because address
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'coarse_sync_state_reg' using encoding 'sequential' in module 'coarse_sync'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 660.277 ; gain = 474.043
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 660.004 ; gain = 474.320
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -182,7 +183,7 @@ Detailed RTL Component Info :
 	   2 Input     33 Bit       Adders := 5     
 	   2 Input     32 Bit       Adders := 1     
 	   2 Input     16 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 10    
+	   2 Input     10 Bit       Adders := 9     
 	   2 Input      9 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 3     
@@ -358,7 +359,7 @@ Detailed RTL Component Info :
 Module coarse_sync 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     10 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 1     
@@ -396,7 +397,7 @@ BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 660.277 ; gain = 474.043
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 660.004 ; gain = 474.320
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -405,9 +406,9 @@ INFO: [Synth 8-5546] ROM "ctrl_work_flag" won't be mapped to RAM because it is t
 INFO: [Synth 8-5545] ROM "s_axis_ctrl_tvalid" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "s_axis_ctrl_tdata" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 916.473 ; gain = 730.238
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 916.684 ; gain = 731.000
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 916.473 ; gain = 730.238
+Finished Parallel Reinference  : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 916.684 ; gain = 731.000
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -536,16 +537,16 @@ INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instan
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 916.473 ; gain = 730.238
+Finished Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 916.684 ; gain = 731.000
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 916.473 ; gain = 730.238
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 916.684 ; gain = 731.000
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 916.473 ; gain = 730.238
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 916.684 ; gain = 731.000
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -553,10 +554,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 916.473 ; gain = 730.238
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 916.684 ; gain = 731.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 916.473 ; gain = 730.238
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 916.684 ; gain = 731.000
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -568,7 +569,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 916.473 ; gain = 730.238
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:00:59 . Memory (MB): peak = 916.684 ; gain = 731.000
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -586,7 +587,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 916.473 ; gain = 730.238
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 916.684 ; gain = 731.000
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -599,7 +600,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 916.473 ; gain = 730.238
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 916.684 ; gain = 731.000
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -611,13 +612,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 916.473 ; gain = 730.238
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 916.684 ; gain = 731.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 916.473 ; gain = 730.238
+Start Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 916.684 ; gain = 731.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 916.473 ; gain = 730.238
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 916.684 ; gain = 731.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -701,11 +702,11 @@ Report Instance Areas:
 |8     |      u2_complex_abs_power2_42 |complex_abs_power2_42   |   445|
 +------+-------------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 916.473 ; gain = 730.238
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 916.684 ; gain = 731.000
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 319 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 916.473 ; gain = 330.277
-Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 916.473 ; gain = 730.238
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 916.684 ; gain = 330.969
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 916.684 ; gain = 731.000
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 218 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -715,8 +716,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-62 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+63 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 916.473 ; gain = 718.348
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.187 . Memory (MB): peak = 916.473 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 30 17:21:49 2016...
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 916.684 ; gain = 719.160
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.203 . Memory (MB): peak = 916.684 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 03 14:17:51 2017...

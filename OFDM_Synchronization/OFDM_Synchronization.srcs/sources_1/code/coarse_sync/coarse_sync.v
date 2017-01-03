@@ -140,9 +140,9 @@ module coarse_sync #(
 	reg				[SPRAM_DATA_WIDTH-1:0]	u4_dina				;
 	wire			[SPRAM_DATA_WIDTH-1:0]	u4_douta			;
 	
-	reg										rd_wea				;
-	reg										rd_wea_dly1			;
-	reg										rd_wea_dly2			;
+	reg										rd_en				;
+	reg										rd_en_dly1			;
+	reg										rd_en_dly2			;
 	reg				[RAM_ADDR_WIDTH-1:0]	data_addr			;
 	
 	reg										coarse_sync_ok		;
@@ -460,7 +460,7 @@ module coarse_sync #(
 		if(axis_areset == 1'b1) begin
 			u4_wea		<= 1'b0;
 			u4_wr_addr	<= 'd0;
-			rd_wea		<= 1'b0;
+			rd_en		<= 1'b0;
 			u4_rd_addr	<= u4_rd_addr_init;
 			u4_addra	<= 'd0;
 			u4_dina		<= 'd0;
@@ -475,7 +475,7 @@ module coarse_sync #(
 					if(u3_i_psi_phi_data_valid == 1'b1) begin
 						u4_wea		<= 1'b1;
 						u4_wr_addr	<= u4_wr_addr + 1'd1;
-						rd_wea		<= 1'b0;
+						rd_en		<= 1'b0;
 						u4_rd_addr	<= u4_rd_addr_init;
 						u4_addra	<= u4_wr_addr + 1'd1;
 						u4_dina		<= {{(SPRAM_DATA_WIDTH-120){1'b0}},
@@ -486,7 +486,7 @@ module coarse_sync #(
 					else begin
 						u4_wea		<= 1'b0;
 						u4_wr_addr	<= u4_wr_addr;
-						rd_wea		<= 1'b0;
+						rd_en		<= 1'b0;
 						u4_rd_addr	<= u4_rd_addr_init;
 						u4_addra	<= u4_wr_addr;
 						u4_dina		<= u4_dina;
@@ -494,11 +494,11 @@ module coarse_sync #(
 				end
 				COARSE_SYNC_SEC: begin
 					if((u3_i_psi_phi_data_valid==1'b1) || (u4_wr_addr==u4_rd_addr)) begin
-						rd_wea		<= 1'b0;
+						rd_en		<= 1'b0;
 						u4_rd_addr	<= u4_rd_addr;
 					end
 					else begin
-						rd_wea		<= 1'b1;
+						rd_en		<= 1'b1;
 						u4_rd_addr	<= u4_rd_addr + 1'd1;
 					end
 					if(u3_i_psi_phi_data_valid == 1'b1) begin
@@ -520,7 +520,7 @@ module coarse_sync #(
 				default: begin
 					u4_wea		<= 1'b0;
 					u4_wr_addr	<= 'd0;
-					rd_wea		<= 1'b0;
+					rd_en		<= 1'b0;
 					u4_rd_addr	<= u4_rd_addr_init;
 					u4_addra	<= 'd0;
 					u4_dina		<= 'd0;
@@ -539,12 +539,12 @@ module coarse_sync #(
 	
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
-			rd_wea_dly1 <= 1'b0;
-			rd_wea_dly2 <= 1'b0;
+			rd_en_dly1 <= 1'b0;
+			rd_en_dly2 <= 1'b0;
 		end
 		else begin
-			rd_wea_dly1 <= rd_wea;
-			rd_wea_dly2 <= rd_wea_dly1;
+			rd_en_dly1 <= rd_en;
+			rd_en_dly2 <= rd_en_dly1;
 		end
 	end
 	
@@ -559,15 +559,15 @@ module coarse_sync #(
 				// COARSE_SYNC_ING: begin
 				// end
 				COARSE_SYNC_FIR: begin
-					if(s_axis_data_tvalid == 1'b1) begin
-						data_addr <= s_axis_data_taddr[RAM_ADDR_WIDTH-1:0] - 8'd225;
+					if(u3_o_tar_data_valid == 1'b1) begin
+						data_addr <= u3_o_tar_data_addr[RAM_ADDR_WIDTH-1:0];
 					end
 					else begin
 						data_addr <= data_addr;
 					end
 				end
 				COARSE_SYNC_SEC: begin
-					if(rd_wea_dly2 == 1'b1) begin
+					if(rd_en_dly2 == 1'b1) begin
 						data_addr <= data_addr + 1'd1;
 					end
 					else begin
@@ -581,7 +581,7 @@ module coarse_sync #(
 		end
 	end
 	
-	assign m_axis_data_tvalid	= rd_wea_dly2;
+	assign m_axis_data_tvalid	= rd_en_dly2;
 	assign m_axis_data_tdata	= u4_douta[119:0];
 	assign m_axis_data_taddr	= {{(16-RAM_ADDR_WIDTH){1'b0}},data_addr};
 	
