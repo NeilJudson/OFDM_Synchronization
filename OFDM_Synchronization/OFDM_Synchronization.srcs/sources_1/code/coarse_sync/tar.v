@@ -5,7 +5,7 @@
 // 
 // Create Date: 2016/11/24 14:20:28
 // Design Name: 
-// Module Name: tar_operator
+// Module Name: tar
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tar_operator #(
+module tar #(
 	parameter PSI_WIDTH		= 34, // <=38
 	parameter PHI_WIDTH		= 35, // <=39
 	parameter RAM_ADDR_WIDTH= 10
@@ -42,42 +42,43 @@ module tar_operator #(
 	o_tar_data		,
 	o_tar_data_addr
     );
-	input						clk				;
-	input						reset			;
+	input					clk				;
+	input					reset			;
 	
-	input						i_work_ctrl_en	;
-	input						i_work_ctrl		; // 1'b0: 停止工作；1'b1: 开始工作，进入清零状态
+	input					i_work_ctrl_en	;
+	input					i_work_ctrl		; // 1'b0: 停止工作；1'b1: 开始工作，进入清零状态
 	
-	input						i_psi_phi_data_valid;
-	input		signed	[37:0]	i_psi_data_i	;
-	input		signed	[37:0]	i_psi_data_q	;
-	input		signed	[38:0]	i_phi_data		;
-	input				[15:0]	i_psi_phi_data_addr;
+	input					i_psi_phi_data_valid;
+	input	signed	[37:0]	i_psi_data_i	;
+	input	signed	[37:0]	i_psi_data_q	;
+	input	signed	[38:0]	i_phi_data		;
+	input			[15:0]	i_psi_phi_data_addr;
 	
-	output						o_tar_data_valid;
-	output		signed	[86:0]	o_tar_data		;
-	output				[15:0]	o_tar_data_addr	;
+	output					o_tar_data_valid;
+	output	signed	[86:0]	o_tar_data		;
+	output			[15:0]	o_tar_data_addr	;
 
 	
 //================================================================================
 // variable
 //================================================================================
-	localparam	SPRAM_ADDR_WIDTH= 5;
-	localparam	SPRAM_DATA_WIDTH= 144;
-	localparam	PSI_SUM_WIDTH	= PSI_WIDTH+5; // 39
-	localparam	PHI_SUM_WIDTH	= PHI_WIDTH+5; // 40
-	localparam	PSI_POWER_WIDTH	= 2*PSI_SUM_WIDTH; // 78
-	localparam	PHI_POWER_WIDTH	= 2*(PHI_SUM_WIDTH-1); // 78
-	localparam	TAR_WIDTH		= PSI_POWER_WIDTH+1; // 79
+	localparam	SPRAM_DATA_WIDTH	= 144;
+	localparam	SPRAM_ADDR_WIDTH	= 5;
+	localparam	SPRAM_DATA_DEPTH	= 2**SPRAM_ADDR_WIDTH; // 32
+	localparam	PSI_SUM_WIDTH		= PSI_WIDTH+5; // 39
+	localparam	PHI_SUM_WIDTH		= PHI_WIDTH+5; // 40
+	localparam	PSI_POWER_WIDTH		= 2*PSI_SUM_WIDTH; // 78
+	localparam	PHI_POWER_WIDTH		= 2*(PHI_SUM_WIDTH-1); // 78
+	localparam	TAR_WIDTH			= PSI_POWER_WIDTH+1; // 79
 	// state
 	localparam	IDLE			= 2'd0,
 				CLEAR			= 2'd1,
 				WORK			= 2'd2;
 	
 	reg				[1:0]					state			;
-	reg				[SPRAM_ADDR_WIDTH:0]	clear_count		;
 	reg				[2:0]					cnt				;
 	
+	reg				[SPRAM_ADDR_WIDTH:0]	clear_addr		;
 	reg										u1_wea			;
 	reg				[SPRAM_ADDR_WIDTH-1:0]	u1_wr_addr		;
 	reg				[SPRAM_ADDR_WIDTH-1:0]	u1_rd_addr		;
@@ -128,21 +129,10 @@ module tar_operator #(
 			case(state)
 				IDLE: begin
 					if((i_work_ctrl_en==1'b1) && (i_work_ctrl==1'b1)) begin
-						state <= CLEAR;
-					end
-					else begin
-						state <= IDLE;
-					end
-				end
-				CLEAR: begin
-					if((i_work_ctrl_en==1'b1) && (i_work_ctrl==1'b0)) begin
-						state <= IDLE;
-					end
-					else if(clear_count >= 'd35) begin
 						state <= WORK;
 					end
 					else begin
-						state <= CLEAR;
+						state <= IDLE;
 					end
 				end
 				WORK: begin
@@ -155,28 +145,6 @@ module tar_operator #(
 				end
 				default: begin
 					state <= IDLE;
-				end
-			endcase
-		end
-	end
-	
-	always @(posedge clk or posedge reset) begin
-		if(reset == 1'b1) begin
-			clear_count <= 'd0;
-		end
-		else begin
-			case(state)
-				// IDLE: begin
-					// clear_count <= 'd0;
-				// end
-				CLEAR: begin
-					clear_count <= clear_count + 1'd1;
-				end
-				// WORK: begin
-					// clear_count <= 'd0;
-				// end
-				default: begin
-					clear_count <= 'd0;
 				end
 			endcase
 		end
@@ -200,6 +168,7 @@ module tar_operator #(
 	localparam u1_rd_addr_init = 'd1;
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
+			clear_addr	<= 'd0;
 			u1_wea		<= 1'b0;
 			u1_wr_addr	<= 'd0;
 			u1_rd_addr	<= u1_rd_addr_init;
@@ -209,20 +178,22 @@ module tar_operator #(
 		else begin
 			case(state)
 				IDLE: begin
-					u1_wea		<= 1'b0;
+					if(clear_addr < SPRAM_DATA_DEPTH) begin
+						clear_addr	<= clear_addr + 1'd1;
+						u1_wea		<= 1'b1;
+						u1_addra	<= clear_addr;
+					end
+					else begin
+						clear_addr	<= clear_addr;
+						u1_wea		<= 1'b0;
+						u1_addra	<= 'd0;
+					end
 					u1_wr_addr	<= 'd0;
 					u1_rd_addr	<= u1_rd_addr_init;
-					u1_addra	<= 'd0;
-					u1_dina		<= 'd0;
-				end
-				CLEAR: begin
-					u1_wea		<= 1'b1;
-					u1_wr_addr	<= 'd0;
-					u1_rd_addr	<= u1_rd_addr_init;
-					u1_addra	<= u1_addra + 1'd1;
 					u1_dina		<= 'd0;
 				end
 				WORK: begin
+					clear_addr	<= 'd0;
 					if(i_psi_phi_data_valid == 1'b1) begin
 						u1_wea		<= 1'b1; // cnt=1
 						u1_wr_addr	<= u1_wr_addr + 1'd1;
@@ -242,6 +213,7 @@ module tar_operator #(
 					end
 				end
 				default: begin
+					clear_addr	<= 'd0;
 					u1_wea		<= 1'b0;
 					u1_wr_addr	<= 'd0;
 					u1_rd_addr	<= u1_rd_addr_init;

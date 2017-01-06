@@ -125,6 +125,7 @@ module coarse_sync #(
 	wire									u3_i_work_ctrl_en	;
 	wire									u3_i_work_ctrl		;
 	wire									u3_i_psi_phi_data_valid;
+	reg										u3_i_psi_phi_data_valid_dly1;
 	wire	signed	[37:0]					u3_i_psi_data_i		;
 	wire	signed	[37:0]					u3_i_psi_data_q		;
 	wire	signed	[38:0]					u3_i_phi_data		;
@@ -276,7 +277,7 @@ module coarse_sync #(
 					if((ctrl_work_en==1'b1) && (ctrl_work==1'b0)) begin
 						coarse_sync_state <= COARSE_SYNC_IDLE;
 					end
-					else if(coarse_sync_sec_count == 8'd255) begin
+					else if(coarse_sync_sec_count == 8'd200) begin
 						coarse_sync_state <= COARSE_SYNC_IDLE;
 					end
 					else begin
@@ -378,10 +379,10 @@ module coarse_sync #(
 	assign u2_i_data_dly_q		= u1_i_data_dly_q;
 	assign u2_i_data_dly_addr	= u1_i_data_dly_addr;
 	
-	psi_operator #(
+	psi #(
 		.SYNC_DATA_WIDTH	(SYNC_DATA_WIDTH	), // <=18
 		.RAM_ADDR_WIDTH		(RAM_ADDR_WIDTH		) // <=16
-	)u1_psi_operator(
+	)u1_psi(
 		.clk				(axis_aclk			),
 		.reset				(axis_areset		),
 		.i_work_ctrl_en		(u1_i_work_ctrl_en	),
@@ -402,10 +403,10 @@ module coarse_sync #(
 		.o_psi_data_addr	(u1_o_psi_data_addr	)
 	);
 	
-	phi_operator #(
+	phi #(
 		.SYNC_DATA_WIDTH	(SYNC_DATA_WIDTH	), // <=18
 		.RAM_ADDR_WIDTH		(RAM_ADDR_WIDTH		) // <=16
-	)u2_phi_operator(
+	)u2_phi(
 		.clk				(axis_aclk			),
 		.reset				(axis_areset		),
 		.i_work_ctrl_en		(u2_i_work_ctrl_en	),
@@ -432,11 +433,11 @@ module coarse_sync #(
 	assign u3_i_phi_data			= u2_o_phi_data;
 	assign u3_i_psi_phi_data_addr	= u1_o_psi_data_addr;
 	
-	tar_operator #(
+	tar #(
 		.PSI_WIDTH				(PSI_WIDTH			), // <=38
 		.PHI_WIDTH				(PHI_WIDTH			), // <=39
 		.RAM_ADDR_WIDTH			(RAM_ADDR_WIDTH		) // <=16
-	)u3_tar_operator(
+	)u3_tar(
 		.clk					(axis_aclk			),
 		.reset					(axis_areset		),
 		.i_work_ctrl_en			(u3_i_work_ctrl_en	),
@@ -455,6 +456,15 @@ module coarse_sync #(
 //================================================================================
 // output data for fine synchronization
 //================================================================================
+	always @(posedge axis_aclk or posedge axis_areset) begin
+		if(axis_areset == 1'b1) begin
+			u3_i_psi_phi_data_valid_dly1 <= 1'b0;
+		end
+		else begin
+			u3_i_psi_phi_data_valid_dly1 <= u3_i_psi_phi_data_valid;
+		end
+	end
+	
 	localparam u4_rd_addr_init = 'd33; // 64个数据后再次大于0的tar值，其对应32数据窗口第1个数据的存放位置
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
@@ -493,26 +503,30 @@ module coarse_sync #(
 					end
 				end
 				COARSE_SYNC_SEC: begin
-					if((u3_i_psi_phi_data_valid==1'b1) || (u4_wr_addr==u4_rd_addr)) begin
-						rd_en		<= 1'b0;
-						u4_rd_addr	<= u4_rd_addr;
-					end
-					else begin
-						rd_en		<= 1'b1;
-						u4_rd_addr	<= u4_rd_addr + 1'd1;
-					end
 					if(u3_i_psi_phi_data_valid == 1'b1) begin
 						u4_wea		<= 1'b1;
 						u4_wr_addr	<= u4_wr_addr + 1'd1;
+						rd_en		<= 1'b0;
+						u4_rd_addr	<= u4_rd_addr;
 						u4_addra	<= u4_wr_addr + 1'd1;
 						u4_dina		<= {{(SPRAM_DATA_WIDTH-120){1'b0}},
 										1'd0,u3_i_phi_data,
 										2'd0,u3_i_psi_data_q,
 										2'd0,u3_i_psi_data_i};
 					end
+					else if(u3_i_psi_phi_data_valid_dly1 == 1'b1) begin
+						u4_wea		<= 1'b0;
+						u4_wr_addr	<= u4_wr_addr;
+						rd_en		<= 1'b1;
+						u4_rd_addr	<= u4_rd_addr + 1'd1;
+						u4_addra	<= u4_rd_addr + 1'd1;
+						u4_dina		<= u4_dina;
+					end
 					else begin
 						u4_wea		<= 1'b0;
 						u4_wr_addr	<= u4_wr_addr;
+						rd_en		<= 1'b0;
+						u4_rd_addr	<= u4_rd_addr;
 						u4_addra	<= u4_rd_addr;
 						u4_dina		<= u4_dina;
 					end
@@ -558,16 +572,13 @@ module coarse_sync #(
 				// end
 				// COARSE_SYNC_ING: begin
 				// end
-				COARSE_SYNC_FIR: begin
-					if(u3_o_tar_data_valid == 1'b1) begin
-						data_addr <= u3_o_tar_data_addr[RAM_ADDR_WIDTH-1:0];
-					end
-					else begin
-						data_addr <= data_addr;
-					end
-				end
+				// COARSE_SYNC_FIR: begin
+				// end
 				COARSE_SYNC_SEC: begin
-					if(rd_en_dly2 == 1'b1) begin
+					if(coarse_sync_state_dly1 == COARSE_SYNC_FIR) begin
+						data_addr <= u3_o_tar_data_addr[RAM_ADDR_WIDTH-1:0] - 1'd1;
+					end
+					else if(rd_en_dly1 == 1'b1) begin
 						data_addr <= data_addr + 1'd1;
 					end
 					else begin
@@ -575,7 +586,7 @@ module coarse_sync #(
 					end
 				end
 				default: begin
-					data_addr <= 'd0;
+					data_addr	<= 'd0;
 				end
 			endcase
 		end

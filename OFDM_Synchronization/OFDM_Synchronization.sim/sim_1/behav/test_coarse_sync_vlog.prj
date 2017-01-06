@@ -10,9 +10,9 @@ verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/ip/complex
 verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_42.v"
 verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/tools/complex_abs_power2_18.v"
 verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/ip/spram_144_512_ip/sim/spram_144_512_ip.v"
-verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/operator/psi_operator.v"
-verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/operator/tar_operator.v"
-verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/operator/phi_operator.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/coarse_sync/tar.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/coarse_sync/phi.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/coarse_sync/psi.v"
 verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v"
 verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/coarse_sync/test_coarse_sync.v"
 
