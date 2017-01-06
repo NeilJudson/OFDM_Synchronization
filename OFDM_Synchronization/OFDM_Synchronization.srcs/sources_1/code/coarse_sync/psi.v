@@ -5,7 +5,7 @@
 // 
 // Create Date: 2016/10/27 21:22:58
 // Design Name: 
-// Module Name: psi_operator
+// Module Name: psi
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module psi_operator #(
+module psi #(
 	parameter SYNC_DATA_WIDTH	= 16, // <=18
 	parameter RAM_ADDR_WIDTH	= 10 // <=10
 	)
@@ -74,17 +74,16 @@ module psi_operator #(
 //================================================================================
 // variable
 //================================================================================
-	localparam	SPRAM_ADDR_WIDTH	= 6;
 	localparam	SPRAM_DATA_WIDTH	= 72;
+	localparam	SPRAM_ADDR_WIDTH	= 6;
+	localparam	SPRAM_DATA_DEPTH	= 2**SPRAM_ADDR_WIDTH; // 64
 	localparam	DATA_MUL_WIDTH		= 2*SYNC_DATA_WIDTH; // 32
 	localparam	PSI_WIDTH			= 2*SYNC_DATA_WIDTH+2; // 34
 	// state
 	localparam	IDLE	= 2'd0,
-				CLEAR	= 2'd1,
-				WORK	= 2'd2;
+				WORK	= 2'd3;
 	
 	reg				[1:0]					state			;
-	reg				[SPRAM_ADDR_WIDTH:0]	clear_count		;
 	reg				[2:0]					cnt				;
 	
 	wire	signed	[17:0]					i_data_q_neg	;
@@ -95,6 +94,7 @@ module psi_operator #(
 	wire									u1_m_axis_dout_tvalid;
 	wire			[79:0]					u1_m_axis_dout_tdata;
 	
+	reg				[SPRAM_ADDR_WIDTH:0]	clear_addr		;
 	reg										u2_wea			;
 	reg				[SPRAM_ADDR_WIDTH-1:0]	u2_wr_addr		;
 	reg				[SPRAM_ADDR_WIDTH-1:0]	u2_rd_addr		;
@@ -143,21 +143,10 @@ module psi_operator #(
 			case(state)
 				IDLE: begin
 					if((i_work_ctrl_en==1'b1) && (i_work_ctrl==1'b1)) begin
-						state <= CLEAR;
-					end
-					else begin
-						state <= IDLE;
-					end
-				end
-				CLEAR: begin
-					if((i_work_ctrl_en==1'b1) && (i_work_ctrl==1'b0)) begin
-						state <= IDLE;
-					end
-					else if(clear_count >= 'd65) begin
 						state <= WORK;
 					end
 					else begin
-						state <= CLEAR;
+						state <= IDLE;
 					end
 				end
 				WORK: begin
@@ -170,26 +159,6 @@ module psi_operator #(
 				end
 				default: begin
 					state <= IDLE;
-				end
-			endcase
-		end
-	end
-	
-	always @(posedge clk or posedge reset) begin
-		if(reset == 1'b1) begin
-			clear_count <= 'd0;
-		end
-		else begin
-			case(state)
-				// IDLE: begin
-				// end
-				CLEAR: begin
-					clear_count <= clear_count + 1'd1;
-				end
-				// WORK: begin
-				// end
-				default: begin
-					clear_count <= 'd0;
 				end
 			endcase
 		end
@@ -260,33 +229,36 @@ module psi_operator #(
 	localparam u2_rd_addr_init = 'd1;
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
+			clear_addr	<= 'd0;
 			u2_wea		<= 1'b0;
 			u2_wr_addr	<= 'd0;
 			u2_rd_addr	<= u2_rd_addr_init;
 			u2_addra	<= 'd0;
 			u2_dina		<= 'd0;
+			u3_dina		<= 'd0;
+			u4_dina		<= 'd0;
 		end
 		else begin
 			case(state)
 				IDLE: begin
-					u2_wea		<= 1'b0;
+					if(clear_addr < SPRAM_DATA_DEPTH) begin
+						clear_addr	<= clear_addr + 1'd1;
+						u2_wea		<= 1'b1;
+						u2_addra	<= clear_addr;
+					end
+					else begin
+						clear_addr	<= clear_addr;
+						u2_wea		<= 1'b0;
+						u2_addra	<= 'd0;
+					end
 					u2_wr_addr	<= 'd0;
 					u2_rd_addr	<= u2_rd_addr_init;
-					u2_addra	<= 'd0;
-					u2_dina		<= 'd0;
-					u3_dina		<= 'd0;
-					u4_dina		<= 'd0;
-				end
-				CLEAR: begin
-					u2_wea		<= 1'b1;
-					u2_wr_addr	<= 'd0;
-					u2_rd_addr	<= u2_rd_addr_init;
-					u2_addra	<= u2_addra + 1'd1;
 					u2_dina		<= 'd0;
 					u3_dina		<= 'd0;
 					u4_dina		<= 'd0;
 				end
 				WORK: begin
+					clear_addr <= 'd0;
 					if(u1_m_axis_dout_tvalid == 1'b1) begin
 						u2_wea		<= 1'b1; // cnt=0
 						u2_wr_addr	<= u2_wr_addr + 1'd1;
@@ -308,6 +280,7 @@ module psi_operator #(
 					end
 				end
 				default: begin
+					clear_addr	<= 'd0;
 					u2_wea		<= 1'b0;
 					u2_wr_addr	<= 'd0;
 					u2_rd_addr	<= u2_rd_addr_init;

@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log test_coarse_sync.vds -m64 -mode batch -messageDb vivado.pb -notrace -source test_coarse_sync.tcl
+EAStep vivado -log test_lambda.vds -m64 -mode batch -messageDb vivado.pb -notrace -source test_lambda.tcl

@@ -1,13 +1,13 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
----------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-| Date         : Tue Jan 03 14:17:51 2017
+| Date         : Fri Jan 06 13:19:27 2017
 | Host         : txjs-130 running 64-bit Service Pack 1  (build 7601)
-| Command      : report_utilization -file test_coarse_sync_utilization_synth.rpt -pb test_coarse_sync_utilization_synth.pb
-| Design       : test_coarse_sync
+| Command      : report_utilization -file test_lambda_utilization_synth.rpt -pb test_lambda_utilization_synth.pb
+| Design       : test_lambda
 | Device       : xc7z045
-| Design State : Synthesized
----------------------------------------------------------------------------------------------------------------------------
+| Design State : Fully Placed
+-----------------------------------------------------------------------------------------------------------------
 
 Utilization Design Information
 
@@ -15,33 +15,31 @@ Table of Contents
 -----------------
 1. Slice Logic
 1.1 Summary of Registers by Type
-2. Memory
-3. DSP
-4. IO and GT Specific
-5. Clocking
-6. Specific Feature
-7. Primitives
-8. Black Boxes
-9. Instantiated Netlists
+2. Slice Logic Distribution
+3. Memory
+4. DSP
+5. IO and GT Specific
+6. Clocking
+7. Specific Feature
+8. Primitives
+9. Black Boxes
+10. Instantiated Netlists
 
 1. Slice Logic
 --------------
 
-+----------------------------+------+-------+-----------+-------+
-|          Site Type         | Used | Fixed | Available | Util% |
-+----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 4743 |     0 |    218600 |  2.17 |
-|   LUT as Logic             | 4740 |     0 |    218600 |  2.17 |
-|   LUT as Memory            |    3 |     0 |     70400 | <0.01 |
-|     LUT as Distributed RAM |    0 |     0 |           |       |
-|     LUT as Shift Register  |    3 |     0 |           |       |
-| Slice Registers            | 1843 |     0 |    437200 |  0.42 |
-|   Register as Flip Flop    | 1843 |     0 |    437200 |  0.42 |
-|   Register as Latch        |    0 |     0 |    437200 |  0.00 |
-| F7 Muxes                   | 1536 |     0 |    109300 |  1.41 |
-| F8 Muxes                   |  768 |     0 |     54650 |  1.41 |
-+----------------------------+------+-------+-----------+-------+
-* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
++-------------------------+------+-------+-----------+-------+
+|        Site Type        | Used | Fixed | Available | Util% |
++-------------------------+------+-------+-----------+-------+
+| Slice LUTs              |    0 |     0 |    218600 |  0.00 |
+|   LUT as Logic          |    0 |     0 |    218600 |  0.00 |
+|   LUT as Memory         |    0 |     0 |     70400 |  0.00 |
+| Slice Registers         |    0 |     0 |    437200 |  0.00 |
+|   Register as Flip Flop |    0 |     0 |    437200 |  0.00 |
+|   Register as Latch     |    0 |     0 |    437200 |  0.00 |
+| F7 Muxes                |    0 |     0 |    109300 |  0.00 |
+| F8 Muxes                |    0 |     0 |     54650 |  0.00 |
++-------------------------+------+-------+-----------+-------+
 
 
 1.1 Summary of Registers by Type
@@ -59,11 +57,30 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 1843  |          Yes |       Reset |            - |
+| 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
-2. Memory
+2. Slice Logic Distribution
+---------------------------
+
++-------------------------------------------------------------+---------+-------+-----------+-------+
+|                          Site Type                          |   Used  | Fixed | Available | Util% |
++-------------------------------------------------------------+---------+-------+-----------+-------+
+| Slice                                                       |       0 |     0 |     54650 |  0.00 |
+|   SLICEL                                                    |       0 |     0 |           |       |
+|   SLICEM                                                    |       0 |     0 |           |       |
+| LUT as Logic                                                |       0 |     0 |    218600 |  0.00 |
+| LUT as Memory                                               |       0 |     0 |     70400 |  0.00 |
+|   LUT as Distributed RAM                                    |       0 |     0 |           |       |
+|   LUT as Shift Register                                     |       0 |     0 |           |       |
+| LUT Flip Flop Pairs                                         |       0 |     0 |    218600 |  0.00 |
+| Unique Control Sets                                         |       0 |       |           |       |
+| Minimum number of registers lost to control set restriction | 0(Lost) |       |           |       |
++-------------------------------------------------------------+---------+-------+-----------+-------+
+
+
+3. Memory
 ---------
 
 +----------------+------+-------+-----------+-------+
@@ -76,7 +93,7 @@ Table of Contents
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
 
 
-3. DSP
+4. DSP
 ------
 
 +-----------+------+-------+-----------+-------+
@@ -86,7 +103,7 @@ Table of Contents
 +-----------+------+-------+-----------+-------+
 
 
-4. IO and GT Specific
+5. IO and GT Specific
 ---------------------
 
 +-----------------------------+------+-------+-----------+-------+
@@ -114,13 +131,13 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 
 
-5. Clocking
+6. Clocking
 -----------
 
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
+| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
 | BUFIO      |    0 |     0 |        32 |  0.00 |
 | MMCME2_ADV |    0 |     0 |         8 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |         8 |  0.00 |
@@ -130,7 +147,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 
 
-6. Specific Feature
+7. Specific Feature
 -------------------
 
 +-------------+------+-------+-----------+-------+
@@ -148,46 +165,24 @@ Table of Contents
 +-------------+------+-------+-----------+-------+
 
 
-7. Primitives
+8. Primitives
 -------------
 
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     | 3504 |                 LUT |
-| FDRE     | 1843 |        Flop & Latch |
-| MUXF7    | 1536 |               MuxFx |
-| LUT2     | 1008 |                 LUT |
-| MUXF8    |  768 |               MuxFx |
-| LUT3     |  260 |                 LUT |
-| CARRY4   |  218 |          CarryLogic |
-| LUT1     |  118 |                 LUT |
-| LUT5     |  113 |                 LUT |
-| LUT4     |   41 |                 LUT |
-| SRL16E   |    3 |  Distributed Memory |
-| BUFG     |    1 |               Clock |
-+----------+------+---------------------+
 
 
-8. Black Boxes
+9. Black Boxes
 --------------
 
-+-----------------------------+------+
-|           Ref Name          | Used |
-+-----------------------------+------+
-| spram_72_64_ip              |    3 |
-| spram_36_64_ip              |    3 |
-| multiplier_42_42_ip         |    3 |
-| dsp48_mul_ip                |    2 |
-| dsp48_mul_add_ip            |    2 |
-| spram_144_512_ip            |    1 |
-| spram_144_32_ip             |    1 |
-| complex_multiplier_18_18_ip |    1 |
-+-----------------------------+------+
++----------+------+
+| Ref Name | Used |
++----------+------+
 
 
-9. Instantiated Netlists
-------------------------
+10. Instantiated Netlists
+-------------------------
 
 +----------+------+
 | Ref Name | Used |

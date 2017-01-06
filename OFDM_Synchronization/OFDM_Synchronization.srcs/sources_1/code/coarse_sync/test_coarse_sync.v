@@ -41,7 +41,7 @@ module test_coarse_sync;
 	wire [119:0] m_axis_data_tdata;
 	wire [15:0] m_axis_data_taddr;
 	
-	reg [31:0] data_in[0:20000];
+	reg [31:0] data_in[0:4000];
 	integer clk_cnt;
 	integer data_cnt;
 
@@ -71,7 +71,7 @@ module test_coarse_sync;
 
 	initial begin
 		// Initialize Inputs
-		$readmemh("ofdm_source.txt",data_in);
+		$readmemh("ofdm_source.dat",data_in);
 		axis_aclk = 0;
 		axis_areset = 0;
 		s_axis_ctrl_tvalid = 0;
@@ -131,20 +131,17 @@ module test_coarse_sync;
 		end
 		else begin
 			if(clk_cnt[2:0] == 3'd3) begin
-				if(data_cnt > 3200) begin
-					s_axis_data_tvalid	<= 1'b1;
-					s_axis_data_tdata	<= 96'd0;
-					s_axis_data_taddr	<= data_cnt + 1;
-					data_cnt			<= data_cnt + 1;
+				s_axis_data_tvalid	<= 1'b1;
+				s_axis_data_taddr	<= data_cnt + 1;
+				data_cnt			<= data_cnt + 1;
+				if(data_cnt >= 3200) begin
+					s_axis_data_tdata <= 96'd0;
 				end
 				else begin
-					s_axis_data_tvalid	<= 1'b1;
-					s_axis_data_tdata	<= {8'd0,data_in[data_cnt][15:0],
+					s_axis_data_tdata <= {8'd0,data_in[data_cnt][15:0],
 											8'd0,data_in[data_cnt][31:16],
 											8'd0,data_in[data_cnt+32][15:0],
 											8'd0,data_in[data_cnt+32][31:16]};
-					s_axis_data_taddr	<= data_cnt + 1;
-					data_cnt			<= data_cnt + 1;
 				end
 			end
 			else begin
@@ -159,27 +156,6 @@ module test_coarse_sync;
 	always @(posedge axis_aclk) begin
 		if(clk_cnt == 30000) begin
 			$stop;
-		end
-	end
-	
-//================================================================================
-// 时序计数
-//================================================================================
-	// 与valid信号对齐
-	integer u1_u2_o_data_cnt; // 期望运算中最后一个数的号�?
-	integer u3_o_tar_data_cnt; // 第四�?32数据窗口中最后一个数的号�?
-	integer u3_o_tar_data_cnt_first; // 第一�?32数据窗口中第�?个数的号�?
-	
-	always @(posedge axis_aclk or posedge axis_areset) begin
-		if(axis_areset == 1'b1) begin
-			u1_u2_o_data_cnt		<= 0;
-			u3_o_tar_data_cnt		<= 0;
-			u3_o_tar_data_cnt_first	<= 0;
-		end
-		else begin
-			u1_u2_o_data_cnt		<= data_cnt - 1;
-			u3_o_tar_data_cnt		<= data_cnt - 2;
-			u3_o_tar_data_cnt_first	<= data_cnt - 2 - 223;
 		end
 	end
 	

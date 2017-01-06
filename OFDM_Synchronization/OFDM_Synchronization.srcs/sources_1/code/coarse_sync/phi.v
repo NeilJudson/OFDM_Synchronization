@@ -5,7 +5,7 @@
 // 
 // Create Date: 2016/11/21 15:37:37
 // Design Name: 
-// Module Name: phi_operator
+// Module Name: phi
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module phi_operator #(
+module phi #(
 	parameter SYNC_DATA_WIDTH	= 16, // <=18
 	parameter RAM_ADDR_WIDTH	= 10 // <=10
 	)
@@ -62,8 +62,9 @@ module phi_operator #(
 //================================================================================
 // variable
 //================================================================================
-	localparam	SPRAM_ADDR_WIDTH	= 6;
 	localparam	SPRAM_DATA_WIDTH	= 36;
+	localparam	SPRAM_ADDR_WIDTH	= 6;
+	localparam	SPRAM_DATA_DEPTH	= 2**SPRAM_ADDR_WIDTH; // 64
 	localparam	DATA_POWER_WIDTH	= 2*SYNC_DATA_WIDTH; // 32
 	localparam	PHI_WIDTH			= 2*SYNC_DATA_WIDTH+1+2; // 35
 	// state
@@ -72,7 +73,6 @@ module phi_operator #(
 				WORK	= 2'd2;
 	
 	reg				[1:0]					state			;
-	reg				[SPRAM_ADDR_WIDTH:0]	clear_count		;
 	reg				[2:0]					cnt				;
 	
 	reg										u1_i_data_valid	;
@@ -91,6 +91,7 @@ module phi_operator #(
 	reg		signed	[DATA_POWER_WIDTH:0]	power_add		;
 	reg				[RAM_ADDR_WIDTH-1:0]	power_add_addr	;
 	
+	reg				[SPRAM_ADDR_WIDTH:0]	clear_addr		;
 	reg										u2_wea			;
 	reg				[SPRAM_ADDR_WIDTH-1:0]	u2_wr_addr		;
 	reg				[SPRAM_ADDR_WIDTH-1:0]	u2_rd_addr		;
@@ -102,14 +103,14 @@ module phi_operator #(
 	wire			[SPRAM_ADDR_WIDTH-1:0]	u3_wr_addr		;
 	wire			[SPRAM_ADDR_WIDTH-1:0]	u3_rd_addr		;
 	wire			[SPRAM_ADDR_WIDTH-1:0]	u3_addra		;
-	wire			[SPRAM_DATA_WIDTH-1:0]	u3_dina			;
+	reg				[SPRAM_DATA_WIDTH-1:0]	u3_dina			;
 	wire			[SPRAM_DATA_WIDTH-1:0]	u3_douta		;
 
 	wire									u4_wea			;
 	wire			[SPRAM_ADDR_WIDTH-1:0]	u4_wr_addr		;
 	wire			[SPRAM_ADDR_WIDTH-1:0]	u4_rd_addr		;
 	wire			[SPRAM_ADDR_WIDTH-1:0]	u4_addra		;
-	wire			[SPRAM_DATA_WIDTH-1:0]	u4_dina			;
+	reg				[SPRAM_DATA_WIDTH-1:0]	u4_dina			;
 	wire			[SPRAM_DATA_WIDTH-1:0]	u4_douta		;
 	
 	reg				[RAM_ADDR_WIDTH-1:0]	u2_dout_addr	;
@@ -135,21 +136,10 @@ module phi_operator #(
 			case(state)
 				IDLE: begin
 					if((i_work_ctrl_en==1'b1) && (i_work_ctrl==1'b1)) begin
-						state <= CLEAR;
-					end
-					else begin
-						state <= IDLE;
-					end
-				end
-				CLEAR: begin
-					if((i_work_ctrl_en==1'b1) && (i_work_ctrl==1'b0)) begin
-						state <= IDLE;
-					end
-					else if(clear_count >= 'd65) begin
 						state <= WORK;
 					end
 					else begin
-						state <= CLEAR;
+						state <= IDLE;
 					end
 				end
 				WORK: begin
@@ -162,26 +152,6 @@ module phi_operator #(
 				end
 				default: begin
 					state <= IDLE;
-				end
-			endcase
-		end
-	end
-	
-	always @(posedge clk or posedge reset) begin
-		if(reset == 1'b1) begin
-			clear_count <= 'd0;
-		end
-		else begin
-			case(state)
-				// IDLE: begin
-				// end
-				CLEAR: begin
-					clear_count <= clear_count + 1'd1;
-				end
-				// WORK: begin
-				// end
-				default: begin
-					clear_count <= 'd0;
 				end
 			endcase
 		end
@@ -272,35 +242,44 @@ module phi_operator #(
 	localparam u2_rd_addr_init = 'd1;
 	always @(posedge clk or posedge reset) begin
 		if(reset == 1'b1) begin
+			clear_addr	<= 'd0;
 			u2_wea		<= 1'b0;
 			u2_wr_addr	<= 'd0;
 			u2_rd_addr	<= u2_rd_addr_init;
 			u2_addra	<= 'd0;
 			u2_dina		<= 'd0;
+			u3_dina		<= 'd0;
+			u4_dina		<= 'd0;
 		end
 		else begin
 			case(state)
 				IDLE: begin
-					u2_wea		<= 1'b0;
+					if(clear_addr < SPRAM_DATA_DEPTH) begin
+						clear_addr	<= clear_addr + 1'd1;
+						u2_wea		<= 1'b1;
+						u2_addra	<= clear_addr;
+					end
+					else begin
+						clear_addr	<= clear_addr;
+						u2_wea		<= 1'b0;
+						u2_addra	<= 'd0;
+					end
 					u2_wr_addr	<= 'd0;
 					u2_rd_addr	<= u2_rd_addr_init;
-					u2_addra	<= 'd0;
 					u2_dina		<= 'd0;
-				end
-				CLEAR: begin
-					u2_wea		<= 1'b1;
-					u2_wr_addr	<= 'd0;
-					u2_rd_addr	<= u2_rd_addr_init;
-					u2_addra	<= u2_addra + 1'd1;
-					u2_dina		<= 'd0;
+					u3_dina		<= 'd0;
+					u4_dina		<= 'd0;
 				end
 				WORK: begin
+					clear_addr <= 'd0;
 					if(power_add_valid == 1'b1) begin
 						u2_wea		<= 1'b1; // cnt=6
 						u2_wr_addr	<= u2_wr_addr + 1'd1;
 						u2_rd_addr	<= u2_rd_addr + 1'd1;
 						u2_addra	<= u2_wr_addr + 1'd1;
 						u2_dina		<= {{(SPRAM_DATA_WIDTH-DATA_POWER_WIDTH-1){1'b0}},power_add};
+						u3_dina		<= u2_douta;
+						u4_dina		<= u3_douta;
 					end
 					else begin
 						u2_wea		<= 1'b0;
@@ -308,6 +287,8 @@ module phi_operator #(
 						u2_rd_addr	<= u2_rd_addr;
 						u2_addra	<= u2_rd_addr;
 						u2_dina		<= u2_dina;
+						u3_dina		<= u2_douta;
+						u4_dina		<= u3_douta;
 					end
 				end
 				default: begin
@@ -316,6 +297,8 @@ module phi_operator #(
 					u2_rd_addr	<= u2_rd_addr_init;
 					u2_addra	<= 'd0;
 					u2_dina		<= 'd0;
+					u3_dina		<= 'd0;
+					u4_dina		<= 'd0;
 				end
 			endcase
 		end
@@ -325,13 +308,11 @@ module phi_operator #(
 	assign u3_wr_addr	= u2_wr_addr;
 	assign u3_rd_addr	= u2_rd_addr;
 	assign u3_addra		= u2_addra	;
-	assign u3_dina		= u2_douta	;
 	
 	assign u4_wea		= u2_wea	;
 	assign u4_wr_addr	= u2_wr_addr;
 	assign u4_rd_addr	= u2_rd_addr;
 	assign u4_addra		= u2_addra	;
-	assign u4_dina		= u3_douta	;
 	
 	spram_36_64_ip u2_spram_36_64_ip (
 		.clka	(clk		),	// input clka;
