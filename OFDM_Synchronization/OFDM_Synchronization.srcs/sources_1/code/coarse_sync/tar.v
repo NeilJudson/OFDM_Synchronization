@@ -21,8 +21,8 @@
 
 
 module tar #(
-	parameter PSI_WIDTH		= 34, // <=38
-	parameter PHI_WIDTH		= 35, // <=39
+	parameter PSI_WIDTH		= 30, // 34, // <=38
+	parameter PHI_WIDTH		= 31, // 35, // <=39
 	parameter RAM_ADDR_WIDTH= 10
 	)
 	(
@@ -65,15 +65,14 @@ module tar #(
 	localparam	SPRAM_DATA_WIDTH	= 144;
 	localparam	SPRAM_ADDR_WIDTH	= 5;
 	localparam	SPRAM_DATA_DEPTH	= 2**SPRAM_ADDR_WIDTH; // 32
-	localparam	PSI_SUM_WIDTH		= PSI_WIDTH+5; // 39
-	localparam	PHI_SUM_WIDTH		= PHI_WIDTH+5; // 40
-	localparam	PSI_POWER_WIDTH		= 2*PSI_SUM_WIDTH; // 78
-	localparam	PHI_POWER_WIDTH		= 2*(PHI_SUM_WIDTH-1); // 78
-	localparam	TAR_WIDTH			= PSI_POWER_WIDTH+1; // 79
+	localparam	PSI_SUM_WIDTH		= PSI_WIDTH+5; // 35 // 39
+	localparam	PHI_SUM_WIDTH		= PHI_WIDTH+5; // 36 // 40
+	localparam	PSI_POWER_WIDTH		= 2*PSI_SUM_WIDTH; // 70 // 78
+	localparam	PHI_POWER_WIDTH		= 2*(PHI_SUM_WIDTH-1); // 70 // 78
+	localparam	TAR_WIDTH			= PSI_POWER_WIDTH+1; // 71 // 79
 	// state
-	localparam	IDLE			= 2'd0,
-				CLEAR			= 2'd1,
-				WORK			= 2'd2;
+	localparam	IDLE	= 2'd0,
+				WORK	= 2'd2;
 	
 	reg				[1:0]					state			;
 	reg				[2:0]					cnt				;
@@ -295,7 +294,7 @@ module tar #(
 	assign u3_A				= {{(42-PHI_SUM_WIDTH+1){phi_sum[PHI_SUM_WIDTH-1]}},phi_sum[PHI_SUM_WIDTH-1:1]}; // *0.5
 	assign u3_B				= {{(42-PHI_SUM_WIDTH+1){phi_sum[PHI_SUM_WIDTH-1]}},phi_sum[PHI_SUM_WIDTH-1:1]};
 	
-	complex_abs_power2_42 u2_complex_abs_power2_42 (
+	complex_abs_power2_42_ip u2_complex_abs_power2_42_ip(
 		.i_clk			(clk			),
 		.i_data_valid	(u2_i_data_valid),
 		.i_data_i		(u2_i_data_i	),

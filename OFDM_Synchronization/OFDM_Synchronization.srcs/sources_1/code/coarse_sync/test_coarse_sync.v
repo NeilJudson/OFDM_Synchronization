@@ -47,7 +47,7 @@ module test_coarse_sync;
 
 	// Instantiate the Unit Under Test (UUT)
 	coarse_sync #(
-		.SYNC_DATA_WIDTH(16),
+		.SYNC_DATA_WIDTH(14),
 		.RAM_ADDR_WIDTH(10)
 	) uut (
 		.axis_aclk(axis_aclk), 

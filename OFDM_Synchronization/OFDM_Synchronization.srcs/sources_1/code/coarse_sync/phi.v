@@ -21,7 +21,7 @@
 
 
 module phi #(
-	parameter SYNC_DATA_WIDTH	= 16, // <=18
+	parameter SYNC_DATA_WIDTH	= 14, // 16, // <=18
 	parameter RAM_ADDR_WIDTH	= 10 // <=10
 	)
 	(
@@ -65,11 +65,10 @@ module phi #(
 	localparam	SPRAM_DATA_WIDTH	= 36;
 	localparam	SPRAM_ADDR_WIDTH	= 6;
 	localparam	SPRAM_DATA_DEPTH	= 2**SPRAM_ADDR_WIDTH; // 64
-	localparam	DATA_POWER_WIDTH	= 2*SYNC_DATA_WIDTH; // 32
-	localparam	PHI_WIDTH			= 2*SYNC_DATA_WIDTH+1+2; // 35
+	localparam	DATA_POWER_WIDTH	= 2*SYNC_DATA_WIDTH; // 28 // 32
+	localparam	PHI_WIDTH			= 2*SYNC_DATA_WIDTH+1+2; // 31 // 35
 	// state
 	localparam	IDLE	= 2'd0,
-				CLEAR	= 2'd1,
 				WORK	= 2'd2;
 	
 	reg				[1:0]					state			;
@@ -199,7 +198,7 @@ module phi #(
 		end
 	end
 	
-	complex_abs_power2_18 u1_complex_abs_power2_18(
+	complex_abs_power2_18_ip u1_complex_abs_power2_18_ip(
 		.i_clk			(clk			),
 		.i_data_valid	(u1_i_data_valid),
 		.i_data_i		(u1_i_data_i	),
@@ -208,7 +207,7 @@ module phi #(
 		.o_data			(u1_o_data		)
 	);
 	
-	complex_abs_power2_18 u5_complex_abs_power2_18(
+	complex_abs_power2_18_ip u5_complex_abs_power2_18_ip(
 		.i_clk			(clk			),
 		.i_data_valid	(u5_i_data_valid),
 		.i_data_i		(u5_i_data_i	),

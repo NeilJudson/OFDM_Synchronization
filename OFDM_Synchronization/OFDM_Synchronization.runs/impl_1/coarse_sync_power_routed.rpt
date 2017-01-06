@@ -1,0 +1,286 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
+| Date             : Fri Jan 06 15:24:36 2017
+| Host             : txjs-130 running 64-bit Service Pack 1  (build 7601)
+| Command          : 
+| Design           : coarse_sync
+| Device           : xc7z045fbg676-3
+| Design State     : Routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-----------------------------------+
+| Total On-Chip Power (W)  | 134.896 (Junction temp exceeded!) |
+| Dynamic (W)              | 131.291                           |
+| Device Static (W)        | 3.605                             |
+| Effective TJA (C/W)      | 1.9                               |
+| Max Ambient (C)          | 0.0                               |
+| Junction Temperature (C) | 125.0                             |
+| Confidence Level         | Low                               |
+| Setting File             | ---                               |
+| Simulation Activity File | ---                               |
+| Design Nets Matched      | NA                                |
++--------------------------+-----------------------------------+
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Slice Logic             |     8.552 |     3965 |       --- |             --- |
+|   LUT as Logic          |     5.301 |     1129 |    218600 |            0.52 |
+|   CARRY4                |     1.202 |      175 |     54650 |            0.32 |
+|   LUT as Shift Register |     1.052 |       95 |     70400 |            0.13 |
+|   Register              |     0.992 |     2042 |    437200 |            0.47 |
+|   BUFG                  |     0.006 |        1 |        32 |            3.13 |
+|   Others                |     0.000 |      108 |       --- |             --- |
+| Signals                 |    16.638 |     4096 |       --- |             --- |
+| Block RAM               |     2.208 |      8.5 |       545 |            1.56 |
+| DSPs                    |    20.496 |       22 |       900 |            2.44 |
+| I/O                     |    83.395 |      217 |       250 |           86.80 |
+| Static Power            |     3.605 |          |           |                 |
+| Total                   |   134.896 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |    50.332 |      48.044 |      2.288 |
+| Vccaux    |       1.800 |     7.176 |       6.802 |      0.374 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |    39.359 |      39.358 |      0.001 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.269 |       0.160 |      0.108 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.473 |       0.000 |      0.473 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.9                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 3.4                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------------------------------------------------------+-----------+
+| Name                                                                          | Power (W) |
++-------------------------------------------------------------------------------+-----------+
+| coarse_sync                                                                   |   131.291 |
+|   u1_psi                                                                      |    10.173 |
+|     u1_complex_multiplier_18_18_ip                                            |     4.831 |
+|       U0                                                                      |     4.831 |
+|         i_synth                                                               |     4.831 |
+|           i_nd_to_rdy                                                         |     0.009 |
+|           i_synth                                                             |     4.822 |
+|             three_mult_structure.use_dsp.i_dsp48                              |     4.822 |
+|               dsp_preadder_1.reg_mult1_preadd_d                               |     0.143 |
+|               mult1_preadder_d_plus_a.mult1                                   |     1.705 |
+|                 mult                                                          |     1.705 |
+|                   use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay          |     0.065 |
+|                   use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay         |     0.081 |
+|               mult2_preadder_d_plus_a.mult2                                   |     1.412 |
+|                 mult                                                          |     1.412 |
+|               mult3_preadder_d_minus_a.mult3                                  |     1.562 |
+|                 mult                                                          |     1.562 |
+|                   use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay         |     0.079 |
+|     u2_spram_72_64_ip                                                         |     0.408 |
+|       U0                                                                      |     0.408 |
+|         inst_blk_mem_gen                                                      |     0.408 |
+|           gnativebmg.native_blk_mem_gen                                       |     0.408 |
+|             valid.cstr                                                        |     0.408 |
+|               ramloop[0].ram.r                                                |     0.408 |
+|                 prim_init.ram                                                 |     0.408 |
+|     u3_spram_72_64_ip                                                         |     0.497 |
+|       U0                                                                      |     0.497 |
+|         inst_blk_mem_gen                                                      |     0.497 |
+|           gnativebmg.native_blk_mem_gen                                       |     0.497 |
+|             valid.cstr                                                        |     0.497 |
+|               ramloop[0].ram.r                                                |     0.497 |
+|                 prim_init.ram                                                 |     0.497 |
+|     u4_spram_72_64_ip                                                         |     0.368 |
+|       U0                                                                      |     0.368 |
+|         inst_blk_mem_gen                                                      |     0.368 |
+|           gnativebmg.native_blk_mem_gen                                       |     0.368 |
+|             valid.cstr                                                        |     0.368 |
+|               ramloop[0].ram.r                                                |     0.368 |
+|                 prim_init.ram                                                 |     0.368 |
+|   u2_phi                                                                      |     7.311 |
+|     u1_complex_abs_power2_18                                                  |     1.993 |
+|       u1_dsp48_mul_ip                                                         |     0.884 |
+|         U0                                                                    |     0.884 |
+|           i_synth                                                             |     0.884 |
+|             i_synth_option.i_synth_model                                      |     0.884 |
+|               opt_7series.i_uniwrap                                           |     0.884 |
+|       u2_dsp48_mul_add_ip                                                     |     1.098 |
+|         U0                                                                    |     1.098 |
+|           i_synth                                                             |     1.098 |
+|             i_synth_option.i_synth_model                                      |     1.098 |
+|               opt_7series.i_uniwrap                                           |     1.098 |
+|     u2_spram_36_64_ip                                                         |     0.196 |
+|       U0                                                                      |     0.196 |
+|         inst_blk_mem_gen                                                      |     0.196 |
+|           gnativebmg.native_blk_mem_gen                                       |     0.196 |
+|             valid.cstr                                                        |     0.196 |
+|               ramloop[0].ram.r                                                |     0.196 |
+|                 prim_init.ram                                                 |     0.196 |
+|     u3_spram_36_64_ip                                                         |     0.255 |
+|       U0                                                                      |     0.255 |
+|         inst_blk_mem_gen                                                      |     0.255 |
+|           gnativebmg.native_blk_mem_gen                                       |     0.255 |
+|             valid.cstr                                                        |     0.255 |
+|               ramloop[0].ram.r                                                |     0.255 |
+|                 prim_init.ram                                                 |     0.255 |
+|     u4_spram_36_64_ip                                                         |     0.181 |
+|       U0                                                                      |     0.181 |
+|         inst_blk_mem_gen                                                      |     0.181 |
+|           gnativebmg.native_blk_mem_gen                                       |     0.181 |
+|             valid.cstr                                                        |     0.181 |
+|               ramloop[0].ram.r                                                |     0.181 |
+|                 prim_init.ram                                                 |     0.181 |
+|     u5_complex_abs_power2_18                                                  |     2.241 |
+|       u1_dsp48_mul_ip                                                         |     0.885 |
+|         U0                                                                    |     0.885 |
+|           i_synth                                                             |     0.885 |
+|             i_synth_option.i_synth_model                                      |     0.885 |
+|               opt_7series.i_uniwrap                                           |     0.885 |
+|       u2_dsp48_mul_add_ip                                                     |     1.354 |
+|         U0                                                                    |     1.354 |
+|           i_synth                                                             |     1.354 |
+|             i_synth_option.i_synth_model                                      |     1.354 |
+|               opt_7series.i_uniwrap                                           |     1.354 |
+|   u3_tar                                                                      |    25.276 |
+|     u1_spram_144_32_ip                                                        |     0.650 |
+|       U0                                                                      |     0.650 |
+|         inst_blk_mem_gen                                                      |     0.650 |
+|           gnativebmg.native_blk_mem_gen                                       |     0.650 |
+|             valid.cstr                                                        |     0.650 |
+|               ramloop[0].ram.r                                                |     0.342 |
+|                 prim_init.ram                                                 |     0.342 |
+|               ramloop[1].ram.r                                                |     0.307 |
+|                 prim_init.ram                                                 |     0.307 |
+|     u2_complex_abs_power2_42                                                  |    14.598 |
+|       u1_multiplier_42_42_ip                                                  |     6.700 |
+|         U0                                                                    |     6.700 |
+|           i_mult                                                              |     6.700 |
+|             gDSP.gDSP_only.iDSP                                               |     6.700 |
+|               use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay |     0.268 |
+|               use_prim.appDSP48[0].bppDSP48[1].need_output_delay.output_delay |     0.325 |
+|               use_prim.appDSP48[1].bppDSP48[1].need_output_delay.output_delay |     0.163 |
+|               use_prim.extra_dsp.need_delay_line.Bdelay                       |     0.116 |
+|               use_prim.iAdelx[1].iAdely[1].use_delay_line.Adelay              |     0.253 |
+|               use_prim.iBdelx[0].iBdely[1].need_delay_line.Bdelay             |     0.142 |
+|               use_prim.iBdelx[1].iBdely[1].need_delay_line.Bdelay             |     0.244 |
+|       u2_multiplier_42_42_ip                                                  |     6.070 |
+|         U0                                                                    |     6.070 |
+|           i_mult                                                              |     6.070 |
+|             gDSP.gDSP_only.iDSP                                               |     6.070 |
+|               use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay |     0.206 |
+|               use_prim.appDSP48[0].bppDSP48[1].need_output_delay.output_delay |     0.217 |
+|               use_prim.appDSP48[1].bppDSP48[1].need_output_delay.output_delay |     0.107 |
+|               use_prim.extra_dsp.need_delay_line.Bdelay                       |     0.116 |
+|               use_prim.iAdelx[1].iAdely[1].use_delay_line.Adelay              |     0.202 |
+|               use_prim.iBdelx[0].iBdely[1].need_delay_line.Bdelay             |     0.142 |
+|               use_prim.iBdelx[1].iBdely[1].need_delay_line.Bdelay             |     0.195 |
+|     u3_multiplier_42_42_ip                                                    |     6.285 |
+|       U0                                                                      |     6.285 |
+|         i_mult                                                                |     6.285 |
+|           gDSP.gDSP_only.iDSP                                                 |     6.285 |
+|             use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay   |     0.220 |
+|             use_prim.appDSP48[0].bppDSP48[1].need_output_delay.output_delay   |     0.213 |
+|             use_prim.appDSP48[1].bppDSP48[1].need_output_delay.output_delay   |     0.081 |
+|             use_prim.extra_dsp.need_delay_line.Bdelay                         |     0.122 |
+|             use_prim.iAdelx[1].iAdely[1].use_delay_line.Adelay                |     0.203 |
+|             use_prim.iBdelx[0].iBdely[1].need_delay_line.Bdelay               |     0.134 |
+|             use_prim.iBdelx[1].iBdely[1].need_delay_line.Bdelay               |     0.196 |
+|   u4_spram_144_512_ip                                                         |     2.372 |
+|     U0                                                                        |     2.372 |
+|       inst_blk_mem_gen                                                        |     2.372 |
+|         gnativebmg.native_blk_mem_gen                                         |     2.372 |
+|           valid.cstr                                                          |     2.372 |
+|             ramloop[0].ram.r                                                  |     1.377 |
+|               prim_init.ram                                                   |     1.377 |
+|             ramloop[1].ram.r                                                  |     0.994 |
+|               prim_init.ram                                                   |     0.994 |
++-------------------------------------------------------------------------------+-----------+
+
+

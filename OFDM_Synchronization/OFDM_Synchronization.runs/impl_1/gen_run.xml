@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z045fbg676-3" LaunchTime="1483687298">
+  <File Type="OPT-DCP" Name="coarse_sync_opt.dcp"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
+  <File Type="PWROPT-DCP" Name="coarse_sync_pwropt.dcp"/>
+  <File Type="ROUTE-DCP" Name="coarse_sync_routed.dcp"/>
+  <File Type="PA-TCL" Name="coarse_sync.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="OPT-DRC" Name="coarse_sync_drc_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="coarse_sync_drc_pwropted.rpt"/>
+  <File Type="OPT-HWDEF" Name="coarse_sync.hwdef"/>
+  <File Type="PLACE-DCP" Name="coarse_sync_placed.dcp"/>
+  <File Type="PLACE-IO" Name="coarse_sync_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="coarse_sync_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="coarse_sync_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="coarse_sync_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="coarse_sync_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="coarse_sync_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="coarse_sync_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="coarse_sync_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="coarse_sync_physopt.dcp"/>
+  <File Type="RDI-RDI" Name="coarse_sync.vdi"/>
+  <File Type="PHYSOPT-DRC" Name="coarse_sync_drc_physopted.rpt"/>
+  <File Type="ROUTE-DRC" Name="coarse_sync_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="coarse_sync_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="coarse_sync_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="coarse_sync_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="coarse_sync_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="coarse_sync_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="coarse_sync_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="coarse_sync_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="coarse_sync_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="coarse_sync_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="coarse_sync_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="coarse_sync_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="coarse_sync_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="coarse_sync_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="coarse_sync_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="coarse_sync.bit"/>
+  <File Type="BG-BIN" Name="coarse_sync.bin"/>
+  <File Type="BITSTR-MSK" Name="coarse_sync.msk"/>
+  <File Type="BITSTR-RBT" Name="coarse_sync.rbt"/>
+  <File Type="BITSTR-NKY" Name="coarse_sync.nky"/>
+  <File Type="BITSTR-BMM" Name="coarse_sync_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="coarse_sync.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="coarse_sync.sysdef"/>
+  <File Type="BG-BGN" Name="coarse_sync.bgn"/>
+  <File Type="BG-DRC" Name="coarse_sync.drc"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/code/tools/complex_abs_power2_42.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/tools/complex_abs_power2_18.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/coarse_sync/tar.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/coarse_sync/psi.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/coarse_sync/phi.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/coarse_sync/coarse_sync.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/coarse_sync/test_coarse_sync.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/fine_sync/lambda.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/fine_sync/test_lambad.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/tools/axis_interface_fifo.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/data_dpram/data_dpram.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/data_dpram/test_data_dpram.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/tools/test_complex_abs_power2_42.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/tools/test_axis_interface_fifo.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/ofdm_syn.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="coarse_sync"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="dsp48_mul_add_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="spram_36_64_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="spram_72_64_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="complex_multiplier_18_18_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="multiplier_42_42_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="spram_144_512_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="dsp48_mul_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="spram_144_32_ip"/>
+</GenRun>
