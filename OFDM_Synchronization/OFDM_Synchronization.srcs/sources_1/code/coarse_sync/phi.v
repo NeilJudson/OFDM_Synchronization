@@ -21,7 +21,7 @@
 
 
 module phi #(
-	parameter SYNC_DATA_WIDTH	= 14, // 16, // <=18
+	parameter SYNC_DATA_WIDTH	= 16, // <=18
 	parameter RAM_ADDR_WIDTH	= 10 // <=10
 	)
 	(
@@ -64,9 +64,9 @@ module phi #(
 //================================================================================
 	localparam	SPRAM_DATA_WIDTH	= 36;
 	localparam	SPRAM_ADDR_WIDTH	= 6;
-	localparam	SPRAM_DATA_DEPTH	= 2**SPRAM_ADDR_WIDTH; // 64
-	localparam	DATA_POWER_WIDTH	= 2*SYNC_DATA_WIDTH; // 28 // 32
-	localparam	PHI_WIDTH			= 2*SYNC_DATA_WIDTH+1+2; // 31 // 35
+	localparam	SPRAM_DATA_DEPTH	= 2**SPRAM_ADDR_WIDTH;	// 64
+	localparam	DATA_POWER_WIDTH	= 2*SYNC_DATA_WIDTH;	// 32
+	localparam	PHI_WIDTH			= 2*SYNC_DATA_WIDTH+1+2;// 35
 	// state
 	localparam	IDLE	= 2'd0,
 				WORK	= 2'd2;

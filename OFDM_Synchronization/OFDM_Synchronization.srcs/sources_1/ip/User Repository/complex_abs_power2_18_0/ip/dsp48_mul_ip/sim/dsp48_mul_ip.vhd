@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2016 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -243,7 +243,7 @@ BEGIN
       C_CONSTANT_1 => 1,
       C_LATENCY => 128,
       C_OPMODES => "000100100000010100000000",
-      C_REG_CONFIG => "00000000000000000011000001000100",
+      C_REG_CONFIG => "00000000000000000011000000000100",
       C_TEST_CORE => 0
     )
     PORT MAP (

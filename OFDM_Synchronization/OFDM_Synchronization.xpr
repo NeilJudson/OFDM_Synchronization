@@ -20,8 +20,23 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/code/fine_sync/lambda.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/code/fine_sync/test_lambad.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/code/coarse_sync/tar.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -29,6 +44,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/code/coarse_sync/psi.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -36,6 +52,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/code/coarse_sync/phi.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -43,6 +60,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/code/coarse_sync/coarse_sync.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -50,6 +68,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/code/coarse_sync/test_coarse_sync.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -64,22 +83,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/code/tools/complex_abs_power2_18.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/code/fine_sync/lambda.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/code/fine_sync/test_lambad.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -121,7 +124,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="test_coarse_sync"/>
+        <Option Name="TopModule" Val="test_lambda"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -145,7 +148,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="test_coarse_sync"/>
+        <Option Name="TopModule" Val="test_lambda"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="SrcSet" Val="sources_1"/>
         <Option Name="XSimWcfgFile" Val="$PSRCDIR/sim_1/operator/test_psi_phi_operator_behav.wcfg"/>
@@ -270,6 +273,19 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="complex_abs_power2_42_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/complex_abs_power2_42_ip">
+      <File Path="$PSRCDIR/sources_1/ip/complex_abs_power2_42_ip/complex_abs_power2_42_ip.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="complex_abs_power2_42_ip"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
     <FileSet Name="complex_abs_power2_18_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/complex_abs_power2_18_ip">
       <File Path="$PSRCDIR/sources_1/ip/complex_abs_power2_18_ip/complex_abs_power2_18_ip.xci">
         <FileInfo>
@@ -283,8 +299,8 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="complex_abs_power2_42_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/complex_abs_power2_42_ip">
-      <File Path="$PSRCDIR/sources_1/ip/complex_abs_power2_42_ip/complex_abs_power2_42_ip.xci">
+    <FileSet Name="multiplier_35_1dsp_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/multiplier_35_1dsp_ip">
+      <File Path="$PSRCDIR/sources_1/ip/multiplier_35_1dsp_ip/multiplier_35_1dsp_ip.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -292,7 +308,33 @@
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TopModule" Val="complex_abs_power2_42_ip"/>
+        <Option Name="TopModule" Val="multiplier_35_1dsp_ip"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="multiplier_69_18_1dsp_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/multiplier_69_18_1dsp_ip">
+      <File Path="$PSRCDIR/sources_1/ip/multiplier_69_18_1dsp_ip/multiplier_69_18_1dsp_ip.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="multiplier_69_18_1dsp_ip"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="complex_abs_power2_35_1dsp_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/complex_abs_power2_35_1dsp_ip">
+      <File Path="$PSRCDIR/sources_1/ip/complex_abs_power2_35_1dsp_ip/complex_abs_power2_35_1dsp_ip.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="complex_abs_power2_35_1dsp_ip"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -392,17 +434,29 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="complex_abs_power2_18_ip_synth_1" Type="Ft3:Synth" SrcSet="complex_abs_power2_18_ip" Part="xc7z045fbg676-3" ConstrsSet="complex_abs_power2_18_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/complex_abs_power2_18_ip_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-    </Run>
     <Run Id="complex_abs_power2_42_ip_synth_1" Type="Ft3:Synth" SrcSet="complex_abs_power2_42_ip" Part="xc7z045fbg676-3" ConstrsSet="complex_abs_power2_42_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/complex_abs_power2_42_ip_synth_1">
       <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="complex_abs_power2_18_ip_synth_1" Type="Ft3:Synth" SrcSet="complex_abs_power2_18_ip" Part="xc7z045fbg676-3" ConstrsSet="complex_abs_power2_18_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/complex_abs_power2_18_ip_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="multiplier_35_1dsp_ip_synth_1" Type="Ft3:Synth" SrcSet="multiplier_35_1dsp_ip" Part="xc7z045fbg676-3" ConstrsSet="multiplier_35_1dsp_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/multiplier_35_1dsp_ip_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="multiplier_69_18_1dsp_ip_synth_1" Type="Ft3:Synth" SrcSet="multiplier_69_18_1dsp_ip" Part="xc7z045fbg676-3" ConstrsSet="multiplier_69_18_1dsp_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/multiplier_69_18_1dsp_ip_synth_1">
+      <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
@@ -410,7 +464,16 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1">
+    <Run Id="complex_abs_power2_35_1dsp_ip_synth_1" Type="Ft3:Synth" SrcSet="complex_abs_power2_35_1dsp_ip" Part="xc7z045fbg676-3" ConstrsSet="complex_abs_power2_35_1dsp_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/complex_abs_power2_35_1dsp_ip_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
@@ -423,7 +486,6 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="spram_72_64_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="spram_72_64_ip" Description="Vivado Implementation Defaults" SynthRun="spram_72_64_ip_synth_1">
       <Strategy Version="1" Minor="2">
@@ -551,7 +613,49 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
+    <Run Id="complex_abs_power2_42_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="complex_abs_power2_42_ip" Description="Vivado Implementation Defaults" SynthRun="complex_abs_power2_42_ip_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
     <Run Id="complex_abs_power2_18_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="complex_abs_power2_18_ip" Description="Vivado Implementation Defaults" SynthRun="complex_abs_power2_18_ip_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="multiplier_35_1dsp_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="multiplier_35_1dsp_ip" Description="Vivado Implementation Defaults" SynthRun="multiplier_35_1dsp_ip_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="multiplier_69_18_1dsp_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="multiplier_69_18_1dsp_ip" Description="Vivado Implementation Defaults" SynthRun="multiplier_69_18_1dsp_ip_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
           <Desc>Vivado Implementation Defaults</Desc>
@@ -567,7 +671,7 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="complex_abs_power2_42_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="complex_abs_power2_42_ip" Description="Vivado Implementation Defaults" SynthRun="complex_abs_power2_42_ip_synth_1">
+    <Run Id="complex_abs_power2_35_1dsp_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="complex_abs_power2_35_1dsp_ip" Description="Vivado Implementation Defaults" SynthRun="complex_abs_power2_35_1dsp_ip_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
           <Desc>Vivado Implementation Defaults</Desc>

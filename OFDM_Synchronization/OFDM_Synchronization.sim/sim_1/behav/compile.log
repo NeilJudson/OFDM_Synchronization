@@ -1,110 +1,36 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_72_64_ip/blk_mem_gen_v8_2/simulation/blk_mem_gen_v8_2.v" into library blk_mem_gen_v8_2
-INFO: [VRFC 10-311] analyzing module STATE_LOGIC_v8_2
-INFO: [VRFC 10-311] analyzing module beh_vlog_muxf7_v8_2
-INFO: [VRFC 10-311] analyzing module beh_vlog_ff_clr_v8_2
-INFO: [VRFC 10-311] analyzing module beh_vlog_ff_pre_v8_2
-INFO: [VRFC 10-311] analyzing module beh_vlog_ff_ce_clr_v8_2
-INFO: [VRFC 10-311] analyzing module write_netlist_v8_2
-INFO: [VRFC 10-311] analyzing module read_netlist_v8_2
-INFO: [VRFC 10-311] analyzing module blk_mem_axi_write_wrapper_beh_v8_2
-INFO: [VRFC 10-311] analyzing module blk_mem_axi_read_wrapper_beh_v8_2
-INFO: [VRFC 10-311] analyzing module blk_mem_axi_regs_fwd_v8_2
-INFO: [VRFC 10-311] analyzing module BLK_MEM_GEN_v8_2_output_stage
-INFO: [VRFC 10-311] analyzing module BLK_MEM_GEN_v8_2_softecc_output_reg_stage
-INFO: [VRFC 10-311] analyzing module BLK_MEM_GEN_v8_2_mem_module
-INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_72_64_ip/sim/spram_72_64_ip.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module spram_72_64_ip
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/sim/spram_36_64_ip.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module spram_36_64_ip
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/sim/spram_144_32_ip.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module spram_144_32_ip
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_funcsim.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiplier_42_42_ip
-INFO: [VRFC 10-311] analyzing module multiplier_42_42_ip_mult_gen_v12_0
-INFO: [VRFC 10-311] analyzing module multiplier_42_42_ip_delay_line__parameterized11
-INFO: [VRFC 10-311] analyzing module multiplier_42_42_ip_delay_line__parameterized12
-INFO: [VRFC 10-311] analyzing module multiplier_42_42_ip_delay_line__parameterized2
-INFO: [VRFC 10-311] analyzing module multiplier_42_42_ip_delay_line__parameterized3
-INFO: [VRFC 10-311] analyzing module multiplier_42_42_ip_delay_line__parameterized4
-INFO: [VRFC 10-311] analyzing module multiplier_42_42_ip_delay_line__parameterized6
-INFO: [VRFC 10-311] analyzing module multiplier_42_42_ip_delay_line__parameterized8
-INFO: [VRFC 10-311] analyzing module multiplier_42_42_ip_dsp
-INFO: [VRFC 10-311] analyzing module multiplier_42_42_ip_mult_gen_v12_0_viv
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_69_18_1dsp_ip/multiplier_69_18_1dsp_ip_funcsim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplier_69_18_1dsp_ip
+INFO: [VRFC 10-311] analyzing module multiplier_69_18_1dsp_ip_dsp48_mul_ip
+INFO: [VRFC 10-311] analyzing module multiplier_69_18_1dsp_ip_multiplier_69_18_1dsp
+INFO: [VRFC 10-311] analyzing module multiplier_69_18_1dsp_ip_xbip_dsp48_macro_v3_0
+INFO: [VRFC 10-311] analyzing module multiplier_69_18_1dsp_ip_xbip_dsp48e1_wrapper_v3_0
+INFO: [VRFC 10-311] analyzing module multiplier_69_18_1dsp_ip_xbip_dsp48_macro_synth
+INFO: [VRFC 10-311] analyzing module multiplier_69_18_1dsp_ip_xbip_dsp48_macro_v3_0_viv
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_funcsim.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip_cmpy_v6_0
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip_dsp
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip_dsp__parameterized0
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip_dsp__parameterized1
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip_mult_gen_v12_0_delay_line
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip_mult_gen_v12_0_delay_line__parameterized0
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip_mult_gen_v12_0_delay_line__parameterized5
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip_cmpy_3_dsp48
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip_cmpy_3_dsp48_mult
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip_cmpy_3_dsp48_mult__parameterized0
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip_cmpy_3_dsp48_mult__parameterized1
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip_cmpy_v6_0_delay_line
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip_cmpy_v6_0_delay_line__parameterized2
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip_cmpy_v6_0_synth
-INFO: [VRFC 10-311] analyzing module complex_multiplier_18_18_ip_cmpy_v6_0_viv
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_35_1dsp_ip/multiplier_35_1dsp_ip_funcsim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplier_35_1dsp_ip
+INFO: [VRFC 10-311] analyzing module multiplier_35_1dsp_ip_dsp48_mul_ip
+INFO: [VRFC 10-311] analyzing module multiplier_35_1dsp_ip_multiplier_35_1dsp
+INFO: [VRFC 10-311] analyzing module multiplier_35_1dsp_ip_xbip_dsp48_macro_v3_0
+INFO: [VRFC 10-311] analyzing module multiplier_35_1dsp_ip_xbip_dsp48e1_wrapper_v3_0
+INFO: [VRFC 10-311] analyzing module multiplier_35_1dsp_ip_xbip_dsp48_macro_synth
+INFO: [VRFC 10-311] analyzing module multiplier_35_1dsp_ip_xbip_dsp48_macro_v3_0_viv
 INFO: [VRFC 10-311] analyzing module glbl
-WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_funcsim.v:2579]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_abs_power2_42_ip/complex_abs_power2_42_ip_funcsim.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_complex_abs_power2_42
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_mult_gen_v12_0
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_mult_gen_v12_0__1
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_multiplier_42_42_ip
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_multiplier_42_42_ip_0
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_delay_line__parameterized11
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_delay_line__parameterized11_4
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_delay_line__parameterized12
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_delay_line__parameterized12_5
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_delay_line__parameterized2
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_delay_line__parameterized2_6
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_delay_line__parameterized3
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_delay_line__parameterized3_7
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_delay_line__parameterized4
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_delay_line__parameterized4_8
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_delay_line__parameterized6
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_delay_line__parameterized6_2
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_delay_line__parameterized8
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_delay_line__parameterized8_3
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_dsp
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_dsp_1
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_mult_gen_v12_0_viv
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_42_ip_mult_gen_v12_0_viv__1
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_35_1dsp_ip/multiplier_35_1dsp_ip_funcsim.v:5679]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_abs_power2_35_1dsp_ip/complex_abs_power2_35_1dsp_ip_funcsim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module complex_abs_power2_35_1dsp_ip
+INFO: [VRFC 10-311] analyzing module complex_abs_power2_35_1dsp_ip_complex_abs_power2_35_1dsp
+INFO: [VRFC 10-311] analyzing module complex_abs_power2_35_1dsp_ip_dsp48_mul_add_ip
+INFO: [VRFC 10-311] analyzing module complex_abs_power2_35_1dsp_ip_xbip_dsp48_macro_v3_0
+INFO: [VRFC 10-311] analyzing module complex_abs_power2_35_1dsp_ip_xbip_dsp48e1_wrapper_v3_0
+INFO: [VRFC 10-311] analyzing module complex_abs_power2_35_1dsp_ip_xbip_dsp48_macro_synth
+INFO: [VRFC 10-311] analyzing module complex_abs_power2_35_1dsp_ip_xbip_dsp48_macro_v3_0_viv
 INFO: [VRFC 10-311] analyzing module glbl
-WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_abs_power2_42_ip/complex_abs_power2_42_ip_funcsim.v:7788]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_abs_power2_18_ip/complex_abs_power2_18_ip_funcsim.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_18_ip
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_18_ip_complex_abs_power2_18
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_18_ip_dsp48_mul_add_ip
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_18_ip_dsp48_mul_ip
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_18_ip_xbip_dsp48_macro_v3_0
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_18_ip_xbip_dsp48_macro_v3_0__parameterized1
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_18_ip_xbip_dsp48e1_wrapper_v3_0
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_18_ip_xbip_dsp48e1_wrapper_v3_0_0
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_18_ip_xbip_dsp48_macro_synth
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_18_ip_xbip_dsp48_macro_synth__parameterized0
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_18_ip_xbip_dsp48_macro_v3_0_viv
-INFO: [VRFC 10-311] analyzing module complex_abs_power2_18_ip_xbip_dsp48_macro_v3_0_viv__parameterized1
-INFO: [VRFC 10-311] analyzing module glbl
-WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_abs_power2_18_ip/complex_abs_power2_18_ip_funcsim.v:2007]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/spram_144_512_ip/sim/spram_144_512_ip.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module spram_144_512_ip
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/tar.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tar
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/psi.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module psi
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/phi.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module phi
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module coarse_sync
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/test_coarse_sync.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module test_coarse_sync
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_abs_power2_35_1dsp_ip/complex_abs_power2_35_1dsp_ip_funcsim.v:6145]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lambda
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/test_lambad.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_lambda
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
 WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.sim/sim_1/behav/glbl.v:6]

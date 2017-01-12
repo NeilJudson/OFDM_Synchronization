@@ -28,10 +28,11 @@ module test_lambda;
 	reg i_work_ctrl_en;
 	reg i_work_ctrl;
 	reg i_psi_phi_data_valid;
-	reg [37:0] i_psi_data_i;
-	reg [37:0] i_psi_data_q;
-	reg [38:0] i_phi_data;
+	reg [29:0] i_psi_data_i;
+	reg [29:0] i_psi_data_q;
+	reg [30:0] i_phi_data;
 	reg [15:0] i_psi_phi_data_addr;
+	reg [7:0] i_rou;
 
 	// Outputs
 	wire o_psi_phi_sum_valid;
@@ -71,8 +72,8 @@ module test_lambda;
 
 	// Instantiate the Unit Under Test (UUT)
 	lambda #(
-		.PSI_WIDTH(34),
-		.PHI_WIDTH(35),
+		.PSI_WIDTH(30),
+		.PHI_WIDTH(31),
 		.RAM_ADDR_WIDTH(10)
 	) uut (
 		.axis_aclk(axis_aclk), 
@@ -84,6 +85,7 @@ module test_lambda;
 		.i_psi_data_q(i_psi_data_q), 
 		.i_phi_data(i_phi_data), 
 		.i_psi_phi_data_addr(i_psi_phi_data_addr), 
+		.i_rou(i_rou),
 		.o_psi_phi_sum_valid(o_psi_phi_sum_valid), 
 		.o_psi_i_sum_1(o_psi_i_sum_1), 
 		.o_psi_q_sum_1(o_psi_q_sum_1), 
@@ -129,11 +131,12 @@ module test_lambda;
 		i_psi_data_q = 0;
 		i_phi_data = 0;
 		i_psi_phi_data_addr = 0;
+		i_rou = 0;
 
 		// Wait 100 ns for global reset to finish
-		#10;
+		#5;
 		axis_areset = 1;
-		#10;
+		#5;
 		axis_areset = 0;
 		#10;
         
@@ -192,6 +195,7 @@ module test_lambda;
 	always @(posedge axis_aclk) begin
 		if(count == 'd8000) begin
 			$stop;
+			
 		end
 	end
 	
