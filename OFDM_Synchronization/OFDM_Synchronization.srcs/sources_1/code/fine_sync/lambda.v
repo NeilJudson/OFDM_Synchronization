@@ -149,7 +149,8 @@ module lambda #(
 	reg		signed	[PSI_WIDTH:0]			ram_psi_i_add[0:STAGE_NUM-1];
 	reg		signed	[PSI_WIDTH:0]			ram_psi_q_add[0:STAGE_NUM-1];
 	reg		signed	[PHI_WIDTH:0]			ram_phi_add[0:STAGE_NUM-1]	;
-	reg										i_psi_phi_data_valid_dly1 = 1'b0;
+	reg										i_psi_phi_data_valid_dly1	;
+	reg										i_psi_phi_data_valid_dly2	;
 	reg										sum_valid = 1'b0			;
 	reg		signed	[PSI_SUM_WIDTH-1:0]		ram_psi_i_sum[0:STAGE_NUM-1];
 	reg		signed	[PSI_SUM_WIDTH-1:0]		ram_psi_q_sum[0:STAGE_NUM-1];
@@ -235,7 +236,7 @@ module lambda #(
 //================================================================================
 // sum
 //================================================================================
-	localparam rd_addr_init = 6'd32;
+	localparam rd_addr_init = 32; // 可以依据STAGE_NUM修改，63-STAGE_NUM
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
 			clear_addr		<= 'd0;
@@ -243,7 +244,7 @@ module lambda #(
 			ram_psi_i[0]	<= 'd0;
 			ram_psi_q[0]	<= 'd0;
 			ram_phi[0]		<= 'd0;
-			rd_addr			<= rd_addr_init; // 可以依据STAGE_NUM修改，64-STAGE_NUM
+			rd_addr			<= rd_addr_init;
 		end
 		else begin
 			case(state)
@@ -295,11 +296,13 @@ module lambda #(
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
 			i_psi_phi_data_valid_dly1 <= 1'b0;
+			i_psi_phi_data_valid_dly2 <= 1'b0;
 			sum_valid <= 1'b0;
 		end
 		else begin
 			i_psi_phi_data_valid_dly1 <= i_psi_phi_data_valid;
-			sum_valid <= i_psi_phi_data_valid_dly1;
+			i_psi_phi_data_valid_dly2 <= i_psi_phi_data_valid_dly1;
+			sum_valid <= i_psi_phi_data_valid_dly2;
 		end
 	end
 	
@@ -308,12 +311,12 @@ module lambda #(
 		for(i=0; i<STAGE_NUM; i=i+1) begin
 			always @(posedge axis_aclk or posedge axis_areset) begin
 				if(axis_areset == 1'b1) begin
-					rd_addr2[i]			<= rd_addr_init + i + 1'd1;
+					rd_addr2[i]			<= rd_addr_init + 32 - i;
 					ram_psi_i_add[i]	<= 'd0;
 					ram_psi_q_add[i]	<= 'd0;
 					ram_phi_add[i]		<= 'd0;
 				end
-				else if(i_psi_phi_data_valid == 1'b1) begin
+				else if(i_psi_phi_data_valid_dly1 == 1'b1) begin
 					rd_addr2[i]			<= rd_addr2[i] + 1'd1;
 					ram_psi_i_add[i]	<= {ram_psi_i[rd_addr2[i]][PSI_WIDTH-1],ram_psi_i[rd_addr2[i]]}
 											- {ram_psi_i[rd_addr][PSI_WIDTH-1],ram_psi_i[rd_addr]};
@@ -336,7 +339,7 @@ module lambda #(
 					ram_psi_q_sum[i]<= 'd0;
 					ram_phi_sum[i]	<= 'd0;
 				end
-				else if(i_psi_phi_data_valid_dly1 == 1'b1) begin
+				else if(i_psi_phi_data_valid_dly2 == 1'b1) begin
 					ram_psi_i_sum[i]<= ram_psi_i_sum[i]
 										+ {{(PSI_SUM_WIDTH-PSI_WIDTH-1){ram_psi_i_add[i][PSI_WIDTH]}},ram_psi_i_add[i]};
 					ram_psi_q_sum[i]<= ram_psi_q_sum[i]
@@ -715,7 +718,7 @@ module lambda #(
 			rou_phi_power[8]<= 'd0;
 			rou_phi_power[9]<= 'd0;
 		end
-		else if(u10_o_p_en == 1'b1) begin
+		else if(u30_o_c_en == 1'b1) begin
 			power_valid		<= 1'b1;
 			rou_phi_power[0]<= u30_o_c[PHI_POWER_WIDTH+7:8];
 			rou_phi_power[1]<= u31_o_c[PHI_POWER_WIDTH+7:8];

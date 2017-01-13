@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:multiplier_35_1dsp:1.0
-// IP Revision: 2
+// IP Revision: 4
 
 (* X_CORE_INFO = "multiplier_35_1dsp,Vivado 2015.2.1" *)
 (* CHECK_LICENSE_TYPE = "multiplier_35_1dsp_ip,multiplier_35_1dsp,{}" *)
-(* CORE_GENERATION_INFO = "multiplier_35_1dsp_ip,multiplier_35_1dsp,{x_ipProduct=Vivado 2015.2.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=multiplier_35_1dsp,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG}" *)
+(* CORE_GENERATION_INFO = "multiplier_35_1dsp_ip,multiplier_35_1dsp,{x_ipProduct=Vivado 2015.2.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=multiplier_35_1dsp,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module multiplier_35_1dsp_ip (
   i_clk,

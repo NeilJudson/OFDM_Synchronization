@@ -4,7 +4,6 @@
 
 set_param simulator.modelsimInstallPath D:/modeltech64_10.4/win64
 debug::add_scope template.lib 1
-set_msg_config -id {Common-41} -limit 4294967295
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7z045fbg676-3
@@ -16,12 +15,12 @@ set_property parent.project_path E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths {{e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/User Repository}} [current_project]
+add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_abs_power2_35_1dsp_ip_synth_1/complex_abs_power2_35_1dsp_ip.dcp
+set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_abs_power2_35_1dsp_ip_synth_1/complex_abs_power2_35_1dsp_ip.dcp]
 add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_35_1dsp_ip_synth_1/multiplier_35_1dsp_ip.dcp
 set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_35_1dsp_ip_synth_1/multiplier_35_1dsp_ip.dcp]
 add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_69_18_1dsp_ip_synth_1/multiplier_69_18_1dsp_ip.dcp
 set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_69_18_1dsp_ip_synth_1/multiplier_69_18_1dsp_ip.dcp]
-add_files -quiet E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_abs_power2_35_1dsp_ip_synth_1/complex_abs_power2_35_1dsp_ip.dcp
-set_property used_in_implementation false [get_files E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_abs_power2_35_1dsp_ip_synth_1/complex_abs_power2_35_1dsp_ip.dcp]
 read_verilog -library xil_defaultlib {
   E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v
   E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/test_lambad.v

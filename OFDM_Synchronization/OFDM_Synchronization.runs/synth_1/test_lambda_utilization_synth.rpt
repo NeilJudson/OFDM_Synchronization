@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-| Date         : Thu Jan 12 14:43:21 2017
+| Date         : Fri Jan 13 16:37:24 2017
 | Host         : txjs-130 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file test_lambda_utilization_synth.rpt -pb test_lambda_utilization_synth.pb
 | Design       : test_lambda
@@ -27,18 +27,20 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+-------------------------+-------+-------+-----------+-------+
-|        Site Type        |  Used | Fixed | Available | Util% |
-+-------------------------+-------+-------+-----------+-------+
-| Slice LUTs*             | 22216 |     0 |    218600 | 10.16 |
-|   LUT as Logic          | 22216 |     0 |    218600 | 10.16 |
-|   LUT as Memory         |     0 |     0 |     70400 |  0.00 |
-| Slice Registers         |  8422 |     0 |    437200 |  1.93 |
-|   Register as Flip Flop |  8422 |     0 |    437200 |  1.93 |
-|   Register as Latch     |     0 |     0 |    437200 |  0.00 |
-| F7 Muxes                |  8760 |     0 |    109300 |  8.01 |
-| F8 Muxes                |  3956 |     0 |     54650 |  7.24 |
-+-------------------------+-------+-------+-----------+-------+
++----------------------------+-------+-------+-----------+-------+
+|          Site Type         |  Used | Fixed | Available | Util% |
++----------------------------+-------+-------+-----------+-------+
+| Slice LUTs*                | 22207 |     0 |    218600 | 10.16 |
+|   LUT as Logic             | 22206 |     0 |    218600 | 10.16 |
+|   LUT as Memory            |     1 |     0 |     70400 | <0.01 |
+|     LUT as Distributed RAM |     0 |     0 |           |       |
+|     LUT as Shift Register  |     1 |     0 |           |       |
+| Slice Registers            |  8403 |     0 |    437200 |  1.92 |
+|   Register as Flip Flop    |  8403 |     0 |    437200 |  1.92 |
+|   Register as Latch        |     0 |     0 |    437200 |  0.00 |
+| F7 Muxes                   |  8760 |     0 |    109300 |  8.01 |
+| F8 Muxes                   |  3956 |     0 |     54650 |  7.24 |
++----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -57,7 +59,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 8422  |          Yes |       Reset |            - |
+| 8403  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -154,14 +156,15 @@ Table of Contents
 +----------+-------+---------------------+
 | LUT6     | 20333 |                 LUT |
 | MUXF7    |  8760 |               MuxFx |
-| FDRE     |  8422 |        Flop & Latch |
+| FDRE     |  8403 |        Flop & Latch |
 | MUXF8    |  3956 |               MuxFx |
-| LUT2     |  1633 |                 LUT |
+| LUT2     |  1625 |                 LUT |
 | CARRY4   |   540 |          CarryLogic |
-| LUT1     |   153 |                 LUT |
+| LUT1     |   151 |                 LUT |
 | LUT5     |   150 |                 LUT |
-| LUT3     |   128 |                 LUT |
-| LUT4     |    80 |                 LUT |
+| LUT3     |   120 |                 LUT |
+| LUT4     |    78 |                 LUT |
+| SRL16E   |     1 |  Distributed Memory |
 | BUFG     |     1 |               Clock |
 +----------+-------+---------------------+
 

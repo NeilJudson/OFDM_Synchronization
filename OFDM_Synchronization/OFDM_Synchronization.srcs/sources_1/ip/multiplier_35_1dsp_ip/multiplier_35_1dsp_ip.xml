@@ -63,7 +63,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>4a00799a</spirit:value>
+            <spirit:value>e2004730</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -79,7 +79,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jan 10 12:27:21 UTC 2017</spirit:value>
+            <spirit:value>Fri Jan 13 03:33:37 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -97,7 +97,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>4a00799a</spirit:value>
+            <spirit:value>e2004730</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -113,7 +113,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jan 10 12:27:23 UTC 2017</spirit:value>
+            <spirit:value>Fri Jan 13 03:33:42 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -132,7 +132,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>4a00799a</spirit:value>
+            <spirit:value>e2004730</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -148,7 +148,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jan 10 12:27:23 UTC 2017</spirit:value>
+            <spirit:value>Fri Jan 13 03:33:42 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -166,7 +166,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>1152fa6d</spirit:value>
+            <spirit:value>7b6b8b5f</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -182,7 +182,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jan 10 12:27:23 UTC 2017</spirit:value>
+            <spirit:value>Fri Jan 13 03:33:42 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -201,7 +201,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>1152fa6d</spirit:value>
+            <spirit:value>7b6b8b5f</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -217,7 +217,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jan 10 12:27:23 UTC 2017</spirit:value>
+            <spirit:value>Fri Jan 13 03:33:42 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -235,7 +235,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>4a00799a</spirit:value>
+            <spirit:value>e2004730</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -554,8 +554,8 @@
         <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>multiplier_35_1dsp_v1_0</xilinx:displayName>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2017-01-10T12:25:26Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2017-01-13T03:04:26Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="xilinx.com:user:multiplier_35_1dsp:1.0_ARCHIVE_LOCATION">E:/jiaweiwei/Vivado workspace/tools/multiplier_35_1dsp/multiplier_35_1dsp.srcs/sources_1</xilinx:tag>
       </xilinx:tags>
@@ -563,7 +563,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2015.2.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="76ba5e05"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="1c6c5359"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4b725380"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="cedee07b"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="d9973b54"/>
     </xilinx:packagingInfo>

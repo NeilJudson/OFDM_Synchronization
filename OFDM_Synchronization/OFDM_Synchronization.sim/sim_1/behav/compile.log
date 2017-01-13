@@ -16,7 +16,7 @@ INFO: [VRFC 10-311] analyzing module multiplier_35_1dsp_ip_xbip_dsp48e1_wrapper_
 INFO: [VRFC 10-311] analyzing module multiplier_35_1dsp_ip_xbip_dsp48_macro_synth
 INFO: [VRFC 10-311] analyzing module multiplier_35_1dsp_ip_xbip_dsp48_macro_v3_0_viv
 INFO: [VRFC 10-311] analyzing module glbl
-WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_35_1dsp_ip/multiplier_35_1dsp_ip_funcsim.v:5679]
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/multiplier_35_1dsp_ip/multiplier_35_1dsp_ip_funcsim.v:5735]
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_abs_power2_35_1dsp_ip/complex_abs_power2_35_1dsp_ip_funcsim.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module complex_abs_power2_35_1dsp_ip
 INFO: [VRFC 10-311] analyzing module complex_abs_power2_35_1dsp_ip_complex_abs_power2_35_1dsp

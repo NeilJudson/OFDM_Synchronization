@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-| Date         : Wed Jan 11 14:49:50 2017
+| Date         : Fri Jan 13 11:35:07 2017
 | Host         : txjs-130 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file multiplier_69_18_1dsp_ip_utilization_synth.rpt -pb multiplier_69_18_1dsp_ip_utilization_synth.pb
 | Design       : multiplier_69_18_1dsp_ip
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  195 |     0 |    218600 |  0.09 |
-|   LUT as Logic          |  195 |     0 |    218600 |  0.09 |
+| Slice LUTs*             |  225 |     0 |    218600 |  0.10 |
+|   LUT as Logic          |  225 |     0 |    218600 |  0.10 |
 |   LUT as Memory         |    0 |     0 |     70400 |  0.00 |
 | Slice Registers         |  304 |     0 |    437200 |  0.07 |
 |   Register as Flip Flop |  304 |     0 |    437200 |  0.07 |
@@ -55,9 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 9     |          Yes |           - |        Reset |
-| 18    |          Yes |         Set |            - |
-| 277   |          Yes |       Reset |            - |
+| 304   |          Yes |           - |        Reset |
+| 0     |          Yes |         Set |            - |
+| 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -153,15 +153,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  277 |        Flop & Latch |
-| LUT3     |   93 |                 LUT |
-| LUT6     |   64 |                 LUT |
-| LUT5     |   35 |                 LUT |
+| FDCE     |  304 |        Flop & Latch |
+| LUT3     |  105 |                 LUT |
+| LUT6     |   69 |                 LUT |
+| LUT5     |   65 |                 LUT |
 | CARRY4   |   22 |          CarryLogic |
-| FDSE     |   18 |        Flop & Latch |
-| FDCE     |    9 |        Flop & Latch |
-| LUT2     |    5 |                 LUT |
-| LUT4     |    4 |                 LUT |
+| LUT4     |    3 |                 LUT |
+| LUT2     |    3 |                 LUT |
 | DSP48E1  |    1 |    Block Arithmetic |
 +----------+------+---------------------+
 

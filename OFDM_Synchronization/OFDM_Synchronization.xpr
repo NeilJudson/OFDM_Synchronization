@@ -299,6 +299,19 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="complex_abs_power2_35_1dsp_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/complex_abs_power2_35_1dsp_ip">
+      <File Path="$PSRCDIR/sources_1/ip/complex_abs_power2_35_1dsp_ip/complex_abs_power2_35_1dsp_ip.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="complex_abs_power2_35_1dsp_ip"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
     <FileSet Name="multiplier_35_1dsp_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/multiplier_35_1dsp_ip">
       <File Path="$PSRCDIR/sources_1/ip/multiplier_35_1dsp_ip/multiplier_35_1dsp_ip.xci">
         <FileInfo>
@@ -322,19 +335,6 @@
       </File>
       <Config>
         <Option Name="TopModule" Val="multiplier_69_18_1dsp_ip"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="complex_abs_power2_35_1dsp_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/complex_abs_power2_35_1dsp_ip">
-      <File Path="$PSRCDIR/sources_1/ip/complex_abs_power2_35_1dsp_ip/complex_abs_power2_35_1dsp_ip.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="complex_abs_power2_35_1dsp_ip"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -448,14 +448,14 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="multiplier_35_1dsp_ip_synth_1" Type="Ft3:Synth" SrcSet="multiplier_35_1dsp_ip" Part="xc7z045fbg676-3" ConstrsSet="multiplier_35_1dsp_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/multiplier_35_1dsp_ip_synth_1">
+    <Run Id="complex_abs_power2_35_1dsp_ip_synth_1" Type="Ft3:Synth" SrcSet="complex_abs_power2_35_1dsp_ip" Part="xc7z045fbg676-3" ConstrsSet="complex_abs_power2_35_1dsp_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/complex_abs_power2_35_1dsp_ip_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="multiplier_69_18_1dsp_ip_synth_1" Type="Ft3:Synth" SrcSet="multiplier_69_18_1dsp_ip" Part="xc7z045fbg676-3" ConstrsSet="multiplier_69_18_1dsp_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/multiplier_69_18_1dsp_ip_synth_1">
+    <Run Id="multiplier_35_1dsp_ip_synth_1" Type="Ft3:Synth" SrcSet="multiplier_35_1dsp_ip" Part="xc7z045fbg676-3" ConstrsSet="multiplier_35_1dsp_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/multiplier_35_1dsp_ip_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -464,7 +464,7 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="complex_abs_power2_35_1dsp_ip_synth_1" Type="Ft3:Synth" SrcSet="complex_abs_power2_35_1dsp_ip" Part="xc7z045fbg676-3" ConstrsSet="complex_abs_power2_35_1dsp_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/complex_abs_power2_35_1dsp_ip_synth_1">
+    <Run Id="multiplier_69_18_1dsp_ip_synth_1" Type="Ft3:Synth" SrcSet="multiplier_69_18_1dsp_ip" Part="xc7z045fbg676-3" ConstrsSet="multiplier_69_18_1dsp_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/multiplier_69_18_1dsp_ip_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -641,7 +641,7 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="multiplier_35_1dsp_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="multiplier_35_1dsp_ip" Description="Vivado Implementation Defaults" SynthRun="multiplier_35_1dsp_ip_synth_1">
+    <Run Id="complex_abs_power2_35_1dsp_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="complex_abs_power2_35_1dsp_ip" Description="Vivado Implementation Defaults" SynthRun="complex_abs_power2_35_1dsp_ip_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
@@ -655,7 +655,7 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="multiplier_69_18_1dsp_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="multiplier_69_18_1dsp_ip" Description="Vivado Implementation Defaults" SynthRun="multiplier_69_18_1dsp_ip_synth_1">
+    <Run Id="multiplier_35_1dsp_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="multiplier_35_1dsp_ip" Description="Vivado Implementation Defaults" SynthRun="multiplier_35_1dsp_ip_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
           <Desc>Vivado Implementation Defaults</Desc>
@@ -671,7 +671,7 @@
         <Step Id="write_bitstream"/>
       </Strategy>
     </Run>
-    <Run Id="complex_abs_power2_35_1dsp_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="complex_abs_power2_35_1dsp_ip" Description="Vivado Implementation Defaults" SynthRun="complex_abs_power2_35_1dsp_ip_synth_1">
+    <Run Id="multiplier_69_18_1dsp_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7z045fbg676-3" ConstrsSet="multiplier_69_18_1dsp_ip" Description="Vivado Implementation Defaults" SynthRun="multiplier_69_18_1dsp_ip_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
           <Desc>Vivado Implementation Defaults</Desc>

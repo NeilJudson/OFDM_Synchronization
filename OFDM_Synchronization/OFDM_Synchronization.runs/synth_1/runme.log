@@ -13,9 +13,9 @@ Command: synth_design -top test_lambda -part xc7z045fbg676-3
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
-INFO: [Common 17-1223] The version limit for your license is '2017.01' and will expire in 19 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Common 17-1223] The version limit for your license is '2017.01' and will expire in 18 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 244.871 ; gain = 58.527
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 244.066 ; gain = 58.227
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'test_lambda' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/test_lambad.v:23]
 INFO: [Synth 8-638] synthesizing module 'lambda' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:23]
@@ -32,9 +32,9 @@ INFO: [Synth 8-638] synthesizing module 'lambda' [E:/jiaweiwei/Project/OFDM_Sync
 	Parameter LAMBDA_WIDTH bound to: 71 - type: integer 
 	Parameter IDLE bound to: 2'b00 
 	Parameter WORK bound to: 2'b11 
-	Parameter rd_addr_init bound to: 6'b100000 
-INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_35_1dsp_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5052-txjs-130/realtime/complex_abs_power2_35_1dsp_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_35_1dsp_ip' (1#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5052-txjs-130/realtime/complex_abs_power2_35_1dsp_ip_stub.v:7]
+	Parameter rd_addr_init bound to: 53 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_35_1dsp_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-1512-txjs-130/realtime/complex_abs_power2_35_1dsp_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_35_1dsp_ip' (1#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-1512-txjs-130/realtime/complex_abs_power2_35_1dsp_ip_stub.v:7]
 WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:363]
 WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:364]
 WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:372]
@@ -55,10 +55,10 @@ WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwe
 WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:436]
 WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:444]
 WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:445]
-INFO: [Synth 8-638] synthesizing module 'multiplier_35_1dsp_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5052-txjs-130/realtime/multiplier_35_1dsp_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'multiplier_35_1dsp_ip' (2#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5052-txjs-130/realtime/multiplier_35_1dsp_ip_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'multiplier_69_18_1dsp_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5052-txjs-130/realtime/multiplier_69_18_1dsp_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'multiplier_69_18_1dsp_ip' (3#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5052-txjs-130/realtime/multiplier_69_18_1dsp_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'multiplier_35_1dsp_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-1512-txjs-130/realtime/multiplier_35_1dsp_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'multiplier_35_1dsp_ip' (2#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-1512-txjs-130/realtime/multiplier_35_1dsp_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'multiplier_69_18_1dsp_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-1512-txjs-130/realtime/multiplier_69_18_1dsp_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'multiplier_69_18_1dsp_ip' (3#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-1512-txjs-130/realtime/multiplier_69_18_1dsp_ip_stub.v:7]
 WARNING: [Synth 8-3848] Net o_psi_phi_sum_valid in module/entity lambda does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:92]
 WARNING: [Synth 8-3848] Net o_psi_i_sum_1 in module/entity lambda does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:93]
 WARNING: [Synth 8-3848] Net o_psi_q_sum_1 in module/entity lambda does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:94]
@@ -96,7 +96,7 @@ WARNING: [Synth 8-350] instance 'uut' of module 'lambda' requires 43 connections
 WARNING: [Synth 8-85] always block has no event control specified [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/test_lambad.v:147]
 INFO: [Synth 8-256] done synthesizing module 'test_lambda' (5#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/test_lambad.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 330.637 ; gain = 144.293
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 329.820 ; gain = 143.980
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -107,7 +107,7 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 WARNING: [Synth 8-3295] tying undriven pin uut:i_rou_en to constant 0 [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/test_lambad.v:78]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 330.637 ; gain = 144.293
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 329.820 ; gain = 143.980
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z045fbg676-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -119,22 +119,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 716.070 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 715.313 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 716.070 ; gain = 529.727
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 715.313 ; gain = 529.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z045fbg676-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 716.070 ; gain = 529.727
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 715.313 ; gain = 529.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 716.070 ; gain = 529.727
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 715.313 ; gain = 529.473
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "ram_psi_i_reg[0]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ram_psi_i_reg[0]" won't be mapped to RAM because it is too sparse
@@ -241,7 +241,7 @@ INFO: [Synth 8-4471] merging register 'i_work_ctrl_reg' into 'i_work_ctrl_en_reg
 INFO: [Synth 8-4471] merging register 'i_psi_data_q_reg[29:0]' into 'i_psi_data_i_reg[29:0]' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/test_lambad.v:178]
 INFO: [Synth 8-5545] ROM "i_work_ctrl_en" won't be mapped to RAM because address size (64) is larger than maximum supported(18)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 716.070 ; gain = 529.727
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 715.313 ; gain = 529.473
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -250,8 +250,8 @@ Report RTL Partitions:
 +------+-----------------+------------+----------+
 |1     |lambda__GB0      |           1|     26658|
 |2     |lambda__GB1      |           1|      4092|
-|3     |lambda__GB2      |           1|     31327|
-|4     |lambda__GB3      |           1|     28785|
+|3     |lambda__GB2      |           1|     31326|
+|4     |lambda__GB3      |           1|     28794|
 |5     |test_lambda__GC0 |           1|       530|
 +------+-----------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -267,11 +267,12 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 10    
 	               31 Bit    Registers := 85    
 	               30 Bit    Registers := 129   
+	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 2     
 	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 12    
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
 +---Muxes : 
 	   3 Input     31 Bit        Muxes := 2     
 	   2 Input     31 Bit        Muxes := 2     
@@ -307,11 +308,12 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 10    
 	               31 Bit    Registers := 84    
 	               30 Bit    Registers := 128   
+	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 2     
 	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 12    
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   3 Input     31 Bit        Muxes := 2     
 	   2 Input     31 Bit        Muxes := 2     
@@ -335,15 +337,15 @@ BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 716.070 ; gain = 529.727
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 715.313 ; gain = 529.473
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "i_work_ctrl_en" won't be mapped to RAM because address size (64) is larger than maximum supported(18)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 716.070 ; gain = 529.727
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 715.313 ; gain = 529.473
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 716.070 ; gain = 529.727
+Finished Parallel Reinference  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 715.313 ; gain = 529.473
 
 Report RTL Partitions: 
 +------+-----------------+------------+----------+
@@ -351,8 +353,8 @@ Report RTL Partitions:
 +------+-----------------+------------+----------+
 |1     |lambda__GB0      |           1|     26718|
 |2     |lambda__GB1      |           1|      2985|
-|3     |lambda__GB2      |           1|     30246|
-|4     |lambda__GB3      |           1|     27738|
+|3     |lambda__GB2      |           1|     30245|
+|4     |lambda__GB3      |           1|     27747|
 |5     |test_lambda__GC0 |           1|       530|
 +------+-----------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -362,9 +364,9 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (uuti_3/\r
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (uuti_3/\rou_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (uuti_3/\rou2_reg[6] )
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:01:36 . Memory (MB): peak = 1059.289 ; gain = 872.945
+Finished Area Optimization : Time (s): cpu = 00:01:25 ; elapsed = 00:01:39 . Memory (MB): peak = 1058.703 ; gain = 872.863
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:22 ; elapsed = 00:01:36 . Memory (MB): peak = 1059.289 ; gain = 872.945
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:25 ; elapsed = 00:01:39 . Memory (MB): peak = 1058.703 ; gain = 872.863
 
 Report RTL Partitions: 
 +------+-----------------+------------+----------+
@@ -372,11 +374,11 @@ Report RTL Partitions:
 +------+-----------------+------------+----------+
 |1     |lambda__GB0      |           1|     26498|
 |2     |lambda__GB1      |           1|      2570|
-|3     |lambda__GB2      |           1|     29421|
-|4     |lambda__GB3      |           1|     26280|
+|3     |lambda__GB2      |           1|     29420|
+|4     |lambda__GB3      |           1|     26286|
 |5     |test_lambda__GC0 |           1|       300|
 +------+-----------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:22 ; elapsed = 00:01:36 . Memory (MB): peak = 1059.289 ; gain = 872.945
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:25 ; elapsed = 00:01:39 . Memory (MB): peak = 1058.703 ; gain = 872.863
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -384,10 +386,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:35 ; elapsed = 00:01:50 . Memory (MB): peak = 1059.289 ; gain = 872.945
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:38 ; elapsed = 00:01:53 . Memory (MB): peak = 1058.703 ; gain = 872.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:35 ; elapsed = 00:01:50 . Memory (MB): peak = 1059.289 ; gain = 872.945
+Finished Timing Optimization : Time (s): cpu = 00:01:38 ; elapsed = 00:01:53 . Memory (MB): peak = 1058.703 ; gain = 872.863
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -396,15 +398,15 @@ Report RTL Partitions:
 +------+-----------------+------------+----------+
 |1     |lambda__GB0      |           1|     26498|
 |2     |lambda__GB1      |           1|      2570|
-|3     |lambda__GB2      |           1|     29421|
-|4     |lambda__GB3      |           1|     26280|
+|3     |lambda__GB2      |           1|     29420|
+|4     |lambda__GB3      |           1|     26286|
 |5     |test_lambda__GC0 |           1|       300|
 +------+-----------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:50 ; elapsed = 00:02:04 . Memory (MB): peak = 1059.289 ; gain = 872.945
+Finished Technology Mapping : Time (s): cpu = 00:01:53 ; elapsed = 00:02:08 . Memory (MB): peak = 1058.703 ; gain = 872.863
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -422,7 +424,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:55 ; elapsed = 00:02:10 . Memory (MB): peak = 1059.289 ; gain = 872.945
+Finished IO Insertion : Time (s): cpu = 00:01:59 ; elapsed = 00:02:13 . Memory (MB): peak = 1058.703 ; gain = 872.863
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -435,7 +437,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:56 ; elapsed = 00:02:10 . Memory (MB): peak = 1059.289 ; gain = 872.945
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:59 ; elapsed = 00:02:14 . Memory (MB): peak = 1058.703 ; gain = 872.863
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -447,13 +449,27 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:57 ; elapsed = 00:02:11 . Memory (MB): peak = 1059.289 ; gain = 872.945
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:00 ; elapsed = 00:02:15 . Memory (MB): peak = 1058.703 ; gain = 872.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:57 ; elapsed = 00:02:11 . Memory (MB): peak = 1059.289 ; gain = 872.945
+Start Renaming Generated Ports : Time (s): cpu = 00:02:00 ; elapsed = 00:02:15 . Memory (MB): peak = 1058.703 ; gain = 872.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:57 ; elapsed = 00:02:12 . Memory (MB): peak = 1059.289 ; gain = 872.945
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:00 ; elapsed = 00:02:15 . Memory (MB): peak = 1058.703 ; gain = 872.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register:
++------------+-------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                            | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|test_lambda | uut/i_psi_phi_data_valid_buf_reg[7] | 8      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+-------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -504,35 +520,36 @@ Report Cell Usage:
 |30    |multiplier_69_18_1dsp_ip__9      |     1|
 |31    |BUFG                             |     1|
 |32    |CARRY4                           |   264|
-|33    |LUT1                             |   153|
-|34    |LUT2                             |  1633|
-|35    |LUT3                             |   128|
-|36    |LUT4                             |    80|
+|33    |LUT1                             |   151|
+|34    |LUT2                             |  1625|
+|35    |LUT3                             |   120|
+|36    |LUT4                             |    78|
 |37    |LUT5                             |   150|
 |38    |LUT6                             | 20333|
 |39    |MUXCY_L                          |  1043|
 |40    |MUXF7                            |  8760|
 |41    |MUXF8                            |  3956|
-|42    |XORCY                            |  1074|
-|43    |FDRE                             |  8422|
+|42    |SRL16E                           |     1|
+|43    |XORCY                            |  1074|
+|44    |FDRE                             |  8403|
 +------+---------------------------------+------+
 
 Report Instance Areas: 
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       | 48287|
-|2     |  uut    |lambda | 48042|
+|1     |top      |       | 48249|
+|2     |  uut    |lambda | 48004|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:57 ; elapsed = 00:02:12 . Memory (MB): peak = 1059.289 ; gain = 872.945
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:01 ; elapsed = 00:02:16 . Memory (MB): peak = 1058.703 ; gain = 872.863
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:42 ; elapsed = 00:02:01 . Memory (MB): peak = 1059.289 ; gain = 465.703
-Synthesis Optimization Complete : Time (s): cpu = 00:01:57 ; elapsed = 00:02:12 . Memory (MB): peak = 1059.289 ; gain = 872.945
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:45 ; elapsed = 00:02:05 . Memory (MB): peak = 1058.703 ; gain = 465.535
+Synthesis Optimization Complete : Time (s): cpu = 00:02:01 ; elapsed = 00:02:16 . Memory (MB): peak = 1058.703 ; gain = 872.863
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 2381 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'test_lambda' is not ideal for floorplanning, since the cellview 'lambda' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -543,7 +560,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 130 Infos, 56 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:07 ; elapsed = 00:02:21 . Memory (MB): peak = 1059.289 ; gain = 861.117
-write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1059.289 ; gain = 0.000
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.609 . Memory (MB): peak = 1059.289 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Jan 12 14:43:21 2017...
+synth_design: Time (s): cpu = 00:02:10 ; elapsed = 00:02:25 . Memory (MB): peak = 1058.703 ; gain = 861.020
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1058.703 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.613 . Memory (MB): peak = 1058.703 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 13 16:37:24 2017...

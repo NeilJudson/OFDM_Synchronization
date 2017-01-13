@@ -51,42 +51,36 @@ module multiplier_35_1dsp(
 	wire		signed		[47:0]	u_p		;
 	
 	reg			signed		[68:0]	c_in	;
-	// reg						[16:0]	c_in_17	;
-	// reg			signed		[51:0]	c_acc	;
 	reg			signed		[68:0]	c_acc	;
 	
 	// 数据输入标志buf
-	always @(posedge i_clk or posedge i_rst)
-		begin
-			if(i_rst == 1'b1)
-				en_buf <= 8'd0;
-			else
-				if(i_en == 1'b1)
-					en_buf <= {en_buf[6:0],1'b1};
-				else
-					en_buf <= {en_buf[6:0],1'b0};
+	always @(posedge i_clk or posedge i_rst) begin
+		if(i_rst == 1'b1) begin
+			en_buf <= 8'd0;
 		end
+		else if(i_en == 1'b1) begin
+			en_buf <= {en_buf[6:0],1'b1};
+		end
+		else begin
+			en_buf <= {en_buf[6:0],1'b0};
+		end
+	end
 	
 	// dsp输入序列
-	always @(posedge i_clk or posedge i_rst)
-		begin
-			if(i_rst == 1'b1)
-				begin
-					a_seq <= 72'd0;
-					b_seq <= 72'd0;
-				end
-			else
-				if(i_en == 1'b1)
-					begin
-						a_seq <= {i_a[34:17],i_a[34:17],1'b0,i_a[16:0],1'b0,i_a[16:0]};
-						b_seq <= {i_b[34:17],1'b0,i_b[16:0],i_b[34:17],1'b0,i_b[16:0]};
-					end
-				else
-					begin
-						a_seq <= a_seq<<18; // 1dly
-						b_seq <= b_seq<<18;
-					end
+	always @(posedge i_clk or posedge i_rst) begin
+		if(i_rst == 1'b1) begin
+			a_seq <= 72'd0;
+			b_seq <= 72'd0;
 		end
+		else if(i_en == 1'b1) begin
+			a_seq <= {i_a[34:17],i_a[34:17],1'b0,i_a[16:0],1'b0,i_a[16:0]};
+			b_seq <= {i_b[34:17],1'b0,i_b[16:0],i_b[34:17],1'b0,i_b[16:0]};
+		end
+		else begin
+			a_seq <= a_seq<<18; // 1dly
+			b_seq <= b_seq<<18;
+		end
+	end
 	assign u_a = a_seq[71:54];
 	assign u_b = b_seq[71:54];
 			
@@ -95,11 +89,14 @@ module multiplier_35_1dsp(
 		.A	(u_a),
 		.B	(u_b),
 		.P	(u_p) // 2dly
-		);
+	);
 	
 	// 各乘积扩大对应2^n倍
-	always @(posedge i_clk)
-		begin
+	always @(posedge i_clk or posedge i_rst) begin
+		if(i_rst == 1'b1) begin
+			c_in <= 69'd0;
+		end
+		else begin
 			case(en_buf[5:2])
 				4'b0001: c_in <= {u_p[34:0],34'd0};
 				4'b0010: c_in <= {{(17){u_p[34]}},u_p[34:0],17'd0};
@@ -108,26 +105,24 @@ module multiplier_35_1dsp(
 				default: c_in <= 69'd0;
 			endcase
 		end
+	end
 	
 	// 累加
-	always @(posedge i_clk)
-		begin
-			// if(en_buf[2] == 1'b1)
-				// c_acc <= 69'b0;
-			if(en_buf[3] == 1'b1)
-				c_acc <= c_in;
-				// c_acc <= c_in[102:17];
-				// c_in_17 <= c_in[16:0];
-			else
-				c_acc <= c_acc + c_in;
-				// c_acc <= c_acc + c_in[102:17];
-				// c_in_17 <= c_in[16:0];
+	always @(posedge i_clk or posedge i_rst) begin
+		if(i_rst == 1'b1) begin
+			c_acc <= 69'd0;
 		end
-
+		else if(en_buf[3] == 1'b1) begin
+			c_acc <= c_in;
+		end
+		else begin
+			c_acc <= c_acc + c_in;
+		end
+	end
+	
 	// 输出
 	// assign o_in_en = en_buf[3];
 	assign o_c_en = en_buf[7];
 	assign o_c = c_acc;
-	// assign o_c = {c_acc,c_in_17};
 	
 endmodule

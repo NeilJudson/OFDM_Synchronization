@@ -40,4 +40,3 @@ EAStep()
      fi
 }
 
-EAStep vivado -log multiplier_35_1dsp_ip.vds -m64 -mode batch -messageDb vivado.pb -notrace -source multiplier_35_1dsp_ip.tcl

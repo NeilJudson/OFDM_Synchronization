@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="536" />
+   <WVObjectSize size="73" />
    <wvobject db_ref_id="1" fp_name="/test_lambda/axis_aclk" type="logic">
       <obj_property name="ElementShortName">axis_aclk</obj_property>
       <obj_property name="ObjectShortName">axis_aclk</obj_property>
@@ -104,11 +104,332 @@
    <wvobject db_ref_id="1" fp_name="/test_lambda/uut/wr_addr" type="array">
       <obj_property name="ElementShortName">wr_addr[5:0]</obj_property>
       <obj_property name="ObjectShortName">wr_addr[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i" type="array">
       <obj_property name="ElementShortName">ram_psi_i[0:63][29:0]</obj_property>
       <obj_property name="ObjectShortName">ram_psi_i[0:63][29:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[0]" type="array">
+         <obj_property name="ElementShortName">[0][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[0][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[1]" type="array">
+         <obj_property name="ElementShortName">[1][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[1][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[2]" type="array">
+         <obj_property name="ElementShortName">[2][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[2][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[3]" type="array">
+         <obj_property name="ElementShortName">[3][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[3][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[4]" type="array">
+         <obj_property name="ElementShortName">[4][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[4][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[5]" type="array">
+         <obj_property name="ElementShortName">[5][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[5][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[6]" type="array">
+         <obj_property name="ElementShortName">[6][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[6][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[7]" type="array">
+         <obj_property name="ElementShortName">[7][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[7][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[8]" type="array">
+         <obj_property name="ElementShortName">[8][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[8][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[9]" type="array">
+         <obj_property name="ElementShortName">[9][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[9][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[10]" type="array">
+         <obj_property name="ElementShortName">[10][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[10][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[11]" type="array">
+         <obj_property name="ElementShortName">[11][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[11][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[12]" type="array">
+         <obj_property name="ElementShortName">[12][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[12][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[13]" type="array">
+         <obj_property name="ElementShortName">[13][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[13][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[14]" type="array">
+         <obj_property name="ElementShortName">[14][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[14][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[15]" type="array">
+         <obj_property name="ElementShortName">[15][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[15][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[16]" type="array">
+         <obj_property name="ElementShortName">[16][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[16][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[17]" type="array">
+         <obj_property name="ElementShortName">[17][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[17][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[18]" type="array">
+         <obj_property name="ElementShortName">[18][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[18][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[19]" type="array">
+         <obj_property name="ElementShortName">[19][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[19][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[20]" type="array">
+         <obj_property name="ElementShortName">[20][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[20][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[21]" type="array">
+         <obj_property name="ElementShortName">[21][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[21][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[22]" type="array">
+         <obj_property name="ElementShortName">[22][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[22][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[23]" type="array">
+         <obj_property name="ElementShortName">[23][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[23][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[24]" type="array">
+         <obj_property name="ElementShortName">[24][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[24][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[25]" type="array">
+         <obj_property name="ElementShortName">[25][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[25][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[26]" type="array">
+         <obj_property name="ElementShortName">[26][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[26][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[27]" type="array">
+         <obj_property name="ElementShortName">[27][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[27][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[28]" type="array">
+         <obj_property name="ElementShortName">[28][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[28][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[29]" type="array">
+         <obj_property name="ElementShortName">[29][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[29][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[30]" type="array">
+         <obj_property name="ElementShortName">[30][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[30][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[31]" type="array">
+         <obj_property name="ElementShortName">[31][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[31][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[32]" type="array">
+         <obj_property name="ElementShortName">[32][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[32][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[33]" type="array">
+         <obj_property name="ElementShortName">[33][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[33][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[34]" type="array">
+         <obj_property name="ElementShortName">[34][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[34][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[35]" type="array">
+         <obj_property name="ElementShortName">[35][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[35][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[36]" type="array">
+         <obj_property name="ElementShortName">[36][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[36][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[37]" type="array">
+         <obj_property name="ElementShortName">[37][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[37][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[38]" type="array">
+         <obj_property name="ElementShortName">[38][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[38][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[39]" type="array">
+         <obj_property name="ElementShortName">[39][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[39][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[40]" type="array">
+         <obj_property name="ElementShortName">[40][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[40][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[41]" type="array">
+         <obj_property name="ElementShortName">[41][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[41][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[42]" type="array">
+         <obj_property name="ElementShortName">[42][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[42][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[43]" type="array">
+         <obj_property name="ElementShortName">[43][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[43][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[44]" type="array">
+         <obj_property name="ElementShortName">[44][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[44][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[45]" type="array">
+         <obj_property name="ElementShortName">[45][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[45][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[46]" type="array">
+         <obj_property name="ElementShortName">[46][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[46][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[47]" type="array">
+         <obj_property name="ElementShortName">[47][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[47][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[48]" type="array">
+         <obj_property name="ElementShortName">[48][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[48][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[49]" type="array">
+         <obj_property name="ElementShortName">[49][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[49][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[50]" type="array">
+         <obj_property name="ElementShortName">[50][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[50][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[51]" type="array">
+         <obj_property name="ElementShortName">[51][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[51][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[52]" type="array">
+         <obj_property name="ElementShortName">[52][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[52][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[53]" type="array">
+         <obj_property name="ElementShortName">[53][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[53][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[54]" type="array">
+         <obj_property name="ElementShortName">[54][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[54][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[55]" type="array">
+         <obj_property name="ElementShortName">[55][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[55][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[56]" type="array">
+         <obj_property name="ElementShortName">[56][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[56][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[57]" type="array">
+         <obj_property name="ElementShortName">[57][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[57][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[58]" type="array">
+         <obj_property name="ElementShortName">[58][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[58][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[59]" type="array">
+         <obj_property name="ElementShortName">[59][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[59][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[60]" type="array">
+         <obj_property name="ElementShortName">[60][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[60][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[61]" type="array">
+         <obj_property name="ElementShortName">[61][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[61][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[62]" type="array">
+         <obj_property name="ElementShortName">[62][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[62][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i[63]" type="array">
+         <obj_property name="ElementShortName">[63][29:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_psi_i[63][29:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_q" type="array">
       <obj_property name="ElementShortName">ram_psi_q[0:63][29:0]</obj_property>
@@ -128,6 +449,57 @@
    <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rd_addr2" type="array">
       <obj_property name="ElementShortName">rd_addr2[0:9][5:0]</obj_property>
       <obj_property name="ObjectShortName">rd_addr2[0:9][5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rd_addr2[0]" type="array">
+         <obj_property name="ElementShortName">[0][5:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_addr2[0][5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rd_addr2[1]" type="array">
+         <obj_property name="ElementShortName">[1][5:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_addr2[1][5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rd_addr2[2]" type="array">
+         <obj_property name="ElementShortName">[2][5:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_addr2[2][5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rd_addr2[3]" type="array">
+         <obj_property name="ElementShortName">[3][5:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_addr2[3][5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rd_addr2[4]" type="array">
+         <obj_property name="ElementShortName">[4][5:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_addr2[4][5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rd_addr2[5]" type="array">
+         <obj_property name="ElementShortName">[5][5:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_addr2[5][5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rd_addr2[6]" type="array">
+         <obj_property name="ElementShortName">[6][5:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_addr2[6][5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rd_addr2[7]" type="array">
+         <obj_property name="ElementShortName">[7][5:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_addr2[7][5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rd_addr2[8]" type="array">
+         <obj_property name="ElementShortName">[8][5:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_addr2[8][5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rd_addr2[9]" type="array">
+         <obj_property name="ElementShortName">[9][5:0]</obj_property>
+         <obj_property name="ObjectShortName">rd_addr2[9][5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/test_lambda/uut/ram_psi_i_add" type="array">
       <obj_property name="ElementShortName">ram_psi_i_add[0:9][30:0]</obj_property>
@@ -194,9 +566,10 @@
       <obj_property name="ObjectShortName">ram_phi_add[0:9][31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/i_psi_phi_data_valid_dly1" type="logic">
-      <obj_property name="ElementShortName">i_psi_phi_data_valid_dly1</obj_property>
-      <obj_property name="ObjectShortName">i_psi_phi_data_valid_dly1</obj_property>
+   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/i_psi_phi_data_valid_buf" type="array">
+      <obj_property name="ElementShortName">i_psi_phi_data_valid_buf[8:0]</obj_property>
+      <obj_property name="ObjectShortName">i_psi_phi_data_valid_buf[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/test_lambda/uut/sum_valid" type="logic">
       <obj_property name="ElementShortName">sum_valid</obj_property>
@@ -479,1876 +852,177 @@
       <obj_property name="ObjectShortName">u39_o_c[85:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/psi_power" type="array">
-      <obj_property name="ElementShortName">psi_power[0:9][69:0]</obj_property>
-      <obj_property name="ObjectShortName">psi_power[0:9][69:0]</obj_property>
-   </wvobject>
    <wvobject db_ref_id="1" fp_name="/test_lambda/uut/power_valid" type="logic">
       <obj_property name="ElementShortName">power_valid</obj_property>
       <obj_property name="ObjectShortName">power_valid</obj_property>
    </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/psi_power" type="array">
+      <obj_property name="ElementShortName">psi_power[0:9][69:0]</obj_property>
+      <obj_property name="ObjectShortName">psi_power[0:9][69:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/psi_power[0]" type="array">
+         <obj_property name="ElementShortName">[0][69:0]</obj_property>
+         <obj_property name="ObjectShortName">psi_power[0][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/psi_power[1]" type="array">
+         <obj_property name="ElementShortName">[1][69:0]</obj_property>
+         <obj_property name="ObjectShortName">psi_power[1][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/psi_power[2]" type="array">
+         <obj_property name="ElementShortName">[2][69:0]</obj_property>
+         <obj_property name="ObjectShortName">psi_power[2][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/psi_power[3]" type="array">
+         <obj_property name="ElementShortName">[3][69:0]</obj_property>
+         <obj_property name="ObjectShortName">psi_power[3][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/psi_power[4]" type="array">
+         <obj_property name="ElementShortName">[4][69:0]</obj_property>
+         <obj_property name="ObjectShortName">psi_power[4][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/psi_power[5]" type="array">
+         <obj_property name="ElementShortName">[5][69:0]</obj_property>
+         <obj_property name="ObjectShortName">psi_power[5][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/psi_power[6]" type="array">
+         <obj_property name="ElementShortName">[6][69:0]</obj_property>
+         <obj_property name="ObjectShortName">psi_power[6][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/psi_power[7]" type="array">
+         <obj_property name="ElementShortName">[7][69:0]</obj_property>
+         <obj_property name="ObjectShortName">psi_power[7][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/psi_power[8]" type="array">
+         <obj_property name="ElementShortName">[8][69:0]</obj_property>
+         <obj_property name="ObjectShortName">psi_power[8][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/psi_power[9]" type="array">
+         <obj_property name="ElementShortName">[9][69:0]</obj_property>
+         <obj_property name="ObjectShortName">psi_power[9][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
    <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rou_phi_power" type="array">
       <obj_property name="ElementShortName">rou_phi_power[0:9][69:0]</obj_property>
       <obj_property name="ObjectShortName">rou_phi_power[0:9][69:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rou_phi_power[0]" type="array">
+         <obj_property name="ElementShortName">[0][69:0]</obj_property>
+         <obj_property name="ObjectShortName">rou_phi_power[0][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rou_phi_power[1]" type="array">
+         <obj_property name="ElementShortName">[1][69:0]</obj_property>
+         <obj_property name="ObjectShortName">rou_phi_power[1][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rou_phi_power[2]" type="array">
+         <obj_property name="ElementShortName">[2][69:0]</obj_property>
+         <obj_property name="ObjectShortName">rou_phi_power[2][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rou_phi_power[3]" type="array">
+         <obj_property name="ElementShortName">[3][69:0]</obj_property>
+         <obj_property name="ObjectShortName">rou_phi_power[3][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rou_phi_power[4]" type="array">
+         <obj_property name="ElementShortName">[4][69:0]</obj_property>
+         <obj_property name="ObjectShortName">rou_phi_power[4][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rou_phi_power[5]" type="array">
+         <obj_property name="ElementShortName">[5][69:0]</obj_property>
+         <obj_property name="ObjectShortName">rou_phi_power[5][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rou_phi_power[6]" type="array">
+         <obj_property name="ElementShortName">[6][69:0]</obj_property>
+         <obj_property name="ObjectShortName">rou_phi_power[6][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rou_phi_power[7]" type="array">
+         <obj_property name="ElementShortName">[7][69:0]</obj_property>
+         <obj_property name="ObjectShortName">rou_phi_power[7][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rou_phi_power[8]" type="array">
+         <obj_property name="ElementShortName">[8][69:0]</obj_property>
+         <obj_property name="ObjectShortName">rou_phi_power[8][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/rou_phi_power[9]" type="array">
+         <obj_property name="ElementShortName">[9][69:0]</obj_property>
+         <obj_property name="ObjectShortName">rou_phi_power[9][69:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/lambda_data_valid" type="logic">
+      <obj_property name="ElementShortName">lambda_data_valid</obj_property>
+      <obj_property name="ObjectShortName">lambda_data_valid</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/test_lambda/uut/lambda_data" type="array">
       <obj_property name="ElementShortName">lambda_data[0:9][70:0]</obj_property>
       <obj_property name="ObjectShortName">lambda_data[0:9][70:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/i_clk" type="logic">
-      <obj_property name="ElementShortName">i_clk</obj_property>
-      <obj_property name="ObjectShortName">i_clk</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/i_en" type="logic">
-      <obj_property name="ElementShortName">i_en</obj_property>
-      <obj_property name="ObjectShortName">i_en</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/i_i" type="array">
-      <obj_property name="ElementShortName">i_i[34:0]</obj_property>
-      <obj_property name="ObjectShortName">i_i[34:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/i_r" type="array">
-      <obj_property name="ElementShortName">i_r[34:0]</obj_property>
-      <obj_property name="ObjectShortName">i_r[34:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/i_rst" type="logic">
-      <obj_property name="ElementShortName">i_rst</obj_property>
-      <obj_property name="ObjectShortName">i_rst</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/o_p" type="array">
-      <obj_property name="ElementShortName">o_p[69:0]</obj_property>
-      <obj_property name="ObjectShortName">o_p[69:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/o_p_en" type="logic">
-      <obj_property name="ElementShortName">o_p_en</obj_property>
-      <obj_property name="ObjectShortName">o_p_en</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/data0" type="array">
-      <obj_property name="ElementShortName">data0[17:0]</obj_property>
-      <obj_property name="ObjectShortName">data0[17:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/data2" type="array">
-      <obj_property name="ElementShortName">data2[17:0]</obj_property>
-      <obj_property name="ObjectShortName">data2[17:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[0] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[0] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[0] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[10] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[10] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[10] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[11] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[11] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[11] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[12] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[12] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[12] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[13] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[13] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[13] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[14] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[14] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[14] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[15] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[15] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[15] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[16] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[16] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[16] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[1] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[1] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[1] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[2] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[2] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[2] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[3] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[3] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[3] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[4] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[4] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[4] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[5] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[5] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[5] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[6] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[6] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[6] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[7] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[7] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[7] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[8] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[8] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[8] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\i_buf_reg_n_0_[9] " type="logic">
-      <obj_property name="ElementShortName">\i_buf_reg_n_0_[9] </obj_property>
-      <obj_property name="ObjectShortName">\i_buf_reg_n_0_[9] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/i_clk" type="logic">
-      <obj_property name="ElementShortName">i_clk</obj_property>
-      <obj_property name="ObjectShortName">i_clk</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/i_en" type="logic">
-      <obj_property name="ElementShortName">i_en</obj_property>
-      <obj_property name="ObjectShortName">i_en</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/i_i" type="array">
-      <obj_property name="ElementShortName">i_i[34:0]</obj_property>
-      <obj_property name="ObjectShortName">i_i[34:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/i_r" type="array">
-      <obj_property name="ElementShortName">i_r[34:0]</obj_property>
-      <obj_property name="ObjectShortName">i_r[34:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/i_rst" type="logic">
-      <obj_property name="ElementShortName">i_rst</obj_property>
-      <obj_property name="ObjectShortName">i_rst</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/in" type="array">
-      <obj_property name="ElementShortName">in[69:0]</obj_property>
-      <obj_property name="ObjectShortName">in[69:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/o_p" type="array">
-      <obj_property name="ElementShortName">o_p[69:0]</obj_property>
-      <obj_property name="ObjectShortName">o_p[69:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/o_p_en" type="logic">
-      <obj_property name="ElementShortName">o_p_en</obj_property>
-      <obj_property name="ObjectShortName">o_p_en</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/p_0_in" type="array">
-      <obj_property name="ElementShortName">p_0_in[11:1]</obj_property>
-      <obj_property name="ObjectShortName">p_0_in[11:1]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[11]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[11]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[11]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[11]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[11]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[11]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[11]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[11]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[11]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[11]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[11]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[11]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[15]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[15]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[15]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[15]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[15]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[15]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[15]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[15]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[15]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[15]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[15]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[15]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[19]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[19]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[19]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[19]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[19]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[19]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[19]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[19]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[19]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[19]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[19]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[19]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[23]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[23]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[23]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[23]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[23]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[23]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[23]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[23]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[23]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[23]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[23]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[23]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[27]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[27]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[27]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[27]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[27]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[27]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[27]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[27]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[27]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[27]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[27]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[27]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[31]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[31]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[31]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[31]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[31]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[31]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[31]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[31]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[31]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[31]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[31]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[31]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[35]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[35]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[35]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[35]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[35]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[35]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[35]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[35]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[35]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[35]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[35]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[35]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[39]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[39]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[39]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[39]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[39]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[39]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[39]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[39]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[39]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[39]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[39]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[39]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[3]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[3]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[3]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[3]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[3]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[3]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[3]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[3]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[3]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[3]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[3]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[3]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[43]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[43]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[43]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[43]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[43]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[43]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[43]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[43]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[43]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[43]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[43]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[43]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[47]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[47]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[47]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[47]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[47]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[47]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[47]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[47]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[47]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[47]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[47]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[47]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[51]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[51]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[51]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[51]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[51]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[51]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[51]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[51]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[51]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[51]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[51]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[51]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[55]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[55]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[55]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[55]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[55]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[55]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[55]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[55]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[55]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[55]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[55]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[55]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[59]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[59]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[59]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[59]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[59]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[59]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[59]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[59]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[59]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[59]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[59]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[59]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[63]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[63]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[63]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[63]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[63]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[63]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[63]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[63]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[63]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[63]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[63]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[63]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[67]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[67]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[67]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[67]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[67]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[67]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[67]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[67]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[67]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[67]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[67]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[67]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[69]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[69]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[69]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[69]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[69]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[69]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[7]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[7]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[7]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[7]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[7]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[7]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[7]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[7]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[7]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc[7]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc[7]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc[7]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[11]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[11]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[11]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[11]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[11]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[11]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[11]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[11]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[11]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[11]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[11]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[11]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[11]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[11]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[11]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[11]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[11]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[11]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[11]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[11]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[11]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[11]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[11]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[11]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[15]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[15]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[15]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[15]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[15]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[15]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[15]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[15]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[15]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[15]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[15]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[15]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[15]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[15]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[15]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[15]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[15]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[15]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[15]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[15]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[15]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[15]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[15]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[15]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[19]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[19]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[19]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[19]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[19]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[19]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[19]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[19]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[19]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[19]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[19]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[19]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[19]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[19]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[19]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[19]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[19]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[19]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[19]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[19]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[19]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[19]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[19]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[19]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[23]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[23]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[23]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[23]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[23]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[23]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[23]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[23]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[23]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[23]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[23]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[23]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[23]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[23]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[23]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[23]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[23]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[23]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[23]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[23]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[23]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[23]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[23]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[23]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[27]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[27]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[27]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[27]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[27]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[27]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[27]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[27]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[27]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[27]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[27]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[27]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[27]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[27]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[27]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[27]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[27]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[27]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[27]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[27]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[27]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[27]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[27]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[27]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[31]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[31]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[31]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[31]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[31]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[31]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[31]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[31]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[31]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[31]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[31]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[31]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[31]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[31]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[31]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[31]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[31]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[31]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[31]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[31]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[31]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[31]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[31]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[31]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[35]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[35]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[35]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[35]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[35]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[35]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[35]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[35]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[35]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[35]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[35]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[35]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[35]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[35]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[35]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[35]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[35]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[35]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[35]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[35]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[35]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[35]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[35]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[35]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[39]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[39]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[39]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[39]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[39]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[39]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[39]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[39]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[39]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[39]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[39]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[39]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[39]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[39]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[39]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[39]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[39]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[39]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[39]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[39]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[39]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[39]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[39]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[39]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[3]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[3]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[3]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[3]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[3]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[3]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[3]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[3]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[3]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[3]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[3]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[3]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[3]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[3]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[3]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[3]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[3]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[3]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[3]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[3]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[3]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[3]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[3]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[3]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[43]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[43]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[43]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[43]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[43]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[43]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[43]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[43]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[43]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[43]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[43]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[43]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[43]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[43]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[43]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[43]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[43]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[43]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[43]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[43]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[43]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[43]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[43]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[43]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[47]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[47]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[47]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[47]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[47]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[47]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[47]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[47]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[47]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[47]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[47]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[47]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[47]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[47]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[47]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[47]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[47]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[47]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[47]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[47]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[47]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[47]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[47]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[47]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[51]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[51]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[51]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[51]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[51]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[51]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[51]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[51]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[51]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[51]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[51]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[51]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[51]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[51]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[51]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[51]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[51]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[51]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[51]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[51]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[51]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[51]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[51]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[51]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[55]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[55]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[55]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[55]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[55]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[55]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[55]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[55]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[55]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[55]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[55]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[55]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[55]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[55]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[55]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[55]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[55]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[55]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[55]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[55]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[55]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[55]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[55]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[55]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[59]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[59]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[59]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[59]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[59]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[59]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[59]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[59]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[59]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[59]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[59]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[59]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[59]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[59]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[59]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[59]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[59]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[59]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[59]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[59]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[59]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[59]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[59]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[59]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[63]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[63]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[63]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[63]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[63]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[63]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[63]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[63]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[63]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[63]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[63]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[63]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[63]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[63]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[63]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[63]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[63]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[63]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[63]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[63]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[63]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[63]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[63]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[63]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[67]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[67]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[67]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[67]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[67]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[67]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[67]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[67]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[67]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[67]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[67]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[67]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[67]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[67]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[67]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[67]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[67]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[67]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[67]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[67]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[67]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[67]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[67]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[67]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[69]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[69]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[69]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[69]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[69]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[69]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[69]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[69]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[69]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[7]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[7]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[7]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[7]_i_1_n_1 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[7]_i_1_n_1 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[7]_i_1_n_1 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[7]_i_1_n_2 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[7]_i_1_n_2 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[7]_i_1_n_2 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[7]_i_1_n_3 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[7]_i_1_n_3 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[7]_i_1_n_3 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[7]_i_1_n_4 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[7]_i_1_n_4 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[7]_i_1_n_4 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[7]_i_1_n_5 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[7]_i_1_n_5 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[7]_i_1_n_5 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[7]_i_1_n_6 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[7]_i_1_n_6 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[7]_i_1_n_6 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_acc_reg[7]_i_1_n_7 " type="logic">
-      <obj_property name="ElementShortName">\p_acc_reg[7]_i_1_n_7 </obj_property>
-      <obj_property name="ObjectShortName">\p_acc_reg[7]_i_1_n_7 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\p_in[17]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\p_in[17]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_in[17]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[0] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[0] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[0] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[10] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[10] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[10] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[11] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[11] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[11] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[12] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[12] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[12] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[13] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[13] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[13] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[14] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[14] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[14] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[15] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[15] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[15] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[16] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[16] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[16] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[1] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[1] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[1] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[2] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[2] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[2] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[3] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[3] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[3] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[4] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[4] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[4] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[5] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[5] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[5] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[6] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[6] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[6] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[7] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[7] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[7] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[8] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[8] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[8] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\r_buf_reg_n_0_[9] " type="logic">
-      <obj_property name="ElementShortName">\r_buf_reg_n_0_[9] </obj_property>
-      <obj_property name="ObjectShortName">\r_buf_reg_n_0_[9] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_a" type="array">
-      <obj_property name="ElementShortName">u_a[17:0]</obj_property>
-      <obj_property name="ObjectShortName">u_a[17:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[0]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[0]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[0]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[10]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[10]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[10]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[11]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[11]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[11]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[12]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[12]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[12]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[13]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[13]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[13]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[14]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[14]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[14]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[15]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[15]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[15]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[16]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[16]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[16]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[16]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[16]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[16]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[17]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[17]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[17]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[17]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[17]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[17]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[17]_i_4_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[17]_i_4_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[17]_i_4_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[17]_i_5_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[17]_i_5_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[17]_i_5_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[1]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[1]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[1]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[2]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[2]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[2]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[3]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[3]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[3]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[4]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[4]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[4]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[5]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[5]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[5]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[6]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[6]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[6]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[7]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[7]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[7]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[8]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[8]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[8]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a[9]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_a[9]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_a[9]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[0] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[0] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[0] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[10] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[10] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[10] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[11] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[11] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[11] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[12] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[12] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[12] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[13] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[13] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[13] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[14] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[14] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[14] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[15] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[15] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[15] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[16] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[16] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[16] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[17] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[17] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[17] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[1] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[1] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[1] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[2] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[2] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[2] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[3] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[3] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[3] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[4] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[4] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[4] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[5] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[5] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[5] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[6] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[6] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[6] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[7] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[7] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[7] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[8] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[8] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[8] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_a_reg_n_0_[9] " type="logic">
-      <obj_property name="ElementShortName">\u_a_reg_n_0_[9] </obj_property>
-      <obj_property name="ObjectShortName">\u_a_reg_n_0_[9] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_b" type="array">
-      <obj_property name="ElementShortName">u_b[17:0]</obj_property>
-      <obj_property name="ObjectShortName">u_b[17:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[0]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[0]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[0]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[10]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[10]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[10]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[11]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[11]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[11]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[12]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[12]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[12]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[13]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[13]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[13]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[14]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[14]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[14]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[15]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[15]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[15]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[16]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[16]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[16]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[16]_i_3_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[16]_i_3_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[16]_i_3_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[1]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[1]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[1]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[2]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[2]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[2]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[3]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[3]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[3]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[4]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[4]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[4]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[5]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[5]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[5]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[6]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[6]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[6]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[7]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[7]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[7]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[8]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[8]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[8]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b[9]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_b[9]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_b[9]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[0] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[0] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[0] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[10] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[10] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[10] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[11] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[11] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[11] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[12] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[12] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[12] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[13] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[13] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[13] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[14] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[14] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[14] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[15] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[15] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[15] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[16] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[16] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[16] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[17] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[17] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[17] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[1] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[1] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[1] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[2] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[2] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[2] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[3] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[3] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[3] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[4] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[4] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[4] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[5] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[5] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[5] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[6] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[6] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[6] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[7] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[7] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[7] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[8] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[8] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[8] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_b_reg_n_0_[9] " type="logic">
-      <obj_property name="ElementShortName">\u_b_reg_n_0_[9] </obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg_n_0_[9] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c[47]_i_1_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_c[47]_i_1_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_c[47]_i_1_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c[47]_i_2_n_0 " type="logic">
-      <obj_property name="ElementShortName">\u_c[47]_i_2_n_0 </obj_property>
-      <obj_property name="ObjectShortName">\u_c[47]_i_2_n_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[0] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[0] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[0] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[10] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[10] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[10] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[11] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[11] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[11] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[12] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[12] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[12] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[13] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[13] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[13] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[14] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[14] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[14] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[15] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[15] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[15] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[16] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[16] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[16] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[17] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[17] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[17] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[18] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[18] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[18] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[19] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[19] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[19] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[1] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[1] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[1] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[20] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[20] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[20] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[21] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[21] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[21] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[22] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[22] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[22] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[23] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[23] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[23] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[24] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[24] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[24] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[25] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[25] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[25] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[26] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[26] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[26] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[27] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[27] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[27] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[28] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[28] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[28] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[29] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[29] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[29] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[2] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[2] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[2] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[30] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[30] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[30] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[31] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[31] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[31] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[32] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[32] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[32] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[33] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[33] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[33] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[34] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[34] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[34] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[35] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[35] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[35] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[36] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[36] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[36] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[37] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[37] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[37] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[38] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[38] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[38] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[39] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[39] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[39] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[3] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[3] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[3] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[40] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[40] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[40] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[41] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[41] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[41] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[42] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[42] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[42] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[43] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[43] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[43] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[44] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[44] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[44] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[45] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[45] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[45] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[46] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[46] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[46] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[47] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[47] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[47] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[4] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[4] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[4] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[5] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[5] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[5] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[6] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[6] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[6] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[7] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[7] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[7] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[8] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[8] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[8] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\u_c_reg_n_0_[9] " type="logic">
-      <obj_property name="ElementShortName">\u_c_reg_n_0_[9] </obj_property>
-      <obj_property name="ObjectShortName">\u_c_reg_n_0_[9] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_100" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_100</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_100</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_48" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_48</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_48</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_49" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_49</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_49</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_50" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_50</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_50</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_51" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_51</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_51</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_52" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_52</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_52</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_53" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_53</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_53</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_54" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_54</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_54</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_55" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_55</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_55</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_56" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_56</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_56</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_57" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_57</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_57</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_58" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_58</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_58</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_59" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_59</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_59</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_60" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_60</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_60</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_61" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_61</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_61</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_62" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_62</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_62</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_63" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_63</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_63</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_64" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_64</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_64</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_65" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_65</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_65</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_66" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_66</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_66</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_67" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_67</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_67</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_68" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_68</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_68</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_69" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_69</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_69</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_70" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_70</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_70</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_71" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_71</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_71</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_72" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_72</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_72</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_73" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_73</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_73</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_74" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_74</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_74</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_75" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_75</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_75</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_76" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_76</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_76</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_77" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_77</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_77</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_78" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_78</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_78</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_79" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_79</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_79</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_80" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_80</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_80</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_81" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_81</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_81</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_82" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_82</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_82</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_83" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_83</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_83</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_84" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_84</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_84</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_85" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_85</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_85</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_86" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_86</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_86</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_87" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_87</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_87</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_88" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_88</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_88</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_89" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_89</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_89</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_90" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_90</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_90</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_91" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_91</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_91</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_92" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_92</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_92</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_93" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_93</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_93</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_94" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_94</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_94</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_95" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_95</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_95</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_96" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_96</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_96</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_97" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_97</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_97</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_98" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_98</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_98</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip_n_99" type="logic">
-      <obj_property name="ElementShortName">u_dsp48_mul_add_ip_n_99</obj_property>
-      <obj_property name="ObjectShortName">u_dsp48_mul_add_ip_n_99</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_p" type="array">
-      <obj_property name="ElementShortName">u_p[47:0]</obj_property>
-      <obj_property name="ObjectShortName">u_p[47:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\NLW_p_acc_reg[69]_i_1_CO_UNCONNECTED " type="array">
-      <obj_property name="ElementShortName">\NLW_p_acc_reg[69]_i_1_CO_UNCONNECTED [3:1]</obj_property>
-      <obj_property name="ObjectShortName">\NLW_p_acc_reg[69]_i_1_CO_UNCONNECTED [3:1]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/\NLW_p_acc_reg[69]_i_1_O_UNCONNECTED " type="array">
-      <obj_property name="ElementShortName">\NLW_p_acc_reg[69]_i_1_O_UNCONNECTED [3:2]</obj_property>
-      <obj_property name="ObjectShortName">\NLW_p_acc_reg[69]_i_1_O_UNCONNECTED [3:2]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/C" type="array">
-      <obj_property name="ElementShortName">C[47:0]</obj_property>
-      <obj_property name="ObjectShortName">C[47:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/D" type="array">
-      <obj_property name="ElementShortName">D[46:0]</obj_property>
-      <obj_property name="ObjectShortName">D[46:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/P" type="array">
-      <obj_property name="ElementShortName">P[47:0]</obj_property>
-      <obj_property name="ObjectShortName">P[47:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/Q" type="array">
-      <obj_property name="ElementShortName">Q[17:0]</obj_property>
-      <obj_property name="ObjectShortName">Q[17:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/\en_buf_reg[9] " type="array">
-      <obj_property name="ElementShortName">\en_buf_reg[9] [2:0]</obj_property>
-      <obj_property name="ObjectShortName">\en_buf_reg[9] [2:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/i_clk" type="logic">
-      <obj_property name="ElementShortName">i_clk</obj_property>
-      <obj_property name="ObjectShortName">i_clk</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/\p_in_reg[65] " type="logic">
-      <obj_property name="ElementShortName">\p_in_reg[65] </obj_property>
-      <obj_property name="ObjectShortName">\p_in_reg[65] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/\p_in_reg[65]_0 " type="logic">
-      <obj_property name="ElementShortName">\p_in_reg[65]_0 </obj_property>
-      <obj_property name="ObjectShortName">\p_in_reg[65]_0 </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/\p_in_reg[66] " type="logic">
-      <obj_property name="ElementShortName">\p_in_reg[66] </obj_property>
-      <obj_property name="ObjectShortName">\p_in_reg[66] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/\p_in_reg[67] " type="logic">
-      <obj_property name="ElementShortName">\p_in_reg[67] </obj_property>
-      <obj_property name="ObjectShortName">\p_in_reg[67] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/\p_in_reg[68] " type="logic">
-      <obj_property name="ElementShortName">\p_in_reg[68] </obj_property>
-      <obj_property name="ObjectShortName">\p_in_reg[68] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/\p_in_reg[69] " type="logic">
-      <obj_property name="ElementShortName">\p_in_reg[69] </obj_property>
-      <obj_property name="ObjectShortName">\p_in_reg[69] </obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/\u_b_reg[17] " type="array">
-      <obj_property name="ElementShortName">\u_b_reg[17] [17:0]</obj_property>
-      <obj_property name="ObjectShortName">\u_b_reg[17] [17:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/NLW_U0_CARRYCASCOUT_UNCONNECTED" type="logic">
-      <obj_property name="ElementShortName">NLW_U0_CARRYCASCOUT_UNCONNECTED</obj_property>
-      <obj_property name="ObjectShortName">NLW_U0_CARRYCASCOUT_UNCONNECTED</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/NLW_U0_CARRYOUT_UNCONNECTED" type="logic">
-      <obj_property name="ElementShortName">NLW_U0_CARRYOUT_UNCONNECTED</obj_property>
-      <obj_property name="ObjectShortName">NLW_U0_CARRYOUT_UNCONNECTED</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/NLW_U0_ACOUT_UNCONNECTED" type="array">
-      <obj_property name="ElementShortName">NLW_U0_ACOUT_UNCONNECTED[29:0]</obj_property>
-      <obj_property name="ObjectShortName">NLW_U0_ACOUT_UNCONNECTED[29:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/NLW_U0_BCOUT_UNCONNECTED" type="array">
-      <obj_property name="ElementShortName">NLW_U0_BCOUT_UNCONNECTED[17:0]</obj_property>
-      <obj_property name="ObjectShortName">NLW_U0_BCOUT_UNCONNECTED[17:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_lambda/uut/u10_complex_abs_power2_35_1dsp_ip/inst/u_dsp48_mul_add_ip/NLW_U0_PCOUT_UNCONNECTED" type="array">
-      <obj_property name="ElementShortName">NLW_U0_PCOUT_UNCONNECTED[47:0]</obj_property>
-      <obj_property name="ObjectShortName">NLW_U0_PCOUT_UNCONNECTED[47:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/lambda_data[0]" type="array">
+         <obj_property name="ElementShortName">[0][70:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data[0][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/lambda_data[1]" type="array">
+         <obj_property name="ElementShortName">[1][70:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data[1][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/lambda_data[2]" type="array">
+         <obj_property name="ElementShortName">[2][70:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data[2][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/lambda_data[3]" type="array">
+         <obj_property name="ElementShortName">[3][70:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data[3][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/lambda_data[4]" type="array">
+         <obj_property name="ElementShortName">[4][70:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data[4][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/lambda_data[5]" type="array">
+         <obj_property name="ElementShortName">[5][70:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data[5][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/lambda_data[6]" type="array">
+         <obj_property name="ElementShortName">[6][70:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data[6][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/lambda_data[7]" type="array">
+         <obj_property name="ElementShortName">[7][70:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data[7][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/lambda_data[8]" type="array">
+         <obj_property name="ElementShortName">[8][70:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data[8][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_lambda/uut/lambda_data[9]" type="array">
+         <obj_property name="ElementShortName">[9][70:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data[9][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>
