@@ -64,16 +64,15 @@ module tar #(
 //================================================================================
 	localparam	SPRAM_DATA_WIDTH	= 144;
 	localparam	SPRAM_ADDR_WIDTH	= 5;
-	localparam	SPRAM_DATA_DEPTH	= 2**SPRAM_ADDR_WIDTH; // 32
-	localparam	PSI_SUM_WIDTH		= PSI_WIDTH+5; // 39
-	localparam	PHI_SUM_WIDTH		= PHI_WIDTH+5; // 40
-	localparam	PSI_POWER_WIDTH		= 2*PSI_SUM_WIDTH; // 78
-	localparam	PHI_POWER_WIDTH		= 2*(PHI_SUM_WIDTH-1); // 78
-	localparam	TAR_WIDTH			= PSI_POWER_WIDTH+1; // 79
+	localparam	SPRAM_DATA_DEPTH	= 2**SPRAM_ADDR_WIDTH;	// 32
+	localparam	PSI_SUM_WIDTH		= PSI_WIDTH+5;			// 39
+	localparam	PHI_SUM_WIDTH		= PHI_WIDTH+5;			// 40
+	localparam	PSI_POWER_WIDTH		= 2*PSI_SUM_WIDTH;		// 78
+	localparam	PHI_POWER_WIDTH		= 2*(PHI_SUM_WIDTH-1);	// 78
+	localparam	TAR_WIDTH			= PSI_POWER_WIDTH+1;	// 79
 	// state
-	localparam	IDLE			= 2'd0,
-				CLEAR			= 2'd1,
-				WORK			= 2'd2;
+	localparam	IDLE	= 2'd0,
+				WORK	= 2'd2;
 	
 	reg				[1:0]					state			;
 	reg				[2:0]					cnt				;
@@ -272,9 +271,12 @@ module tar #(
 		end
 		else if(i_psi_phi_data_valid_dly1 == 1'b1) begin
 			sum_valid	<= 1'b1; // cnt=2
-			psi_i_sum	<= psi_i_sum + {{(PSI_SUM_WIDTH-PSI_WIDTH-1){psi_i_add[PSI_WIDTH]}},psi_i_add};
-			psi_q_sum	<= psi_q_sum + {{(PSI_SUM_WIDTH-PSI_WIDTH-1){psi_q_add[PSI_WIDTH]}},psi_q_add};
-			phi_sum		<= phi_sum + {{(PHI_SUM_WIDTH-PHI_WIDTH-1){phi_add[PHI_WIDTH]}},phi_add};
+			psi_i_sum	<= psi_i_sum
+							+ {{(PSI_SUM_WIDTH-PSI_WIDTH-1){psi_i_add[PSI_WIDTH]}},psi_i_add};
+			psi_q_sum	<= psi_q_sum
+							+ {{(PSI_SUM_WIDTH-PSI_WIDTH-1){psi_q_add[PSI_WIDTH]}},psi_q_add};
+			phi_sum		<= phi_sum
+							+ {{(PHI_SUM_WIDTH-PHI_WIDTH-1){phi_add[PHI_WIDTH]}},phi_add};
 			sum_addr	<= i_psi_phi_data_addr[RAM_ADDR_WIDTH-1:0] - 5'd31;
 		end
 		else begin
@@ -295,7 +297,7 @@ module tar #(
 	assign u3_A				= {{(42-PHI_SUM_WIDTH+1){phi_sum[PHI_SUM_WIDTH-1]}},phi_sum[PHI_SUM_WIDTH-1:1]}; // *0.5
 	assign u3_B				= {{(42-PHI_SUM_WIDTH+1){phi_sum[PHI_SUM_WIDTH-1]}},phi_sum[PHI_SUM_WIDTH-1:1]};
 	
-	complex_abs_power2_42 u2_complex_abs_power2_42 (
+	complex_abs_power2_42_ip u2_complex_abs_power2_42_ip(
 		.i_clk			(clk			),
 		.i_data_valid	(u2_i_data_valid),
 		.i_data_i		(u2_i_data_i	),
@@ -328,8 +330,8 @@ module tar #(
 		end
 		else if(power_valid == 1'b1) begin
 			tar_data_valid	<= 1'b1; // 11dly，cnt=3
-			tar_data		<= {psi_power[PSI_POWER_WIDTH-1],psi_power}
-								- {{(PSI_POWER_WIDTH-PHI_POWER_WIDTH+3){phi_power[PHI_POWER_WIDTH-1]}},phi_power[PHI_POWER_WIDTH-1:2]};
+			tar_data		<= {{(TAR_WIDTH-PSI_POWER_WIDTH){psi_power[PSI_POWER_WIDTH-1]}},psi_power}
+								- {{(TAR_WIDTH-PHI_POWER_WIDTH+2){phi_power[PHI_POWER_WIDTH-1]}},phi_power[PHI_POWER_WIDTH-1:2]};
 								// psi_power-(0.5*0.5)*phi_power
 			tar_data_addr	<= sum_addr - 1'd1;
 		end
@@ -343,6 +345,5 @@ module tar #(
 	assign o_tar_data_valid	= tar_data_valid;
 	assign o_tar_data		= {{(87-TAR_WIDTH){tar_data[TAR_WIDTH-1]}},tar_data};
 	assign o_tar_data_addr	= {{(16-RAM_ADDR_WIDTH){1'b0}},tar_data_addr};
-
 	
 endmodule

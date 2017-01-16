@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2.1 (64-bit)
+# SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
+# IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
+# Start of session at: Fri Jan 06 16:09:48 2017
+# Process ID: 2616
+# Log file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_abs_power2_42_ip_synth_1/complex_abs_power2_42_ip.vds
+# Journal file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_abs_power2_42_ip_synth_1\vivado.jou
+#-----------------------------------------------------------
+source complex_abs_power2_42_ip.tcl -notrace

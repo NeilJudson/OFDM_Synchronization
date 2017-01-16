@@ -76,9 +76,9 @@ module psi #(
 //================================================================================
 	localparam	SPRAM_DATA_WIDTH	= 72;
 	localparam	SPRAM_ADDR_WIDTH	= 6;
-	localparam	SPRAM_DATA_DEPTH	= 2**SPRAM_ADDR_WIDTH; // 64
-	localparam	DATA_MUL_WIDTH		= 2*SYNC_DATA_WIDTH; // 32
-	localparam	PSI_WIDTH			= 2*SYNC_DATA_WIDTH+2; // 34
+	localparam	SPRAM_DATA_DEPTH	= 2**SPRAM_ADDR_WIDTH;	// 64
+	localparam	DATA_MUL_WIDTH		= 2*SYNC_DATA_WIDTH;	// 32
+	localparam	PSI_WIDTH			= 2*SYNC_DATA_WIDTH+2;	// 34
 	// state
 	localparam	IDLE	= 2'd0,
 				WORK	= 2'd3;

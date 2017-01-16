@@ -72,8 +72,8 @@ module coarse_sync #(
 //================================================================================
 // variable
 //================================================================================
-	localparam	PSI_WIDTH		= 2*SYNC_DATA_WIDTH+2;		// 34
-	localparam	PHI_WIDTH		= 2*SYNC_DATA_WIDTH+1+2;	// 35
+	localparam	PSI_WIDTH		= 2*SYNC_DATA_WIDTH+2;	// 34
+	localparam	PHI_WIDTH		= 2*SYNC_DATA_WIDTH+1+2;// 35
 	localparam	SPRAM_ADDR_WIDTH= 9;
 	localparam	SPRAM_DATA_WIDTH= 144;
 	// coarse_sync_state

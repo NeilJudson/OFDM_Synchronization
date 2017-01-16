@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="complex_abs_power2_35_1dsp_ip_synth_1" LaunchPart="xc7z045fbg676-3" LaunchTime="1484203216">
+  <File Type="RDS-DCP" Name="complex_abs_power2_35_1dsp_ip.dcp"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/complex_abs_power2_35_1dsp_ip_synth_1/constrs_in.xml"/>
+  <File Type="RDS-UTIL-PB" Name="complex_abs_power2_35_1dsp_ip_utilization_synth.pb"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/complex_abs_power2_35_1dsp_ip_synth_1/sources.xml"/>
+  <File Type="RDS-PROPCONSTRS" Name="complex_abs_power2_35_1dsp_ip_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="complex_abs_power2_35_1dsp_ip.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/complex_abs_power2_35_1dsp_ip_synth_1/complex_abs_power2_35_1dsp_ip_synth_1.psg"/>
+  <File Type="RDS-RDS" Name="complex_abs_power2_35_1dsp_ip.vds"/>
+  <File Type="RDS-UTIL" Name="complex_abs_power2_35_1dsp_ip_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="complex_abs_power2_35_1dsp_ip_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="complex_abs_power2_35_1dsp_ip_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/complex_abs_power2_35_1dsp_ip">
+    <File Path="$PSRCDIR/sources_1/ip/complex_abs_power2_35_1dsp_ip/complex_abs_power2_35_1dsp_ip.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="complex_abs_power2_35_1dsp_ip"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/complex_abs_power2_35_1dsp_ip">
+    <File Path="$PSRCDIR/sources_1/ip/complex_abs_power2_35_1dsp_ip/complex_abs_power2_35_1dsp_ip.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="complex_abs_power2_35_1dsp_ip"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
