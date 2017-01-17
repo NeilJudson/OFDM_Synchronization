@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log test_lambda.vds -m64 -mode batch -messageDb vivado.pb -notrace -source test_lambda.tcl
+EAStep vivado -log peak_search.vds -m64 -mode batch -messageDb vivado.pb -notrace -source peak_search.tcl

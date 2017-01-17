@@ -58,7 +58,7 @@ module lambda #(
 	input					axis_areset			;
 	
 	input					i_work_ctrl_en		;
-	input					i_work_ctrl			; // 1'b0: 停止工作；1'b1: 开始工作，进入清零状态
+	input					i_work_ctrl			; // 1'b0: 停止工作；1'b1: 开始工作
 	
 	input					i_psi_phi_data_valid;
 	input	signed	[29:0]	i_psi_data_i		;
