@@ -45,4 +45,3 @@ Compiling module xil_defaultlib.lambda_default
 Compiling module xil_defaultlib.test_lambda
 Compiling module xil_defaultlib.glbl
 Waiting for 9 sub-compilation(s) to finish...
-Built simulation snapshot test_lambda_behav

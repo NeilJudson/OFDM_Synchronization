@@ -35,38 +35,18 @@ module test_lambda;
 	reg [7:0] i_rou;
 
 	// Outputs
-	wire o_psi_phi_sum_valid;
-	wire o_psi_i_sum_1;
-	wire o_psi_q_sum_1;
-	wire o_phi_sum_1;
-	wire o_psi_i_sum_2;
-	wire o_psi_q_sum_2;
-	wire o_phi_sum_2;
-	wire o_psi_i_sum_3;
-	wire o_psi_q_sum_3;
-	wire o_phi_sum_3;
-	wire o_psi_i_sum_4;
-	wire o_psi_q_sum_4;
-	wire o_phi_sum_4;
-	wire o_psi_i_sum_5;
-	wire o_psi_q_sum_5;
-	wire o_phi_sum_5;
-	wire o_psi_i_sum_6;
-	wire o_psi_q_sum_6;
-	wire o_phi_sum_6;
-	wire o_psi_i_sum_7;
-	wire o_psi_q_sum_7;
-	wire o_phi_sum_7;
-	wire o_psi_i_sum_8;
-	wire o_psi_q_sum_8;
-	wire o_phi_sum_8;
-	wire o_psi_i_sum_9;
-	wire o_psi_q_sum_9;
-	wire o_phi_sum_9;
-	wire o_psi_i_sum_10;
-	wire o_psi_q_sum_10;
-	wire o_phi_sum_10;
-	wire [15:0] o_psi_phi_sum_addr;
+	wire o_lambda_data_valid;
+	wire [70:0] o_lambda_data_32;
+	wire [70:0] o_lambda_data_31;
+	wire [70:0] o_lambda_data_30;
+	wire [70:0] o_lambda_data_29;
+	wire [70:0] o_lambda_data_28;
+	wire [70:0] o_lambda_data_27;
+	wire [70:0] o_lambda_data_26;
+	wire [70:0] o_lambda_data_25;
+	wire [70:0] o_lambda_data_24;
+	wire [70:0] o_lambda_data_23;
+	wire [15:0] o_lambda_data_addr;
 	
 	reg [63:0] count;
 
@@ -86,38 +66,18 @@ module test_lambda;
 		.i_phi_data(i_phi_data), 
 		.i_psi_phi_data_addr(i_psi_phi_data_addr), 
 		.i_rou(i_rou),
-		.o_psi_phi_sum_valid(o_psi_phi_sum_valid), 
-		.o_psi_i_sum_1(o_psi_i_sum_1), 
-		.o_psi_q_sum_1(o_psi_q_sum_1), 
-		.o_phi_sum_1(o_phi_sum_1), 
-		.o_psi_i_sum_2(o_psi_i_sum_2), 
-		.o_psi_q_sum_2(o_psi_q_sum_2), 
-		.o_phi_sum_2(o_phi_sum_2), 
-		.o_psi_i_sum_3(o_psi_i_sum_3), 
-		.o_psi_q_sum_3(o_psi_q_sum_3), 
-		.o_phi_sum_3(o_phi_sum_3), 
-		.o_psi_i_sum_4(o_psi_i_sum_4), 
-		.o_psi_q_sum_4(o_psi_q_sum_4), 
-		.o_phi_sum_4(o_phi_sum_4), 
-		.o_psi_i_sum_5(o_psi_i_sum_5), 
-		.o_psi_q_sum_5(o_psi_q_sum_5), 
-		.o_phi_sum_5(o_phi_sum_5), 
-		.o_psi_i_sum_6(o_psi_i_sum_6), 
-		.o_psi_q_sum_6(o_psi_q_sum_6), 
-		.o_phi_sum_6(o_phi_sum_6), 
-		.o_psi_i_sum_7(o_psi_i_sum_7), 
-		.o_psi_q_sum_7(o_psi_q_sum_7), 
-		.o_phi_sum_7(o_phi_sum_7), 
-		.o_psi_i_sum_8(o_psi_i_sum_8), 
-		.o_psi_q_sum_8(o_psi_q_sum_8), 
-		.o_phi_sum_8(o_phi_sum_8), 
-		.o_psi_i_sum_9(o_psi_i_sum_9), 
-		.o_psi_q_sum_9(o_psi_q_sum_9), 
-		.o_phi_sum_9(o_phi_sum_9), 
-		.o_psi_i_sum_10(o_psi_i_sum_10), 
-		.o_psi_q_sum_10(o_psi_q_sum_10), 
-		.o_phi_sum_10(o_phi_sum_10), 
-		.o_psi_phi_sum_addr(o_psi_phi_sum_addr)
+		.o_lambda_data_valid(o_lambda_data_valid), 
+		.o_lambda_data_32(o_lambda_data_32),
+		.o_lambda_data_31(o_lambda_data_31),
+		.o_lambda_data_30(o_lambda_data_30),
+		.o_lambda_data_29(o_lambda_data_29),
+		.o_lambda_data_28(o_lambda_data_28),
+		.o_lambda_data_27(o_lambda_data_27),
+		.o_lambda_data_26(o_lambda_data_26),
+		.o_lambda_data_25(o_lambda_data_25),
+		.o_lambda_data_24(o_lambda_data_24),
+		.o_lambda_data_23(o_lambda_data_23),
+		.o_lambda_data_addr(o_lambda_data_addr)
 	);
 
 	initial begin
@@ -177,18 +137,21 @@ module test_lambda;
 			i_psi_data_i		<= 'd0;
 			i_psi_data_q		<= 'd0;
 			i_phi_data			<= 'd0;
+			i_psi_phi_data_addr	<= 'd0;
 		end
 		else if((count > 'd80) && (count[2:0] == 3'd7)) begin
 			i_psi_phi_data_valid<= 1'b1;
 			i_psi_data_i		<= count[40:3];
 			i_psi_data_q		<= count[40:3];
 			i_phi_data			<= count[41:3];
+			i_psi_phi_data_addr	<= count[18:3];
 		end
 		else begin
 			i_psi_phi_data_valid<= 1'b0;
 			i_psi_data_i		<= i_psi_data_i;
 			i_psi_data_q		<= i_psi_data_q;
 			i_phi_data			<= i_phi_data;
+			i_psi_phi_data_addr	<= i_psi_phi_data_addr;
 		end
 	end
 	

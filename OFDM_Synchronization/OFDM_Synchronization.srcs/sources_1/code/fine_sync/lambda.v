@@ -41,38 +41,18 @@ module lambda #(
 	i_rou_en			,
 	i_rou				,
 	
-	o_psi_phi_sum_valid	,
-	o_psi_i_sum_1		,
-	o_psi_q_sum_1		,
-	o_phi_sum_1			,
-	o_psi_i_sum_2		,
-	o_psi_q_sum_2		,
-	o_phi_sum_2			,
-	o_psi_i_sum_3		,
-	o_psi_q_sum_3		,
-	o_phi_sum_3			,
-	o_psi_i_sum_4		,
-	o_psi_q_sum_4		,
-	o_phi_sum_4			,
-	o_psi_i_sum_5		,
-	o_psi_q_sum_5		,
-	o_phi_sum_5			,
-	o_psi_i_sum_6		,
-	o_psi_q_sum_6		,
-	o_phi_sum_6			,
-	o_psi_i_sum_7		,
-	o_psi_q_sum_7		,
-	o_phi_sum_7			,
-	o_psi_i_sum_8		,
-	o_psi_q_sum_8		,
-	o_phi_sum_8			,
-	o_psi_i_sum_9		,
-	o_psi_q_sum_9		,
-	o_phi_sum_9			,
-	o_psi_i_sum_10		,
-	o_psi_q_sum_10		,
-	o_phi_sum_10		,
-	o_psi_phi_sum_addr
+	o_lambda_data_valid	,
+	o_lambda_data_32	,
+	o_lambda_data_31	,
+	o_lambda_data_30	,
+	o_lambda_data_29	,
+	o_lambda_data_28	,
+	o_lambda_data_27	,
+	o_lambda_data_26	,
+	o_lambda_data_25	,
+	o_lambda_data_24	,
+	o_lambda_data_23	,
+	o_lambda_data_addr
     );
 	input					axis_aclk			;
 	input					axis_areset			;
@@ -87,40 +67,20 @@ module lambda #(
 	input			[15:0]	i_psi_phi_data_addr	;
 	
 	input					i_rou_en			;
-	input			[7:0]	i_rou				;
+	input			[7:0]	i_rou				; // 系数，fix0_8
 	
-	output					o_psi_phi_sum_valid	;
-	output					o_psi_i_sum_1		;
-	output					o_psi_q_sum_1		;
-	output					o_phi_sum_1			;
-	output					o_psi_i_sum_2		;
-	output					o_psi_q_sum_2		;
-	output					o_phi_sum_2			;
-	output					o_psi_i_sum_3		;
-	output					o_psi_q_sum_3		;
-	output					o_phi_sum_3			;
-	output					o_psi_i_sum_4		;
-	output					o_psi_q_sum_4		;
-	output					o_phi_sum_4			;
-	output					o_psi_i_sum_5		;
-	output					o_psi_q_sum_5		;
-	output					o_phi_sum_5			;
-	output					o_psi_i_sum_6		;
-	output					o_psi_q_sum_6		;
-	output					o_phi_sum_6			;
-	output					o_psi_i_sum_7		;
-	output					o_psi_q_sum_7		;
-	output					o_phi_sum_7			;
-	output					o_psi_i_sum_8		;
-	output					o_psi_q_sum_8		;
-	output					o_phi_sum_8			;
-	output					o_psi_i_sum_9		;
-	output					o_psi_q_sum_9		;
-	output					o_phi_sum_9			;
-	output					o_psi_i_sum_10		;
-	output					o_psi_q_sum_10		;
-	output					o_phi_sum_10		;
-	output			[15:0]	o_psi_phi_sum_addr	;
+	output					o_lambda_data_valid	;
+	output	signed	[70:0]	o_lambda_data_32	;
+	output	signed	[70:0]	o_lambda_data_31	;
+	output	signed	[70:0]	o_lambda_data_30	;
+	output	signed	[70:0]	o_lambda_data_29	;
+	output	signed	[70:0]	o_lambda_data_28	;
+	output	signed	[70:0]	o_lambda_data_27	;
+	output	signed	[70:0]	o_lambda_data_26	;
+	output	signed	[70:0]	o_lambda_data_25	;
+	output	signed	[70:0]	o_lambda_data_24	;
+	output	signed	[70:0]	o_lambda_data_23	;
+	output			[15:0]	o_lambda_data_addr	;
 	
 //================================================================================
 // variable
@@ -146,15 +106,16 @@ module lambda #(
 	reg				[PHI_WIDTH-1:0]			ram_phi[0:RAM_DATA_DEPTH-1]	;
 	reg				[RAM_ADDR_WIDTH2-1:0]	rd_addr						;
 	reg				[RAM_ADDR_WIDTH2-1:0]	rd_addr2[0:STAGE_NUM-1]		;
-	reg		signed	[PSI_WIDTH:0]			ram_psi_i_add[0:STAGE_NUM-1];
-	reg		signed	[PSI_WIDTH:0]			ram_psi_q_add[0:STAGE_NUM-1];
-	reg		signed	[PHI_WIDTH:0]			ram_phi_add[0:STAGE_NUM-1]	;
+	reg		signed	[PSI_WIDTH:0]			psi_i_add[0:STAGE_NUM-1]	;
+	reg		signed	[PSI_WIDTH:0]			psi_q_add[0:STAGE_NUM-1]	;
+	reg		signed	[PHI_WIDTH:0]			phi_add[0:STAGE_NUM-1]		;
 	reg										i_psi_phi_data_valid_dly1	;
 	reg										i_psi_phi_data_valid_dly2	;
 	reg										sum_valid = 1'b0			;
-	reg		signed	[PSI_SUM_WIDTH-1:0]		ram_psi_i_sum[0:STAGE_NUM-1];
-	reg		signed	[PSI_SUM_WIDTH-1:0]		ram_psi_q_sum[0:STAGE_NUM-1];
-	reg		signed	[PHI_SUM_WIDTH-1:0]		ram_phi_sum[0:STAGE_NUM-1]	;
+	reg		signed	[PSI_SUM_WIDTH-1:0]		psi_i_sum[0:STAGE_NUM-1]	;
+	reg		signed	[PSI_SUM_WIDTH-1:0]		psi_q_sum[0:STAGE_NUM-1]	;
+	reg		signed	[PHI_SUM_WIDTH-1:0]		phi_sum[0:STAGE_NUM-1]		;
+	reg				[RAM_ADDR_WIDTH-1:0]	sum_addr					;
 	
 	wire									u10_o_p_en					;
 	wire	signed	[69:0]					u10_o_p						;
@@ -199,7 +160,7 @@ module lambda #(
 	
 	reg										lambda_data_valid			;
 	reg		signed	[LAMBDA_WIDTH-1:0]		lambda_data[0:STAGE_NUM-1]	;
-	// reg				[RAM_ADDR_WIDTH-1:0]	lambda_data_addr	;
+	reg				[RAM_ADDR_WIDTH-1:0]	lambda_data_addr			;
 	
 //================================================================================
 // state
@@ -311,50 +272,62 @@ module lambda #(
 		for(i=0; i<STAGE_NUM; i=i+1) begin
 			always @(posedge axis_aclk or posedge axis_areset) begin
 				if(axis_areset == 1'b1) begin
-					rd_addr2[i]			<= rd_addr_init + 32 - i;
-					ram_psi_i_add[i]	<= 'd0;
-					ram_psi_q_add[i]	<= 'd0;
-					ram_phi_add[i]		<= 'd0;
+					rd_addr2[i]	<= rd_addr_init + 32 - i;
+					psi_i_add[i]<= 'd0;
+					psi_q_add[i]<= 'd0;
+					phi_add[i]	<= 'd0;
 				end
 				else if(i_psi_phi_data_valid_dly1 == 1'b1) begin
-					rd_addr2[i]			<= rd_addr2[i] + 1'd1;
-					ram_psi_i_add[i]	<= {ram_psi_i[rd_addr2[i]][PSI_WIDTH-1],ram_psi_i[rd_addr2[i]]}
-											- {ram_psi_i[rd_addr][PSI_WIDTH-1],ram_psi_i[rd_addr]};
-					ram_psi_q_add[i]	<= {ram_psi_q[rd_addr2[i]][PSI_WIDTH-1],ram_psi_q[rd_addr2[i]]}
-											- {ram_psi_q[rd_addr][PSI_WIDTH-1],ram_psi_q[rd_addr]};
-					ram_phi_add[i]		<= {ram_phi[rd_addr2[i]][PHI_WIDTH-1],ram_phi[rd_addr2[i]]}
-											- {ram_phi[rd_addr][PHI_WIDTH-1],ram_phi[rd_addr]};
+					rd_addr2[i]	<= rd_addr2[i] + 1'd1;
+					psi_i_add[i]<= {ram_psi_i[rd_addr2[i]][PSI_WIDTH-1],ram_psi_i[rd_addr2[i]]}
+									- {ram_psi_i[rd_addr][PSI_WIDTH-1],ram_psi_i[rd_addr]};
+					psi_q_add[i]<= {ram_psi_q[rd_addr2[i]][PSI_WIDTH-1],ram_psi_q[rd_addr2[i]]}
+									- {ram_psi_q[rd_addr][PSI_WIDTH-1],ram_psi_q[rd_addr]};
+					phi_add[i]	<= {ram_phi[rd_addr2[i]][PHI_WIDTH-1],ram_phi[rd_addr2[i]]}
+									- {ram_phi[rd_addr][PHI_WIDTH-1],ram_phi[rd_addr]};
 				end
 				else begin
-					rd_addr2[i]			<= rd_addr2[i];
-					ram_psi_i_add[i]	<= ram_psi_i_add[i];
-					ram_psi_q_add[i]	<= ram_psi_q_add[i];
-					ram_phi_add[i]		<= ram_phi_add[i];
+					rd_addr2[i]	<= rd_addr2[i];
+					psi_i_add[i]<= psi_i_add[i];
+					psi_q_add[i]<= psi_q_add[i];
+					phi_add[i]	<= phi_add[i];
 				end
 			end
 			
 			always @(posedge axis_aclk or posedge axis_areset) begin
 				if(axis_areset == 1'b1) begin
-					ram_psi_i_sum[i]<= 'd0;
-					ram_psi_q_sum[i]<= 'd0;
-					ram_phi_sum[i]	<= 'd0;
+					psi_i_sum[i]<= 'd0;
+					psi_q_sum[i]<= 'd0;
+					phi_sum[i]	<= 'd0;
 				end
 				else if(i_psi_phi_data_valid_dly2 == 1'b1) begin
-					ram_psi_i_sum[i]<= ram_psi_i_sum[i]
-										+ {{(PSI_SUM_WIDTH-PSI_WIDTH-1){ram_psi_i_add[i][PSI_WIDTH]}},ram_psi_i_add[i]};
-					ram_psi_q_sum[i]<= ram_psi_q_sum[i]
-										+ {{(PSI_SUM_WIDTH-PSI_WIDTH-1){ram_psi_q_add[i][PSI_WIDTH]}},ram_psi_q_add[i]};
-					ram_phi_sum[i]	<= ram_phi_sum[i]
-										+ {{(PHI_SUM_WIDTH-PHI_WIDTH-1){ram_phi_add[i][PHI_WIDTH]}},ram_phi_add[i]};
+					psi_i_sum[i]<= psi_i_sum[i]
+									+ {{(PSI_SUM_WIDTH-PSI_WIDTH-1){psi_i_add[i][PSI_WIDTH]}},psi_i_add[i]};
+					psi_q_sum[i]<= psi_q_sum[i]
+									+ {{(PSI_SUM_WIDTH-PSI_WIDTH-1){psi_q_add[i][PSI_WIDTH]}},psi_q_add[i]};
+					phi_sum[i]	<= phi_sum[i]
+									+ {{(PHI_SUM_WIDTH-PHI_WIDTH-1){phi_add[i][PHI_WIDTH]}},phi_add[i]};
 				end
 				else begin
-					ram_psi_i_sum[i]<= ram_psi_i_sum[i];
-					ram_psi_q_sum[i]<= ram_psi_q_sum[i];
-					ram_phi_sum[i]	<= ram_phi_sum[i];
+					psi_i_sum[i]<= psi_i_sum[i];
+					psi_q_sum[i]<= psi_q_sum[i];
+					phi_sum[i]	<= phi_sum[i];
 				end
 			end
 		end
 	endgenerate
+	
+	always @(posedge axis_aclk or posedge axis_areset) begin
+		if(axis_areset == 1'b1) begin
+			sum_addr <= 'd0;
+		end
+		else if(i_psi_phi_data_valid_dly2 == 1'b1) begin
+			sum_addr <= i_psi_phi_data_addr[RAM_ADDR_WIDTH-1:0] - (63 - rd_addr_init);
+		end
+		else begin
+			sum_addr <= sum_addr;
+		end
+	end
 	
 //================================================================================
 // psi_power
@@ -363,8 +336,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 6个周期后才能输入下一个数据
-		.i_r	({{(35-PSI_SUM_WIDTH){ram_psi_i_sum[0][PSI_SUM_WIDTH-1]}},ram_psi_i_sum[0]}), // input signed [34:0] i_r;
-		.i_i	({{(35-PSI_SUM_WIDTH){ram_psi_q_sum[0][PSI_SUM_WIDTH-1]}},ram_psi_q_sum[0]}), // input signed [34:0] i_i;
+		.i_r	({{(35-PSI_SUM_WIDTH){psi_i_sum[0][PSI_SUM_WIDTH-1]}},psi_i_sum[0]}), // input signed [34:0] i_r;
+		.i_i	({{(35-PSI_SUM_WIDTH){psi_q_sum[0][PSI_SUM_WIDTH-1]}},psi_q_sum[0]}), // input signed [34:0] i_i;
 		.o_p_en	(u10_o_p_en	),	// output o_p_en; // 12dly
 		.o_p	(u10_o_p	)	// output signed [69:0] o_p;
 	);
@@ -372,8 +345,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 6个周期后才能输入下一个数据
-		.i_r	({{(35-PSI_SUM_WIDTH){ram_psi_i_sum[1][PSI_SUM_WIDTH-1]}},ram_psi_i_sum[1]}), // input signed [34:0] i_r;
-		.i_i	({{(35-PSI_SUM_WIDTH){ram_psi_q_sum[1][PSI_SUM_WIDTH-1]}},ram_psi_q_sum[1]}), // input signed [34:0] i_i;
+		.i_r	({{(35-PSI_SUM_WIDTH){psi_i_sum[1][PSI_SUM_WIDTH-1]}},psi_i_sum[1]}), // input signed [34:0] i_r;
+		.i_i	({{(35-PSI_SUM_WIDTH){psi_q_sum[1][PSI_SUM_WIDTH-1]}},psi_q_sum[1]}), // input signed [34:0] i_i;
 		.o_p_en	(			),	// output o_p_en; // 12dly
 		.o_p	(u11_o_p	)	// output signed [69:0] o_p;
 	);
@@ -381,8 +354,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 6个周期后才能输入下一个数据
-		.i_r	({{(35-PSI_SUM_WIDTH){ram_psi_i_sum[2][PSI_SUM_WIDTH-1]}},ram_psi_i_sum[2]}), // input signed [34:0] i_r;
-		.i_i	({{(35-PSI_SUM_WIDTH){ram_psi_q_sum[2][PSI_SUM_WIDTH-1]}},ram_psi_q_sum[2]}), // input signed [34:0] i_i;
+		.i_r	({{(35-PSI_SUM_WIDTH){psi_i_sum[2][PSI_SUM_WIDTH-1]}},psi_i_sum[2]}), // input signed [34:0] i_r;
+		.i_i	({{(35-PSI_SUM_WIDTH){psi_q_sum[2][PSI_SUM_WIDTH-1]}},psi_q_sum[2]}), // input signed [34:0] i_i;
 		.o_p_en	(			),	// output o_p_en; // 12dly
 		.o_p	(u12_o_p	)	// output signed [69:0] o_p;
 	);
@@ -390,8 +363,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 6个周期后才能输入下一个数据
-		.i_r	({{(35-PSI_SUM_WIDTH){ram_psi_i_sum[3][PSI_SUM_WIDTH-1]}},ram_psi_i_sum[3]}), // input signed [34:0] i_r;
-		.i_i	({{(35-PSI_SUM_WIDTH){ram_psi_q_sum[3][PSI_SUM_WIDTH-1]}},ram_psi_q_sum[3]}), // input signed [34:0] i_i;
+		.i_r	({{(35-PSI_SUM_WIDTH){psi_i_sum[3][PSI_SUM_WIDTH-1]}},psi_i_sum[3]}), // input signed [34:0] i_r;
+		.i_i	({{(35-PSI_SUM_WIDTH){psi_q_sum[3][PSI_SUM_WIDTH-1]}},psi_q_sum[3]}), // input signed [34:0] i_i;
 		.o_p_en	(			),	// output o_p_en; // 12dly
 		.o_p	(u13_o_p	)	// output signed [69:0] o_p;
 	);
@@ -399,8 +372,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 6个周期后才能输入下一个数据
-		.i_r	({{(35-PSI_SUM_WIDTH){ram_psi_i_sum[4][PSI_SUM_WIDTH-1]}},ram_psi_i_sum[4]}), // input signed [34:0] i_r;
-		.i_i	({{(35-PSI_SUM_WIDTH){ram_psi_q_sum[4][PSI_SUM_WIDTH-1]}},ram_psi_q_sum[4]}), // input signed [34:0] i_i;
+		.i_r	({{(35-PSI_SUM_WIDTH){psi_i_sum[4][PSI_SUM_WIDTH-1]}},psi_i_sum[4]}), // input signed [34:0] i_r;
+		.i_i	({{(35-PSI_SUM_WIDTH){psi_q_sum[4][PSI_SUM_WIDTH-1]}},psi_q_sum[4]}), // input signed [34:0] i_i;
 		.o_p_en	(			),	// output o_p_en; // 12dly
 		.o_p	(u14_o_p	)	// output signed [69:0] o_p;
 	);
@@ -408,8 +381,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 6个周期后才能输入下一个数据
-		.i_r	({{(35-PSI_SUM_WIDTH){ram_psi_i_sum[5][PSI_SUM_WIDTH-1]}},ram_psi_i_sum[5]}), // input signed [34:0] i_r;
-		.i_i	({{(35-PSI_SUM_WIDTH){ram_psi_q_sum[5][PSI_SUM_WIDTH-1]}},ram_psi_q_sum[5]}), // input signed [34:0] i_i;
+		.i_r	({{(35-PSI_SUM_WIDTH){psi_i_sum[5][PSI_SUM_WIDTH-1]}},psi_i_sum[5]}), // input signed [34:0] i_r;
+		.i_i	({{(35-PSI_SUM_WIDTH){psi_q_sum[5][PSI_SUM_WIDTH-1]}},psi_q_sum[5]}), // input signed [34:0] i_i;
 		.o_p_en	(			),	// output o_p_en; // 12dly
 		.o_p	(u15_o_p	)	// output signed [69:0] o_p;
 	);
@@ -417,8 +390,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 6个周期后才能输入下一个数据
-		.i_r	({{(35-PSI_SUM_WIDTH){ram_psi_i_sum[6][PSI_SUM_WIDTH-1]}},ram_psi_i_sum[6]}), // input signed [34:0] i_r;
-		.i_i	({{(35-PSI_SUM_WIDTH){ram_psi_q_sum[6][PSI_SUM_WIDTH-1]}},ram_psi_q_sum[6]}), // input signed [34:0] i_i;
+		.i_r	({{(35-PSI_SUM_WIDTH){psi_i_sum[6][PSI_SUM_WIDTH-1]}},psi_i_sum[6]}), // input signed [34:0] i_r;
+		.i_i	({{(35-PSI_SUM_WIDTH){psi_q_sum[6][PSI_SUM_WIDTH-1]}},psi_q_sum[6]}), // input signed [34:0] i_i;
 		.o_p_en	(			),	// output o_p_en; // 12dly
 		.o_p	(u16_o_p	)	// output signed [69:0] o_p;
 	);
@@ -426,8 +399,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 6个周期后才能输入下一个数据
-		.i_r	({{(35-PSI_SUM_WIDTH){ram_psi_i_sum[7][PSI_SUM_WIDTH-1]}},ram_psi_i_sum[7]}), // input signed [34:0] i_r;
-		.i_i	({{(35-PSI_SUM_WIDTH){ram_psi_q_sum[7][PSI_SUM_WIDTH-1]}},ram_psi_q_sum[7]}), // input signed [34:0] i_i;
+		.i_r	({{(35-PSI_SUM_WIDTH){psi_i_sum[7][PSI_SUM_WIDTH-1]}},psi_i_sum[7]}), // input signed [34:0] i_r;
+		.i_i	({{(35-PSI_SUM_WIDTH){psi_q_sum[7][PSI_SUM_WIDTH-1]}},psi_q_sum[7]}), // input signed [34:0] i_i;
 		.o_p_en	(			),	// output o_p_en; // 12dly
 		.o_p	(u17_o_p	)	// output signed [69:0] o_p;
 	);
@@ -435,8 +408,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 6个周期后才能输入下一个数据
-		.i_r	({{(35-PSI_SUM_WIDTH){ram_psi_i_sum[8][PSI_SUM_WIDTH-1]}},ram_psi_i_sum[8]}), // input signed [34:0] i_r;
-		.i_i	({{(35-PSI_SUM_WIDTH){ram_psi_q_sum[8][PSI_SUM_WIDTH-1]}},ram_psi_q_sum[8]}), // input signed [34:0] i_i;
+		.i_r	({{(35-PSI_SUM_WIDTH){psi_i_sum[8][PSI_SUM_WIDTH-1]}},psi_i_sum[8]}), // input signed [34:0] i_r;
+		.i_i	({{(35-PSI_SUM_WIDTH){psi_q_sum[8][PSI_SUM_WIDTH-1]}},psi_q_sum[8]}), // input signed [34:0] i_i;
 		.o_p_en	(			),	// output o_p_en; // 12dly
 		.o_p	(u18_o_p	)	// output signed [69:0] o_p;
 	);
@@ -444,8 +417,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 6个周期后才能输入下一个数据
-		.i_r	({{(35-PSI_SUM_WIDTH){ram_psi_i_sum[9][PSI_SUM_WIDTH-1]}},ram_psi_i_sum[9]}), // input signed [34:0] i_r;
-		.i_i	({{(35-PSI_SUM_WIDTH){ram_psi_q_sum[9][PSI_SUM_WIDTH-1]}},ram_psi_q_sum[9]}), // input signed [34:0] i_i;
+		.i_r	({{(35-PSI_SUM_WIDTH){psi_i_sum[9][PSI_SUM_WIDTH-1]}},psi_i_sum[9]}), // input signed [34:0] i_r;
+		.i_i	({{(35-PSI_SUM_WIDTH){psi_q_sum[9][PSI_SUM_WIDTH-1]}},psi_q_sum[9]}), // input signed [34:0] i_i;
 		.o_p_en	(			),	// output o_p_en; // 12dly
 		.o_p	(u19_o_p	)	// output signed [69:0] o_p;
 	);
@@ -496,8 +469,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 4个工作周期内只能1个数据
-		.i_a	({{(35-PHI_WIDTH+1){ram_phi_sum[0][PHI_WIDTH-1]}},ram_phi_sum[0][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
-		.i_b	({{(35-PHI_WIDTH+1){ram_phi_sum[0][PHI_WIDTH-1]}},ram_phi_sum[0][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
+		.i_a	({{(35-PHI_WIDTH+1){phi_sum[0][PHI_WIDTH-1]}},phi_sum[0][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
+		.i_b	({{(35-PHI_WIDTH+1){phi_sum[0][PHI_WIDTH-1]}},phi_sum[0][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
 		.o_c_en	(u20_o_c_en	),	// output o_c_en;
 		.o_c	(u20_o_c	)	// output signed [68:0] o_c; // 8dly
 	);
@@ -505,8 +478,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 4个工作周期内只能1个数据
-		.i_a	({{(35-PHI_WIDTH+1){ram_phi_sum[1][PHI_WIDTH-1]}},ram_phi_sum[1][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
-		.i_b	({{(35-PHI_WIDTH+1){ram_phi_sum[1][PHI_WIDTH-1]}},ram_phi_sum[1][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
+		.i_a	({{(35-PHI_WIDTH+1){phi_sum[1][PHI_WIDTH-1]}},phi_sum[1][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
+		.i_b	({{(35-PHI_WIDTH+1){phi_sum[1][PHI_WIDTH-1]}},phi_sum[1][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
 		.o_c_en	(			),	// output o_c_en;
 		.o_c	(u21_o_c	)	// output signed [68:0] o_c; // 8dly
 	);
@@ -514,8 +487,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 4个工作周期内只能1个数据
-		.i_a	({{(35-PHI_WIDTH+1){ram_phi_sum[2][PHI_WIDTH-1]}},ram_phi_sum[2][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
-		.i_b	({{(35-PHI_WIDTH+1){ram_phi_sum[2][PHI_WIDTH-1]}},ram_phi_sum[2][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
+		.i_a	({{(35-PHI_WIDTH+1){phi_sum[2][PHI_WIDTH-1]}},phi_sum[2][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
+		.i_b	({{(35-PHI_WIDTH+1){phi_sum[2][PHI_WIDTH-1]}},phi_sum[2][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
 		.o_c_en	(			),	// output o_c_en;
 		.o_c	(u22_o_c	)	// output signed [68:0] o_c; // 8dly
 	);
@@ -523,8 +496,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 4个工作周期内只能1个数据
-		.i_a	({{(35-PHI_WIDTH+1){ram_phi_sum[3][PHI_WIDTH-1]}},ram_phi_sum[3][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
-		.i_b	({{(35-PHI_WIDTH+1){ram_phi_sum[3][PHI_WIDTH-1]}},ram_phi_sum[3][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
+		.i_a	({{(35-PHI_WIDTH+1){phi_sum[3][PHI_WIDTH-1]}},phi_sum[3][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
+		.i_b	({{(35-PHI_WIDTH+1){phi_sum[3][PHI_WIDTH-1]}},phi_sum[3][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
 		.o_c_en	(			),	// output o_c_en;
 		.o_c	(u23_o_c	)	// output signed [68:0] o_c; // 8dly
 	);
@@ -532,8 +505,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 4个工作周期内只能1个数据
-		.i_a	({{(35-PHI_WIDTH+1){ram_phi_sum[4][PHI_WIDTH-1]}},ram_phi_sum[4][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
-		.i_b	({{(35-PHI_WIDTH+1){ram_phi_sum[4][PHI_WIDTH-1]}},ram_phi_sum[4][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
+		.i_a	({{(35-PHI_WIDTH+1){phi_sum[4][PHI_WIDTH-1]}},phi_sum[4][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
+		.i_b	({{(35-PHI_WIDTH+1){phi_sum[4][PHI_WIDTH-1]}},phi_sum[4][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
 		.o_c_en	(			),	// output o_c_en;
 		.o_c	(u24_o_c	)	// output signed [68:0] o_c; // 8dly
 	);
@@ -541,8 +514,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 4个工作周期内只能1个数据
-		.i_a	({{(35-PHI_WIDTH+1){ram_phi_sum[5][PHI_WIDTH-1]}},ram_phi_sum[5][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
-		.i_b	({{(35-PHI_WIDTH+1){ram_phi_sum[5][PHI_WIDTH-1]}},ram_phi_sum[5][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
+		.i_a	({{(35-PHI_WIDTH+1){phi_sum[5][PHI_WIDTH-1]}},phi_sum[5][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
+		.i_b	({{(35-PHI_WIDTH+1){phi_sum[5][PHI_WIDTH-1]}},phi_sum[5][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
 		.o_c_en	(			),	// output o_c_en;
 		.o_c	(u25_o_c	)	// output signed [68:0] o_c; // 8dly
 	);
@@ -550,8 +523,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 4个工作周期内只能1个数据
-		.i_a	({{(35-PHI_WIDTH+1){ram_phi_sum[6][PHI_WIDTH-1]}},ram_phi_sum[6][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
-		.i_b	({{(35-PHI_WIDTH+1){ram_phi_sum[6][PHI_WIDTH-1]}},ram_phi_sum[6][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
+		.i_a	({{(35-PHI_WIDTH+1){phi_sum[6][PHI_WIDTH-1]}},phi_sum[6][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
+		.i_b	({{(35-PHI_WIDTH+1){phi_sum[6][PHI_WIDTH-1]}},phi_sum[6][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
 		.o_c_en	(			),	// output o_c_en;
 		.o_c	(u26_o_c	)	// output signed [68:0] o_c; // 8dly
 	);
@@ -559,8 +532,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 4个工作周期内只能1个数据
-		.i_a	({{(35-PHI_WIDTH+1){ram_phi_sum[7][PHI_WIDTH-1]}},ram_phi_sum[7][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
-		.i_b	({{(35-PHI_WIDTH+1){ram_phi_sum[7][PHI_WIDTH-1]}},ram_phi_sum[7][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
+		.i_a	({{(35-PHI_WIDTH+1){phi_sum[7][PHI_WIDTH-1]}},phi_sum[7][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
+		.i_b	({{(35-PHI_WIDTH+1){phi_sum[7][PHI_WIDTH-1]}},phi_sum[7][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
 		.o_c_en	(			),	// output o_c_en;
 		.o_c	(u27_o_c	)	// output signed [68:0] o_c; // 8dly
 	);
@@ -568,8 +541,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 4个工作周期内只能1个数据
-		.i_a	({{(35-PHI_WIDTH+1){ram_phi_sum[8][PHI_WIDTH-1]}},ram_phi_sum[8][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
-		.i_b	({{(35-PHI_WIDTH+1){ram_phi_sum[8][PHI_WIDTH-1]}},ram_phi_sum[8][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
+		.i_a	({{(35-PHI_WIDTH+1){phi_sum[8][PHI_WIDTH-1]}},phi_sum[8][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
+		.i_b	({{(35-PHI_WIDTH+1){phi_sum[8][PHI_WIDTH-1]}},phi_sum[8][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
 		.o_c_en	(			),	// output o_c_en;
 		.o_c	(u28_o_c	)	// output signed [68:0] o_c; // 8dly
 	);
@@ -577,8 +550,8 @@ module lambda #(
 		.i_clk	(axis_aclk	),	// input i_clk;
 		.i_rst	(axis_areset),	// input i_rst;
 		.i_en	(sum_valid	),	// input i_en; // 4个工作周期内只能1个数据
-		.i_a	({{(35-PHI_WIDTH+1){ram_phi_sum[9][PHI_WIDTH-1]}},ram_phi_sum[9][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
-		.i_b	({{(35-PHI_WIDTH+1){ram_phi_sum[9][PHI_WIDTH-1]}},ram_phi_sum[9][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
+		.i_a	({{(35-PHI_WIDTH+1){phi_sum[9][PHI_WIDTH-1]}},phi_sum[9][PHI_WIDTH-1:1]}),	// input signed [34:0] i_a;
+		.i_b	({{(35-PHI_WIDTH+1){phi_sum[9][PHI_WIDTH-1]}},phi_sum[9][PHI_WIDTH-1:1]}),	// input signed [34:0] i_b;
 		.o_c_en	(			),	// output o_c_en;
 		.o_c	(u29_o_c	)	// output signed [68:0] o_c; // 8dly
 	);
@@ -748,13 +721,16 @@ module lambda #(
 	
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
-			lambda_data_valid <= 1'b0;
+			lambda_data_valid	<= 1'b0;
+			lambda_data_addr	<= 'd0;
 		end
 		else if(power_valid == 1'b1) begin
-			lambda_data_valid <= 1'b1;
+			lambda_data_valid	<= 1'b1;
+			lambda_data_addr	<= sum_addr - 2'd2;
 		end
 		else begin
-			lambda_data_valid <= 1'b0;
+			lambda_data_valid	<= 1'b0;
+			lambda_data_addr	<= lambda_data_addr;
 		end
 	end
 	
@@ -776,6 +752,17 @@ module lambda #(
 		end
 	endgenerate
 	
-	
+	assign o_lambda_data_valid	= lambda_data_valid;
+	assign o_lambda_data_32		= {{(71-LAMBDA_WIDTH){lambda_data[0][LAMBDA_WIDTH-1]}},lambda_data[0]};
+	assign o_lambda_data_31		= {{(71-LAMBDA_WIDTH){lambda_data[1][LAMBDA_WIDTH-1]}},lambda_data[1]};
+	assign o_lambda_data_30		= {{(71-LAMBDA_WIDTH){lambda_data[2][LAMBDA_WIDTH-1]}},lambda_data[2]};
+	assign o_lambda_data_29		= {{(71-LAMBDA_WIDTH){lambda_data[3][LAMBDA_WIDTH-1]}},lambda_data[3]};
+	assign o_lambda_data_28		= {{(71-LAMBDA_WIDTH){lambda_data[4][LAMBDA_WIDTH-1]}},lambda_data[4]};
+	assign o_lambda_data_27		= {{(71-LAMBDA_WIDTH){lambda_data[5][LAMBDA_WIDTH-1]}},lambda_data[5]};
+	assign o_lambda_data_26		= {{(71-LAMBDA_WIDTH){lambda_data[6][LAMBDA_WIDTH-1]}},lambda_data[6]};
+	assign o_lambda_data_25		= {{(71-LAMBDA_WIDTH){lambda_data[7][LAMBDA_WIDTH-1]}},lambda_data[7]};
+	assign o_lambda_data_24		= {{(71-LAMBDA_WIDTH){lambda_data[8][LAMBDA_WIDTH-1]}},lambda_data[8]};
+	assign o_lambda_data_23		= {{(71-LAMBDA_WIDTH){lambda_data[9][LAMBDA_WIDTH-1]}},lambda_data[9]};
+	assign o_lambda_data_addr	= {{(16-RAM_ADDR_WIDTH){1'b0}},lambda_data_addr};
 	
 endmodule

@@ -1,7 +1,0 @@
-Running: xsim.dir/test_lambda_behav/xsimk.exe -simmode gui -wdb test_lambda_behav.wdb -simrunnum 0 -socket 52273
-Design successfully loaded
-Design Loading Memory Usage: 160052 KB (Peak: 160052 KB)
-Design Loading CPU Usage: 561 ms
-Simulation completed
-Simulation Memory Usage: 170752 KB (Peak: 170752 KB)
-Simulation CPU Usage: 5085 ms
