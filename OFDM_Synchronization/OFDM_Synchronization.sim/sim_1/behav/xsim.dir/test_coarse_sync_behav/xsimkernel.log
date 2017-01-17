@@ -1,0 +1,7 @@
+Running: xsim.dir/test_coarse_sync_behav/xsimk.exe -simmode gui -wdb test_coarse_sync_behav.wdb -simrunnum 0 -socket 51233
+Design successfully loaded
+Design Loading Memory Usage: 31992 KB (Peak: 31992 KB)
+Design Loading CPU Usage: 234 ms
+Simulation completed
+Simulation Memory Usage: 35432 KB (Peak: 35432 KB)
+Simulation CPU Usage: 312 ms

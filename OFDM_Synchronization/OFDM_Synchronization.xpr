@@ -122,6 +122,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/code/fine_sync/peak_search.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="test_lambda"/>
@@ -146,14 +154,20 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/test_lambda_behav.wcfg">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="test_lambda"/>
+        <Option Name="TopModule" Val="test_coarse_sync"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="SrcSet" Val="sources_1"/>
         <Option Name="XSimWcfgFile" Val="$PSRCDIR/sim_1/operator/test_psi_phi_operator_behav.wcfg"/>
         <Option Name="XSimWcfgFile" Val="$PPRDIR/test_coarse_sync_behav.wcfg"/>
         <Option Name="XSimWcfgFile" Val="$PPRDIR/test_coarse_sync_behav.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/test_lambda_behav.wcfg"/>
       </Config>
     </FileSet>
     <FileSet Name="spram_72_64_ip" Type="BlockSrcs" RelSrcDir="$PSRCDIR/spram_72_64_ip">
