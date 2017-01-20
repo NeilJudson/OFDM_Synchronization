@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+verilog blk_mem_gen_v8_2  "../../../OFDM_Synchronization.srcs/sources_1/ip/spram_72_64_ip/blk_mem_gen_v8_2/simulation/blk_mem_gen_v8_2.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/ip/spram_72_64_ip/sim/spram_72_64_ip.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/ip/spram_36_64_ip/sim/spram_36_64_ip.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/ip/spram_144_32_ip/sim/spram_144_32_ip.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/ip/multiplier_69_18_1dsp_ip/multiplier_69_18_1dsp_ip_funcsim.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/ip/multiplier_42_42_ip/multiplier_42_42_ip_funcsim.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/ip/multiplier_35_1dsp_ip/multiplier_35_1dsp_ip_funcsim.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_funcsim.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/ip/complex_abs_power2_42_ip/complex_abs_power2_42_ip_funcsim.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/ip/complex_abs_power2_35_1dsp_ip/complex_abs_power2_35_1dsp_ip_funcsim.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/ip/complex_abs_power2_18_ip/complex_abs_power2_18_ip_funcsim.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/ip/spram_144_512_ip/sim/spram_144_512_ip.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/coarse_sync/tar.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/coarse_sync/psi.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/coarse_sync/phi.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/fine_sync/peak_search.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/fine_sync/fine_sync.v"
+verilog xil_defaultlib  "../../../OFDM_Synchronization.srcs/sources_1/code/test_coarse_sync_fine_sync.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

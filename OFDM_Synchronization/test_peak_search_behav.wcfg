@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_peak_search_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_peak_search" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="41" />
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/axis_aclk" type="logic">
+      <obj_property name="ElementShortName">axis_aclk</obj_property>
+      <obj_property name="ObjectShortName">axis_aclk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/axis_areset" type="logic">
+      <obj_property name="ElementShortName">axis_areset</obj_property>
+      <obj_property name="ObjectShortName">axis_areset</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_work_ctrl_en" type="logic">
+      <obj_property name="ElementShortName">i_work_ctrl_en</obj_property>
+      <obj_property name="ObjectShortName">i_work_ctrl_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_work_ctrl" type="logic">
+      <obj_property name="ElementShortName">i_work_ctrl</obj_property>
+      <obj_property name="ObjectShortName">i_work_ctrl</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_valid" type="logic">
+      <obj_property name="ElementShortName">i_lambda_data_valid</obj_property>
+      <obj_property name="ObjectShortName">i_lambda_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_32" type="array">
+      <obj_property name="ElementShortName">i_lambda_data_32[70:0]</obj_property>
+      <obj_property name="ObjectShortName">i_lambda_data_32[70:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_31" type="array">
+      <obj_property name="ElementShortName">i_lambda_data_31[70:0]</obj_property>
+      <obj_property name="ObjectShortName">i_lambda_data_31[70:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_30" type="array">
+      <obj_property name="ElementShortName">i_lambda_data_30[70:0]</obj_property>
+      <obj_property name="ObjectShortName">i_lambda_data_30[70:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_29" type="array">
+      <obj_property name="ElementShortName">i_lambda_data_29[70:0]</obj_property>
+      <obj_property name="ObjectShortName">i_lambda_data_29[70:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_28" type="array">
+      <obj_property name="ElementShortName">i_lambda_data_28[70:0]</obj_property>
+      <obj_property name="ObjectShortName">i_lambda_data_28[70:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_27" type="array">
+      <obj_property name="ElementShortName">i_lambda_data_27[70:0]</obj_property>
+      <obj_property name="ObjectShortName">i_lambda_data_27[70:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_26" type="array">
+      <obj_property name="ElementShortName">i_lambda_data_26[70:0]</obj_property>
+      <obj_property name="ObjectShortName">i_lambda_data_26[70:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_25" type="array">
+      <obj_property name="ElementShortName">i_lambda_data_25[70:0]</obj_property>
+      <obj_property name="ObjectShortName">i_lambda_data_25[70:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_24" type="array">
+      <obj_property name="ElementShortName">i_lambda_data_24[70:0]</obj_property>
+      <obj_property name="ObjectShortName">i_lambda_data_24[70:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_23" type="array">
+      <obj_property name="ElementShortName">i_lambda_data_23[70:0]</obj_property>
+      <obj_property name="ObjectShortName">i_lambda_data_23[70:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_addr" type="array">
+      <obj_property name="ElementShortName">i_lambda_data_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">i_lambda_data_addr[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/o_fine_sync_ok" type="logic">
+      <obj_property name="ElementShortName">o_fine_sync_ok</obj_property>
+      <obj_property name="ObjectShortName">o_fine_sync_ok</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/o_fine_sync_L" type="array">
+      <obj_property name="ElementShortName">o_fine_sync_L[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_fine_sync_L[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/o_fine_sync_addr" type="array">
+      <obj_property name="ElementShortName">o_fine_sync_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_fine_sync_addr[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/state" type="array">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/state_dly1" type="array">
+      <obj_property name="ElementShortName">state_dly1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state_dly1[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/search_cnt" type="array">
+      <obj_property name="ElementShortName">search_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">search_cnt[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/confirm_cnt" type="array">
+      <obj_property name="ElementShortName">confirm_cnt[2:0]</obj_property>
+      <obj_property name="ObjectShortName">confirm_cnt[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_valid_buf" type="array">
+      <obj_property name="ElementShortName">i_lambda_data_valid_buf[11:0]</obj_property>
+      <obj_property name="ObjectShortName">i_lambda_data_valid_buf[11:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf" type="array">
+      <obj_property name="ElementShortName">i_lambda_data_buf[0:31][70:0]</obj_property>
+      <obj_property name="ObjectShortName">i_lambda_data_buf[0:31][70:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[0]" type="array">
+         <obj_property name="ElementShortName">[0][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[0][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[1]" type="array">
+         <obj_property name="ElementShortName">[1][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[1][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[2]" type="array">
+         <obj_property name="ElementShortName">[2][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[2][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[3]" type="array">
+         <obj_property name="ElementShortName">[3][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[3][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[4]" type="array">
+         <obj_property name="ElementShortName">[4][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[4][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[5]" type="array">
+         <obj_property name="ElementShortName">[5][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[5][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[6]" type="array">
+         <obj_property name="ElementShortName">[6][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[6][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[7]" type="array">
+         <obj_property name="ElementShortName">[7][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[7][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[8]" type="array">
+         <obj_property name="ElementShortName">[8][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[8][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[9]" type="array">
+         <obj_property name="ElementShortName">[9][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[9][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[10]" type="array">
+         <obj_property name="ElementShortName">[10][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[10][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[11]" type="array">
+         <obj_property name="ElementShortName">[11][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[11][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[12]" type="array">
+         <obj_property name="ElementShortName">[12][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[12][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[13]" type="array">
+         <obj_property name="ElementShortName">[13][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[13][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[14]" type="array">
+         <obj_property name="ElementShortName">[14][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[14][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[15]" type="array">
+         <obj_property name="ElementShortName">[15][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[15][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[16]" type="array">
+         <obj_property name="ElementShortName">[16][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[16][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[17]" type="array">
+         <obj_property name="ElementShortName">[17][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[17][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[18]" type="array">
+         <obj_property name="ElementShortName">[18][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[18][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[19]" type="array">
+         <obj_property name="ElementShortName">[19][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[19][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[20]" type="array">
+         <obj_property name="ElementShortName">[20][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[20][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[21]" type="array">
+         <obj_property name="ElementShortName">[21][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[21][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[22]" type="array">
+         <obj_property name="ElementShortName">[22][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[22][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[23]" type="array">
+         <obj_property name="ElementShortName">[23][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[23][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[24]" type="array">
+         <obj_property name="ElementShortName">[24][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[24][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[25]" type="array">
+         <obj_property name="ElementShortName">[25][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[25][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[26]" type="array">
+         <obj_property name="ElementShortName">[26][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[26][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[27]" type="array">
+         <obj_property name="ElementShortName">[27][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[27][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[28]" type="array">
+         <obj_property name="ElementShortName">[28][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[28][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[29]" type="array">
+         <obj_property name="ElementShortName">[29][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[29][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[30]" type="array">
+         <obj_property name="ElementShortName">[30][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[30][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/i_lambda_data_buf[31]" type="array">
+         <obj_property name="ElementShortName">[31][70:0]</obj_property>
+         <obj_property name="ObjectShortName">i_lambda_data_buf[31][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff" type="array">
+      <obj_property name="ElementShortName">lambda_data_diff[0:15][71:0]</obj_property>
+      <obj_property name="ObjectShortName">lambda_data_diff[0:15][71:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[0]" type="array">
+         <obj_property name="ElementShortName">[0][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[0][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[1]" type="array">
+         <obj_property name="ElementShortName">[1][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[1][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[2]" type="array">
+         <obj_property name="ElementShortName">[2][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[2][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[3]" type="array">
+         <obj_property name="ElementShortName">[3][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[3][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[4]" type="array">
+         <obj_property name="ElementShortName">[4][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[4][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[5]" type="array">
+         <obj_property name="ElementShortName">[5][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[5][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[6]" type="array">
+         <obj_property name="ElementShortName">[6][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[6][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[7]" type="array">
+         <obj_property name="ElementShortName">[7][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[7][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[8]" type="array">
+         <obj_property name="ElementShortName">[8][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[8][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[9]" type="array">
+         <obj_property name="ElementShortName">[9][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[9][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[10]" type="array">
+         <obj_property name="ElementShortName">[10][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[10][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[11]" type="array">
+         <obj_property name="ElementShortName">[11][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[11][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[12]" type="array">
+         <obj_property name="ElementShortName">[12][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[12][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[13]" type="array">
+         <obj_property name="ElementShortName">[13][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[13][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[14]" type="array">
+         <obj_property name="ElementShortName">[14][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[14][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/lambda_data_diff[15]" type="array">
+         <obj_property name="ElementShortName">[15][71:0]</obj_property>
+         <obj_property name="ObjectShortName">lambda_data_diff[15][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max" type="array">
+      <obj_property name="ElementShortName">data_2_max[0:15][70:0]</obj_property>
+      <obj_property name="ObjectShortName">data_2_max[0:15][70:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[0]" type="array">
+         <obj_property name="ElementShortName">[0][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[0][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[1]" type="array">
+         <obj_property name="ElementShortName">[1][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[1][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[2]" type="array">
+         <obj_property name="ElementShortName">[2][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[2][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[3]" type="array">
+         <obj_property name="ElementShortName">[3][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[3][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[4]" type="array">
+         <obj_property name="ElementShortName">[4][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[4][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[5]" type="array">
+         <obj_property name="ElementShortName">[5][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[5][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[6]" type="array">
+         <obj_property name="ElementShortName">[6][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[6][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[7]" type="array">
+         <obj_property name="ElementShortName">[7][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[7][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[8]" type="array">
+         <obj_property name="ElementShortName">[8][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[8][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[9]" type="array">
+         <obj_property name="ElementShortName">[9][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[9][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[10]" type="array">
+         <obj_property name="ElementShortName">[10][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[10][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[11]" type="array">
+         <obj_property name="ElementShortName">[11][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[11][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[12]" type="array">
+         <obj_property name="ElementShortName">[12][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[12][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[13]" type="array">
+         <obj_property name="ElementShortName">[13][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[13][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[14]" type="array">
+         <obj_property name="ElementShortName">[14][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[14][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max[15]" type="array">
+         <obj_property name="ElementShortName">[15][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max[15][70:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max_diff" type="array">
+      <obj_property name="ElementShortName">data_2_max_diff[0:7][71:0]</obj_property>
+      <obj_property name="ObjectShortName">data_2_max_diff[0:7][71:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max_diff[0]" type="array">
+         <obj_property name="ElementShortName">[0][71:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max_diff[0][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max_diff[1]" type="array">
+         <obj_property name="ElementShortName">[1][71:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max_diff[1][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max_diff[2]" type="array">
+         <obj_property name="ElementShortName">[2][71:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max_diff[2][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max_diff[3]" type="array">
+         <obj_property name="ElementShortName">[3][71:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max_diff[3][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max_diff[4]" type="array">
+         <obj_property name="ElementShortName">[4][71:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max_diff[4][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max_diff[5]" type="array">
+         <obj_property name="ElementShortName">[5][71:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max_diff[5][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max_diff[6]" type="array">
+         <obj_property name="ElementShortName">[6][71:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max_diff[6][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_2_max_diff[7]" type="array">
+         <obj_property name="ElementShortName">[7][71:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2_max_diff[7][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_4_max" type="array">
+      <obj_property name="ElementShortName">data_4_max[0:7][70:0]</obj_property>
+      <obj_property name="ObjectShortName">data_4_max[0:7][70:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_4_max[0]" type="array">
+         <obj_property name="ElementShortName">[0][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_4_max[0][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_4_max[1]" type="array">
+         <obj_property name="ElementShortName">[1][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_4_max[1][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_4_max[2]" type="array">
+         <obj_property name="ElementShortName">[2][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_4_max[2][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_4_max[3]" type="array">
+         <obj_property name="ElementShortName">[3][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_4_max[3][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_4_max[4]" type="array">
+         <obj_property name="ElementShortName">[4][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_4_max[4][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_4_max[5]" type="array">
+         <obj_property name="ElementShortName">[5][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_4_max[5][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_4_max[6]" type="array">
+         <obj_property name="ElementShortName">[6][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_4_max[6][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_4_max[7]" type="array">
+         <obj_property name="ElementShortName">[7][70:0]</obj_property>
+         <obj_property name="ObjectShortName">data_4_max[7][70:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_4_max_diff" type="array">
+      <obj_property name="ElementShortName">data_4_max_diff[0:3][71:0]</obj_property>
+      <obj_property name="ObjectShortName">data_4_max_diff[0:3][71:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_4_max_diff[0]" type="array">
+         <obj_property name="ElementShortName">[0][71:0]</obj_property>
+         <obj_property name="ObjectShortName">data_4_max_diff[0][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_4_max_diff[1]" type="array">
+         <obj_property name="ElementShortName">[1][71:0]</obj_property>
+         <obj_property name="ObjectShortName">data_4_max_diff[1][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_4_max_diff[2]" type="array">
+         <obj_property name="ElementShortName">[2][71:0]</obj_property>
+         <obj_property name="ObjectShortName">data_4_max_diff[2][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_4_max_diff[3]" type="array">
+         <obj_property name="ElementShortName">[3][71:0]</obj_property>
+         <obj_property name="ObjectShortName">data_4_max_diff[3][71:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_8_max" type="array">
+      <obj_property name="ElementShortName">data_8_max[0:3][70:0]</obj_property>
+      <obj_property name="ObjectShortName">data_8_max[0:3][70:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_8_max_diff" type="array">
+      <obj_property name="ElementShortName">data_8_max_diff[0:1][71:0]</obj_property>
+      <obj_property name="ObjectShortName">data_8_max_diff[0:1][71:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_16_max" type="array">
+      <obj_property name="ElementShortName">data_16_max[0:1][70:0]</obj_property>
+      <obj_property name="ObjectShortName">data_16_max[0:1][70:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_16_max_diff" type="array">
+      <obj_property name="ElementShortName">data_16_max_diff[71:0]</obj_property>
+      <obj_property name="ObjectShortName">data_16_max_diff[71:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_32_max" type="array">
+      <obj_property name="ElementShortName">data_32_max[70:0]</obj_property>
+      <obj_property name="ObjectShortName">data_32_max[70:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_32_max_addr" type="array">
+      <obj_property name="ElementShortName">data_32_max_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">data_32_max_addr[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_32_peak_minus_max" type="array">
+      <obj_property name="ElementShortName">data_32_peak_minus_max[71:0]</obj_property>
+      <obj_property name="ObjectShortName">data_32_peak_minus_max[71:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_32_peak" type="array">
+      <obj_property name="ElementShortName">data_32_peak[70:0]</obj_property>
+      <obj_property name="ObjectShortName">data_32_peak[70:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_32_peak_addr" type="array">
+      <obj_property name="ElementShortName">data_32_peak_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">data_32_peak_addr[9:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_peak_valid" type="logic">
+      <obj_property name="ElementShortName">data_peak_valid</obj_property>
+      <obj_property name="ObjectShortName">data_peak_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_peak_search/uut/data_peak_addr" type="array">
+      <obj_property name="ElementShortName">data_peak_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">data_peak_addr[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

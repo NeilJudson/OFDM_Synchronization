@@ -32,6 +32,7 @@ module test_lambda;
 	reg [29:0] i_psi_data_q;
 	reg [30:0] i_phi_data;
 	reg [15:0] i_psi_phi_data_addr;
+	reg i_rou_en;
 	reg [7:0] i_rou;
 
 	// Outputs
@@ -65,19 +66,20 @@ module test_lambda;
 		.i_psi_data_q(i_psi_data_q), 
 		.i_phi_data(i_phi_data), 
 		.i_psi_phi_data_addr(i_psi_phi_data_addr), 
-		.i_rou(i_rou),
+		.i_rou_en(i_rou_en),
+		.i_rou(i_rou), 
 		.o_lambda_data_valid(o_lambda_data_valid), 
-		.o_lambda_data_32(o_lambda_data_32),
-		.o_lambda_data_31(o_lambda_data_31),
-		.o_lambda_data_30(o_lambda_data_30),
-		.o_lambda_data_29(o_lambda_data_29),
-		.o_lambda_data_28(o_lambda_data_28),
-		.o_lambda_data_27(o_lambda_data_27),
-		.o_lambda_data_26(o_lambda_data_26),
-		.o_lambda_data_25(o_lambda_data_25),
-		.o_lambda_data_24(o_lambda_data_24),
-		.o_lambda_data_23(o_lambda_data_23),
-		.o_lambda_data_addr(o_lambda_data_addr)
+		.o_lambda_data_32(o_lambda_data_32), 
+		.o_lambda_data_31(o_lambda_data_31), 
+		.o_lambda_data_30(o_lambda_data_30), 
+		.o_lambda_data_29(o_lambda_data_29), 
+		.o_lambda_data_28(o_lambda_data_28), 
+		.o_lambda_data_27(o_lambda_data_27), 
+		.o_lambda_data_26(o_lambda_data_26), 
+		.o_lambda_data_25(o_lambda_data_25), 
+		.o_lambda_data_24(o_lambda_data_24), 
+		.o_lambda_data_23(o_lambda_data_23), 
+		.o_lambda_data_addr(o_lambda_data_addr) 
 	);
 
 	initial begin
@@ -91,6 +93,7 @@ module test_lambda;
 		i_psi_data_q = 0;
 		i_phi_data = 0;
 		i_psi_phi_data_addr = 0;
+		i_rou_en = 0;
 		i_rou = 0;
 
 		// Wait 100 ns for global reset to finish
@@ -158,7 +161,6 @@ module test_lambda;
 	always @(posedge axis_aclk) begin
 		if(count == 'd8000) begin
 			$stop;
-			
 		end
 	end
 	

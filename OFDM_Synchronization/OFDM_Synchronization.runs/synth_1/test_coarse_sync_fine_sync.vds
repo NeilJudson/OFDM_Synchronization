@@ -1,0 +1,1106 @@
+#-----------------------------------------------------------
+# Vivado v2015.2.1 (64-bit)
+# SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
+# IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
+# Start of session at: Fri Jan 20 17:14:40 2017
+# Process ID: 996
+# Log file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/test_coarse_sync_fine_sync.vds
+# Journal file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source test_coarse_sync_fine_sync.tcl -notrace
+Command: synth_design -top test_coarse_sync_fine_sync -part xc7z045fbg676-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-1223] The version limit for your license is '2017.01' and will expire in 11 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 243.930 ; gain = 58.426
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'test_coarse_sync_fine_sync' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/test_coarse_sync_fine_sync.v:23]
+INFO: [Synth 8-638] synthesizing module 'coarse_sync' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:23]
+	Parameter SYNC_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter PSI_WIDTH bound to: 34 - type: integer 
+	Parameter PHI_WIDTH bound to: 35 - type: integer 
+	Parameter SPRAM_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter SPRAM_DATA_WIDTH bound to: 144 - type: integer 
+	Parameter COARSE_SYNC_IDLE bound to: 3'b000 
+	Parameter COARSE_SYNC_ING bound to: 3'b001 
+	Parameter COARSE_SYNC_FIR bound to: 3'b010 
+	Parameter COARSE_SYNC_SEC bound to: 3'b011 
+	Parameter u4_rd_addr_init bound to: 33 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'psi' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/psi.v:23]
+	Parameter SYNC_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter SPRAM_DATA_WIDTH bound to: 72 - type: integer 
+	Parameter SPRAM_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter SPRAM_DATA_DEPTH bound to: 64 - type: integer 
+	Parameter DATA_MUL_WIDTH bound to: 32 - type: integer 
+	Parameter PSI_WIDTH bound to: 34 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter WORK bound to: 2'b11 
+	Parameter u2_rd_addr_init bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'complex_multiplier_18_18_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/complex_multiplier_18_18_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'complex_multiplier_18_18_ip' (1#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/complex_multiplier_18_18_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'spram_72_64_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/spram_72_64_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_72_64_ip' (2#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/spram_72_64_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'psi' (3#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/psi.v:23]
+INFO: [Synth 8-638] synthesizing module 'phi' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/phi.v:23]
+	Parameter SYNC_DATA_WIDTH bound to: 16 - type: integer 
+	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter SPRAM_DATA_WIDTH bound to: 36 - type: integer 
+	Parameter SPRAM_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter SPRAM_DATA_DEPTH bound to: 64 - type: integer 
+	Parameter DATA_POWER_WIDTH bound to: 32 - type: integer 
+	Parameter PHI_WIDTH bound to: 35 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter WORK bound to: 2'b10 
+	Parameter u2_rd_addr_init bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_18_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/complex_abs_power2_18_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_18_ip' (4#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/complex_abs_power2_18_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'spram_36_64_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/spram_36_64_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_36_64_ip' (5#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/spram_36_64_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'phi' (6#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/phi.v:23]
+INFO: [Synth 8-638] synthesizing module 'tar' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/tar.v:23]
+	Parameter PSI_WIDTH bound to: 34 - type: integer 
+	Parameter PHI_WIDTH bound to: 35 - type: integer 
+	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter SPRAM_DATA_WIDTH bound to: 144 - type: integer 
+	Parameter SPRAM_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter SPRAM_DATA_DEPTH bound to: 32 - type: integer 
+	Parameter PSI_SUM_WIDTH bound to: 39 - type: integer 
+	Parameter PHI_SUM_WIDTH bound to: 40 - type: integer 
+	Parameter PSI_POWER_WIDTH bound to: 78 - type: integer 
+	Parameter PHI_POWER_WIDTH bound to: 78 - type: integer 
+	Parameter TAR_WIDTH bound to: 79 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter WORK bound to: 2'b10 
+	Parameter u1_rd_addr_init bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'spram_144_32_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/spram_144_32_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_144_32_ip' (7#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/spram_144_32_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_42_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/complex_abs_power2_42_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_42_ip' (8#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/complex_abs_power2_42_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'multiplier_42_42_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/multiplier_42_42_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'multiplier_42_42_ip' (9#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/multiplier_42_42_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'tar' (10#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/tar.v:23]
+INFO: [Synth 8-638] synthesizing module 'spram_144_512_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/spram_144_512_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_144_512_ip' (11#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/spram_144_512_ip_stub.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:162]
+WARNING: [Synth 8-3848] Net s_axis_ctrl_trdy in module/entity coarse_sync does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:56]
+WARNING: [Synth 8-3848] Net s_axis_data_trdy in module/entity coarse_sync does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:62]
+WARNING: [Synth 8-3848] Net m_axis_data_tlast in module/entity coarse_sync does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:65]
+INFO: [Synth 8-256] done synthesizing module 'coarse_sync' (12#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:23]
+INFO: [Synth 8-638] synthesizing module 'fine_sync' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/fine_sync.v:23]
+	Parameter PSI_WIDTH bound to: 30 - type: integer 
+	Parameter PHI_WIDTH bound to: 31 - type: integer 
+	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter LAMBDA_WIDTH bound to: 71 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'lambda' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:23]
+	Parameter PSI_WIDTH bound to: 30 - type: integer 
+	Parameter PHI_WIDTH bound to: 31 - type: integer 
+	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter RAM_ADDR_WIDTH2 bound to: 6 - type: integer 
+	Parameter RAM_DATA_DEPTH bound to: 64 - type: integer 
+	Parameter STAGE_NUM bound to: 10 - type: integer 
+	Parameter PSI_SUM_WIDTH bound to: 35 - type: integer 
+	Parameter PHI_SUM_WIDTH bound to: 36 - type: integer 
+	Parameter PSI_POWER_WIDTH bound to: 70 - type: integer 
+	Parameter PHI_POWER_WIDTH bound to: 70 - type: integer 
+	Parameter LAMBDA_WIDTH bound to: 71 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter WORK bound to: 2'b11 
+	Parameter rd_addr_init bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_35_1dsp_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/complex_abs_power2_35_1dsp_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_35_1dsp_ip' (13#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/complex_abs_power2_35_1dsp_ip_stub.v:7]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:339]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:340]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:348]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:349]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:357]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:358]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:366]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:367]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:375]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:376]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:384]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:385]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:393]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:394]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:402]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:403]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:411]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:412]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:420]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:421]
+INFO: [Synth 8-638] synthesizing module 'multiplier_35_1dsp_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/multiplier_35_1dsp_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'multiplier_35_1dsp_ip' (14#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/multiplier_35_1dsp_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'multiplier_69_18_1dsp_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/multiplier_69_18_1dsp_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'multiplier_69_18_1dsp_ip' (15#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-996-txjs-130/realtime/multiplier_69_18_1dsp_ip_stub.v:7]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:756]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:757]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:758]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:759]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:760]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:761]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:762]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:763]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:764]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:765]
+INFO: [Synth 8-256] done synthesizing module 'lambda' (16#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:23]
+INFO: [Synth 8-638] synthesizing module 'peak_search' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/peak_search.v:23]
+	Parameter LAMBDA_WIDTH bound to: 71 - type: integer 
+	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter IDLE bound to: 3'b000 
+	Parameter SEARCH bound to: 3'b011 
+	Parameter CONFIRM bound to: 3'b110 
+INFO: [Synth 8-256] done synthesizing module 'peak_search' (17#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/peak_search.v:23]
+INFO: [Synth 8-256] done synthesizing module 'fine_sync' (18#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/fine_sync.v:23]
+INFO: [Synth 8-3876] $readmem data file 'ofdm_source.dat' is read successfully [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/test_coarse_sync_fine_sync.v:117]
+WARNING: [Synth 8-85] always block has no event control specified [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/test_coarse_sync_fine_sync.v:152]
+INFO: [Synth 8-256] done synthesizing module 'test_coarse_sync_fine_sync' (19#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/test_coarse_sync_fine_sync.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 346.395 ; gain = 160.891
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 346.395 ; gain = 160.891
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z045fbg676-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 759.191 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 759.191 ; gain = 573.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z045fbg676-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 759.191 ; gain = 573.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 759.191 ; gain = 573.688
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "u1_dout_addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "u234_dout_valid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'u5_i_data_valid_reg' into 'u1_i_data_valid_reg' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/phi.v:179]
+INFO: [Synth 8-5544] ROM "u2_dout_addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:578]
+INFO: [Synth 8-802] inferred FSM for state register 'coarse_sync_state_reg' in module 'coarse_sync'
+INFO: [Synth 8-5546] ROM "ctrl_work_flag" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "coarse_sync_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "coarse_sync_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "coarse_sync_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "coarse_sync_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[32]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[32]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[33]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[33]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[34]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[34]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[35]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[35]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[36]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[36]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[37]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[37]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[38]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[38]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[39]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[39]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[40]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[40]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[41]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[41]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[42]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[42]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[43]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[43]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[44]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[44]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[45]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[45]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[46]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[46]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[47]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[47]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ram_psi_i_reg[48]" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data_peak_valid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "s_axis_ctrl_tvalid" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "s_axis_ctrl_tdata" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5544] ROM "s_axis_data_tvalid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data_cnt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                     Old Encoding 
+---------------------------------------------------------------------------------------------------
+        COARSE_SYNC_IDLE |                               00 |                              000
+         COARSE_SYNC_ING |                               01 |                              001
+         COARSE_SYNC_FIR |                               10 |                              010
+         COARSE_SYNC_SEC |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'coarse_sync_state_reg' using encoding 'sequential' in module 'coarse_sync'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 759.191 ; gain = 573.688
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |lambda__GB0                     |           1|     28954|
+|2     |lambda__GB1                     |           1|      6045|
+|3     |lambda__GB2                     |           1|     30058|
+|4     |lambda__GB3                     |           1|     28285|
+|5     |peak_search                     |           1|     18909|
+|6     |test_coarse_sync_fine_sync__GC0 |           1|     16881|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     79 Bit       Adders := 1     
+	   3 Input     72 Bit       Adders := 32    
+	   3 Input     71 Bit       Adders := 10    
+	   3 Input     36 Bit       Adders := 1     
+	   2 Input     35 Bit       Adders := 1     
+	   3 Input     35 Bit       Adders := 2     
+	   2 Input     34 Bit       Adders := 4     
+	   2 Input     33 Bit       Adders := 5     
+	   3 Input     32 Bit       Adders := 10    
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     31 Bit       Adders := 20    
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 12    
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 4     
+	   2 Input      6 Bit       Adders := 17    
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	              144 Bit    Registers := 2     
+	               96 Bit    Registers := 1     
+	               79 Bit    Registers := 1     
+	               72 Bit    Registers := 35    
+	               71 Bit    Registers := 74    
+	               70 Bit    Registers := 20    
+	               48 Bit    Registers := 2     
+	               36 Bit    Registers := 4     
+	               35 Bit    Registers := 3     
+	               34 Bit    Registers := 4     
+	               33 Bit    Registers := 5     
+	               32 Bit    Registers := 11    
+	               31 Bit    Registers := 84    
+	               30 Bit    Registers := 128   
+	               18 Bit    Registers := 8     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 18    
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 19    
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 10    
+	                2 Bit    Registers := 12    
+	                1 Bit    Registers := 50    
++---Muxes : 
+	   3 Input    144 Bit        Muxes := 2     
+	   2 Input     96 Bit        Muxes := 1     
+	   3 Input     72 Bit        Muxes := 3     
+	   2 Input     71 Bit        Muxes := 31    
+	   3 Input     71 Bit        Muxes := 1     
+	   3 Input     36 Bit        Muxes := 3     
+	   3 Input     31 Bit        Muxes := 2     
+	   2 Input     31 Bit        Muxes := 2     
+	   3 Input     30 Bit        Muxes := 4     
+	   2 Input     30 Bit        Muxes := 4     
+	   2 Input     12 Bit        Muxes := 1     
+	   3 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 2     
+	   3 Input      9 Bit        Muxes := 3     
+	   3 Input      8 Bit        Muxes := 2     
+	   3 Input      7 Bit        Muxes := 4     
+	   3 Input      6 Bit        Muxes := 9     
+	   2 Input      6 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 4     
+	   3 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 6     
+	   5 Input      2 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 9     
+	  13 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 64    
+	   3 Input      1 Bit        Muxes := 21    
+	   2 Input      1 Bit        Muxes := 15    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module test_coarse_sync_fine_sync 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               96 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     96 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module lambda 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     71 Bit       Adders := 10    
+	   3 Input     32 Bit       Adders := 10    
+	   3 Input     31 Bit       Adders := 20    
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 12    
++---Registers : 
+	               71 Bit    Registers := 10    
+	               70 Bit    Registers := 20    
+	               32 Bit    Registers := 10    
+	               31 Bit    Registers := 84    
+	               30 Bit    Registers := 128   
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 12    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   3 Input     31 Bit        Muxes := 2     
+	   2 Input     31 Bit        Muxes := 2     
+	   3 Input     30 Bit        Muxes := 4     
+	   2 Input     30 Bit        Muxes := 4     
+	   3 Input      7 Bit        Muxes := 1     
+	   3 Input      6 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 64    
+	   3 Input      1 Bit        Muxes := 3     
+Module peak_search 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     72 Bit       Adders := 32    
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               72 Bit    Registers := 32    
+	               71 Bit    Registers := 64    
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 7     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	   2 Input     71 Bit        Muxes := 31    
+	   3 Input     71 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   3 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module psi 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     34 Bit       Adders := 2     
+	   2 Input     33 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 3     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               72 Bit    Registers := 3     
+	               48 Bit    Registers := 2     
+	               34 Bit    Registers := 2     
+	               33 Bit    Registers := 4     
+	               10 Bit    Registers := 5     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   3 Input     72 Bit        Muxes := 3     
+	   3 Input      7 Bit        Muxes := 1     
+	   3 Input      6 Bit        Muxes := 3     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 3     
+Module phi 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     35 Bit       Adders := 1     
+	   2 Input     34 Bit       Adders := 2     
+	   2 Input     33 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 3     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               36 Bit    Registers := 3     
+	               35 Bit    Registers := 1     
+	               34 Bit    Registers := 2     
+	               33 Bit    Registers := 1     
+	               18 Bit    Registers := 4     
+	               10 Bit    Registers := 5     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   3 Input     36 Bit        Muxes := 3     
+	   3 Input      7 Bit        Muxes := 1     
+	   3 Input      6 Bit        Muxes := 3     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 3     
+Module tar 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     79 Bit       Adders := 1     
+	   3 Input     36 Bit       Adders := 1     
+	   3 Input     35 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	              144 Bit    Registers := 1     
+	               79 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+	               35 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   3 Input    144 Bit        Muxes := 1     
+	   3 Input      6 Bit        Muxes := 1     
+	   3 Input      5 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 3     
+Module coarse_sync 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	              144 Bit    Registers := 1     
+	               18 Bit    Registers := 4     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   3 Input    144 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 2     
+	   3 Input      9 Bit        Muxes := 3     
+	   3 Input      8 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	  13 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 900 (col length:140)
+BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 759.191 ; gain = 573.688
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design peak_search has port o_fine_sync_addr[15] driven by constant 0
+WARNING: [Synth 8-3917] design peak_search has port o_fine_sync_addr[14] driven by constant 0
+WARNING: [Synth 8-3917] design peak_search has port o_fine_sync_addr[13] driven by constant 0
+WARNING: [Synth 8-3917] design peak_search has port o_fine_sync_addr[12] driven by constant 0
+WARNING: [Synth 8-3917] design peak_search has port o_fine_sync_addr[11] driven by constant 0
+WARNING: [Synth 8-3917] design peak_search has port o_fine_sync_addr[10] driven by constant 0
+WARNING: [Synth 8-3331] design peak_search has unconnected port i_lambda_data_addr[15]
+WARNING: [Synth 8-3331] design peak_search has unconnected port i_lambda_data_addr[14]
+WARNING: [Synth 8-3331] design peak_search has unconnected port i_lambda_data_addr[13]
+WARNING: [Synth 8-3331] design peak_search has unconnected port i_lambda_data_addr[12]
+WARNING: [Synth 8-3331] design peak_search has unconnected port i_lambda_data_addr[11]
+WARNING: [Synth 8-3331] design peak_search has unconnected port i_lambda_data_addr[10]
+INFO: [Synth 8-5545] ROM "s_axis_ctrl_tvalid" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "s_axis_ctrl_tdata" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:01:21 . Memory (MB): peak = 759.191 ; gain = 573.688
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:31 ; elapsed = 00:01:21 . Memory (MB): peak = 759.191 ; gain = 573.688
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |lambda__GB0                     |           1|     28675|
+|2     |lambda__GB1                     |           1|      6107|
+|3     |lambda__GB2                     |           1|     29848|
+|4     |lambda__GB3                     |           1|     28075|
+|5     |peak_search                     |           1|     23306|
+|6     |test_coarse_sync_fine_sync__GC0 |           1|     16809|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++---------------------------+------------+---------------+----------------+
+|Module Name                | RTL Object | Depth x Width | Implemented As | 
++---------------------------+------------+---------------+----------------+
+|test_coarse_sync_fine_sync | rom        | 4096x32       | LUT            | 
+|test_coarse_sync_fine_sync | rom__1     | 4096x32       | LUT            | 
++---------------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u234_dout_valid_reg ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/power_add_valid_dly2_reg ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/cnt_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/cnt_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/cnt_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/power_add_addr_reg[9] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/power_add_addr_reg[8] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/power_add_addr_reg[7] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/power_add_addr_reg[6] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/power_add_addr_reg[5] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/power_add_addr_reg[4] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/power_add_addr_reg[3] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/power_add_addr_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/power_add_addr_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/power_add_addr_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u2_dout_addr_reg[9] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u2_dout_addr_reg[8] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u2_dout_addr_reg[7] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u2_dout_addr_reg[6] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u2_dout_addr_reg[5] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u2_dout_addr_reg[4] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u2_dout_addr_reg[3] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u2_dout_addr_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u2_dout_addr_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u2_dout_addr_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u3_dout_addr_reg[9] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u3_dout_addr_reg[8] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u3_dout_addr_reg[7] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u3_dout_addr_reg[6] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u3_dout_addr_reg[5] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u3_dout_addr_reg[4] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u3_dout_addr_reg[3] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u3_dout_addr_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u3_dout_addr_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u3_dout_addr_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u4_dout_addr_reg[9] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u4_dout_addr_reg[8] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u4_dout_addr_reg[7] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u4_dout_addr_reg[6] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u4_dout_addr_reg[5] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u4_dout_addr_reg[4] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u4_dout_addr_reg[3] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u4_dout_addr_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u4_dout_addr_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u4_dout_addr_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/phi_data_addr_reg[9] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/phi_data_addr_reg[8] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/phi_data_addr_reg[7] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/phi_data_addr_reg[6] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/phi_data_addr_reg[5] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/phi_data_addr_reg[4] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/phi_data_addr_reg[3] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/phi_data_addr_reg[2] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/phi_data_addr_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/phi_data_addr_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (coarse_sync_ok_reg) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[15] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[14] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[13] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[12] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[11] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_i_data_dly_addr_reg[10] ) is unused and will be removed from module coarse_sync.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (uut_coarse_sync/\u3_tar/state_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (uut_coarse_sync/\u3_tar/u1_dina_reg[143] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (uut_coarse_sync/\u2_phi/u2_dina_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (uut_coarse_sync/\u2_phi/state_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s_axis_ctrl_tdata_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (uut_coarse_sync/\coarse_sync_state_dly1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (uut_coarse_sync/\u4_dina_reg[143] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (uut_coarse_sync/ctrl_work_data_reg)
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/state_reg[1] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_a_tdata_reg[46] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_a_tdata_reg[45] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_a_tdata_reg[44] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_a_tdata_reg[43] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_a_tdata_reg[42] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_a_tdata_reg[41] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_a_tdata_reg[22] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_a_tdata_reg[21] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_a_tdata_reg[20] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_a_tdata_reg[19] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_a_tdata_reg[18] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_a_tdata_reg[17] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_a_tdata_reg[16] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_a_tdata_reg[15] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[46] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[45] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[44] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[43] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[42] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[41] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[40] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[39] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[22] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[21] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[20] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[19] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[18] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[17] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[16] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u1_psi/u1_s_axis_b_tdata_reg[15] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/state_reg[0] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u5_i_data_i_reg[16] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u5_i_data_i_reg[15] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u5_i_data_q_reg[16] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u5_i_data_q_reg[15] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u1_i_data_i_reg[16] ) is unused and will be removed from module coarse_sync.
+WARNING: [Synth 8-3332] Sequential element (\u2_phi/u1_i_data_i_reg[15] ) is unused and will be removed from module coarse_sync.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:58 . Memory (MB): peak = 759.191 ; gain = 573.688
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:38 ; elapsed = 00:01:58 . Memory (MB): peak = 759.191 ; gain = 573.688
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |lambda__GB0                     |           1|     27116|
+|2     |lambda__GB1                     |           1|      6107|
+|3     |lambda__GB2                     |           1|     28772|
+|4     |lambda__GB3                     |           1|     26532|
+|5     |test_coarse_sync_fine_sync__GC0 |           1|     11979|
++------+--------------------------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:38 ; elapsed = 00:01:58 . Memory (MB): peak = 759.191 ; gain = 573.688
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:02:11 . Memory (MB): peak = 875.711 ; gain = 690.207
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou2_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou2_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou2_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou2_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou2_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou2_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou2_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\rou2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\state_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[63][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[62][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[61][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[60][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[59][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[58][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[57][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[56][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[55][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[54][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[53][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[52][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[51][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[50][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[49][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[48][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[47][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[46][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[45][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[44][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[43][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[42][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[41][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[40][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[39][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[38][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[37][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[36][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[35][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[34][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[33][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[32][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[31][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[30][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[29][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[28][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[27][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[26][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[25][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[24][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[23][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[22][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[21][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[20][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[19][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[18][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[17][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[16][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[15][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[14][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[13][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[12][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[11][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[10][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[9][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[8][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[7][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[6][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[5][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[4][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[3][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[2][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u1_lambdai_3/\ram_psi_i_reg[1][29] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u1_lambdai_3/\clear_addr_reg[6] )
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:02:16 . Memory (MB): peak = 880.613 ; gain = 695.109
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |lambda__GB0                     |           1|     24760|
+|2     |lambda__GB1                     |           1|      6107|
+|3     |lambda__GB2                     |           1|     27382|
+|4     |lambda__GB3                     |           1|       520|
+|5     |test_coarse_sync_fine_sync__GC0 |           1|     11705|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:09 ; elapsed = 00:02:29 . Memory (MB): peak = 950.113 ; gain = 764.609
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:11 ; elapsed = 00:02:31 . Memory (MB): peak = 950.113 ; gain = 764.609
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:11 ; elapsed = 00:02:31 . Memory (MB): peak = 950.113 ; gain = 764.609
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:12 ; elapsed = 00:02:32 . Memory (MB): peak = 950.113 ; gain = 764.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:01:12 ; elapsed = 00:02:32 . Memory (MB): peak = 950.113 ; gain = 764.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:12 ; elapsed = 00:02:32 . Memory (MB): peak = 950.113 ; gain = 764.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register:
++---------------------------+-------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                | RTL Name                                              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------------+-------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|test_coarse_sync_fine_sync | uut_fine_sync/u1_lambda/i_psi_phi_data_valid_dly1_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++---------------------------+-------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |spram_144_512_ip              |         1|
+|2     |complex_multiplier_18_18_ip   |         1|
+|3     |spram_72_64_ip                |         3|
+|4     |complex_abs_power2_18_ip      |         2|
+|5     |spram_36_64_ip                |         3|
+|6     |spram_144_32_ip               |         1|
+|7     |complex_abs_power2_42_ip      |         1|
+|8     |multiplier_42_42_ip           |         1|
+|9     |complex_abs_power2_35_1dsp_ip |        10|
+|10    |multiplier_35_1dsp_ip         |        10|
+|11    |multiplier_69_18_1dsp_ip      |        10|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------------+------+
+|      |Cell                             |Count |
++------+---------------------------------+------+
+|1     |complex_abs_power2_18_ip         |     1|
+|2     |complex_abs_power2_18_ip__1      |     1|
+|3     |complex_abs_power2_35_1dsp_ip    |     1|
+|4     |complex_abs_power2_35_1dsp_ip__1 |     1|
+|5     |complex_abs_power2_35_1dsp_ip__2 |     1|
+|6     |complex_abs_power2_35_1dsp_ip__3 |     1|
+|7     |complex_abs_power2_35_1dsp_ip__4 |     1|
+|8     |complex_abs_power2_35_1dsp_ip__5 |     1|
+|9     |complex_abs_power2_35_1dsp_ip__6 |     1|
+|10    |complex_abs_power2_35_1dsp_ip__7 |     1|
+|11    |complex_abs_power2_35_1dsp_ip__8 |     1|
+|12    |complex_abs_power2_35_1dsp_ip__9 |     1|
+|13    |complex_abs_power2_42_ip         |     1|
+|14    |complex_multiplier_18_18_ip      |     1|
+|15    |multiplier_35_1dsp_ip            |     1|
+|16    |multiplier_35_1dsp_ip__1         |     1|
+|17    |multiplier_35_1dsp_ip__2         |     1|
+|18    |multiplier_35_1dsp_ip__3         |     1|
+|19    |multiplier_35_1dsp_ip__4         |     1|
+|20    |multiplier_35_1dsp_ip__5         |     1|
+|21    |multiplier_35_1dsp_ip__6         |     1|
+|22    |multiplier_35_1dsp_ip__7         |     1|
+|23    |multiplier_35_1dsp_ip__8         |     1|
+|24    |multiplier_35_1dsp_ip__9         |     1|
+|25    |multiplier_42_42_ip              |     1|
+|26    |multiplier_69_18_1dsp_ip         |     1|
+|27    |multiplier_69_18_1dsp_ip__1      |     1|
+|28    |multiplier_69_18_1dsp_ip__2      |     1|
+|29    |multiplier_69_18_1dsp_ip__3      |     1|
+|30    |multiplier_69_18_1dsp_ip__4      |     1|
+|31    |multiplier_69_18_1dsp_ip__5      |     1|
+|32    |multiplier_69_18_1dsp_ip__6      |     1|
+|33    |multiplier_69_18_1dsp_ip__7      |     1|
+|34    |multiplier_69_18_1dsp_ip__8      |     1|
+|35    |multiplier_69_18_1dsp_ip__9      |     1|
+|36    |spram_144_32_ip                  |     1|
+|37    |spram_144_512_ip                 |     1|
+|38    |spram_36_64_ip                   |     1|
+|39    |spram_36_64_ip__1                |     1|
+|40    |spram_36_64_ip__2                |     1|
+|41    |spram_72_64_ip                   |     1|
+|42    |spram_72_64_ip__1                |     1|
+|43    |spram_72_64_ip__2                |     1|
+|44    |BUFG                             |     1|
+|45    |CARRY4                           |   321|
+|46    |LUT1                             |    75|
+|47    |LUT2                             |  2539|
+|48    |LUT3                             |  8189|
+|49    |LUT4                             |    69|
+|50    |LUT5                             |   105|
+|51    |LUT6                             |  4727|
+|52    |MUXCY_L                          |  1157|
+|53    |MUXF7                            |  1536|
+|54    |MUXF8                            |   768|
+|55    |SRL16E                           |     1|
+|56    |XORCY                            |  1192|
+|57    |FDRE                             |  3837|
++------+---------------------------------+------+
+
+Report Instance Areas: 
++------+------------------+------------+------+
+|      |Instance          |Module      |Cells |
++------+------------------+------------+------+
+|1     |top               |            | 27743|
+|2     |  uut_coarse_sync |coarse_sync |  4219|
+|3     |    u1_psi        |psi         |  1519|
+|4     |    u2_phi        |phi         |   911|
+|5     |    u3_tar        |tar         |  1366|
+|6     |  uut_fine_sync   |fine_sync   | 17345|
+|7     |    u1_lambda     |lambda      | 17345|
++------+------------------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:12 ; elapsed = 00:02:33 . Memory (MB): peak = 950.113 ; gain = 764.609
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4048 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:02:14 . Memory (MB): peak = 950.113 ; gain = 329.980
+Synthesis Optimization Complete : Time (s): cpu = 00:01:12 ; elapsed = 00:02:33 . Memory (MB): peak = 950.113 ; gain = 764.609
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2670 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 306 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 306 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+261 Infos, 146 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:17 ; elapsed = 00:02:38 . Memory (MB): peak = 950.113 ; gain = 751.898
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.344 . Memory (MB): peak = 950.113 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 20 17:17:23 2017...

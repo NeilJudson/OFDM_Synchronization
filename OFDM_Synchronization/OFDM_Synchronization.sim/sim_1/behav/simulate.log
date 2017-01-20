@@ -2,25 +2,25 @@ Vivado Simulator 2015.2
 Time resolution is 1 ps
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
-Block Memory Generator module test_coarse_sync.uut.u1_psi.u2_spram_72_64_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module test_coarse_sync_fine_sync.uut_coarse_sync.u1_psi.u2_spram_72_64_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
-Block Memory Generator module test_coarse_sync.uut.u1_psi.u3_spram_72_64_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module test_coarse_sync_fine_sync.uut_coarse_sync.u1_psi.u3_spram_72_64_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
-Block Memory Generator module test_coarse_sync.uut.u1_psi.u4_spram_72_64_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module test_coarse_sync_fine_sync.uut_coarse_sync.u1_psi.u4_spram_72_64_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
-Block Memory Generator module test_coarse_sync.uut.u2_phi.u2_spram_36_64_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module test_coarse_sync_fine_sync.uut_coarse_sync.u2_phi.u2_spram_36_64_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
-Block Memory Generator module test_coarse_sync.uut.u2_phi.u3_spram_36_64_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module test_coarse_sync_fine_sync.uut_coarse_sync.u2_phi.u3_spram_36_64_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
-Block Memory Generator module test_coarse_sync.uut.u2_phi.u4_spram_36_64_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module test_coarse_sync_fine_sync.uut_coarse_sync.u2_phi.u4_spram_36_64_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
-Block Memory Generator module test_coarse_sync.uut.u3_tar.u1_spram_144_32_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module test_coarse_sync_fine_sync.uut_coarse_sync.u3_tar.u1_spram_144_32_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
-Block Memory Generator module test_coarse_sync.uut.u4_spram_144_512_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module test_coarse_sync_fine_sync.uut_coarse_sync.u4_spram_144_512_ip.inst.native_mem_module.blk_mem_gen_v8_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
