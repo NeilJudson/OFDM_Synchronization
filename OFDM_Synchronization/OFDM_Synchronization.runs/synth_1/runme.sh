@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log test_coarse_sync_fine_sync.vds -m64 -mode batch -messageDb vivado.pb -notrace -source test_coarse_sync_fine_sync.tcl
+EAStep vivado -log ofdm_syn.vds -m64 -mode batch -messageDb vivado.pb -notrace -source ofdm_syn.tcl

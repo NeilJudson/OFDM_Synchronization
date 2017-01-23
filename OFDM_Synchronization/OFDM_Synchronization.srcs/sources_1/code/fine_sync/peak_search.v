@@ -67,8 +67,8 @@ module peak_search #(
 	i_lambda_data_addr ,
 	
 	o_fine_sync_ok     ,
-	o_fine_sync_L      ,
-	o_fine_sync_addr
+	o_channel_length   ,
+	o_cp_start_addr 
 	);
 	input                axis_aclk          ;
 	input                axis_areset        ;
@@ -112,8 +112,8 @@ module peak_search #(
 	input         [15:0] i_lambda_data_addr ;
 	
 	output               o_fine_sync_ok     ;
-	output        [4:0]  o_fine_sync_L      ;
-	output        [15:0] o_fine_sync_addr   ;
+	output        [4:0]  o_channel_length   ;
+	output        [15:0] o_cp_start_addr    ;
 	
 //================================================================================
 // variable
@@ -134,33 +134,33 @@ module peak_search #(
 	
 	reg signed [LAMBDA_WIDTH:0]     lambda_data_diff[0:15];
 	reg signed [LAMBDA_WIDTH-1:0]   data_2_max[0:15]      ;
-	reg                             data_2_max_L[0:15]    ;
+	reg                             data_2_max_y[0:15]    ;
 	
 	reg signed [LAMBDA_WIDTH:0]     data_2_max_diff[0:7]  ;
 	reg signed [LAMBDA_WIDTH-1:0]   data_4_max[0:7]       ;
-	reg        [1:0]                data_4_max_L[0:7]     ;
+	reg        [1:0]                data_4_max_y[0:7]     ;
 	
 	reg signed [LAMBDA_WIDTH:0]     data_4_max_diff[0:3]  ;
 	reg signed [LAMBDA_WIDTH-1:0]   data_8_max[0:3]       ;
-	reg        [2:0]                data_8_max_L[0:3]     ;
+	reg        [2:0]                data_8_max_y[0:3]     ;
 	
 	reg signed [LAMBDA_WIDTH:0]     data_8_max_diff[0:1]  ;
 	reg signed [LAMBDA_WIDTH-1:0]   data_16_max[0:1]      ;
-	reg        [3:0]                data_16_max_L[0:1]    ;
+	reg        [3:0]                data_16_max_y[0:1]    ;
 	
 	reg signed [LAMBDA_WIDTH:0]     data_16_max_diff      ;
 	reg signed [LAMBDA_WIDTH-1:0]   data_32_max           ;
-	reg        [4:0]                data_32_max_L         ;
+	reg        [4:0]                data_32_max_y         ;
 	reg        [RAM_ADDR_WIDTH-1:0] data_32_max_addr      ;
 	
 	reg signed [LAMBDA_WIDTH:0]     data_32_peak_minus_max;
 	reg signed [LAMBDA_WIDTH-1:0]   data_32_peak     ;
-	reg        [4:0]                data_32_peak_L   ;
+	reg        [4:0]                data_32_peak_y   ;
 	reg        [RAM_ADDR_WIDTH-1:0] data_32_peak_addr;
 	
-	reg                             data_peak_valid  ;
-	reg        [4:0]                data_peak_L      ;
-	reg        [RAM_ADDR_WIDTH-1:0] data_peak_addr   ;
+	reg                             fine_sync_ok     ;
+	reg        [4:0]                channel_length   ;
+	reg        [RAM_ADDR_WIDTH-1:0] cp_start_addr    ;
 	
 //================================================================================
 // state
@@ -398,21 +398,21 @@ module peak_search #(
 			always @(posedge axis_aclk or posedge axis_areset) begin
 				if(axis_areset == 1'b1) begin
 					data_2_max[i1]   <= 'd0;
-					data_2_max_L[i1] <= 1'b0;
+					data_2_max_y[i1] <= 1'b0;
 				end
 				else if(i_lambda_data_valid_buf[1] == 1'b1) begin
 					if(lambda_data_diff[i1][LAMBDA_WIDTH] == 1'b0) begin
 						data_2_max[i1]   <= i_lambda_data_buf[2*i1];
-						data_2_max_L[i1] <= 1'b0;
+						data_2_max_y[i1] <= 1'b0;
 					end
 					else begin
 						data_2_max[i1]   <= i_lambda_data_buf[2*i1+1];
-						data_2_max_L[i1] <= 1'b1;
+						data_2_max_y[i1] <= 1'b1;
 					end
 				end
 				else begin
 					data_2_max[i1]   <= data_2_max[i1];
-					data_2_max_L[i1] <= data_2_max_L[i1];
+					data_2_max_y[i1] <= data_2_max_y[i1];
 				end
 			end
 		end
@@ -437,21 +437,21 @@ module peak_search #(
 			always @(posedge axis_aclk or posedge axis_areset) begin
 				if(axis_areset == 1'b1) begin
 					data_4_max[i2]   <= 'd0;
-					data_4_max_L[i2] <= 1'b0;
+					data_4_max_y[i2] <= 1'b0;
 				end
 				else if(i_lambda_data_valid_buf[3] == 1'b1) begin
 					if(data_2_max_diff[i2][LAMBDA_WIDTH] == 1'b0) begin
 						data_4_max[i2]   <= data_2_max[2*i2];
-						data_4_max_L[i2] <= {1'b0,data_2_max_L[2*i2]};
+						data_4_max_y[i2] <= {1'b0,data_2_max_y[2*i2]};
 					end
 					else begin
 						data_4_max[i2]   <= data_2_max[2*i2+1];
-						data_4_max_L[i2] <= {1'b1,data_2_max_L[2*i2+1]};
+						data_4_max_y[i2] <= {1'b1,data_2_max_y[2*i2+1]};
 					end
 				end
 				else begin
 					data_4_max[i2]   <= data_4_max[i2];
-					data_4_max_L[i2] <= data_4_max_L[i2];
+					data_4_max_y[i2] <= data_4_max_y[i2];
 				end
 			end
 		end
@@ -476,21 +476,21 @@ module peak_search #(
 			always @(posedge axis_aclk or posedge axis_areset) begin
 				if(axis_areset == 1'b1) begin
 					data_8_max[i3]   <= 'd0;
-					data_8_max_L[i3] <= 1'b0;
+					data_8_max_y[i3] <= 1'b0;
 				end
 				else if(i_lambda_data_valid_buf[5] == 1'b1) begin
 					if(data_4_max_diff[i3][LAMBDA_WIDTH] == 1'b0) begin
 						data_8_max[i3]   <= data_4_max[2*i3];
-						data_8_max_L[i3] <= {1'b0,data_4_max_L[2*i3]};
+						data_8_max_y[i3] <= {1'b0,data_4_max_y[2*i3]};
 					end
 					else begin
 						data_8_max[i3]   <= data_4_max[2*i3+1];
-						data_8_max_L[i3] <= {1'b1,data_4_max_L[2*i3+1]};
+						data_8_max_y[i3] <= {1'b1,data_4_max_y[2*i3+1]};
 					end
 				end
 				else begin
 					data_8_max[i3]   <= data_8_max[i3];
-					data_8_max_L[i3] <= data_8_max_L[i3];
+					data_8_max_y[i3] <= data_8_max_y[i3];
 				end
 			end
 		end
@@ -515,21 +515,21 @@ module peak_search #(
 			always @(posedge axis_aclk or posedge axis_areset) begin
 				if(axis_areset == 1'b1) begin
 					data_16_max[i4]   <= 'd0;
-					data_16_max_L[i4] <= 1'b0;
+					data_16_max_y[i4] <= 1'b0;
 				end
 				else if(i_lambda_data_valid_buf[7] == 1'b1) begin
 					if(data_8_max_diff[i4][LAMBDA_WIDTH] == 1'b0) begin
 						data_16_max[i4]   <= data_8_max[2*i4];
-						data_16_max_L[i4] <= {1'b0,data_8_max_L[2*i4]};
+						data_16_max_y[i4] <= {1'b0,data_8_max_y[2*i4]};
 					end
 					else begin
 						data_16_max[i4]   <= data_8_max[2*i4+1];
-						data_16_max_L[i4] <= {1'b1,data_8_max_L[2*i4+1]};
+						data_16_max_y[i4] <= {1'b1,data_8_max_y[2*i4+1]};
 					end
 				end
 				else begin
 					data_16_max[i4]   <= data_16_max[i4];
-					data_16_max_L[i4] <= data_16_max_L[i4];
+					data_16_max_y[i4] <= data_16_max_y[i4];
 				end
 			end
 		end
@@ -551,23 +551,23 @@ module peak_search #(
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
 			data_32_max      <= 'd0;
-			data_32_max_L    <= 1'b0;
+			data_32_max_y    <= 1'b0;
 			data_32_max_addr <= 'd0;
 		end
 		else if(i_lambda_data_valid_buf[9] == 1'b1) begin
 			if(data_16_max_diff[LAMBDA_WIDTH] == 1'b0) begin
 				data_32_max   <= data_16_max[0];
-				data_32_max_L <= {1'b0,data_16_max_L[0]};
+				data_32_max_y <= {1'b0,data_16_max_y[0]};
 			end
 			else begin
 				data_32_max   <= data_16_max[1];
-				data_32_max_L <= {1'b1,data_16_max_L[1]};
+				data_32_max_y <= {1'b1,data_16_max_y[1]};
 			end
 			data_32_max_addr <= i_lambda_data_addr[RAM_ADDR_WIDTH-1:0] - 1'd1;
 		end
 		else begin
 			data_32_max      <= data_32_max;
-			data_32_max_L    <= data_32_max_L;
+			data_32_max_y    <= data_32_max_y;
 			data_32_max_addr <= data_32_max_addr;
 		end
 	end
@@ -591,7 +591,7 @@ module peak_search #(
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
 			data_32_peak      <= 'd0;
-			data_32_peak_L    <= 5'd0;
+			data_32_peak_y    <= 5'd0;
 			data_32_peak_addr <= 'd0;
 		end
 		else begin
@@ -602,29 +602,29 @@ module peak_search #(
 					if(i_lambda_data_valid_buf[11] == 1'b1) begin
 						if(data_32_peak_minus_max[LAMBDA_WIDTH] == 1'b0) begin // 大小一样，不更新，即以最早为准
 							data_32_peak      <= data_32_peak;
-							data_32_peak_L    <= data_32_peak_L;
+							data_32_peak_y    <= data_32_peak_y;
 							data_32_peak_addr <= data_32_peak_addr;
 						end
 						else begin
 							data_32_peak      <= data_32_max;
-							data_32_peak_L    <= data_32_max_L;
+							data_32_peak_y    <= data_32_max_y;
 							data_32_peak_addr <= data_32_max_addr;
 						end
 					end
 					else begin
 						data_32_peak      <= data_32_peak;
-						data_32_peak_L    <= data_32_peak_L;
+						data_32_peak_y    <= data_32_peak_y;
 						data_32_peak_addr <= data_32_peak_addr;
 					end
 				end
 				CONFIRM: begin
 					data_32_peak      <= data_32_peak;
-					data_32_peak_L    <= data_32_peak_L;
+					data_32_peak_y    <= data_32_peak_y;
 					data_32_peak_addr <= data_32_peak_addr;
 				end
 				default: begin
 					data_32_peak      <= 'd0;
-					data_32_peak_L    <= 5'd0;
+					data_32_peak_y    <= 5'd0;
 					data_32_peak_addr <= 'd0;
 				end
 			endcase
@@ -633,9 +633,9 @@ module peak_search #(
 	
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
-			data_peak_valid <= 1'b0;
-			data_peak_L     <= 5'd0;
-			data_peak_addr  <= 'd0;
+			fine_sync_ok   <= 1'b0;
+			channel_length <= 5'd0;
+			cp_start_addr  <= 'd0;
 		end
 		else begin
 			case(state)
@@ -645,28 +645,28 @@ module peak_search #(
 				// end
 				CONFIRM: begin
 					if((state_dly1==SEARCH) && (data_32_peak[LAMBDA_WIDTH-1]==1'b0)) begin
-						data_peak_valid <= 1'b1;
-						data_peak_L     <= data_32_peak_L;;
-						data_peak_addr  <= data_32_peak_addr;
+						fine_sync_ok   <= 1'b1;
+						channel_length <= data_32_peak_y + 1'd1;
+						cp_start_addr  <= data_32_peak_addr - {{(RAM_ADDR_WIDTH-6){1'b0}},6'd32}
+						                  - {{(RAM_ADDR_WIDTH-5){1'b0}},data_32_peak_y};
 					end
 					else begin
-						data_peak_valid <= 1'b0;
-						data_peak_L     <= data_peak_L;
-						data_peak_addr  <= data_peak_addr;
+						fine_sync_ok   <= 1'b0;
+						channel_length <= channel_length;
+						cp_start_addr  <= cp_start_addr ;
 					end
 				end
 				default: begin
-					data_peak_valid <= 1'b0;
-					data_peak_L     <= 5'd0;
-					data_peak_addr  <= 'd0;
+					fine_sync_ok   <= 1'b0;
+					channel_length <= 5'd0;
+					cp_start_addr  <= 'd0;
 				end
 			endcase
 		end
 	end
 	
-	assign o_fine_sync_ok   = data_peak_valid;
-	assign o_fine_sync_L    = data_peak_L;
-	assign o_fine_sync_addr = {{(16-RAM_ADDR_WIDTH){1'b0}},data_peak_addr};
-	
+	assign o_fine_sync_ok   = fine_sync_ok;
+	assign o_channel_length = channel_length;
+	assign o_cp_start_addr  = {{(16-RAM_ADDR_WIDTH){1'b0}},cp_start_addr};
 	
 endmodule

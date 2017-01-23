@@ -55,8 +55,8 @@ module test_coarse_sync_fine_sync;
 
 	// Outputs
 	wire o_fine_sync_ok;
-	wire [4:0] o_fine_sync_L;
-	wire [15:0] o_fine_sync_addr;
+	wire [4:0] o_channel_length;
+	wire [15:0] o_cp_start_addr;
 	
 	reg [31:0] data_in[0:4000];
 	integer clk_cnt;
@@ -86,8 +86,8 @@ module test_coarse_sync_fine_sync;
 		.o_coarse_sync_ok(o_coarse_sync_ok)
 	);
 	
-	assign i_work_ctrl_en       = (o_coarse_sync_ok==1'b1) ? 1'b1 : 1'b0;
-	assign i_work_ctrl          = (o_coarse_sync_ok==1'b1) ? 1'b1 : 1'b0;
+	assign i_work_ctrl_en       = o_coarse_sync_ok;
+	assign i_work_ctrl          = o_coarse_sync_ok;
 	assign i_psi_phi_data_valid = m_axis_data_tvalid;
 	assign i_psi_data_i         = m_axis_data_tdata[33:4];
 	assign i_psi_data_q         = m_axis_data_tdata[73:44];
@@ -111,8 +111,8 @@ module test_coarse_sync_fine_sync;
 		.i_rou_en(i_rou_en),
 		.i_rou(i_rou),
 		.o_fine_sync_ok(o_fine_sync_ok),
-		.o_fine_sync_L(o_fine_sync_L),
-		.o_fine_sync_addr(o_fine_sync_addr)
+		.o_channel_length(o_channel_length),
+		.o_cp_start_addr(o_cp_start_addr)
 	);
 
 	initial begin
@@ -188,9 +188,9 @@ module test_coarse_sync_fine_sync;
 				end
 				else begin
 					s_axis_data_tdata <= {8'd0,data_in[data_cnt][15:0],
-											8'd0,data_in[data_cnt][31:16],
-											8'd0,data_in[data_cnt+32][15:0],
-											8'd0,data_in[data_cnt+32][31:16]};
+					                      8'd0,data_in[data_cnt][31:16],
+					                      8'd0,data_in[data_cnt+32][15:0],
+					                      8'd0,data_in[data_cnt+32][31:16]};
 				end
 			end
 			else begin

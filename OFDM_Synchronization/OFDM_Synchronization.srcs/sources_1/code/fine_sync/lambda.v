@@ -559,9 +559,13 @@ module lambda #(
 //================================================================================
 // lambda
 //================================================================================
+	/*
+	* 14dB -------- 8'b1101_1011
+	*/
+	localparam rou_init = 8'b1101_1011;
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
-			rou <= 8'b0100_0000;
+			rou <= rou_init;
 		end
 		else if(i_rou_en == 1'b1) begin
 			rou <= i_rou;
@@ -569,7 +573,7 @@ module lambda #(
 	end
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
-			rou2 <= 8'b0100_0000;
+			rou2 <= rou_init;
 		end
 		else if((i_work_ctrl_en==1'b1) && (i_work_ctrl==1'b1)) begin
 			rou2 <= rou;

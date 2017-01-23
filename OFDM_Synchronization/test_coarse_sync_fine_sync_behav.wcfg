@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_coarse_sync_fine_sync_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_coarse_sync_fine_sync" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="143" />
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/axis_aclk" type="logic">
+      <obj_property name="ElementShortName">axis_aclk</obj_property>
+      <obj_property name="ObjectShortName">axis_aclk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/axis_areset" type="logic">
+      <obj_property name="ElementShortName">axis_areset</obj_property>
+      <obj_property name="ObjectShortName">axis_areset</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_ctrl_tvalid" type="logic">
+      <obj_property name="ElementShortName">s_axis_ctrl_tvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axis_ctrl_tvalid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_ctrl_tlast" type="logic">
+      <obj_property name="ElementShortName">s_axis_ctrl_tlast</obj_property>
+      <obj_property name="ObjectShortName">s_axis_ctrl_tlast</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_ctrl_tdata" type="array">
+      <obj_property name="ElementShortName">s_axis_ctrl_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_ctrl_tdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_ctrl_trdy" type="logic">
+      <obj_property name="ElementShortName">s_axis_ctrl_trdy</obj_property>
+      <obj_property name="ObjectShortName">s_axis_ctrl_trdy</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_data_tvalid" type="logic">
+      <obj_property name="ElementShortName">s_axis_data_tvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tvalid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_data_tlast" type="logic">
+      <obj_property name="ElementShortName">s_axis_data_tlast</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tlast</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_data_tdata" type="array">
+      <obj_property name="ElementShortName">s_axis_data_tdata[95:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_tdata[95:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_data_taddr" type="array">
+      <obj_property name="ElementShortName">s_axis_data_taddr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_taddr[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_data_trdy" type="logic">
+      <obj_property name="ElementShortName">s_axis_data_trdy</obj_property>
+      <obj_property name="ObjectShortName">s_axis_data_trdy</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/m_axis_data_tvalid" type="logic">
+      <obj_property name="ElementShortName">m_axis_data_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tvalid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/m_axis_data_tlast" type="logic">
+      <obj_property name="ElementShortName">m_axis_data_tlast</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tlast</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/m_axis_data_tdata" type="array">
+      <obj_property name="ElementShortName">m_axis_data_tdata[119:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_tdata[119:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/m_axis_data_taddr" type="array">
+      <obj_property name="ElementShortName">m_axis_data_taddr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_taddr[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/m_axis_data_trdy" type="logic">
+      <obj_property name="ElementShortName">m_axis_data_trdy</obj_property>
+      <obj_property name="ObjectShortName">m_axis_data_trdy</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/o_coarse_sync_ok" type="logic">
+      <obj_property name="ElementShortName">o_coarse_sync_ok</obj_property>
+      <obj_property name="ObjectShortName">o_coarse_sync_ok</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/ctrl_work_flag" type="logic">
+      <obj_property name="ElementShortName">ctrl_work_flag</obj_property>
+      <obj_property name="ObjectShortName">ctrl_work_flag</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/ctrl_work_flag_dly1" type="logic">
+      <obj_property name="ElementShortName">ctrl_work_flag_dly1</obj_property>
+      <obj_property name="ObjectShortName">ctrl_work_flag_dly1</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/ctrl_work_data" type="logic">
+      <obj_property name="ElementShortName">ctrl_work_data</obj_property>
+      <obj_property name="ObjectShortName">ctrl_work_data</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/ctrl_work_en" type="logic">
+      <obj_property name="ElementShortName">ctrl_work_en</obj_property>
+      <obj_property name="ObjectShortName">ctrl_work_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/ctrl_work" type="logic">
+      <obj_property name="ElementShortName">ctrl_work</obj_property>
+      <obj_property name="ObjectShortName">ctrl_work</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/coarse_sync_state" type="array">
+      <obj_property name="ElementShortName">coarse_sync_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">coarse_sync_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/coarse_sync_state_dly1" type="array">
+      <obj_property name="ElementShortName">coarse_sync_state_dly1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">coarse_sync_state_dly1[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/coarse_sync_fir_count" type="array">
+      <obj_property name="ElementShortName">coarse_sync_fir_count[6:0]</obj_property>
+      <obj_property name="ObjectShortName">coarse_sync_fir_count[6:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/coarse_sync_sec_count" type="array">
+      <obj_property name="ElementShortName">coarse_sync_sec_count[7:0]</obj_property>
+      <obj_property name="ObjectShortName">coarse_sync_sec_count[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_i_work_ctrl_en" type="logic">
+      <obj_property name="ElementShortName">u1_i_work_ctrl_en</obj_property>
+      <obj_property name="ObjectShortName">u1_i_work_ctrl_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_i_work_ctrl" type="logic">
+      <obj_property name="ElementShortName">u1_i_work_ctrl</obj_property>
+      <obj_property name="ObjectShortName">u1_i_work_ctrl</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_i_data_valid" type="logic">
+      <obj_property name="ElementShortName">u1_i_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u1_i_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_i_data_i" type="array">
+      <obj_property name="ElementShortName">u1_i_data_i[17:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_i_data_i[17:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_i_data_q" type="array">
+      <obj_property name="ElementShortName">u1_i_data_q[17:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_i_data_q[17:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_i_data_dly_i" type="array">
+      <obj_property name="ElementShortName">u1_i_data_dly_i[17:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_i_data_dly_i[17:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_i_data_dly_q" type="array">
+      <obj_property name="ElementShortName">u1_i_data_dly_q[17:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_i_data_dly_q[17:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_i_data_dly_addr" type="array">
+      <obj_property name="ElementShortName">u1_i_data_dly_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_i_data_dly_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_o_self_corr_valid" type="logic">
+      <obj_property name="ElementShortName">u1_o_self_corr_valid</obj_property>
+      <obj_property name="ObjectShortName">u1_o_self_corr_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_o_self_corr_i" type="array">
+      <obj_property name="ElementShortName">u1_o_self_corr_i[35:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_self_corr_i[35:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_o_self_corr_q" type="array">
+      <obj_property name="ElementShortName">u1_o_self_corr_q[35:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_self_corr_q[35:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_o_self_corr_addr" type="array">
+      <obj_property name="ElementShortName">u1_o_self_corr_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_self_corr_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_o_psi_data_valid" type="logic">
+      <obj_property name="ElementShortName">u1_o_psi_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u1_o_psi_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_o_psi_data_i" type="array">
+      <obj_property name="ElementShortName">u1_o_psi_data_i[37:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_psi_data_i[37:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_o_psi_data_q" type="array">
+      <obj_property name="ElementShortName">u1_o_psi_data_q[37:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_psi_data_q[37:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u1_o_psi_data_addr" type="array">
+      <obj_property name="ElementShortName">u1_o_psi_data_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_psi_data_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u2_i_work_ctrl_en" type="logic">
+      <obj_property name="ElementShortName">u2_i_work_ctrl_en</obj_property>
+      <obj_property name="ObjectShortName">u2_i_work_ctrl_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u2_i_work_ctrl" type="logic">
+      <obj_property name="ElementShortName">u2_i_work_ctrl</obj_property>
+      <obj_property name="ObjectShortName">u2_i_work_ctrl</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u2_i_data_valid" type="logic">
+      <obj_property name="ElementShortName">u2_i_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u2_i_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u2_i_data_i" type="array">
+      <obj_property name="ElementShortName">u2_i_data_i[17:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_data_i[17:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u2_i_data_q" type="array">
+      <obj_property name="ElementShortName">u2_i_data_q[17:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_data_q[17:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u2_i_data_dly_i" type="array">
+      <obj_property name="ElementShortName">u2_i_data_dly_i[17:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_data_dly_i[17:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u2_i_data_dly_q" type="array">
+      <obj_property name="ElementShortName">u2_i_data_dly_q[17:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_data_dly_q[17:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u2_i_data_dly_addr" type="array">
+      <obj_property name="ElementShortName">u2_i_data_dly_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_data_dly_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u2_o_phi_data_valid" type="logic">
+      <obj_property name="ElementShortName">u2_o_phi_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u2_o_phi_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u2_o_phi_data" type="array">
+      <obj_property name="ElementShortName">u2_o_phi_data[38:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_o_phi_data[38:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u2_o_phi_data_addr" type="array">
+      <obj_property name="ElementShortName">u2_o_phi_data_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_o_phi_data_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u3_i_work_ctrl_en" type="logic">
+      <obj_property name="ElementShortName">u3_i_work_ctrl_en</obj_property>
+      <obj_property name="ObjectShortName">u3_i_work_ctrl_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u3_i_work_ctrl" type="logic">
+      <obj_property name="ElementShortName">u3_i_work_ctrl</obj_property>
+      <obj_property name="ObjectShortName">u3_i_work_ctrl</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u3_i_psi_phi_data_valid" type="logic">
+      <obj_property name="ElementShortName">u3_i_psi_phi_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u3_i_psi_phi_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u3_i_psi_phi_data_valid_dly1" type="logic">
+      <obj_property name="ElementShortName">u3_i_psi_phi_data_valid_dly1</obj_property>
+      <obj_property name="ObjectShortName">u3_i_psi_phi_data_valid_dly1</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u3_i_psi_data_i" type="array">
+      <obj_property name="ElementShortName">u3_i_psi_data_i[37:0]</obj_property>
+      <obj_property name="ObjectShortName">u3_i_psi_data_i[37:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u3_i_psi_data_q" type="array">
+      <obj_property name="ElementShortName">u3_i_psi_data_q[37:0]</obj_property>
+      <obj_property name="ObjectShortName">u3_i_psi_data_q[37:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u3_i_phi_data" type="array">
+      <obj_property name="ElementShortName">u3_i_phi_data[38:0]</obj_property>
+      <obj_property name="ObjectShortName">u3_i_phi_data[38:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u3_i_psi_phi_data_addr" type="array">
+      <obj_property name="ElementShortName">u3_i_psi_phi_data_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">u3_i_psi_phi_data_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u3_o_tar_data_valid" type="logic">
+      <obj_property name="ElementShortName">u3_o_tar_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u3_o_tar_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u3_o_tar_data" type="array">
+      <obj_property name="ElementShortName">u3_o_tar_data[86:0]</obj_property>
+      <obj_property name="ObjectShortName">u3_o_tar_data[86:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u3_o_tar_data_addr" type="array">
+      <obj_property name="ElementShortName">u3_o_tar_data_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">u3_o_tar_data_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u4_wea" type="logic">
+      <obj_property name="ElementShortName">u4_wea</obj_property>
+      <obj_property name="ObjectShortName">u4_wea</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u4_wr_addr" type="array">
+      <obj_property name="ElementShortName">u4_wr_addr[8:0]</obj_property>
+      <obj_property name="ObjectShortName">u4_wr_addr[8:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u4_rd_addr" type="array">
+      <obj_property name="ElementShortName">u4_rd_addr[8:0]</obj_property>
+      <obj_property name="ObjectShortName">u4_rd_addr[8:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u4_addra" type="array">
+      <obj_property name="ElementShortName">u4_addra[8:0]</obj_property>
+      <obj_property name="ObjectShortName">u4_addra[8:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u4_dina" type="array">
+      <obj_property name="ElementShortName">u4_dina[143:0]</obj_property>
+      <obj_property name="ObjectShortName">u4_dina[143:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u4_douta" type="array">
+      <obj_property name="ElementShortName">u4_douta[143:0]</obj_property>
+      <obj_property name="ObjectShortName">u4_douta[143:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/rd_en" type="logic">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/rd_en_dly1" type="logic">
+      <obj_property name="ElementShortName">rd_en_dly1</obj_property>
+      <obj_property name="ObjectShortName">rd_en_dly1</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/rd_en_dly2" type="logic">
+      <obj_property name="ElementShortName">rd_en_dly2</obj_property>
+      <obj_property name="ObjectShortName">rd_en_dly2</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/data_addr" type="array">
+      <obj_property name="ElementShortName">data_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">data_addr[9:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/coarse_sync_ok" type="logic">
+      <obj_property name="ElementShortName">coarse_sync_ok</obj_property>
+      <obj_property name="ObjectShortName">coarse_sync_ok</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/test_u3_o_tar_data" type="array">
+      <obj_property name="ElementShortName">test_u3_o_tar_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">test_u3_o_tar_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/SYNC_DATA_WIDTH" type="array">
+      <obj_property name="ElementShortName">SYNC_DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SYNC_DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/RAM_ADDR_WIDTH" type="array">
+      <obj_property name="ElementShortName">RAM_ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RAM_ADDR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/PSI_WIDTH" type="array">
+      <obj_property name="ElementShortName">PSI_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PSI_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/PHI_WIDTH" type="array">
+      <obj_property name="ElementShortName">PHI_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PHI_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/SPRAM_ADDR_WIDTH" type="array">
+      <obj_property name="ElementShortName">SPRAM_ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SPRAM_ADDR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/SPRAM_DATA_WIDTH" type="array">
+      <obj_property name="ElementShortName">SPRAM_DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SPRAM_DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/COARSE_SYNC_IDLE" type="array">
+      <obj_property name="ElementShortName">COARSE_SYNC_IDLE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">COARSE_SYNC_IDLE[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/COARSE_SYNC_ING" type="array">
+      <obj_property name="ElementShortName">COARSE_SYNC_ING[2:0]</obj_property>
+      <obj_property name="ObjectShortName">COARSE_SYNC_ING[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/COARSE_SYNC_FIR" type="array">
+      <obj_property name="ElementShortName">COARSE_SYNC_FIR[2:0]</obj_property>
+      <obj_property name="ObjectShortName">COARSE_SYNC_FIR[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/COARSE_SYNC_SEC" type="array">
+      <obj_property name="ElementShortName">COARSE_SYNC_SEC[2:0]</obj_property>
+      <obj_property name="ObjectShortName">COARSE_SYNC_SEC[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/u4_rd_addr_init" type="array">
+      <obj_property name="ElementShortName">u4_rd_addr_init[31:0]</obj_property>
+      <obj_property name="ObjectShortName">u4_rd_addr_init[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/axis_aclk" type="logic">
+      <obj_property name="ElementShortName">axis_aclk</obj_property>
+      <obj_property name="ObjectShortName">axis_aclk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/axis_areset" type="logic">
+      <obj_property name="ElementShortName">axis_areset</obj_property>
+      <obj_property name="ObjectShortName">axis_areset</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/i_work_ctrl_en" type="logic">
+      <obj_property name="ElementShortName">i_work_ctrl_en</obj_property>
+      <obj_property name="ObjectShortName">i_work_ctrl_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/i_work_ctrl" type="logic">
+      <obj_property name="ElementShortName">i_work_ctrl</obj_property>
+      <obj_property name="ObjectShortName">i_work_ctrl</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/i_psi_phi_data_valid" type="logic">
+      <obj_property name="ElementShortName">i_psi_phi_data_valid</obj_property>
+      <obj_property name="ObjectShortName">i_psi_phi_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/i_psi_data_i" type="array">
+      <obj_property name="ElementShortName">i_psi_data_i[29:0]</obj_property>
+      <obj_property name="ObjectShortName">i_psi_data_i[29:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/i_psi_data_q" type="array">
+      <obj_property name="ElementShortName">i_psi_data_q[29:0]</obj_property>
+      <obj_property name="ObjectShortName">i_psi_data_q[29:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/i_phi_data" type="array">
+      <obj_property name="ElementShortName">i_phi_data[30:0]</obj_property>
+      <obj_property name="ObjectShortName">i_phi_data[30:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/i_psi_phi_data_addr" type="array">
+      <obj_property name="ElementShortName">i_psi_phi_data_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">i_psi_phi_data_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/i_rou_en" type="logic">
+      <obj_property name="ElementShortName">i_rou_en</obj_property>
+      <obj_property name="ObjectShortName">i_rou_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/i_rou" type="array">
+      <obj_property name="ElementShortName">i_rou[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_rou[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/o_channel_length" type="array">
+      <obj_property name="ElementShortName">o_channel_length[4:0]</obj_property>
+      <obj_property name="ObjectShortName">o_channel_length[4:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/o_cp_start_addr" type="array">
+      <obj_property name="ElementShortName">o_cp_start_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_cp_start_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/o_fine_sync_ok" type="logic">
+      <obj_property name="ElementShortName">o_fine_sync_ok</obj_property>
+      <obj_property name="ObjectShortName">o_fine_sync_ok</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_i_work_ctrl_en" type="logic">
+      <obj_property name="ElementShortName">u1_i_work_ctrl_en</obj_property>
+      <obj_property name="ObjectShortName">u1_i_work_ctrl_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_i_work_ctrl" type="logic">
+      <obj_property name="ElementShortName">u1_i_work_ctrl</obj_property>
+      <obj_property name="ObjectShortName">u1_i_work_ctrl</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_i_psi_phi_data_valid" type="logic">
+      <obj_property name="ElementShortName">u1_i_psi_phi_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u1_i_psi_phi_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_i_psi_data_i" type="array">
+      <obj_property name="ElementShortName">u1_i_psi_data_i[29:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_i_psi_data_i[29:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_i_psi_data_q" type="array">
+      <obj_property name="ElementShortName">u1_i_psi_data_q[29:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_i_psi_data_q[29:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_i_phi_data" type="array">
+      <obj_property name="ElementShortName">u1_i_phi_data[30:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_i_phi_data[30:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_i_psi_phi_data_addr" type="array">
+      <obj_property name="ElementShortName">u1_i_psi_phi_data_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_i_psi_phi_data_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_i_rou_en" type="logic">
+      <obj_property name="ElementShortName">u1_i_rou_en</obj_property>
+      <obj_property name="ObjectShortName">u1_i_rou_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_i_rou" type="array">
+      <obj_property name="ElementShortName">u1_i_rou[7:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_i_rou[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_o_lambda_data_valid" type="logic">
+      <obj_property name="ElementShortName">u1_o_lambda_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u1_o_lambda_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_o_lambda_data_32" type="array">
+      <obj_property name="ElementShortName">u1_o_lambda_data_32[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_lambda_data_32[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_o_lambda_data_31" type="array">
+      <obj_property name="ElementShortName">u1_o_lambda_data_31[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_lambda_data_31[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_o_lambda_data_30" type="array">
+      <obj_property name="ElementShortName">u1_o_lambda_data_30[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_lambda_data_30[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_o_lambda_data_29" type="array">
+      <obj_property name="ElementShortName">u1_o_lambda_data_29[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_lambda_data_29[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_o_lambda_data_28" type="array">
+      <obj_property name="ElementShortName">u1_o_lambda_data_28[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_lambda_data_28[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_o_lambda_data_27" type="array">
+      <obj_property name="ElementShortName">u1_o_lambda_data_27[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_lambda_data_27[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_o_lambda_data_26" type="array">
+      <obj_property name="ElementShortName">u1_o_lambda_data_26[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_lambda_data_26[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_o_lambda_data_25" type="array">
+      <obj_property name="ElementShortName">u1_o_lambda_data_25[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_lambda_data_25[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_o_lambda_data_24" type="array">
+      <obj_property name="ElementShortName">u1_o_lambda_data_24[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_lambda_data_24[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_o_lambda_data_23" type="array">
+      <obj_property name="ElementShortName">u1_o_lambda_data_23[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_lambda_data_23[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u1_o_lambda_data_addr" type="array">
+      <obj_property name="ElementShortName">u1_o_lambda_data_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">u1_o_lambda_data_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_i_work_ctrl_en" type="logic">
+      <obj_property name="ElementShortName">u2_i_work_ctrl_en</obj_property>
+      <obj_property name="ObjectShortName">u2_i_work_ctrl_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_i_work_ctrl" type="logic">
+      <obj_property name="ElementShortName">u2_i_work_ctrl</obj_property>
+      <obj_property name="ObjectShortName">u2_i_work_ctrl</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_i_lambda_data_valid" type="logic">
+      <obj_property name="ElementShortName">u2_i_lambda_data_valid</obj_property>
+      <obj_property name="ObjectShortName">u2_i_lambda_data_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_i_lambda_data_32" type="array">
+      <obj_property name="ElementShortName">u2_i_lambda_data_32[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_lambda_data_32[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_i_lambda_data_31" type="array">
+      <obj_property name="ElementShortName">u2_i_lambda_data_31[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_lambda_data_31[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_i_lambda_data_30" type="array">
+      <obj_property name="ElementShortName">u2_i_lambda_data_30[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_lambda_data_30[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_i_lambda_data_29" type="array">
+      <obj_property name="ElementShortName">u2_i_lambda_data_29[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_lambda_data_29[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_i_lambda_data_28" type="array">
+      <obj_property name="ElementShortName">u2_i_lambda_data_28[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_lambda_data_28[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_i_lambda_data_27" type="array">
+      <obj_property name="ElementShortName">u2_i_lambda_data_27[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_lambda_data_27[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_i_lambda_data_26" type="array">
+      <obj_property name="ElementShortName">u2_i_lambda_data_26[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_lambda_data_26[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_i_lambda_data_25" type="array">
+      <obj_property name="ElementShortName">u2_i_lambda_data_25[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_lambda_data_25[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_i_lambda_data_24" type="array">
+      <obj_property name="ElementShortName">u2_i_lambda_data_24[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_lambda_data_24[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_i_lambda_data_23" type="array">
+      <obj_property name="ElementShortName">u2_i_lambda_data_23[70:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_lambda_data_23[70:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_i_lambda_data_addr" type="array">
+      <obj_property name="ElementShortName">u2_i_lambda_data_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_i_lambda_data_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_o_fine_sync_ok" type="logic">
+      <obj_property name="ElementShortName">u2_o_fine_sync_ok</obj_property>
+      <obj_property name="ObjectShortName">u2_o_fine_sync_ok</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_o_channel_length" type="array">
+      <obj_property name="ElementShortName">u2_o_channel_length[4:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_o_channel_length[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/u2_o_cp_start_addr" type="array">
+      <obj_property name="ElementShortName">u2_o_cp_start_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">u2_o_cp_start_addr[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/PSI_WIDTH" type="array">
+      <obj_property name="ElementShortName">PSI_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PSI_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/PHI_WIDTH" type="array">
+      <obj_property name="ElementShortName">PHI_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PHI_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/RAM_ADDR_WIDTH" type="array">
+      <obj_property name="ElementShortName">RAM_ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RAM_ADDR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_fine_sync/LAMBDA_WIDTH" type="array">
+      <obj_property name="ElementShortName">LAMBDA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">LAMBDA_WIDTH[31:0]</obj_property>
+   </wvobject>
+</wave_config>

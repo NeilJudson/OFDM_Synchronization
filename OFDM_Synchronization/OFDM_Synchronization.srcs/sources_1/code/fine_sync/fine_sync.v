@@ -41,8 +41,8 @@ module fine_sync #(
 	i_rou               ,
 	
 	o_fine_sync_ok      ,
-	o_fine_sync_L       ,
-	o_fine_sync_addr
+	o_channel_length    ,
+	o_cp_start_addr
 	);
 	input                axis_aclk           ;
 	input                axis_areset         ;
@@ -59,8 +59,8 @@ module fine_sync #(
 	input         [7:0]  i_rou               ; // 系数，fix0_8
 	
 	output               o_fine_sync_ok      ;
-	output        [4:0]  o_fine_sync_L       ;
-	output        [15:0] o_fine_sync_addr    ;
+	output        [4:0]  o_channel_length    ;
+	output        [15:0] o_cp_start_addr     ;
 	
 //================================================================================
 // variable
@@ -104,8 +104,8 @@ module fine_sync #(
 	wire signed [70:0] u2_i_lambda_data_23    ;
 	wire        [15:0] u2_i_lambda_data_addr  ;
 	wire               u2_o_fine_sync_ok      ;
-	wire        [4:0]  u2_o_fine_sync_L       ;
-	wire        [15:0] u2_o_fine_sync_addr    ;
+	wire        [4:0]  u2_o_channel_length    ;
+	wire        [15:0] u2_o_cp_start_addr     ;
 	
 //================================================================================
 // lambda
@@ -124,7 +124,7 @@ module fine_sync #(
 		.PSI_WIDTH           (PSI_WIDTH              ), // <=30
 		.PHI_WIDTH           (PHI_WIDTH              ), // <=31
 		.RAM_ADDR_WIDTH      (RAM_ADDR_WIDTH         )
-	) u1_lambda (
+	)u1_lambda(
 		.axis_aclk           (axis_aclk              ),
 		.axis_areset         (axis_areset            ),
 		.i_work_ctrl_en      (u1_i_work_ctrl_en      ),
@@ -171,7 +171,7 @@ module fine_sync #(
 	peak_search #(
 		.LAMBDA_WIDTH       (LAMBDA_WIDTH          ), // <=71
 		.RAM_ADDR_WIDTH     (RAM_ADDR_WIDTH        )
-	) u2_peak_search (
+	)u2_peak_search(
 		.axis_aclk          (axis_aclk             ),
 		.axis_areset        (axis_areset           ),
 		.i_work_ctrl_en     (u2_i_work_ctrl_en     ),
@@ -211,12 +211,12 @@ module fine_sync #(
 		.i_lambda_data_1    ({(71){1'b1}}          ),
 		.i_lambda_data_addr (u2_i_lambda_data_addr ),
 		.o_fine_sync_ok     (u2_o_fine_sync_ok     ),
-		.o_fine_sync_L      (u2_o_fine_sync_L      ),
-		.o_fine_sync_addr   (u2_o_fine_sync_addr   )
+		.o_channel_length   (u2_o_channel_length   ),
+		.o_cp_start_addr    (u2_o_cp_start_addr    )
 	);
 	
 	assign o_fine_sync_ok   = u2_o_fine_sync_ok  ;
-	assign o_fine_sync_L    = u2_o_fine_sync_L   ;
-	assign o_fine_sync_addr = u2_o_fine_sync_addr;
+	assign o_channel_length = u2_o_channel_length;
+	assign o_cp_start_addr  = u2_o_cp_start_addr ;
 	
 endmodule
