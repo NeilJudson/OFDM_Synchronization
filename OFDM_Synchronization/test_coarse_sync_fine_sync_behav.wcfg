@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="143" />
+   <WVObjectSize size="136" />
    <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/axis_aclk" type="logic">
       <obj_property name="ElementShortName">axis_aclk</obj_property>
       <obj_property name="ObjectShortName">axis_aclk</obj_property>
@@ -18,22 +18,6 @@
    <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/axis_areset" type="logic">
       <obj_property name="ElementShortName">axis_areset</obj_property>
       <obj_property name="ObjectShortName">axis_areset</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_ctrl_tvalid" type="logic">
-      <obj_property name="ElementShortName">s_axis_ctrl_tvalid</obj_property>
-      <obj_property name="ObjectShortName">s_axis_ctrl_tvalid</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_ctrl_tlast" type="logic">
-      <obj_property name="ElementShortName">s_axis_ctrl_tlast</obj_property>
-      <obj_property name="ObjectShortName">s_axis_ctrl_tlast</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_ctrl_tdata" type="array">
-      <obj_property name="ElementShortName">s_axis_ctrl_tdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">s_axis_ctrl_tdata[31:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_ctrl_trdy" type="logic">
-      <obj_property name="ElementShortName">s_axis_ctrl_trdy</obj_property>
-      <obj_property name="ObjectShortName">s_axis_ctrl_trdy</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_data_tvalid" type="logic">
       <obj_property name="ElementShortName">s_axis_data_tvalid</obj_property>
@@ -46,10 +30,12 @@
    <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_data_tdata" type="array">
       <obj_property name="ElementShortName">s_axis_data_tdata[95:0]</obj_property>
       <obj_property name="ObjectShortName">s_axis_data_tdata[95:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_data_taddr" type="array">
       <obj_property name="ElementShortName">s_axis_data_taddr[15:0]</obj_property>
       <obj_property name="ObjectShortName">s_axis_data_taddr[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/s_axis_data_trdy" type="logic">
       <obj_property name="ElementShortName">s_axis_data_trdy</obj_property>
@@ -78,18 +64,6 @@
    <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/o_coarse_sync_ok" type="logic">
       <obj_property name="ElementShortName">o_coarse_sync_ok</obj_property>
       <obj_property name="ObjectShortName">o_coarse_sync_ok</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/ctrl_work_flag" type="logic">
-      <obj_property name="ElementShortName">ctrl_work_flag</obj_property>
-      <obj_property name="ObjectShortName">ctrl_work_flag</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/ctrl_work_flag_dly1" type="logic">
-      <obj_property name="ElementShortName">ctrl_work_flag_dly1</obj_property>
-      <obj_property name="ObjectShortName">ctrl_work_flag_dly1</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/ctrl_work_data" type="logic">
-      <obj_property name="ElementShortName">ctrl_work_data</obj_property>
-      <obj_property name="ObjectShortName">ctrl_work_data</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/ctrl_work_en" type="logic">
       <obj_property name="ElementShortName">ctrl_work_en</obj_property>
@@ -314,6 +288,9 @@
    <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/test_u3_o_tar_data" type="array">
       <obj_property name="ElementShortName">test_u3_o_tar_data[63:0]</obj_property>
       <obj_property name="ObjectShortName">test_u3_o_tar_data[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/test_coarse_sync_fine_sync/uut_coarse_sync/SYNC_DATA_WIDTH" type="array">
       <obj_property name="ElementShortName">SYNC_DATA_WIDTH[31:0]</obj_property>

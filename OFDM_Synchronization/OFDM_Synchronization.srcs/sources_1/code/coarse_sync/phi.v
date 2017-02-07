@@ -22,8 +22,8 @@
 
 module phi #(
 	parameter SYNC_DATA_WIDTH = 16, // <=18
-	parameter PHI_WIDTH       = 35, // <=35
-	parameter RAM_ADDR_WIDTH  = 10 // <=10
+	parameter PHI_WIDTH       = 35, // <=39
+	parameter RAM_ADDR_WIDTH  = 10  // <=16
 	)
 	(
 	clk			,

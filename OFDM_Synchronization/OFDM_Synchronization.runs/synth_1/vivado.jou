@@ -2,9 +2,9 @@
 # Vivado v2015.2.1 (64-bit)
 # SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
 # IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
-# Start of session at: Sun Jan 22 17:42:31 2017
-# Process ID: 1100
-# Log file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/ofdm_syn.vds
+# Start of session at: Tue Feb 07 14:55:56 2017
+# Process ID: 4424
+# Log file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/test_coarse_sync_fine_sync.vds
 # Journal file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source ofdm_syn.tcl -notrace
+source test_coarse_sync_fine_sync.tcl -notrace

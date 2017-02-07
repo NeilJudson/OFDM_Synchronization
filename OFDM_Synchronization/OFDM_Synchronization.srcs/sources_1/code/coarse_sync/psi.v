@@ -22,8 +22,8 @@
 
 module psi #(
 	parameter SYNC_DATA_WIDTH = 16, // <=18
-	parameter PSI_WIDTH       = 34, // <=34
-	parameter RAM_ADDR_WIDTH  = 10 // <=10
+	parameter PSI_WIDTH       = 34, // <=38
+	parameter RAM_ADDR_WIDTH  = 10  // <=16
 	)
 	(
 	clk			,

@@ -25,9 +25,8 @@ module test_coarse_sync_fine_sync;
 	// Inputs
 	reg axis_aclk;
 	reg axis_areset;
-	reg s_axis_ctrl_tvalid;
-	reg s_axis_ctrl_tlast;
-	reg [31:0] s_axis_ctrl_tdata;
+	reg i_work_ctrl_en;
+	reg i_work_ctrl;
 	reg s_axis_data_tvalid;
 	reg s_axis_data_tlast;
 	reg [95:0] s_axis_data_tdata;
@@ -43,8 +42,8 @@ module test_coarse_sync_fine_sync;
 	wire o_coarse_sync_ok;
 	
 	// Inputs
-	wire i_work_ctrl_en;
-	wire i_work_ctrl;
+	wire u2_i_work_ctrl_en;
+	wire u2_i_work_ctrl;
 	wire i_psi_phi_data_valid;
 	wire [29:0] i_psi_data_i;
 	wire [29:0] i_psi_data_q;
@@ -65,14 +64,14 @@ module test_coarse_sync_fine_sync;
 	// Instantiate the Unit Under Test (UUT)
 	coarse_sync #(
 		.SYNC_DATA_WIDTH(16),
+		.PSI_WIDTH(34),
+		.PHI_WIDTH(35),
 		.RAM_ADDR_WIDTH(10)
 	) uut_coarse_sync (
 		.axis_aclk(axis_aclk), 
 		.axis_areset(axis_areset), 
-		.s_axis_ctrl_tvalid(s_axis_ctrl_tvalid), 
-		.s_axis_ctrl_tlast(s_axis_ctrl_tlast), 
-		.s_axis_ctrl_tdata(s_axis_ctrl_tdata), 
-		.s_axis_ctrl_trdy(s_axis_ctrl_trdy), 
+		.i_work_ctrl_en(i_work_ctrl_en),
+		.i_work_ctrl(i_work_ctrl),
 		.s_axis_data_tvalid(s_axis_data_tvalid), 
 		.s_axis_data_tlast(s_axis_data_tlast), 
 		.s_axis_data_tdata(s_axis_data_tdata), 
@@ -86,8 +85,8 @@ module test_coarse_sync_fine_sync;
 		.o_coarse_sync_ok(o_coarse_sync_ok)
 	);
 	
-	assign i_work_ctrl_en       = o_coarse_sync_ok;
-	assign i_work_ctrl          = o_coarse_sync_ok;
+	assign u2_i_work_ctrl_en    = o_coarse_sync_ok;
+	assign u2_i_work_ctrl       = o_coarse_sync_ok;
 	assign i_psi_phi_data_valid = m_axis_data_tvalid;
 	assign i_psi_data_i         = m_axis_data_tdata[33:4];
 	assign i_psi_data_q         = m_axis_data_tdata[73:44];
@@ -101,8 +100,8 @@ module test_coarse_sync_fine_sync;
 	) uut_fine_sync (
 		.axis_aclk(axis_aclk), 
 		.axis_areset(axis_areset), 
-		.i_work_ctrl_en(i_work_ctrl_en),
-		.i_work_ctrl(i_work_ctrl),
+		.i_work_ctrl_en(u2_i_work_ctrl_en),
+		.i_work_ctrl(u2_i_work_ctrl),
 		.i_psi_phi_data_valid(i_psi_phi_data_valid),
 		.i_psi_data_i(i_psi_data_i),
 		.i_psi_data_q(i_psi_data_q),
@@ -120,9 +119,8 @@ module test_coarse_sync_fine_sync;
 		$readmemh("ofdm_source.dat",data_in);
 		axis_aclk = 0;
 		axis_areset = 0;
-		s_axis_ctrl_tvalid = 0;
-		s_axis_ctrl_tlast = 0;
-		s_axis_ctrl_tdata = 0;
+		i_work_ctrl_en = 0;
+		i_work_ctrl = 0;
 		s_axis_data_tvalid = 0;
 		s_axis_data_tlast = 0;
 		s_axis_data_tdata = 0;
@@ -158,16 +156,16 @@ module test_coarse_sync_fine_sync;
 	
 	always @(posedge axis_aclk or posedge axis_areset) begin
 		if(axis_areset == 1'b1) begin
-			s_axis_ctrl_tvalid	<= 1'b0;
-			s_axis_ctrl_tdata	<= 32'd0;
+			i_work_ctrl_en	<= 1'b0;
+			i_work_ctrl		<= 1'b0;
 		end
 		else if(clk_cnt == 80) begin
-			s_axis_ctrl_tvalid	<= 1'b1;
-			s_axis_ctrl_tdata	<= {8'd1,24'd1};
+			i_work_ctrl_en	<= 1'b1;
+			i_work_ctrl		<= 1'b1;
 		end
 		else begin
-			s_axis_ctrl_tvalid	<= 1'b0;
-			s_axis_ctrl_tdata	<= 32'd0;
+			i_work_ctrl_en	<= 1'b0;
+			i_work_ctrl		<= 1'b0;
 		end
 	end
 	

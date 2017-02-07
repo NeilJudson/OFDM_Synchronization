@@ -23,7 +23,7 @@
 module tar #(
 	parameter PSI_WIDTH		= 34, // <=38
 	parameter PHI_WIDTH		= 35, // <=39
-	parameter RAM_ADDR_WIDTH= 10
+	parameter RAM_ADDR_WIDTH= 10  // <=16
 	)
 	(
 	clk				,
