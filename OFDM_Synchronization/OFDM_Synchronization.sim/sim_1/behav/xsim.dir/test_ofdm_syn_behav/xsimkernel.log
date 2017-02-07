@@ -1,0 +1,7 @@
+Running: xsim.dir/test_ofdm_syn_behav/xsimk.exe -simmode gui -wdb test_ofdm_syn_behav.wdb -simrunnum 0 -socket 49460
+Design successfully loaded
+Design Loading Memory Usage: 173372 KB (Peak: 173372 KB)
+Design Loading CPU Usage: 702 ms
+Simulation completed
+Simulation Memory Usage: 193968 KB (Peak: 193968 KB)
+Simulation CPU Usage: 149526 ms

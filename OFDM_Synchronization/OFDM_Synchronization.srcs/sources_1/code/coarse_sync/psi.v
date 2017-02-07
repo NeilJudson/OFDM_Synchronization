@@ -21,8 +21,9 @@
 
 
 module psi #(
-	parameter SYNC_DATA_WIDTH	= 16, // <=18
-	parameter RAM_ADDR_WIDTH	= 10 // <=10
+	parameter SYNC_DATA_WIDTH = 16, // <=18
+	parameter PSI_WIDTH       = 34, // <=38
+	parameter RAM_ADDR_WIDTH  = 10  // <=16
 	)
 	(
 	clk			,
@@ -78,7 +79,7 @@ module psi #(
 	localparam	SPRAM_ADDR_WIDTH	= 6;
 	localparam	SPRAM_DATA_DEPTH	= 2**SPRAM_ADDR_WIDTH;	// 64
 	localparam	DATA_MUL_WIDTH		= 2*SYNC_DATA_WIDTH;	// 32
-	localparam	PSI_WIDTH			= 2*SYNC_DATA_WIDTH+2;	// 34
+	// localparam	PSI_WIDTH			= 2*SYNC_DATA_WIDTH+2;	// 34
 	// state
 	localparam	IDLE	= 2'd0,
 				WORK	= 2'd3;
