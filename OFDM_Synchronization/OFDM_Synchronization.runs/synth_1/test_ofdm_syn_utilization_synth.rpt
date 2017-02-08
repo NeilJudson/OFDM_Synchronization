@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2.1 (win64) Build 1302555 Wed Aug  5 13:06:02 MDT 2015
-| Date         : Wed Feb 08 15:00:06 2017
-| Host         : FUTURE3 running 64-bit Service Pack 1  (build 7601)
+| Date         : Wed Feb 08 15:15:20 2017
+| Host         : txjs-130 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file test_ofdm_syn_utilization_synth.rpt -pb test_ofdm_syn_utilization_synth.pb
 | Design       : test_ofdm_syn
 | Device       : xc7z045

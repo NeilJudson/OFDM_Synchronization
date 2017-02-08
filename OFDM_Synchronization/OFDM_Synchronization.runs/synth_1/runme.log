@@ -15,10 +15,10 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: [Common 17-1223] The version limit for your license is '2017.01' and will expire in -8 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 245.809 ; gain = 72.051
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 245.641 ; gain = 59.379
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'test_ofdm_syn' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/test_ofdm_syn.v:23]
-INFO: [Synth 8-638] synthesizing module 'ofdm_syn' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:23]
+INFO: [Synth 8-638] synthesizing module 'test_ofdm_syn' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/test_ofdm_syn.v:23]
+INFO: [Synth 8-638] synthesizing module 'ofdm_syn' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:23]
 	Parameter SYNC_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter PSI_WIDTH bound to: 34 - type: integer 
 	Parameter PHI_WIDTH bound to: 35 - type: integer 
@@ -32,7 +32,7 @@ INFO: [Synth 8-638] synthesizing module 'ofdm_syn' [F:/jiaweiwei/Project/OFDM_Sy
 	Parameter SYNC_FINE_SEARCH bound to: 3'b011 
 	Parameter SYNC_FINE_DONE bound to: 3'b100 
 	Parameter SYNC_DATA_OUTPUT bound to: 3'b101 
-INFO: [Synth 8-638] synthesizing module 'data_dpram' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/data_dpram/data_dpram.v:23]
+INFO: [Synth 8-638] synthesizing module 'data_dpram' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/data_dpram/data_dpram.v:23]
 	Parameter SYNC_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
 	Parameter DPRAM_ADDR_WIDTH bound to: 10 - type: integer 
@@ -42,24 +42,24 @@ INFO: [Synth 8-638] synthesizing module 'data_dpram' [F:/jiaweiwei/Project/OFDM_
 	Parameter SYNC_FINE_SEARCH bound to: 3'b011 
 	Parameter SYNC_FINE_DONE bound to: 3'b100 
 	Parameter SYNC_DATA_OUTPUT bound to: 3'b101 
-INFO: [Synth 8-638] synthesizing module 'dpram_36_1024_ip' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/dpram_36_1024_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'dpram_36_1024_ip' (1#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/dpram_36_1024_ip_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'axis_interface_fifo' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/axis_interface_fifo.v:23]
+INFO: [Synth 8-638] synthesizing module 'dpram_36_1024_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/dpram_36_1024_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'dpram_36_1024_ip' (1#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/dpram_36_1024_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'axis_interface_fifo' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/axis_interface_fifo.v:23]
 	Parameter DATA_IN_WIDTH bound to: 74 - type: integer 
 	Parameter DATA_OUT_WIDTH bound to: 74 - type: integer 
 	Parameter DATA_DEPTH bound to: 8 - type: integer 
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/axis_interface_fifo.v:111]
-INFO: [Synth 8-256] done synthesizing module 'axis_interface_fifo' (2#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/axis_interface_fifo.v:23]
-INFO: [Synth 8-638] synthesizing module 'axis_interface_fifo__parameterized0' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/axis_interface_fifo.v:23]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/axis_interface_fifo.v:111]
+INFO: [Synth 8-256] done synthesizing module 'axis_interface_fifo' (2#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/axis_interface_fifo.v:23]
+INFO: [Synth 8-638] synthesizing module 'axis_interface_fifo__parameterized0' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/axis_interface_fifo.v:23]
 	Parameter DATA_IN_WIDTH bound to: 32 - type: integer 
 	Parameter DATA_OUT_WIDTH bound to: 32 - type: integer 
 	Parameter DATA_DEPTH bound to: 8 - type: integer 
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/axis_interface_fifo.v:111]
-INFO: [Synth 8-256] done synthesizing module 'axis_interface_fifo__parameterized0' (2#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/axis_interface_fifo.v:23]
-WARNING: [Synth 8-3848] Net u3_m_axis_data_trdy in module/entity data_dpram does not have driver. [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/data_dpram/data_dpram.v:120]
-WARNING: [Synth 8-3848] Net u4_m_axis_data_trdy in module/entity data_dpram does not have driver. [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/data_dpram/data_dpram.v:128]
-INFO: [Synth 8-256] done synthesizing module 'data_dpram' (3#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/data_dpram/data_dpram.v:23]
-INFO: [Synth 8-638] synthesizing module 'coarse_sync' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:23]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/axis_interface_fifo.v:111]
+INFO: [Synth 8-256] done synthesizing module 'axis_interface_fifo__parameterized0' (2#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/tools/axis_interface_fifo.v:23]
+WARNING: [Synth 8-3848] Net u3_m_axis_data_trdy in module/entity data_dpram does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/data_dpram/data_dpram.v:120]
+WARNING: [Synth 8-3848] Net u4_m_axis_data_trdy in module/entity data_dpram does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/data_dpram/data_dpram.v:128]
+INFO: [Synth 8-256] done synthesizing module 'data_dpram' (3#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/data_dpram/data_dpram.v:23]
+INFO: [Synth 8-638] synthesizing module 'coarse_sync' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:23]
 	Parameter SYNC_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter PSI_WIDTH bound to: 34 - type: integer 
 	Parameter PHI_WIDTH bound to: 35 - type: integer 
@@ -71,7 +71,7 @@ INFO: [Synth 8-638] synthesizing module 'coarse_sync' [F:/jiaweiwei/Project/OFDM
 	Parameter COARSE_SYNC_FIR bound to: 3'b010 
 	Parameter COARSE_SYNC_SEC bound to: 3'b011 
 	Parameter u4_rd_addr_init bound to: 33 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'psi' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/psi.v:23]
+INFO: [Synth 8-638] synthesizing module 'psi' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/psi.v:23]
 	Parameter SYNC_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter PSI_WIDTH bound to: 34 - type: integer 
 	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
@@ -82,12 +82,12 @@ INFO: [Synth 8-638] synthesizing module 'psi' [F:/jiaweiwei/Project/OFDM_Synchro
 	Parameter IDLE bound to: 2'b00 
 	Parameter WORK bound to: 2'b11 
 	Parameter u2_rd_addr_init bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'complex_multiplier_18_18_ip' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/complex_multiplier_18_18_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'complex_multiplier_18_18_ip' (4#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/complex_multiplier_18_18_ip_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'spram_72_64_ip' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/spram_72_64_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'spram_72_64_ip' (5#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/spram_72_64_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'psi' (6#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/psi.v:23]
-INFO: [Synth 8-638] synthesizing module 'phi' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/phi.v:23]
+INFO: [Synth 8-638] synthesizing module 'complex_multiplier_18_18_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/complex_multiplier_18_18_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'complex_multiplier_18_18_ip' (4#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/complex_multiplier_18_18_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'spram_72_64_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/spram_72_64_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_72_64_ip' (5#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/spram_72_64_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'psi' (6#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/psi.v:23]
+INFO: [Synth 8-638] synthesizing module 'phi' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/phi.v:23]
 	Parameter SYNC_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter PHI_WIDTH bound to: 35 - type: integer 
 	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
@@ -98,12 +98,12 @@ INFO: [Synth 8-638] synthesizing module 'phi' [F:/jiaweiwei/Project/OFDM_Synchro
 	Parameter IDLE bound to: 2'b00 
 	Parameter WORK bound to: 2'b10 
 	Parameter u2_rd_addr_init bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_18_ip' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/complex_abs_power2_18_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_18_ip' (7#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/complex_abs_power2_18_ip_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'spram_36_64_ip' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/spram_36_64_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'spram_36_64_ip' (8#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/spram_36_64_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'phi' (9#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/phi.v:23]
-INFO: [Synth 8-638] synthesizing module 'tar' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/tar.v:23]
+INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_18_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/complex_abs_power2_18_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_18_ip' (7#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/complex_abs_power2_18_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'spram_36_64_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/spram_36_64_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_36_64_ip' (8#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/spram_36_64_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'phi' (9#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/phi.v:23]
+INFO: [Synth 8-638] synthesizing module 'tar' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/tar.v:23]
 	Parameter PSI_WIDTH bound to: 34 - type: integer 
 	Parameter PHI_WIDTH bound to: 35 - type: integer 
 	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
@@ -118,24 +118,24 @@ INFO: [Synth 8-638] synthesizing module 'tar' [F:/jiaweiwei/Project/OFDM_Synchro
 	Parameter IDLE bound to: 2'b00 
 	Parameter WORK bound to: 2'b10 
 	Parameter u1_rd_addr_init bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'spram_144_32_ip' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/spram_144_32_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'spram_144_32_ip' (10#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/spram_144_32_ip_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_42_ip' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/complex_abs_power2_42_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_42_ip' (11#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/complex_abs_power2_42_ip_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'multiplier_42_42_ip' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/multiplier_42_42_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'multiplier_42_42_ip' (12#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/multiplier_42_42_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'tar' (13#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/tar.v:23]
-INFO: [Synth 8-638] synthesizing module 'spram_144_512_ip' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/spram_144_512_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'spram_144_512_ip' (14#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/spram_144_512_ip_stub.v:7]
-WARNING: [Synth 8-3848] Net s_axis_data_trdy in module/entity coarse_sync does not have driver. [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:60]
-WARNING: [Synth 8-3848] Net m_axis_data_tlast in module/entity coarse_sync does not have driver. [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:63]
-INFO: [Synth 8-256] done synthesizing module 'coarse_sync' (15#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:23]
-INFO: [Synth 8-638] synthesizing module 'fine_sync' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/fine_sync.v:23]
+INFO: [Synth 8-638] synthesizing module 'spram_144_32_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/spram_144_32_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_144_32_ip' (10#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/spram_144_32_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_42_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/complex_abs_power2_42_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_42_ip' (11#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/complex_abs_power2_42_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'multiplier_42_42_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/multiplier_42_42_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'multiplier_42_42_ip' (12#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/multiplier_42_42_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'tar' (13#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/tar.v:23]
+INFO: [Synth 8-638] synthesizing module 'spram_144_512_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/spram_144_512_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'spram_144_512_ip' (14#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/spram_144_512_ip_stub.v:7]
+WARNING: [Synth 8-3848] Net s_axis_data_trdy in module/entity coarse_sync does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:60]
+WARNING: [Synth 8-3848] Net m_axis_data_tlast in module/entity coarse_sync does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:63]
+INFO: [Synth 8-256] done synthesizing module 'coarse_sync' (15#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:23]
+INFO: [Synth 8-638] synthesizing module 'fine_sync' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/fine_sync.v:23]
 	Parameter PSI_WIDTH bound to: 30 - type: integer 
 	Parameter PHI_WIDTH bound to: 31 - type: integer 
 	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
 	Parameter LAMBDA_WIDTH bound to: 71 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'lambda' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:23]
+INFO: [Synth 8-638] synthesizing module 'lambda' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:23]
 	Parameter PSI_WIDTH bound to: 30 - type: integer 
 	Parameter PHI_WIDTH bound to: 31 - type: integer 
 	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
@@ -151,68 +151,68 @@ INFO: [Synth 8-638] synthesizing module 'lambda' [F:/jiaweiwei/Project/OFDM_Sync
 	Parameter WORK bound to: 2'b11 
 	Parameter rd_addr_init bound to: 32 - type: integer 
 	Parameter rou_init bound to: 8'b11011011 
-INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_35_1dsp_ip' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/complex_abs_power2_35_1dsp_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_35_1dsp_ip' (16#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/complex_abs_power2_35_1dsp_ip_stub.v:7]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:339]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:340]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:348]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:349]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:357]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:358]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:366]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:367]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:375]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:376]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:384]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:385]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:393]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:394]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:402]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:403]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:411]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:412]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:420]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:421]
-INFO: [Synth 8-638] synthesizing module 'multiplier_35_1dsp_ip' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/multiplier_35_1dsp_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'multiplier_35_1dsp_ip' (17#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/multiplier_35_1dsp_ip_stub.v:7]
-INFO: [Synth 8-638] synthesizing module 'multiplier_69_18_1dsp_ip' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/multiplier_69_18_1dsp_ip_stub.v:7]
-INFO: [Synth 8-256] done synthesizing module 'multiplier_69_18_1dsp_ip' (18#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-5520-FUTURE3/realtime/multiplier_69_18_1dsp_ip_stub.v:7]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:760]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:761]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:762]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:763]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:764]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:765]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:766]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:767]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:768]
-WARNING: [Synth 8-693] zero replication count - replication ignored [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:769]
-INFO: [Synth 8-256] done synthesizing module 'lambda' (19#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:23]
-INFO: [Synth 8-638] synthesizing module 'peak_search' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/peak_search.v:23]
+INFO: [Synth 8-638] synthesizing module 'complex_abs_power2_35_1dsp_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/complex_abs_power2_35_1dsp_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'complex_abs_power2_35_1dsp_ip' (16#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/complex_abs_power2_35_1dsp_ip_stub.v:7]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:339]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:340]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:348]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:349]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:357]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:358]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:366]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:367]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:375]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:376]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:384]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:385]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:393]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:394]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:402]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:403]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:411]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:412]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:420]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:421]
+INFO: [Synth 8-638] synthesizing module 'multiplier_35_1dsp_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/multiplier_35_1dsp_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'multiplier_35_1dsp_ip' (17#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/multiplier_35_1dsp_ip_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'multiplier_69_18_1dsp_ip' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/multiplier_69_18_1dsp_ip_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'multiplier_69_18_1dsp_ip' (18#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1/.Xil/Vivado-4376-txjs-130/realtime/multiplier_69_18_1dsp_ip_stub.v:7]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:760]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:761]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:762]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:763]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:764]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:765]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:766]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:767]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:768]
+WARNING: [Synth 8-693] zero replication count - replication ignored [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:769]
+INFO: [Synth 8-256] done synthesizing module 'lambda' (19#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/lambda.v:23]
+INFO: [Synth 8-638] synthesizing module 'peak_search' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/peak_search.v:23]
 	Parameter LAMBDA_WIDTH bound to: 71 - type: integer 
 	Parameter RAM_ADDR_WIDTH bound to: 10 - type: integer 
 	Parameter IDLE bound to: 3'b000 
 	Parameter SEARCH bound to: 3'b011 
 	Parameter CONFIRM bound to: 3'b110 
-INFO: [Synth 8-256] done synthesizing module 'peak_search' (20#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/peak_search.v:23]
-INFO: [Synth 8-256] done synthesizing module 'fine_sync' (21#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/fine_sync.v:23]
-WARNING: [Synth 8-3848] Net s_axis_ctrl_trdy in module/entity ofdm_syn does not have driver. [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:56]
-WARNING: [Synth 8-3848] Net s_axis_data_trdy in module/entity ofdm_syn does not have driver. [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:61]
-WARNING: [Synth 8-3848] Net m_axis_ctrl_tvalid in module/entity ofdm_syn does not have driver. [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:63]
-WARNING: [Synth 8-3848] Net m_axis_ctrl_tlast in module/entity ofdm_syn does not have driver. [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:64]
-WARNING: [Synth 8-3848] Net m_axis_ctrl_tdata in module/entity ofdm_syn does not have driver. [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:65]
-WARNING: [Synth 8-3848] Net m_axis_data_tvalid in module/entity ofdm_syn does not have driver. [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:68]
-WARNING: [Synth 8-3848] Net m_axis_data_tlast in module/entity ofdm_syn does not have driver. [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:69]
-WARNING: [Synth 8-3848] Net m_axis_data_tdata in module/entity ofdm_syn does not have driver. [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:70]
-WARNING: [Synth 8-3848] Net u1_m_axis_data_for_coarse_trdy in module/entity ofdm_syn does not have driver. [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:113]
-WARNING: [Synth 8-3848] Net u1_m_axis_data_after_fine_trdy in module/entity ofdm_syn does not have driver. [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:118]
-WARNING: [Synth 8-3848] Net u2_m_axis_data_trdy in module/entity ofdm_syn does not have driver. [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:133]
-INFO: [Synth 8-256] done synthesizing module 'ofdm_syn' (22#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:23]
-INFO: [Synth 8-3876] $readmem data file 'ofdm_source.dat' is read successfully [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/test_ofdm_syn.v:77]
-WARNING: [Synth 8-85] always block has no event control specified [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/test_ofdm_syn.v:100]
-INFO: [Synth 8-256] done synthesizing module 'test_ofdm_syn' (23#1) [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/test_ofdm_syn.v:23]
+INFO: [Synth 8-256] done synthesizing module 'peak_search' (20#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/peak_search.v:23]
+INFO: [Synth 8-256] done synthesizing module 'fine_sync' (21#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/fine_sync/fine_sync.v:23]
+WARNING: [Synth 8-3848] Net s_axis_ctrl_trdy in module/entity ofdm_syn does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:56]
+WARNING: [Synth 8-3848] Net s_axis_data_trdy in module/entity ofdm_syn does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:61]
+WARNING: [Synth 8-3848] Net m_axis_ctrl_tvalid in module/entity ofdm_syn does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:63]
+WARNING: [Synth 8-3848] Net m_axis_ctrl_tlast in module/entity ofdm_syn does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:64]
+WARNING: [Synth 8-3848] Net m_axis_ctrl_tdata in module/entity ofdm_syn does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:65]
+WARNING: [Synth 8-3848] Net m_axis_data_tvalid in module/entity ofdm_syn does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:68]
+WARNING: [Synth 8-3848] Net m_axis_data_tlast in module/entity ofdm_syn does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:69]
+WARNING: [Synth 8-3848] Net m_axis_data_tdata in module/entity ofdm_syn does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:70]
+WARNING: [Synth 8-3848] Net u1_m_axis_data_for_coarse_trdy in module/entity ofdm_syn does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:113]
+WARNING: [Synth 8-3848] Net u1_m_axis_data_after_fine_trdy in module/entity ofdm_syn does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:118]
+WARNING: [Synth 8-3848] Net u2_m_axis_data_trdy in module/entity ofdm_syn does not have driver. [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:133]
+INFO: [Synth 8-256] done synthesizing module 'ofdm_syn' (22#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:23]
+INFO: [Synth 8-3876] $readmem data file 'ofdm_source.dat' is read successfully [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/test_ofdm_syn.v:77]
+WARNING: [Synth 8-85] always block has no event control specified [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/test_ofdm_syn.v:100]
+INFO: [Synth 8-256] done synthesizing module 'test_ofdm_syn' (23#1) [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/test_ofdm_syn.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 350.656 ; gain = 176.898
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 349.531 ; gain = 163.270
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -221,12 +221,12 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin u3_axis_interface_fifo:m_axis_data_trdy to constant 0 [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/data_dpram/data_dpram.v:309]
-WARNING: [Synth 8-3295] tying undriven pin u4_axis_interface_fifo:m_axis_data_trdy to constant 0 [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/data_dpram/data_dpram.v:334]
-WARNING: [Synth 8-3295] tying undriven pin u1_data_dpram:m_axis_data_after_fine_trdy to constant 0 [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:285]
-WARNING: [Synth 8-3295] tying undriven pin u2_coarse_sync:m_axis_data_trdy to constant 0 [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:363]
+WARNING: [Synth 8-3295] tying undriven pin u3_axis_interface_fifo:m_axis_data_trdy to constant 0 [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/data_dpram/data_dpram.v:309]
+WARNING: [Synth 8-3295] tying undriven pin u4_axis_interface_fifo:m_axis_data_trdy to constant 0 [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/data_dpram/data_dpram.v:334]
+WARNING: [Synth 8-3295] tying undriven pin u1_data_dpram:m_axis_data_after_fine_trdy to constant 0 [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:285]
+WARNING: [Synth 8-3295] tying undriven pin u2_coarse_sync:m_axis_data_trdy to constant 0 [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/ofdm_syn.v:363]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 350.656 ; gain = 176.898
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 349.531 ; gain = 163.270
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z045fbg676-3
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -238,22 +238,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 766.453 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.131 . Memory (MB): peak = 766.090 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:14 ; elapsed = 00:01:18 . Memory (MB): peak = 766.453 ; gain = 592.695
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 766.090 ; gain = 579.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z045fbg676-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:14 ; elapsed = 00:01:18 . Memory (MB): peak = 766.453 ; gain = 592.695
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 766.090 ; gain = 579.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:18 . Memory (MB): peak = 766.453 ; gain = 592.695
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 766.090 ; gain = 579.828
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "ram_reg[7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ram_reg[6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -273,9 +273,9 @@ INFO: [Synth 8-5544] ROM "ram_reg[1]" won't be mapped to Block RAM because addre
 INFO: [Synth 8-5544] ROM "ram_reg[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "u1_dout_addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "u234_dout_valid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-4471] merging register 'u5_i_data_valid_reg' into 'u1_i_data_valid_reg' [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/phi.v:180]
+INFO: [Synth 8-4471] merging register 'u5_i_data_valid_reg' into 'u1_i_data_valid_reg' [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/phi.v:180]
 INFO: [Synth 8-5544] ROM "u2_dout_addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:533]
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/code/coarse_sync/coarse_sync.v:533]
 INFO: [Synth 8-802] inferred FSM for state register 'coarse_sync_state_reg' in module 'coarse_sync'
 INFO: [Synth 8-5544] ROM "coarse_sync_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "coarse_sync_state" won't be mapped to RAM because it is too sparse
@@ -411,7 +411,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'coarse_sync_state_reg' usi
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'sync_state_reg' using encoding 'sequential' in module 'ofdm_syn'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:26 ; elapsed = 00:01:30 . Memory (MB): peak = 766.453 ; gain = 592.695
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 766.090 ; gain = 579.828
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -777,7 +777,7 @@ BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:29 ; elapsed = 00:01:33 . Memory (MB): peak = 766.453 ; gain = 592.695
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 766.090 ; gain = 579.828
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -796,9 +796,9 @@ WARNING: [Synth 8-3331] design peak_search has unconnected port i_lambda_data_ad
 WARNING: [Synth 8-3331] design peak_search has unconnected port i_lambda_data_addr[11]
 WARNING: [Synth 8-3331] design peak_search has unconnected port i_lambda_data_addr[10]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:02:30 ; elapsed = 00:03:02 . Memory (MB): peak = 1001.605 ; gain = 827.848
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:01:12 . Memory (MB): peak = 1002.398 ; gain = 816.137
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:02:30 ; elapsed = 00:03:02 . Memory (MB): peak = 1001.605 ; gain = 827.848
+Finished Parallel Reinference  : Time (s): cpu = 00:00:49 ; elapsed = 00:01:12 . Memory (MB): peak = 1002.398 ; gain = 816.137
 
 Report RTL Partitions: 
 +------+-------------------+------------+----------+
@@ -941,9 +941,9 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u2_coars
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u2_coarse_sync/coarse_sync_state_dly1_reg[2] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u2_coarse_sync/u4_dina_reg[143] )
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:02:40 ; elapsed = 00:03:53 . Memory (MB): peak = 1001.605 ; gain = 827.848
+Finished Area Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:45 . Memory (MB): peak = 1002.398 ; gain = 816.137
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:02:40 ; elapsed = 00:03:53 . Memory (MB): peak = 1001.605 ; gain = 827.848
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:55 ; elapsed = 00:01:45 . Memory (MB): peak = 1002.398 ; gain = 816.137
 
 Report RTL Partitions: 
 +------+-------------------+------------+----------+
@@ -957,7 +957,7 @@ Report RTL Partitions:
 |6     |ofdm_syn__GC0      |           1|      7625|
 |7     |test_ofdm_syn__GC0 |           1|      3661|
 +------+-------------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:02:40 ; elapsed = 00:03:53 . Memory (MB): peak = 1001.605 ; gain = 827.848
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:55 ; elapsed = 00:01:45 . Memory (MB): peak = 1002.398 ; gain = 816.137
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -965,7 +965,7 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:26 ; elapsed = 00:04:39 . Memory (MB): peak = 1001.605 ; gain = 827.848
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:08 ; elapsed = 00:01:59 . Memory (MB): peak = 1002.398 ; gain = 816.137
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\uut/u3_fine_sync/u2_peak_search /\i_lambda_data_buf_reg[31][0] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\uut/u3_fine_sync/u2_peak_search /\i_lambda_data_buf_reg[30][0] )
@@ -1061,7 +1061,7 @@ INFO: [Synth 8-3333] propagating constant 1 across sequential element (\uut/u3_f
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\uut/u3_fine_sync/u2_peak_search /\i_lambda_data_buf_reg[28][4] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:06 ; elapsed = 00:05:19 . Memory (MB): peak = 1001.605 ; gain = 827.848
+Finished Timing Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:02:11 . Memory (MB): peak = 1002.398 ; gain = 816.137
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1080,7 +1080,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:05:02 ; elapsed = 00:06:17 . Memory (MB): peak = 1001.605 ; gain = 827.848
+Finished Technology Mapping : Time (s): cpu = 00:01:37 ; elapsed = 00:02:29 . Memory (MB): peak = 1002.398 ; gain = 816.137
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1099,7 +1099,7 @@ INFO: [Synth 8-5365] Flop uut/u3_fine_sync/u2_peak_search/data_32_peak_addr_reg[
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:05:23 ; elapsed = 00:06:38 . Memory (MB): peak = 1001.605 ; gain = 827.848
+Finished IO Insertion : Time (s): cpu = 00:01:44 ; elapsed = 00:02:35 . Memory (MB): peak = 1002.398 ; gain = 816.137
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1112,7 +1112,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:05:25 ; elapsed = 00:06:40 . Memory (MB): peak = 1001.605 ; gain = 827.848
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:44 ; elapsed = 00:02:36 . Memory (MB): peak = 1002.398 ; gain = 816.137
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1124,13 +1124,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:36 ; elapsed = 00:06:51 . Memory (MB): peak = 1001.605 ; gain = 827.848
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:48 ; elapsed = 00:02:39 . Memory (MB): peak = 1002.398 ; gain = 816.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:05:36 ; elapsed = 00:06:51 . Memory (MB): peak = 1001.605 ; gain = 827.848
+Start Renaming Generated Ports : Time (s): cpu = 00:01:48 ; elapsed = 00:02:39 . Memory (MB): peak = 1002.398 ; gain = 816.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:05:36 ; elapsed = 00:06:51 . Memory (MB): peak = 1001.605 ; gain = 827.848
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:48 ; elapsed = 00:02:39 . Memory (MB): peak = 1002.398 ; gain = 816.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1235,14 +1235,14 @@ Report Instance Areas:
 |11    |      u2_peak_search         |peak_search         |  3993|
 +------+-----------------------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:05:39 ; elapsed = 00:06:54 . Memory (MB): peak = 1001.605 ; gain = 827.848
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:49 ; elapsed = 00:02:40 . Memory (MB): peak = 1002.398 ; gain = 816.137
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3028 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:04:34 ; elapsed = 00:06:11 . Memory (MB): peak = 1001.605 ; gain = 386.637
-Synthesis Optimization Complete : Time (s): cpu = 00:05:40 ; elapsed = 00:06:56 . Memory (MB): peak = 1001.605 ; gain = 827.848
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:29 ; elapsed = 00:02:22 . Memory (MB): peak = 1002.398 ; gain = 377.508
+Synthesis Optimization Complete : Time (s): cpu = 00:01:49 ; elapsed = 00:02:42 . Memory (MB): peak = 1002.398 ; gain = 816.137
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 3163 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'test_ofdm_syn' is not ideal for floorplanning, since the cellview 'lambda' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -1253,7 +1253,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 305 Infos, 165 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:06:16 ; elapsed = 00:07:30 . Memory (MB): peak = 1001.605 ; gain = 804.223
-write_checkpoint: Time (s): cpu = 00:00:29 ; elapsed = 00:00:24 . Memory (MB): peak = 1001.605 ; gain = 0.000
-report_utilization: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1001.605 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Feb 08 15:00:08 2017...
+synth_design: Time (s): cpu = 00:02:02 ; elapsed = 00:02:53 . Memory (MB): peak = 1002.398 ; gain = 804.047
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1002.398 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.870 . Memory (MB): peak = 1002.398 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 08 15:15:20 2017...
