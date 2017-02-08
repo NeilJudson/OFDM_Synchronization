@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log test_coarse_sync_fine_sync.vds -m64 -mode batch -messageDb vivado.pb -notrace -source test_coarse_sync_fine_sync.tcl" );
+         "-log test_ofdm_syn.vds -m64 -mode batch -messageDb vivado.pb -notrace -source test_ofdm_syn.tcl" );
 
 
 

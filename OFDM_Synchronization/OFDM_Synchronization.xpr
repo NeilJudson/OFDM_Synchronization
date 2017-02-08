@@ -454,23 +454,26 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="dpram_36_1024_ip_synth_1" Type="Ft3:Synth" SrcSet="dpram_36_1024_ip" Part="xc7z045fbg676-3" ConstrsSet="dpram_36_1024_ip" Description="Vivado Synthesis Defaults">
+    <Run Id="dpram_36_1024_ip_synth_1" Type="Ft3:Synth" SrcSet="dpram_36_1024_ip" Part="xc7z045fbg676-3" ConstrsSet="dpram_36_1024_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/dpram_36_1024_ip_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="dsp48_mul_ip_synth_1" Type="Ft3:Synth" SrcSet="dsp48_mul_ip" Part="xc7z045fbg676-3" ConstrsSet="dsp48_mul_ip" Description="Vivado Synthesis Defaults">
+    <Run Id="dsp48_mul_ip_synth_1" Type="Ft3:Synth" SrcSet="dsp48_mul_ip" Part="xc7z045fbg676-3" ConstrsSet="dsp48_mul_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/dsp48_mul_ip_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="dsp48_mul_add_ip_synth_1" Type="Ft3:Synth" SrcSet="dsp48_mul_add_ip" Part="xc7z045fbg676-3" ConstrsSet="dsp48_mul_add_ip" Description="Vivado Synthesis Defaults">
+    <Run Id="dsp48_mul_add_ip_synth_1" Type="Ft3:Synth" SrcSet="dsp48_mul_add_ip" Part="xc7z045fbg676-3" ConstrsSet="dsp48_mul_add_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/dsp48_mul_add_ip_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="spram_144_32_ip_synth_1" Type="Ft3:Synth" SrcSet="spram_144_32_ip" Part="xc7z045fbg676-3" ConstrsSet="spram_144_32_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/spram_144_32_ip_synth_1">
       <Strategy Version="1" Minor="2">
