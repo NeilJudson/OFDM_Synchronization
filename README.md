@@ -9,3 +9,5 @@ Device: ZYNQ-7000
 FFT Length: 256
 
 CP Length: 32
+
+![设计框图](F:\\FPGA设计框图.jpg)
