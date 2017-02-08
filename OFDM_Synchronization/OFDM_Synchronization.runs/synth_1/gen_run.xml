@@ -1,35 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z045fbg676-3" LaunchTime="1484563163">
-  <File Type="RDS-DCP" Name="test_lambda.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7z045fbg676-3" LaunchTime="1486523831">
+  <File Type="RDS-DCP" Name="test_coarse_sync_fine_sync.dcp"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
-  <File Type="RDS-UTIL-PB" Name="test_lambda_utilization_synth.pb"/>
+  <File Type="RDS-UTIL-PB" Name="test_coarse_sync_fine_sync_utilization_synth.pb"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
-  <File Type="RDS-PROPCONSTRS" Name="test_lambda_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="test_lambda.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="test_coarse_sync_fine_sync_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="test_coarse_sync_fine_sync.tcl"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
-  <File Type="RDS-RDS" Name="test_lambda.vds"/>
-  <File Type="RDS-UTIL" Name="test_lambda_utilization_synth.rpt"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="test_lambda_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="test_lambda_timing_summary_synth.pb"/>
+  <File Type="RDS-RDS" Name="test_coarse_sync_fine_sync.vds"/>
+  <File Type="RDS-UTIL" Name="test_coarse_sync_fine_sync_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="test_coarse_sync_fine_sync_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="test_coarse_sync_fine_sync_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/code/fine_sync/lambda.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/code/fine_sync/test_lambad.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/code/coarse_sync/tar.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -37,7 +22,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/code/coarse_sync/psi.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -45,13 +29,95 @@
     </File>
     <File Path="$PSRCDIR/sources_1/code/coarse_sync/phi.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/fine_sync/lambda.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/fine_sync/peak_search.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/code/coarse_sync/coarse_sync.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/fine_sync/fine_sync.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/test_coarse_sync_fine_sync.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/tools/axis_interface_fifo.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/data_dpram/data_dpram.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/ofdm_syn.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/test_ofdm_syn.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/fine_sync/test_peak_search.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/fine_sync/test_lambad.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/code/data_dpram/test_data_dpram.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -83,41 +149,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/code/tools/axis_interface_fifo.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/code/data_dpram/data_dpram.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/code/data_dpram/test_data_dpram.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/code/ofdm_syn.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="test_lambda"/>
+      <Option Name="TopModule" Val="test_coarse_sync_fine_sync"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -130,7 +164,15 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="multiplier_35_1dsp_ip"/>
-  <BlockFileSet Type="BlockSrcs" Name="complex_abs_power2_35_1dsp_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="complex_abs_power2_42_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="spram_36_64_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="spram_72_64_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="complex_multiplier_18_18_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="multiplier_42_42_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="spram_144_32_ip"/>
   <BlockFileSet Type="BlockSrcs" Name="multiplier_69_18_1dsp_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="spram_144_512_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="complex_abs_power2_18_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="complex_abs_power2_35_1dsp_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="multiplier_35_1dsp_ip"/>
 </GenRun>

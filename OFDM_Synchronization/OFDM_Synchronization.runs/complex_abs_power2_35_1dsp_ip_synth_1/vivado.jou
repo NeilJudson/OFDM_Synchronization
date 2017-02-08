@@ -2,9 +2,9 @@
 # Vivado v2015.2.1 (64-bit)
 # SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
 # IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
-# Start of session at: Thu Jan 12 14:40:17 2017
-# Process ID: 4704
-# Log file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_abs_power2_35_1dsp_ip_synth_1/complex_abs_power2_35_1dsp_ip.vds
-# Journal file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_abs_power2_35_1dsp_ip_synth_1\vivado.jou
+# Start of session at: Wed Feb 08 11:24:18 2017
+# Process ID: 1392
+# Log file: F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/complex_abs_power2_35_1dsp_ip_synth_1/complex_abs_power2_35_1dsp_ip.vds
+# Journal file: F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/complex_abs_power2_35_1dsp_ip_synth_1\vivado.jou
 #-----------------------------------------------------------
 source complex_abs_power2_35_1dsp_ip.tcl -notrace

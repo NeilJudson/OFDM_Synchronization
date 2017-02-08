@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="spram_72_64_ip_synth_1" LaunchDir="F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/spram_72_64_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="spram_36_64_ip_synth_1" LaunchDir="F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/spram_36_64_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="complex_multiplier_18_18_ip_synth_1" LaunchDir="F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="multiplier_42_42_ip_synth_1" LaunchDir="F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_42_42_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="spram_144_32_ip_synth_1" LaunchDir="F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/spram_144_32_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="spram_144_512_ip_synth_1" LaunchDir="F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/spram_144_512_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="complex_abs_power2_42_ip_synth_1" LaunchDir="F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/complex_abs_power2_42_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="complex_abs_power2_18_ip_synth_1" LaunchDir="F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/complex_abs_power2_18_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="complex_abs_power2_35_1dsp_ip_synth_1" LaunchDir="F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/complex_abs_power2_35_1dsp_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="multiplier_35_1dsp_ip_synth_1" LaunchDir="F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_35_1dsp_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="multiplier_69_18_1dsp_ip_synth_1" LaunchDir="F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/multiplier_69_18_1dsp_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="spram_72_64_ip_synth_1"/>
+		<Parent Id="spram_36_64_ip_synth_1"/>
+		<Parent Id="complex_multiplier_18_18_ip_synth_1"/>
+		<Parent Id="multiplier_42_42_ip_synth_1"/>
+		<Parent Id="spram_144_32_ip_synth_1"/>
+		<Parent Id="spram_144_512_ip_synth_1"/>
+		<Parent Id="complex_abs_power2_42_ip_synth_1"/>
+		<Parent Id="complex_abs_power2_18_ip_synth_1"/>
+		<Parent Id="complex_abs_power2_35_1dsp_ip_synth_1"/>
+		<Parent Id="multiplier_35_1dsp_ip_synth_1"/>
+		<Parent Id="multiplier_69_18_1dsp_ip_synth_1"/>
+	</Run>
+</Runs>
+

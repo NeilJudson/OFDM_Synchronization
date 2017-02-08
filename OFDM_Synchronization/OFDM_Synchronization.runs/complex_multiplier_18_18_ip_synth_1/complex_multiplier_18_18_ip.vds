@@ -2,214 +2,215 @@
 # Vivado v2015.2.1 (64-bit)
 # SW Build 1302555 on Wed Aug  5 13:06:02 MDT 2015
 # IP Build 1291990 on Mon Jul 27 03:18:52 MDT 2015
-# Start of session at: Fri Dec 16 14:55:43 2016
-# Process ID: 3576
-# Log file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1/complex_multiplier_18_18_ip.vds
-# Journal file: E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1\vivado.jou
+# Start of session at: Wed Feb 08 11:19:43 2017
+# Process ID: 372
+# Log file: F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1/complex_multiplier_18_18_ip.vds
+# Journal file: F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1\vivado.jou
 #-----------------------------------------------------------
 source complex_multiplier_18_18_ip.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/15.2/Vivado/2015.2/data/ip'.
-WARNING: [IP_Flow 19-3664] IP 'complex_multiplier_18_18_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'complex_multiplier_18_18_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'complex_multiplier_18_18_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'complex_multiplier_18_18_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_funcsim.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'complex_multiplier_18_18_ip' generated file not found 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_funcsim.vhdl'. Please regenerate to continue.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/User Repository'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/jiaweiwei/Xilinx/15.2/Vivado/2015.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'complex_multiplier_18_18_ip' generated file not found 'f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'complex_multiplier_18_18_ip' generated file not found 'f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'complex_multiplier_18_18_ip' generated file not found 'f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'complex_multiplier_18_18_ip' generated file not found 'f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_funcsim.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'complex_multiplier_18_18_ip' generated file not found 'f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_funcsim.vhdl'. Please regenerate to continue.
 Command: synth_design -top complex_multiplier_18_18_ip -part xc7z045fbg676-3 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-1223] The version limit for your license is '2017.01' and will expire in -8 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 249.027 ; gain = 63.398
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 250.379 ; gain = 77.457
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'complex_multiplier_18_18_ip' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/synth/complex_multiplier_18_18_ip.vhd:71]
-INFO: [Synth 8-3491] module 'cmpy_v6_0' declared at 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0.vhd:109' bound to instance 'U0' of component 'cmpy_v6_0' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/synth/complex_multiplier_18_18_ip.vhd:150]
-INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0.vhd:173]
-INFO: [Synth 8-3491] module 'cmpy_v6_0_viv' declared at 'e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:12038' bound to instance 'i_synth' of component 'cmpy_v6_0_viv' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0.vhd:180]
-INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_viv' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:12113]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:893]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:897]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:901]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:905]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:909]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:913]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:917]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:926]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:934]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:938]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:942]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:946]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:951]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1009]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1196]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1229]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1230]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1364]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1456]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1457]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1459]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1460]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1474]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1475]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1477]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1478]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1456]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1457]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1459]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1460]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1474]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1475]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1477]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1478]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1389]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1390]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1411]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1440]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3837]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3853]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3728]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3730]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1456]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1457]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1459]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1460]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1474]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1475]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1477]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1478]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3738]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1299]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1229]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1230]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1364]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1389]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1390]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1440]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3837]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3853]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3728]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3730]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1456]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1457]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1459]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1460]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1474]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1475]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1477]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1478]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3738]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1299]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1367]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1368]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1370]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1385]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1386]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1400]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1401]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1402]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1404]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1405]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1418]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1229]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1230]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1364]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1456]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1457]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1459]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1460]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1474]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1475]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1477]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1478]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1389]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1390]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1440]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3837]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3853]
-WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1299]
+INFO: [Synth 8-638] synthesizing module 'complex_multiplier_18_18_ip' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/synth/complex_multiplier_18_18_ip.vhd:71]
+INFO: [Synth 8-3491] module 'cmpy_v6_0' declared at 'f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0.vhd:109' bound to instance 'U0' of component 'cmpy_v6_0' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/synth/complex_multiplier_18_18_ip.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0.vhd:173]
+INFO: [Synth 8-3491] module 'cmpy_v6_0_viv' declared at 'f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:12038' bound to instance 'i_synth' of component 'cmpy_v6_0_viv' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0.vhd:180]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_viv' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:12113]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:893]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:897]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:901]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:905]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:909]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:913]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:917]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:926]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:934]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:938]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:942]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:946]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:951]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1009]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1196]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1229]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1230]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1364]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1456]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1457]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1459]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1460]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1474]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1475]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1477]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1478]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1456]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1457]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1459]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1460]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1474]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1475]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1477]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1478]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1389]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1390]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1411]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1440]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3837]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3853]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3728]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3730]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1456]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1457]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1459]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1460]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1474]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1475]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1477]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1478]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3738]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1229]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1230]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1364]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1389]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1390]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1440]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3837]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3853]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3728]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3730]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1456]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1457]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1459]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1460]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1474]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1475]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1477]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1478]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3738]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1299]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1367]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1368]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1370]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1385]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1386]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1400]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1401]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1402]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1404]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1405]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1418]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1229]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1230]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1364]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1456]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1457]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1459]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1460]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1474]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1475]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1477]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1478]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1389]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1390]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:1440]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3837]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:3853]
+WARNING: [Synth 8-312] ignoring unsynthesizable construct: assertion statement [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1299]
 INFO: [Common 17-14] Message 'Synth 8-312' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3919] null assignment ignored [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:12426]
-INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1745]
-INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "yes" *) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1772]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line' (1#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_synth' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:11627]
-INFO: [Synth 8-638] synthesizing module 'cmpy_3_dsp48' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4938]
-INFO: [Synth 8-63] RTL assertion: "mult1 pps: a b extra_b  1 1 0" [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9763]
-INFO: [Synth 8-63] RTL assertion: "mult2 pps: a b extra_b  1 2 0" [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9764]
-INFO: [Synth 8-638] synthesizing module 'input_negation' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1917]
-INFO: [Synth 8-256] done synthesizing module 'input_negation' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1917]
-INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized0' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized0' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized1' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized1' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized2' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "yes" *) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1802]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized2' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized3' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized3' (2#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-638] synthesizing module 'cmpy_3_dsp48_mult' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4593]
-INFO: [Synth 8-3919] null assignment ignored [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4605]
-INFO: [Synth 8-3919] null assignment ignored [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4605]
-INFO: [Synth 8-3919] null assignment ignored [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4608]
-INFO: [Synth 8-638] synthesizing module 'dsp' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
-INFO: [Synth 8-638] synthesizing module 'op_resize' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4018]
-INFO: [Synth 8-256] done synthesizing module 'op_resize' (3#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4018]
-INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line' (4#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line__parameterized0' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "yes" *) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4375]
-INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line__parameterized0' (4#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-113] binding component instance 'iDSP48E1' to cell 'DSP48E1' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:11042]
-INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line__parameterized1' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line__parameterized1' (4#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'dsp' (5#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_3_dsp48_mult' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4593]
-INFO: [Synth 8-638] synthesizing module 'cmpy_3_dsp48_mult__parameterized0' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4593]
-INFO: [Synth 8-506] null port 'C' ignored [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4582]
-INFO: [Synth 8-3919] null assignment ignored [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4605]
-INFO: [Synth 8-3919] null assignment ignored [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4605]
-INFO: [Synth 8-3919] null assignment ignored [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4608]
-INFO: [Synth 8-638] synthesizing module 'dsp__parameterized0' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
-INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line__parameterized2' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line__parameterized2' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line__parameterized3' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line__parameterized3' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-113] binding component instance 'iDSP48E1' to cell 'DSP48E1' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:11042]
-INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line__parameterized4' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line__parameterized4' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'dsp__parameterized0' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_3_dsp48_mult__parameterized0' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4593]
-INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized4' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized4' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized5' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized5' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized6' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized6' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-638] synthesizing module 'cmpy_3_dsp48_mult__parameterized1' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4593]
-INFO: [Synth 8-3919] null assignment ignored [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4605]
-INFO: [Synth 8-3919] null assignment ignored [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4605]
-INFO: [Synth 8-3919] null assignment ignored [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4608]
-INFO: [Synth 8-638] synthesizing module 'dsp__parameterized1' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
-INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line__parameterized5' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line__parameterized5' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-113] binding component instance 'iDSP48E1' to cell 'DSP48E1' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:11042]
-INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line__parameterized6' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line__parameterized6' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
-INFO: [Synth 8-256] done synthesizing module 'dsp__parameterized1' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_3_dsp48_mult__parameterized1' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4593]
-INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized7' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized7' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized8' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized8' (6#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_3_dsp48' (7#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4938]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_synth' (8#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:11627]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_viv' (9#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:12113]
-INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0' (10#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0.vhd:173]
-INFO: [Synth 8-256] done synthesizing module 'complex_multiplier_18_18_ip' (11#1) [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/synth/complex_multiplier_18_18_ip.vhd:71]
+INFO: [Synth 8-3919] null assignment ignored [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:12426]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1745]
+INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "yes" *) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1772]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line' (1#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_synth' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:11627]
+INFO: [Synth 8-638] synthesizing module 'cmpy_3_dsp48' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4938]
+INFO: [Synth 8-63] RTL assertion: "mult1 pps: a b extra_b  1 1 0" [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9763]
+INFO: [Synth 8-63] RTL assertion: "mult2 pps: a b extra_b  1 2 0" [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9764]
+INFO: [Synth 8-638] synthesizing module 'input_negation' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1917]
+INFO: [Synth 8-256] done synthesizing module 'input_negation' (2#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1917]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized0' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized0' (2#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized1' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized1' (2#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized2' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "yes" *) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1802]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized2' (2#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized3' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized3' (2#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-638] synthesizing module 'cmpy_3_dsp48_mult' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4593]
+INFO: [Synth 8-3919] null assignment ignored [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4605]
+INFO: [Synth 8-3919] null assignment ignored [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4605]
+INFO: [Synth 8-3919] null assignment ignored [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4608]
+INFO: [Synth 8-638] synthesizing module 'dsp' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
+INFO: [Synth 8-638] synthesizing module 'op_resize' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4018]
+INFO: [Synth 8-256] done synthesizing module 'op_resize' (3#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4018]
+INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line' (4#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line__parameterized0' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "yes" *) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4375]
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line__parameterized0' (4#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-113] binding component instance 'iDSP48E1' to cell 'DSP48E1' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:11042]
+INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line__parameterized1' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line__parameterized1' (4#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'dsp' (5#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_3_dsp48_mult' (6#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4593]
+INFO: [Synth 8-638] synthesizing module 'cmpy_3_dsp48_mult__parameterized0' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4593]
+INFO: [Synth 8-506] null port 'C' ignored [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4582]
+INFO: [Synth 8-3919] null assignment ignored [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4605]
+INFO: [Synth 8-3919] null assignment ignored [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4605]
+INFO: [Synth 8-3919] null assignment ignored [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4608]
+INFO: [Synth 8-638] synthesizing module 'dsp__parameterized0' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
+INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line__parameterized2' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line__parameterized2' (6#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line__parameterized3' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line__parameterized3' (6#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-113] binding component instance 'iDSP48E1' to cell 'DSP48E1' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:11042]
+INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line__parameterized4' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line__parameterized4' (6#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'dsp__parameterized0' (6#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_3_dsp48_mult__parameterized0' (6#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4593]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized4' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized4' (6#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized5' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized5' (6#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized6' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized6' (6#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-638] synthesizing module 'cmpy_3_dsp48_mult__parameterized1' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4593]
+INFO: [Synth 8-3919] null assignment ignored [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4605]
+INFO: [Synth 8-3919] null assignment ignored [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4605]
+INFO: [Synth 8-3919] null assignment ignored [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4608]
+INFO: [Synth 8-638] synthesizing module 'dsp__parameterized1' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
+INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line__parameterized5' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line__parameterized5' (6#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-113] binding component instance 'iDSP48E1' to cell 'DSP48E1' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:11042]
+INFO: [Synth 8-638] synthesizing module 'mult_gen_v12_0_delay_line__parameterized6' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_v12_0_delay_line__parameterized6' (6#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4150]
+INFO: [Synth 8-256] done synthesizing module 'dsp__parameterized1' (6#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:9906]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_3_dsp48_mult__parameterized1' (6#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4593]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized7' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized7' (6#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-638] synthesizing module 'cmpy_v6_0_delay_line__parameterized8' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_delay_line__parameterized8' (6#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1577]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_3_dsp48' (7#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:4938]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_synth' (8#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:11627]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0_viv' (9#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:12113]
+INFO: [Synth 8-256] done synthesizing module 'cmpy_v6_0' (10#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0.vhd:173]
+INFO: [Synth 8-256] done synthesizing module 'complex_multiplier_18_18_ip' (11#1) [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/synth/complex_multiplier_18_18_ip.vhd:71]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 309.184 ; gain = 123.555
+Finished RTL Elaboration : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 311.367 ; gain = 138.445
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -219,7 +220,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 309.184 ; gain = 123.555
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 311.367 ; gain = 138.445
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -228,35 +229,35 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_ooc.xdc] for cell 'U0'
-Parsing XDC File [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1/dont_touch.xdc]
+Parsing XDC File [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_ooc.xdc] for cell 'U0'
+Parsing XDC File [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 594.645 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 595.438 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 594.645 ; gain = 409.016
+Finished Constraint Validation : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 595.438 ; gain = 422.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z045fbg676-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 594.645 ; gain = 409.016
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 595.438 ; gain = 422.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  E:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  F:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.runs/complex_multiplier_18_18_ip_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 594.645 ; gain = 409.016
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 595.438 ; gain = 422.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 594.645 ; gain = 409.016
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 595.438 ; gain = 422.516
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -285,17 +286,17 @@ BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 594.645 ; gain = 409.016
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 595.438 ; gain = 422.516
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'i_synth/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_3.reg_mult3_preadd_d/dN.std_srl.shift_reg_reg[0][24:0]' into 'i_synth/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][24:0]' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1810]
-INFO: [Synth 8-4471] merging register 'i_synth/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[24:0]' into 'i_synth/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[24:0]' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4225]
-INFO: [Synth 8-4471] merging register 'i_synth/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_3.reg_mult3_preadd_d/dN.std_srl.shift_reg_reg[1][24:0]' into 'i_synth/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[1][24:0]' [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1810]
+INFO: [Synth 8-4471] merging register 'i_synth/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_3.reg_mult3_preadd_d/dN.std_srl.shift_reg_reg[0][24:0]' into 'i_synth/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][24:0]' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1810]
+INFO: [Synth 8-4471] merging register 'i_synth/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[24:0]' into 'i_synth/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[24:0]' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/mult_gen_v12_0/hdl/mult_gen_v12_0_vh_rfs.vhd:4225]
+INFO: [Synth 8-4471] merging register 'i_synth/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_3.reg_mult3_preadd_d/dN.std_srl.shift_reg_reg[1][24:0]' into 'i_synth/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[1][24:0]' [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/cmpy_v6_0/hdl/cmpy_v6_0_vh_rfs.vhd:1810]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 594.645 ; gain = 409.016
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 595.438 ; gain = 422.516
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 594.645 ; gain = 409.016
+Finished Parallel Reinference  : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 595.438 ; gain = 422.516
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -306,16 +307,16 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 594.645 ; gain = 409.016
+Finished Area Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 595.438 ; gain = 422.516
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 594.645 ; gain = 409.016
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 595.438 ; gain = 422.516
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 594.645 ; gain = 409.016
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 595.438 ; gain = 422.516
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -323,10 +324,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 662.145 ; gain = 476.516
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 662.832 ; gain = 489.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 663.043 ; gain = 477.414
+Finished Timing Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 663.770 ; gain = 490.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -338,7 +339,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 682.398 ; gain = 496.770
+Finished Technology Mapping : Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 684.051 ; gain = 511.129
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -356,7 +357,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 682.398 ; gain = 496.770
+Finished IO Insertion : Time (s): cpu = 00:01:22 ; elapsed = 00:01:25 . Memory (MB): peak = 684.051 ; gain = 511.129
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -369,7 +370,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 682.398 ; gain = 496.770
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:22 ; elapsed = 00:01:25 . Memory (MB): peak = 684.051 ; gain = 511.129
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -381,13 +382,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 682.398 ; gain = 496.770
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:22 ; elapsed = 00:01:25 . Memory (MB): peak = 684.051 ; gain = 511.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 682.398 ; gain = 496.770
+Start Renaming Generated Ports : Time (s): cpu = 00:01:22 ; elapsed = 00:01:25 . Memory (MB): peak = 684.051 ; gain = 511.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 682.398 ; gain = 496.770
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:22 ; elapsed = 00:01:25 . Memory (MB): peak = 684.051 ; gain = 511.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -410,25 +411,25 @@ Report Cell Usage:
 |5     |FDRE      |   142|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 682.398 ; gain = 496.770
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:22 ; elapsed = 00:01:25 . Memory (MB): peak = 684.051 ; gain = 511.129
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:53 . Memory (MB): peak = 682.398 ; gain = 191.906
-Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 682.398 ; gain = 496.770
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:01:11 . Memory (MB): peak = 684.051 ; gain = 197.695
+Synthesis Optimization Complete : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 684.051 ; gain = 511.129
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [e:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_ooc.xdc] for cell 'U0'
+Parsing XDC File [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [f:/jiaweiwei/Project/OFDM_Synchronization/OFDM_Synchronization/OFDM_Synchronization.srcs/sources_1/ip/complex_multiplier_18_18_ip/complex_multiplier_18_18_ip_ooc.xdc] for cell 'U0'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-104 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+105 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 682.398 ; gain = 480.164
+synth_design: Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 684.051 ; gain = 481.766
 INFO: [Coretcl 2-1174] Renamed 15 cell refs.
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.094 . Memory (MB): peak = 682.398 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 16 14:56:50 2016...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 684.051 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 08 11:21:13 2017...
